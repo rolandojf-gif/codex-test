@@ -361,7 +361,10 @@ function renderAppliedRules(rules) {
    LÓGICA DE DATOS (sin cambios respecto a v1)
    ═══════════════════════════════════════════════════════ */
 function buildGuidanceKeyChain(phaseId, subsectionId, sublevelId) {
-  return [phaseId, subsectionId, sublevelId].filter(Boolean);
+  if (sublevelId) return [sublevelId];
+  if (subsectionId) return [subsectionId];
+  if (phaseId) return [phaseId];
+  return [];
 }
 
 function resolveBaseGuidance(guidanceKeys) {
@@ -388,6 +391,7 @@ function findSubsection(subId) {
 }
 
 function findSublevel(subsection, lvlId) {
+  if (!lvlId) return null;
   return subsection?.sublevels?.find((l) => l.id === lvlId) ?? null;
 }
 
