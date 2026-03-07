@@ -21,11 +21,8 @@ const state = {
 const elements = {
   phaseSelect: document.querySelector("#phaseSelect"),
   subsectionSelect: document.querySelector("#subsectionSelect"),
-  sublevelField: document.querySelector("#sublevelField"),
-  sublevelSelect: document.querySelector("#sublevelSelect"),
   productInput: document.querySelector("#productInput"),
   processInput: document.querySelector("#processInput"),
-  selectionPath: document.querySelector("#selectionPath"),
   guidanceTitle: document.querySelector("#guidanceTitle"),
   guidanceId: document.querySelector("#guidanceId"),
   quePedir: document.querySelector("#quePedir"),
@@ -50,7 +47,7 @@ async function init() {
     attachEvents();
     render();
   } catch (error) {
-    console.error("Error cargando datos de auditoria:", error);
+    console.error("Error cargando datos de auditoría:", error);
     elements.guidanceTitle.textContent = "No se pudieron cargar los datos";
     elements.guidanceId.textContent = "Error";
   }
@@ -62,12 +59,7 @@ function attachEvents() {
     render();
   });
 
-  elements.subsectionSelect.addEventListener("change", () => {
-    populateSublevels();
-    render();
-  });
-
-  elements.sublevelSelect.addEventListener("change", render);
+  elements.subsectionSelect.addEventListener("change", render);
   elements.productInput.addEventListener("input", render);
   elements.processInput.addEventListener("input", render);
 }
@@ -82,39 +74,23 @@ function populatePhases() {
 }
 
 function populateSubsections() {
-  const phase = findPhase(elements.phaseSelect.value);
-  const subsections = phase?.subsections ?? [];
+  const phaseId = elements.phaseSelect.value;
+  const phase = findPhase(phaseId);
 
-  elements.subsectionSelect.innerHTML = subsections
-    .map((subsection) => `<option value="${subsection.id}">${subsection.id} - ${subsection.title}</option>`)
+  elements.subsectionSelect.innerHTML = (phase?.subsections ?? [])
+    .map(
+      (sub) =>
+        `<option value="${sub.id}">${sub.id} - ${sub.title}</option>`
+    )
     .join("");
-
-  populateSublevels();
-}
-
-function populateSublevels() {
-  const subsection = findSubsection(elements.subsectionSelect.value);
-  const sublevels = subsection?.sublevels ?? [];
-
-  if (!sublevels.length) {
-    elements.sublevelSelect.innerHTML = "";
-    elements.sublevelField.classList.add("hidden");
-    return;
-  }
-
-  elements.sublevelSelect.innerHTML = sublevels
-    .map((sublevel) => `<option value="${sublevel.id}">${sublevel.id} - ${sublevel.title}</option>`)
-    .join("");
-
-  elements.sublevelField.classList.remove("hidden");
 }
 
 function render() {
-  const selection = getCurrentSelection();
-  const baseGuidance = resolveBaseGuidance(selection.guidanceKeys);
+  const subsectionId = elements.subsectionSelect.value;
+  const subsectionMeta = findSubsection(subsectionId);
+  const baseGuidance = state.guidance?.items?.[subsectionId] ?? null;
 
-  if (!selection.meta || !baseGuidance) {
-    elements.selectionPath.textContent = "";
+  if (!subsectionMeta || !baseGuidance) {
     elements.guidanceTitle.textContent = "Subapartado sin datos";
     elements.guidanceId.textContent = "N/A";
     REQUIRED_FIELDS.forEach((field) => renderList(field, []));
@@ -127,15 +103,10 @@ function render() {
     process: elements.processInput.value
   });
 
-  const effectiveGuidance = applyRuleAdjustments(
-    selection.guidanceKeys,
-    baseGuidance,
-    matchedRules
-  );
+  const effectiveGuidance = applyRuleAdjustments(subsectionId, baseGuidance, matchedRules);
 
-  elements.selectionPath.textContent = selection.pathLabel;
-  elements.guidanceTitle.textContent = selection.meta.title;
-  elements.guidanceId.textContent = selection.meta.id;
+  elements.guidanceTitle.textContent = subsectionMeta.title;
+  elements.guidanceId.textContent = subsectionMeta.id;
 
   renderList("que_pedir", effectiveGuidance.que_pedir);
   renderList("que_espero_ver", effectiveGuidance.que_espero_ver);
@@ -146,56 +117,8 @@ function render() {
   renderAppliedRules(matchedRules);
 }
 
-function getCurrentSelection() {
-  const phase = findPhase(elements.phaseSelect.value);
-  const subsection = findSubsection(elements.subsectionSelect.value);
-  const hasSublevels = Array.isArray(subsection?.sublevels) && subsection.sublevels.length > 0;
-  const sublevel = hasSublevels ? findSublevel(subsection, elements.sublevelSelect.value) : null;
-  const meta = sublevel ?? subsection ?? null;
-  const guidanceKeys = buildGuidanceKeyChain(phase?.id, subsection?.id, sublevel?.id);
-  const pathParts = [phase?.id, subsection?.id, sublevel?.id].filter(Boolean);
-
-  return {
-    meta,
-    guidanceKeys,
-    pathLabel: pathParts.join(" > ")
-  };
-}
-
-function buildGuidanceKeyChain(phaseId, subsectionId, sublevelId) {
-  const keys = [];
-
-  if (phaseId) {
-    keys.push(phaseId);
-  }
-
-  if (subsectionId) {
-    keys.push(subsectionId);
-  }
-
-  if (sublevelId) {
-    keys.push(sublevelId);
-  }
-
-  return keys;
-}
-
-function resolveBaseGuidance(guidanceKeys) {
-  const merged = {};
-
-  for (const key of guidanceKeys) {
-    mergeGuidance(merged, state.guidance?.items?.[key] ?? null);
-  }
-
-  const hasContent = REQUIRED_FIELDS.some(
-    (field) => Array.isArray(merged[field]) && merged[field].length > 0
-  );
-
-  return hasContent ? merged : null;
-}
-
 function findPhase(phaseId) {
-  return state.structure?.phases?.find((phase) => phase.id === phaseId) ?? null;
+  return state.structure?.phases?.find((phase) => phase.id === phaseId);
 }
 
 function findSubsection(subsectionId) {
@@ -207,10 +130,6 @@ function findSubsection(subsectionId) {
   }
 
   return null;
-}
-
-function findSublevel(subsection, sublevelId) {
-  return subsection?.sublevels?.find((sublevel) => sublevel.id === sublevelId) ?? subsection?.sublevels?.[0] ?? null;
 }
 
 function normalizeText(value) {
@@ -237,19 +156,22 @@ function findMatchingRules(context) {
     const productTokens = rule.when?.product_contains ?? [];
     const processTokens = rule.when?.process_contains ?? [];
 
-    return matchesCriteria(productText, productTokens) && matchesCriteria(processText, processTokens);
+    const productOk = matchesCriteria(productText, productTokens);
+    const processOk = matchesCriteria(processText, processTokens);
+
+    return productOk && processOk;
   });
 }
 
-function applyRuleAdjustments(guidanceKeys, baseGuidance, matchedRules) {
+function applyRuleAdjustments(subsectionId, baseGuidance, matchedRules) {
   const effective = structuredClone(baseGuidance);
 
   for (const rule of matchedRules) {
-    mergeGuidance(effective, rule.adjustments?.["*"] ?? null);
+    const specificAdjustment = rule.adjustments?.[subsectionId] ?? null;
+    const globalAdjustment = rule.adjustments?.["*"] ?? null;
 
-    for (const key of guidanceKeys) {
-      mergeGuidance(effective, rule.adjustments?.[key] ?? null);
-    }
+    mergeGuidance(effective, globalAdjustment);
+    mergeGuidance(effective, specificAdjustment);
   }
 
   return effective;
@@ -285,7 +207,7 @@ function renderList(field, items) {
   const listItems = Array.isArray(items) ? items : [];
 
   if (!listItems.length) {
-    container.innerHTML = "<li>Sin contenido para este nivel de auditoria.</li>";
+    container.innerHTML = "<li>Sin contenido para este subapartado.</li>";
     return;
   }
 

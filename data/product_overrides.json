@@ -1,356 +1,78 @@
 {
-  "version": "1.3.0",
+  "version": "1.0.0",
   "rules": [
     {
-      "id": "pinza_nodular_default",
-      "name": "Pinza de freno de fundicion nodular",
+      "id": "electronics_smt",
+      "name": "Electrónica con proceso SMT/reflow",
       "when": {
-        "product_contains": ["pinza", "caliper", "cuerpo pinza"]
+        "product_contains": ["ecu", "bms", "inverter", "inversor", "electr"],
+        "process_contains": ["smt", "reflow", "aoi", "spi"]
       },
       "adjustments": {
         "*": {
           "evidencias_tipicas": [
-            "Trazabilidad de colada, lote y resultados metalurgicos vinculada a las zonas criticas de la pinza.",
-            "Mapa interno de zonas de estanqueidad, roscas y alojamientos funcionales con su control asociado."
+            "Trazabilidad de bobinas/lotes de componentes electrónicos y perfil térmico por lote.",
+            "Alarmas y bloqueos de AOI/SPI con registro de reacción."
           ],
           "red_flags": [
-            "La pinza se audita como una fundicion generica y no como componente de seguridad del circuito hidraulico.",
-            "No existe proteccion reforzada frente a porosidad o defecto interno en zonas criticas de estanqueidad."
-          ]
-        },
-        "P3.1": {
-          "que_pedir": [
-            "Despliegue de caracteristicas especiales en alojamiento de piston, superficies de estanqueidad, roscas funcionales y referencias de mecanizado."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Resultados de homologacion de zonas criticas de estanqueidad y, si aplica, de capacidad de mecanizado de alojamientos funcionales."
+            "Uso de perfil térmico fuera de ventana sin aprobación formal.",
+            "Bypass de alarmas de AOI/SPI sin análisis de riesgo."
           ]
         },
         "P6.2": {
-          "preguntas_de_contraste": [
-            "Que control concreto evita que una porosidad o inclusion llegue a una zona critica de estanqueidad?"
-          ]
-        },
-        "P7.2": {
-          "preguntas_de_contraste": [
-            "Si aparece una fuga o grieta en cliente, como reconstruyes el camino completo hasta colada, lote y proceso?"
+          "que_pedir": [
+            "Límites de pasta, offsets y criterios de paro por deriva en SPI/AOI.",
+            "Plan de reacción ante defectos de soldadura tipo tombstone, puente o voiding."
           ]
         }
       }
     },
     {
-      "id": "horquilla_nodular_default",
-      "name": "Horquilla de freno de fundicion nodular",
+      "id": "injection_molding",
+      "name": "Piezas plásticas por inyección",
       "when": {
-        "product_contains": ["horquilla", "carrier", "bracket", "soporte pinza"]
+        "process_contains": ["inyeccion", "inyección", "moldeo", "molding"]
       },
       "adjustments": {
-        "*": {
-          "evidencias_tipicas": [
-            "Mapa de zonas criticas de apoyo de pastilla, alojamientos funcionales y superficies de fijacion.",
-            "Historico de capacidad y defectologia en zonas sometidas a carga o reaccion."
-          ],
-          "red_flags": [
-            "Se infravaloran riesgos dimensionales o metalurgicos por no ser una pieza hidraulica.",
-            "No hay control reforzado en interfaces funcionales con pastilla, bulones o anclajes."
-          ]
-        },
-        "P3.1": {
-          "que_pedir": [
-            "Identificacion de caracteristicas especiales en superficies de apoyo, alojamientos funcionales, taladros, roscas y referencias de fijacion."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Demostracion de capacidad dimensional y de estabilidad de proceso en interfaces funcionales y zonas sometidas a carga."
-          ]
-        },
-        "P6.2": {
-          "preguntas_de_contraste": [
-            "Que defecto de fundicion o de mecanizado tiene mas probabilidad de comprometer la funcion de la horquilla y como se bloquea?"
-          ]
-        }
-      }
-    },
-    {
-      "id": "fundicion_nodular_freno",
-      "name": "Proceso de fundicion nodular para componentes de freno",
-      "when": {
-        "process_contains": [
-          "fundicion nodular",
-          "fundición nodular",
-          "fundicion",
-          "fundición",
-          "fusion",
-          "fusión",
-          "colada",
-          "nodularizacion",
-          "nodularización",
-          "inoculacion",
-          "inoculación",
-          "moldeo",
-          "macho",
-          "machos"
-        ]
-      },
-      "adjustments": {
-        "*": {
-          "evidencias_tipicas": [
-            "Homologacion de materias primas y consumibles criticos con control por lote y proveedor.",
-            "Trazabilidad de carga, colada, tratamiento, lote de piezas y liberacion final.",
-            "Pareto de defectologia especifico de fundicion nodular y acciones de reduccion."
-          ],
-          "red_flags": [
-            "Lote liberado con evidencia incompleta de quimica, tratamiento o microestructura.",
-            "Cambios de materia prima, retornos o consumibles tratados como rutina de planta.",
-            "La liberacion depende demasiado de inspeccion final y poco del control del proceso."
-          ]
-        },
-        "P3.2": {
-          "que_pedir": [
-            "Factibilidad de cumplir quimica, nodularidad, microestructura, soundness, dureza, rechazo objetivo y capacidad de control por lote."
-          ]
-        },
         "P4.2": {
           "que_pedir": [
-            "Ventanas maestras de proceso para fusion, tratamiento, inoculacion, colada, arena y machos, con criterios de reaccion."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Criterios de homologacion de carga metalica, retornos, nodularizante, inoculante, arena, resinas y machos, con segregacion y trazabilidad."
-          ]
-        },
-        "P6.2": {
-          "que_pedir": [
-            "Registros de control de temperatura, analisis quimico, tratamiento nodular, inoculacion, tiempos de colada y criterios de bloqueo de lote."
+            "Ventanas de proceso por cavidad (temperatura, presión, tiempo de sostenimiento).",
+            "Estrategia de validación tras cambio de resina o colorante."
           ],
           "que_espero_ver": [
-            "La deriva de proceso se detecta antes de materializarse en porosidad, rechupe, inclusion o perdida de nodularidad."
+            "Control de secado de material higroscópico con límites definidos.",
+            "Separación clara de parámetros maestros y ajustes de turno."
           ]
         },
         "P6.3": {
-          "que_pedir": [
-            "Plan de mantenimiento y calibracion de hornos, cucharas, espectrometro, analisis termico, equipos metalograficos y utiles de proceso."
-          ]
-        }
-      }
-    },
-    {
-      "id": "perfil_fundicion_bruto",
-      "name": "Perfil proveedor: fundicion bruto",
-      "when": {
-        "process_contains": [
-          "fundicion bruto",
-          "fundición bruto",
-          "fundicion en bruto",
-          "fundición en bruto",
-          "solo fundicion",
-          "solo fundición",
-          "bruto"
-        ]
-      },
-      "adjustments": {
-        "P3.2": {
-          "que_pedir": [
-            "Factibilidad del proveedor limitada a bruto: soundness, quimica, metalurgia, geometria en bruto y estabilidad de defectologia, sin dar por asumidas capacidades de mecanizado ajenas."
-          ],
-          "que_espero_ver": [
-            "El proveedor tiene claro cual es su punto de liberacion y que riesgos debe transferir formalmente al siguiente eslabon."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Criterios de liberacion del bruto, segregacion de lote y documentacion que acompana la transferencia al cliente o al mecanizador."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Homologacion de bruto en quimica, microestructura, dureza, soundness, dimensiones en bruto y defectologia admisible."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Trazabilidad completa desde materia prima y colada hasta el lote de bruto liberado."
-          ]
-        },
-        "P6.2": {
-          "que_espero_ver": [
-            "La decision de liberar el bruto no se apoya en expectativas de que el mecanizado posterior corrija problemas de fundicion."
-          ]
-        },
-        "P6.4": {
-          "red_flags": [
-            "El proveedor bruto da por cerrada la calidad sin definir claramente la interfaz tecnica y documental con el mecanizado siguiente."
-          ]
-        }
-      }
-    },
-    {
-      "id": "perfil_fundicion_mecanizado",
-      "name": "Perfil proveedor: fundicion + mecanizado",
-      "when": {
-        "process_contains": [
-          "fundicion + mecanizado",
-          "fundición + mecanizado",
-          "fundicion mecanizado",
-          "fundición mecanizado",
-          "fundicion y mecanizado",
-          "fundición y mecanizado",
-          "mecanizado"
-        ]
-      },
-      "adjustments": {
-        "*": {
-          "evidencias_tipicas": [
-            "Trazabilidad del lote bruto al lote mecanizado, incluyendo programa, utilaje y first-off aprobados.",
-            "Historico de desgaste de herramienta, cambios de offset y rechazo dimensional en cotas especiales."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Hojas de setup, first-off, criterios de cambio de herramienta, offsets, dispositivos de amarre y reaction plans de mecanizado."
-          ],
-          "que_espero_ver": [
-            "El mecanizado protege con first-off, SPC y control de desgaste lo que no puede quedar delegado a la inspeccion final."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Capacidad demostrada en cotas especiales mecanizadas, rugosidad, roscas, coaxialidades o referencias funcionales si aplican."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Reglas de identificacion, segregacion y trazabilidad entre bruto, semimecanizado y mecanizado final."
-          ]
-        },
-        "P6.2": {
-          "que_pedir": [
-            "Registros de first-off, SPC, control de vida de herramienta, cambios de programa y liberacion tras cambio de setup."
-          ],
           "preguntas_de_contraste": [
-            "Como detectas si el defecto nace en el bruto o en el mecanizado antes de mezclar lotes y causas?"
-          ]
-        },
-        "P6.3": {
-          "evidencias_tipicas": [
-            "Presetting, historico de herramienta, liberacion de galgas, estudios MSA y capacidad de maquinas CNC."
-          ]
-        },
-        "P6.4": {
+            "¿Cómo detectan deriva entre cavidades antes de generar scrap visible?"
+          ],
           "red_flags": [
-            "El mecanizado corrige sintomas del bruto sin retroalimentar al proceso de fundicion o sin separar causas."
+            "Ajustes frecuentes de parámetros sin estudio de causa."
           ]
         }
       }
     },
     {
-      "id": "perfil_integrado_acabado",
-      "name": "Perfil proveedor: fundicion + mecanizado + acabado superficial",
+      "id": "welding_laser",
+      "name": "Soldadura láser/resistencia",
       "when": {
-        "process_contains": [
-          "fundicion + mecanizado + acabado superficial",
-          "fundición + mecanizado + acabado superficial",
-          "acabado superficial",
-          "recubrimiento",
-          "pintura",
-          "cataforesis",
-          "fosfatado"
-        ]
+        "process_contains": ["laser", "láser", "soldadura", "resistencia"]
       },
       "adjustments": {
-        "*": {
-          "evidencias_tipicas": [
-            "Trazabilidad del lote antes y despues de limpieza, preparacion y acabado superficial.",
-            "Evidencia de proteccion final, embalaje y prevencion de dano o contaminacion postacabado."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Parametros de limpieza, preparacion, mascaras, banos u horno, tiempos, temperaturas y criterios de rechazo del acabado superficial."
-          ],
-          "que_espero_ver": [
-            "La limpieza y el acabado no se tratan como operacion cosmetica, sino como etapa critica para funcionalidad y proteccion final."
-          ]
-        },
         "P4.3": {
           "que_pedir": [
-            "Resultados de espesor, adherencia, cobertura, curado, corrosion o proteccion final, si aplican al alcance del proveedor."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Reglas de limpieza previa, estado superficial de entrada al acabado y trazabilidad del lote acabado."
+            "Resultados de cupones de validación metalúrgica y mecánica por combinación de material.",
+            "Plan de monitorización de potencia/energía y desviación permitida."
           ]
         },
         "P6.2": {
-          "que_pedir": [
-            "Controles en linea de limpieza, contaminacion, parametros de proceso, espesor, adherencia y proteccion final."
-          ],
-          "preguntas_de_contraste": [
-            "Como evitas que una pieza correcta en mecanizado quede inservible por contaminacion o dano en acabado?"
-          ]
-        },
-        "P6.3": {
           "evidencias_tipicas": [
-            "Analiticas de bano si aplican, perfiles de horno, calibracion de medidores de espesor y control de utillajes de colgado o mascara."
-          ]
-        },
-        "P6.4": {
+            "Registro de calibración de sensores de potencia y sistema de visión de cordón."
+          ],
           "red_flags": [
-            "El acabado superficial no tiene barreras robustas frente a contaminacion, dano posterior o embalaje insuficiente.",
-            "Se mide el espesor o la adherencia, pero no se gobierna la limpieza y preparacion que los condicionan."
-          ]
-        }
-      }
-    },
-    {
-      "id": "piston_hidraulico_secundario",
-      "name": "Piston hidraulico de freno turismo",
-      "when": {
-        "product_contains": ["piston", "pistón"]
-      },
-      "adjustments": {
-        "P3.1": {
-          "que_pedir": [
-            "Requisitos de material, dureza, rugosidad, tratamiento superficial y limpieza funcional del piston."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Capacidad demostrada en diametro, acabado superficial, tratamiento y proteccion anticorrosion si aplica."
-          ]
-        },
-        "P6.2": {
-          "red_flags": [
-            "Se libera piston sin control suficientemente robusto de superficie, diametro o contaminacion."
-          ]
-        }
-      }
-    },
-    {
-      "id": "pastilla_freno_secundaria",
-      "name": "Pastilla de freno turismo",
-      "when": {
-        "product_contains": ["pastilla", "pad"]
-      },
-      "adjustments": {
-        "P3.1": {
-          "que_pedir": [
-            "Requisitos funcionales de friccion, adherencia, geometria, ruido, embalaje y trazabilidad de lote de material."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Controles de mezcla, prensado, curado, adhesivado y marcado si estan en alcance del proveedor."
-          ]
-        },
-        "P6.4": {
-          "red_flags": [
-            "La variacion del material de friccion o del curado se detecta tarde, ya en producto terminado."
+            "Parámetros de soldadura modificados sin rerun de validación mínima."
           ]
         }
       }
