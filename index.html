@@ -34,12 +34,17 @@
           <select id="subsectionSelect"></select>
         </div>
 
+        <div id="sublevelField" class="field hidden">
+          <label for="sublevelSelect">Subnivel</label>
+          <select id="sublevelSelect"></select>
+        </div>
+
         <div class="field">
           <label for="productInput">Producto (abierto)</label>
           <input
             id="productInput"
             type="text"
-            placeholder="Ej: Inversor HV, ECU motor, BMS"
+            placeholder="Ej: pinza de freno de fundicion nodular"
             autocomplete="off"
           />
         </div>
@@ -49,7 +54,7 @@
           <input
             id="processInput"
             type="text"
-            placeholder="Ej: SMT, soldadura láser, inyección, ensamblaje final"
+            placeholder="Ej: fundicion bruto, fundicion + mecanizado, fundicion + mecanizado + acabado superficial"
             autocomplete="off"
           />
         </div>
@@ -58,7 +63,8 @@
       <section class="panel result" aria-live="polite">
         <div class="result-header">
           <div>
-            <p class="label">Subapartado seleccionado</p>
+            <p class="label">Elemento seleccionado</p>
+            <p id="selectionPath" class="label"></p>
             <h2 id="guidanceTitle">Cargando...</h2>
           </div>
           <p id="guidanceId" class="badge"></p>

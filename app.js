@@ -21,8 +21,11 @@ const state = {
 const elements = {
   phaseSelect: document.querySelector("#phaseSelect"),
   subsectionSelect: document.querySelector("#subsectionSelect"),
+  sublevelField: document.querySelector("#sublevelField"),
+  sublevelSelect: document.querySelector("#sublevelSelect"),
   productInput: document.querySelector("#productInput"),
   processInput: document.querySelector("#processInput"),
+  selectionPath: document.querySelector("#selectionPath"),
   guidanceTitle: document.querySelector("#guidanceTitle"),
   guidanceId: document.querySelector("#guidanceId"),
   quePedir: document.querySelector("#quePedir"),
@@ -47,25 +50,34 @@ async function init() {
     attachEvents();
     render();
   } catch (error) {
-    console.error("Error cargando datos de auditoría:", error);
+    console.error("Error cargando datos de auditoria:", error);
     elements.guidanceTitle.textContent = "No se pudieron cargar los datos";
     elements.guidanceId.textContent = "Error";
   }
 }
 
 function attachEvents() {
-  elements.phaseSelect.addEventListener("change", () => {
+  elements.phaseSelect?.addEventListener("change", () => {
     populateSubsections();
     render();
   });
 
-  elements.subsectionSelect.addEventListener("change", render);
-  elements.productInput.addEventListener("input", render);
-  elements.processInput.addEventListener("input", render);
+  elements.subsectionSelect?.addEventListener("change", () => {
+    populateSublevels();
+    render();
+  });
+
+  elements.sublevelSelect?.addEventListener("change", render);
+  elements.productInput?.addEventListener("input", render);
+  elements.processInput?.addEventListener("input", render);
 }
 
 function populatePhases() {
   const phases = state.structure?.phases ?? [];
+  if (!elements.phaseSelect) {
+    return;
+  }
+
   elements.phaseSelect.innerHTML = phases
     .map((phase) => `<option value="${phase.id}">${phase.id} - ${phase.title}</option>`)
     .join("");
@@ -74,25 +86,55 @@ function populatePhases() {
 }
 
 function populateSubsections() {
-  const phaseId = elements.phaseSelect.value;
-  const phase = findPhase(phaseId);
+  if (!elements.phaseSelect || !elements.subsectionSelect) {
+    return;
+  }
 
-  elements.subsectionSelect.innerHTML = (phase?.subsections ?? [])
-    .map(
-      (sub) =>
-        `<option value="${sub.id}">${sub.id} - ${sub.title}</option>`
-    )
+  const phase = findPhase(elements.phaseSelect.value);
+  const subsections = phase?.subsections ?? [];
+
+  elements.subsectionSelect.innerHTML = subsections
+    .map((subsection) => `<option value="${subsection.id}">${subsection.id} - ${subsection.title}</option>`)
     .join("");
+
+  populateSublevels();
+}
+
+function populateSublevels() {
+  if (!elements.subsectionSelect || !elements.sublevelSelect || !elements.sublevelField) {
+    return;
+  }
+
+  const subsection = findSubsection(elements.subsectionSelect.value);
+  const sublevels = subsection?.sublevels ?? [];
+
+  if (!sublevels.length) {
+    elements.sublevelSelect.innerHTML = "";
+    elements.sublevelField.classList.add("hidden");
+    return;
+  }
+
+  elements.sublevelSelect.innerHTML = sublevels
+    .map((sublevel) => `<option value="${sublevel.id}">${sublevel.id} - ${sublevel.title}</option>`)
+    .join("");
+
+  elements.sublevelField.classList.remove("hidden");
 }
 
 function render() {
-  const subsectionId = elements.subsectionSelect.value;
-  const subsectionMeta = findSubsection(subsectionId);
-  const baseGuidance = state.guidance?.items?.[subsectionId] ?? null;
+  const selection = getCurrentSelection();
+  const baseGuidance = resolveBaseGuidance(selection.guidanceKeys);
 
-  if (!subsectionMeta || !baseGuidance) {
-    elements.guidanceTitle.textContent = "Subapartado sin datos";
-    elements.guidanceId.textContent = "N/A";
+  if (!selection.meta || !baseGuidance) {
+    if (elements.selectionPath) {
+      elements.selectionPath.textContent = "";
+    }
+    if (elements.guidanceTitle) {
+      elements.guidanceTitle.textContent = "Subapartado sin datos";
+    }
+    if (elements.guidanceId) {
+      elements.guidanceId.textContent = "N/A";
+    }
     REQUIRED_FIELDS.forEach((field) => renderList(field, []));
     hideAppliedRules();
     return;
@@ -103,10 +145,21 @@ function render() {
     process: elements.processInput.value
   });
 
-  const effectiveGuidance = applyRuleAdjustments(subsectionId, baseGuidance, matchedRules);
+  const effectiveGuidance = applyRuleAdjustments(
+    selection.guidanceKeys,
+    baseGuidance,
+    matchedRules
+  );
 
-  elements.guidanceTitle.textContent = subsectionMeta.title;
-  elements.guidanceId.textContent = subsectionMeta.id;
+  if (elements.selectionPath) {
+    elements.selectionPath.textContent = selection.pathLabel;
+  }
+  if (elements.guidanceTitle) {
+    elements.guidanceTitle.textContent = selection.meta.title;
+  }
+  if (elements.guidanceId) {
+    elements.guidanceId.textContent = selection.meta.id;
+  }
 
   renderList("que_pedir", effectiveGuidance.que_pedir);
   renderList("que_espero_ver", effectiveGuidance.que_espero_ver);
@@ -117,8 +170,56 @@ function render() {
   renderAppliedRules(matchedRules);
 }
 
+function getCurrentSelection() {
+  const phase = findPhase(elements.phaseSelect?.value);
+  const subsection = findSubsection(elements.subsectionSelect?.value);
+  const hasSublevels = Array.isArray(subsection?.sublevels) && subsection.sublevels.length > 0;
+  const sublevel = hasSublevels ? findSublevel(subsection, elements.sublevelSelect?.value) : null;
+  const meta = sublevel ?? subsection ?? null;
+  const guidanceKeys = buildGuidanceKeyChain(phase?.id, subsection?.id, sublevel?.id);
+  const pathParts = [phase?.id, subsection?.id, sublevel?.id].filter(Boolean);
+
+  return {
+    meta,
+    guidanceKeys,
+    pathLabel: pathParts.join(" > ")
+  };
+}
+
+function buildGuidanceKeyChain(phaseId, subsectionId, sublevelId) {
+  const keys = [];
+
+  if (phaseId) {
+    keys.push(phaseId);
+  }
+
+  if (subsectionId) {
+    keys.push(subsectionId);
+  }
+
+  if (sublevelId) {
+    keys.push(sublevelId);
+  }
+
+  return keys;
+}
+
+function resolveBaseGuidance(guidanceKeys) {
+  const merged = {};
+
+  for (const key of guidanceKeys) {
+    mergeGuidance(merged, state.guidance?.items?.[key] ?? null);
+  }
+
+  const hasContent = REQUIRED_FIELDS.some(
+    (field) => Array.isArray(merged[field]) && merged[field].length > 0
+  );
+
+  return hasContent ? merged : null;
+}
+
 function findPhase(phaseId) {
-  return state.structure?.phases?.find((phase) => phase.id === phaseId);
+  return state.structure?.phases?.find((phase) => phase.id === phaseId) ?? null;
 }
 
 function findSubsection(subsectionId) {
@@ -130,6 +231,10 @@ function findSubsection(subsectionId) {
   }
 
   return null;
+}
+
+function findSublevel(subsection, sublevelId) {
+  return subsection?.sublevels?.find((sublevel) => sublevel.id === sublevelId) ?? subsection?.sublevels?.[0] ?? null;
 }
 
 function normalizeText(value) {
@@ -156,22 +261,19 @@ function findMatchingRules(context) {
     const productTokens = rule.when?.product_contains ?? [];
     const processTokens = rule.when?.process_contains ?? [];
 
-    const productOk = matchesCriteria(productText, productTokens);
-    const processOk = matchesCriteria(processText, processTokens);
-
-    return productOk && processOk;
+    return matchesCriteria(productText, productTokens) && matchesCriteria(processText, processTokens);
   });
 }
 
-function applyRuleAdjustments(subsectionId, baseGuidance, matchedRules) {
+function applyRuleAdjustments(guidanceKeys, baseGuidance, matchedRules) {
   const effective = structuredClone(baseGuidance);
 
   for (const rule of matchedRules) {
-    const specificAdjustment = rule.adjustments?.[subsectionId] ?? null;
-    const globalAdjustment = rule.adjustments?.["*"] ?? null;
+    mergeGuidance(effective, rule.adjustments?.["*"] ?? null);
 
-    mergeGuidance(effective, globalAdjustment);
-    mergeGuidance(effective, specificAdjustment);
+    for (const key of guidanceKeys) {
+      mergeGuidance(effective, rule.adjustments?.[key] ?? null);
+    }
   }
 
   return effective;
@@ -206,8 +308,12 @@ function renderList(field, items) {
   const container = elementByField[field];
   const listItems = Array.isArray(items) ? items : [];
 
+  if (!container) {
+    return;
+  }
+
   if (!listItems.length) {
-    container.innerHTML = "<li>Sin contenido para este subapartado.</li>";
+    container.innerHTML = "<li>Sin contenido para este nivel de auditoria.</li>";
     return;
   }
 
@@ -215,6 +321,10 @@ function renderList(field, items) {
 }
 
 function renderAppliedRules(rules) {
+  if (!elements.appliedRules) {
+    return;
+  }
+
   if (!rules.length) {
     hideAppliedRules();
     return;
@@ -226,6 +336,10 @@ function renderAppliedRules(rules) {
 }
 
 function hideAppliedRules() {
+  if (!elements.appliedRules) {
+    return;
+  }
+
   elements.appliedRules.textContent = "";
   elements.appliedRules.classList.add("hidden");
 }
