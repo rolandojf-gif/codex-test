@@ -1,0 +1,545 @@
+{
+  "version": "1.0.0",
+  "items": {
+    "P2.1": {
+      "id": "P2.1",
+      "titulo": "Organización y responsabilidades del proyecto",
+      "que_pedir": [
+        "Organigrama del proyecto con roles clave (PM, calidad, ingeniería, compras, logística).",
+        "Matriz RACI vigente para hitos y entregables.",
+        "Evidencia de nombramiento formal de responsables de APQP/industrialización."
+      ],
+      "que_espero_ver": [
+        "Responsabilidades sin solapamientos críticos.",
+        "Sustituciones definidas para funciones críticas.",
+        "Escalación clara hacia dirección ante riesgos de plazo/calidad."
+      ],
+      "evidencias_tipicas": [
+        "Actas de kick-off y revisiones de proyecto.",
+        "RACI en control documental.",
+        "Listado de competencias y autorizaciones por rol."
+      ],
+      "preguntas_de_contraste": [
+        "¿Quién decide una desviación temporal de control y con qué criterio?",
+        "¿Qué rol es dueño del cierre de acciones abiertas por cliente?"
+      ],
+      "red_flags": [
+        "Roles críticos vacantes o compartidos sin límites.",
+        "No existe evidencia de escalación cuando hay desvíos repetidos."
+      ]
+    },
+    "P2.2": {
+      "id": "P2.2",
+      "titulo": "Planificación de proyecto y recursos",
+      "que_pedir": [
+        "Plan maestro del proyecto con hitos de desarrollo, validación y SOP.",
+        "Plan de recursos por función y turno en fases críticas.",
+        "Lista de riesgos de capacidad para equipos, útiles y personal."
+      ],
+      "que_espero_ver": [
+        "Hitos coherentes con dependencias reales entre actividades.",
+        "Capacidad de reacción ante retrasos (planes de contingencia).",
+        "Consistencia entre planificación de proyecto y planificación de planta."
+      ],
+      "evidencias_tipicas": [
+        "Gantt en revisión periódica.",
+        "Minutas de seguimiento con acciones y responsables.",
+        "Plan de inversiones y estado de liberación de medios."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué hito está hoy en mayor riesgo y qué acción preventiva hay?",
+        "¿Cómo se aseguró la disponibilidad de personal en ramp-up?"
+      ],
+      "red_flags": [
+        "Plan desactualizado respecto a la realidad de planta.",
+        "No hay contingencia para cuello de botella ya identificado."
+      ]
+    },
+    "P2.3": {
+      "id": "P2.3",
+      "titulo": "Gestión de riesgos del proyecto",
+      "que_pedir": [
+        "Registro de riesgos del proyecto con evaluación periódica.",
+        "Criterios de severidad/probabilidad y responsables de mitigación.",
+        "Seguimiento de riesgos transferidos a fases P4/P6."
+      ],
+      "que_espero_ver": [
+        "Riesgos vivos con acciones en plazo.",
+        "Conexión entre riesgos y decisiones de validación/liberación.",
+        "Escalación objetiva de riesgos rojos."
+      ],
+      "evidencias_tipicas": [
+        "Risk register con fechas y dueños.",
+        "Reportes de comité de proyecto.",
+        "Indicadores de madurez del proyecto."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué riesgo empeoró en el último mes y por qué?",
+        "¿Qué condición bloquearía SOP hoy?"
+      ],
+      "red_flags": [
+        "Riesgos en estado verde sin evidencia de reducción real.",
+        "Acciones vencidas reiteradamente sin escalación."
+      ]
+    },
+    "P3.1": {
+      "id": "P3.1",
+      "titulo": "Requisitos del cliente y legales",
+      "que_pedir": [
+        "Listado maestro de requisitos cliente, normativos y reglamentarios.",
+        "Matriz de trazabilidad requisito-especificación-verificación.",
+        "Registro de cambios de requisitos con impacto analizado."
+      ],
+      "que_espero_ver": [
+        "Trazabilidad bidireccional desde requisito hasta evidencia de validación.",
+        "Control de versiones robusto de especificaciones.",
+        "Cobertura de requisitos especiales de seguridad/función."
+      ],
+      "evidencias_tipicas": [
+        "CSR del cliente y análisis interno.",
+        "Matrices de compliance.",
+        "Actas de revisión técnica multidisciplinar."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cómo se previene fabricar con una revisión obsoleta?",
+        "¿Qué requisito crítico no estaba claro y cómo se resolvió?"
+      ],
+      "red_flags": [
+        "Requisitos no desglosados al nivel de proceso.",
+        "Cambios de requisito aplicados parcialmente."
+      ]
+    },
+    "P3.2": {
+      "id": "P3.2",
+      "titulo": "Factibilidad y revisión técnica",
+      "que_pedir": [
+        "Estudio de factibilidad técnico-logística-económica.",
+        "Resultado de revisiones de diseño para manufacturabilidad.",
+        "Listado de supuestos críticos validados o pendientes."
+      ],
+      "que_espero_ver": [
+        "Decisiones de factibilidad con datos y responsables.",
+        "Riesgos de manufactura abordados antes de industrializar.",
+        "Alineación entre ingeniería de producto y proceso."
+      ],
+      "evidencias_tipicas": [
+        "DFM/DFA checklists.",
+        "Actas de revisión de factibilidad.",
+        "Planes de acciones por brecha técnica."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué limitación de proceso fue aceptada por cliente y por qué?",
+        "¿Qué hipótesis de factibilidad sigue sin cierre?"
+      ],
+      "red_flags": [
+        "Aprobaciones sin soporte objetivo.",
+        "Dependencia excesiva de retrabajos para cumplir especificación."
+      ]
+    },
+    "P3.3": {
+      "id": "P3.3",
+      "titulo": "Plan de aseguramiento para producto/proceso",
+      "que_pedir": [
+        "Plan APQP o equivalente con entregables por fase.",
+        "Plan de validación de producto y proceso.",
+        "Plan de control preliminar y estrategia de capacidad."
+      ],
+      "que_espero_ver": [
+        "Cobertura explícita de características especiales.",
+        "Criterios de aceptación definidos antes de pruebas.",
+        "Consistencia entre plan de validación y control en serie."
+      ],
+      "evidencias_tipicas": [
+        "Plan de control pre-lanzamiento.",
+        "DVP&R/PVP&R o documentos equivalentes.",
+        "Cronograma de corridas piloto."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué característica especial no tiene método de control robusto?",
+        "¿Qué validación se recortó por tiempo y cómo se compensó?"
+      ],
+      "red_flags": [
+        "Plan de control genérico sin vínculo al riesgo real.",
+        "Pruebas repetidas sin análisis de causa."
+      ]
+    },
+    "P4.1": {
+      "id": "P4.1",
+      "titulo": "Diseño y validación del producto",
+      "que_pedir": [
+        "Resultados de verificaciones y validaciones de diseño.",
+        "Estado de acciones de AMFE de diseño.",
+        "Evidencia de aprobación de cambios de diseño."
+      ],
+      "que_espero_ver": [
+        "Ensayos trazables a requisitos críticos.",
+        "Acciones AMFE cerradas antes de liberar diseño.",
+        "No conformidades de validación con plan de contención."
+      ],
+      "evidencias_tipicas": [
+        "Informes de ensayo y homologación.",
+        "DFMEA con historial de revisiones.",
+        "Registros de Engineering Change Request."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué ensayo falló y qué cambio de diseño se aplicó?",
+        "¿Cómo se asegura que la última revisión llegue al taller?"
+      ],
+      "red_flags": [
+        "Validaciones incompletas sin aceptación formal de riesgo.",
+        "Cambios de diseño sin evaluar impacto en proceso."
+      ]
+    },
+    "P4.2": {
+      "id": "P4.2",
+      "titulo": "Diseño y validación del proceso",
+      "que_pedir": [
+        "Diagrama de flujo de proceso actualizado.",
+        "PFMEA y plan de control alineados al flujo real.",
+        "Estudios de capacidad inicial (máquinas y proceso)."
+      ],
+      "que_espero_ver": [
+        "Controles preventivos sobre modos de fallo de alto riesgo.",
+        "Parámetros críticos definidos con ventana operativa.",
+        "Coherencia entre PFMEA, instrucciones y poka-yokes."
+      ],
+      "evidencias_tipicas": [
+        "PFMEA con acciones priorizadas.",
+        "Run@Rate o pruebas de capacidad de línea.",
+        "Instrucciones de trabajo liberadas y vigentes."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué parámetro crítico se controla al 100% y por qué?",
+        "¿Dónde está el principal punto de detección tardía?"
+      ],
+      "red_flags": [
+        "PFMEA sin actualizar tras cambios de proceso.",
+        "Capacidad no demostrada para volumen objetivo."
+      ]
+    },
+    "P4.3": {
+      "id": "P4.3",
+      "titulo": "Muestreo, homologación y liberación",
+      "que_pedir": [
+        "Plan y resultados de corridas piloto/pre-serie.",
+        "Documentación de homologación (PPAP/PPF u homologable).",
+        "Criterios de liberación interna y de cliente."
+      ],
+      "que_espero_ver": [
+        "Evidencia completa de conformidad antes de SOP.",
+        "Desviaciones abiertas con plazo y responsable.",
+        "Decisión de liberación basada en datos de proceso reales."
+      ],
+      "evidencias_tipicas": [
+        "Resultados dimensionales y funcionales de lote piloto.",
+        "PSW o equivalente.",
+        "Plan de contención de lanzamiento seguro."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué condición impediría liberar hoy la referencia?",
+        "¿Qué desviaciones aceptó cliente y hasta cuándo?"
+      ],
+      "red_flags": [
+        "Liberaciones por calendario y no por madurez.",
+        "Tasa de rechazo de piloto sin plan robusto de reducción."
+      ]
+    },
+    "P4.4": {
+      "id": "P4.4",
+      "titulo": "Gestión de cambios en desarrollo",
+      "que_pedir": [
+        "Procedimiento de gestión de cambios con evaluación de riesgo.",
+        "Lista de cambios abiertos, aprobados y rechazados.",
+        "Evidencia de comunicación transversal de cambios."
+      ],
+      "que_espero_ver": [
+        "Flujo de aprobación formal antes de implementar cambios.",
+        "Revalidación proporcional al impacto del cambio.",
+        "Trazabilidad histórica de qué cambió, cuándo y por quién."
+      ],
+      "evidencias_tipicas": [
+        "ECR/ECO y actas de comité de cambios.",
+        "Análisis de impacto en calidad/coste/plazo.",
+        "Registros de actualización documental."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuál fue el último cambio urgente y cómo se controló el riesgo?",
+        "¿Qué cambio pendiente preocupa más al equipo de planta?"
+      ],
+      "red_flags": [
+        "Cambios implementados sin liberar documentos asociados.",
+        "No existe verificación post-cambio."
+      ]
+    },
+    "P5.1": {
+      "id": "P5.1",
+      "titulo": "Selección y evaluación de proveedores",
+      "que_pedir": [
+        "Criterios de homologación de proveedores por criticidad.",
+        "Resultados de auditorías y evaluaciones iniciales.",
+        "Plan de mitigación para proveedores de alto riesgo."
+      ],
+      "que_espero_ver": [
+        "Proceso de selección basado en capacidad real, no solo coste.",
+        "Escalado de requisitos según criticidad del componente.",
+        "Seguimiento activo de proveedores nuevos."
+      ],
+      "evidencias_tipicas": [
+        "Scorecards de proveedor.",
+        "Informes de auditoría de proceso en proveedor.",
+        "Contratos con requisitos de calidad claros."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué proveedor crítico no pasaría hoy una reevaluación?",
+        "¿Cómo validaron capacidad antes del primer pedido en serie?"
+      ],
+      "red_flags": [
+        "Homologación documental sin visita técnica.",
+        "Sin plan alternativo para mono-fuente crítica."
+      ]
+    },
+    "P5.2": {
+      "id": "P5.2",
+      "titulo": "Aseguramiento de calidad de suministro",
+      "que_pedir": [
+        "Plan de control de recepción y gestión de lotes entrantes.",
+        "Indicadores de desempeño proveedor (PPM, OTD, incidencias).",
+        "Plan de desarrollo para proveedores con desviaciones crónicas."
+      ],
+      "que_espero_ver": [
+        "Controles de entrada ajustados al riesgo real del componente.",
+        "Respuesta rápida ante degradación de desempeño proveedor.",
+        "Uso disciplinado de 8D o método equivalente."
+      ],
+      "evidencias_tipicas": [
+        "Registros de recepción y liberación de material.",
+        "Panel de KPI por proveedor.",
+        "8D cerrados con verificación de eficacia."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué proveedor empeoró en PPM y qué acción se lanzó?",
+        "¿Cuándo se decidió pasar de inspección reducida a reforzada?"
+      ],
+      "red_flags": [
+        "Inspección al 100% sostenida sin plan de salida.",
+        "Reincidencia de defectos sin bloqueo estructural."
+      ]
+    },
+    "P5.3": {
+      "id": "P5.3",
+      "titulo": "Escalación y seguimiento con proveedores",
+      "que_pedir": [
+        "Matriz de escalación por severidad e impacto cliente.",
+        "Listado de acciones abiertas con proveedores críticos.",
+        "Revisiones periódicas de negocio-calidad con proveedores."
+      ],
+      "que_espero_ver": [
+        "Escalación temprana antes de afectar a cliente final.",
+        "Responsables claros en ambos lados para cada acción.",
+        "Cierre efectivo y documentado de compromisos."
+      ],
+      "evidencias_tipicas": [
+        "Actas de QBR o reuniones de escalación.",
+        "Dashboards de riesgos de suministro.",
+        "Planes de contingencia logísticos/técnicos."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué incidente se evitó por escalación anticipada?",
+        "¿Qué acción vencida con proveedor sigue sin dueño real?"
+      ],
+      "red_flags": [
+        "Escalación reactiva después de impacto a cliente.",
+        "Acciones repetidas sin evidencia de eficacia."
+      ]
+    },
+    "P6.1": {
+      "id": "P6.1",
+      "titulo": "Preparación y arranque de producción",
+      "que_pedir": [
+        "Checklist de readiness de línea antes de SOP.",
+        "Estado de cualificación de operarios y técnicos.",
+        "Plan de contingencia para arranque y ramp-up."
+      ],
+      "que_espero_ver": [
+        "Recursos críticos disponibles y verificados.",
+        "Formación cerrada en puestos de alto riesgo.",
+        "Arranque controlado con monitoreo reforzado."
+      ],
+      "evidencias_tipicas": [
+        "Registros de formación y certificación de puesto.",
+        "Liberación de útiles, gages y programas de máquina.",
+        "Plan de producción de las primeras semanas."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué punto de la línea aún depende de soporte experto externo?",
+        "¿Cómo se decide aumentar ritmo sin perder control?"
+      ],
+      "red_flags": [
+        "SOP con pendientes críticos abiertos sin contención.",
+        "Operarios sin certificación en operaciones especiales."
+      ]
+    },
+    "P6.2": {
+      "id": "P6.2",
+      "titulo": "Cumplimiento de instrucciones y control en línea",
+      "que_pedir": [
+        "Instrucciones de trabajo vigentes en puesto.",
+        "Plan de reacción ante fuera de control.",
+        "Registros de control de proceso y producto en línea."
+      ],
+      "que_espero_ver": [
+        "Ejecución estandarizada entre turnos.",
+        "Reacción inmediata y contenida ante desviaciones.",
+        "Trazabilidad de lote/serie consistente."
+      ],
+      "evidencias_tipicas": [
+        "Controles SPC, check sheets y trazabilidad MES.",
+        "Instrucciones visuales por estación.",
+        "Registros de paro por calidad."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué hace el operador si un control crítico falla?",
+        "¿Cómo se evita que material no conforme avance de estación?"
+      ],
+      "red_flags": [
+        "Instrucciones diferentes entre estación y sistema.",
+        "Registros incompletos en turnos nocturnos o fines de semana."
+      ]
+    },
+    "P6.3": {
+      "id": "P6.3",
+      "titulo": "Mantenimiento, capacidad y estabilidad del proceso",
+      "que_pedir": [
+        "Plan TPM/preventivo de equipos críticos.",
+        "Indicadores de disponibilidad, rendimiento y calidad.",
+        "Estudios de capacidad periódicos para características especiales."
+      ],
+      "que_espero_ver": [
+        "Mantenimiento preventivo ejecutado en plazo.",
+        "Capacidad mantenida tras cambios de lote/turno.",
+        "Acciones sistemáticas ante degradación de OEE/Cpk."
+      ],
+      "evidencias_tipicas": [
+        "Histórico de averías y MTBF/MTTR.",
+        "Informes de capacidad y cartas de control.",
+        "Plan de repuestos críticos."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué equipo crítico genera más variación y cómo se controla?",
+        "¿Qué mantenimiento preventivo se retrasó y qué riesgo asumieron?"
+      ],
+      "red_flags": [
+        "Paradas repetitivas sin análisis de causa raíz.",
+        "Capacidad aceptada con excepciones permanentes."
+      ]
+    },
+    "P6.4": {
+      "id": "P6.4",
+      "titulo": "Gestión de no conformidades internas",
+      "que_pedir": [
+        "Proceso de segregación, identificación y disposición de NC.",
+        "Indicadores de scrap, retrabajo y escapes internos.",
+        "Registro de acciones correctivas con verificación de eficacia."
+      ],
+      "que_espero_ver": [
+        "Contención inmediata con trazabilidad de material afectado.",
+        "Uso disciplinado de análisis causa raíz.",
+        "Reducción sostenida de recurrencias."
+      ],
+      "evidencias_tipicas": [
+        "Etiquetado y zonas de cuarentena.",
+        "Informes 8D/A3 internos.",
+        "Panel de defectos por estación/turno."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuál es el defecto recurrente número 1 y qué barrera falló?",
+        "¿Qué evidencia hay de que la acción correctiva fue eficaz?"
+      ],
+      "red_flags": [
+        "Material dudoso fuera de área controlada.",
+        "Cierres administrativos de acciones sin validación en piso."
+      ]
+    },
+    "P7.1": {
+      "id": "P7.1",
+      "titulo": "Gestión de reclamaciones de cliente",
+      "que_pedir": [
+        "Flujo de gestión de quejas y tiempos objetivo de respuesta.",
+        "Histórico de reclamaciones por cliente/referencia.",
+        "Plan de contención inmediata frente a incidentes externos."
+      ],
+      "que_espero_ver": [
+        "Priorización por impacto seguridad/cliente.",
+        "Comunicación estructurada y trazable con cliente.",
+        "Containment efectivo y medible en corto plazo."
+      ],
+      "evidencias_tipicas": [
+        "Portales de cliente con estatus actualizado.",
+        "Informes de contención en 24h/48h.",
+        "KPI de tiempo de cierre de reclamaciones."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué reclamación abierta tiene más riesgo reputacional?",
+        "¿Cómo se verifica que la contención realmente cubre todo el stock?"
+      ],
+      "red_flags": [
+        "Respuestas tardías recurrentes al cliente.",
+        "Contenciones que dependen de inspección manual indefinida."
+      ]
+    },
+    "P7.2": {
+      "id": "P7.2",
+      "titulo": "Análisis de campo y acciones correctivas",
+      "que_pedir": [
+        "Método estándar para análisis de piezas de campo.",
+        "Trazabilidad desde síntoma de campo a causa raíz.",
+        "Plan de acción correctiva y preventiva validado."
+      ],
+      "que_espero_ver": [
+        "Análisis técnico con datos objetivos y no suposiciones.",
+        "Vínculo entre acciones y eliminación de causa raíz.",
+        "Seguimiento de eficacia en garantía/campo."
+      ],
+      "evidencias_tipicas": [
+        "Reportes FRACAS o equivalente.",
+        "Resultados de laboratorio y teardown.",
+        "Evidencia de validación post-corrección."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué caso de campo tardó más en cerrarse y por qué?",
+        "¿Qué dato descartó una hipótesis inicial equivocada?"
+      ],
+      "red_flags": [
+        "Acciones correctivas sin validación de eficacia.",
+        "Cierre por agotamiento de plazo y no por resolución técnica."
+      ]
+    },
+    "P7.3": {
+      "id": "P7.3",
+      "titulo": "Lecciones aprendidas y prevención",
+      "que_pedir": [
+        "Proceso de captura de lecciones aprendidas por proyecto.",
+        "Evidencia de transferencia de lecciones a nuevos programas.",
+        "Indicadores de repetición de fallas históricas."
+      ],
+      "que_espero_ver": [
+        "Lecciones accionables, no solo descriptivas.",
+        "Integración real en AMFE, plan de control e instrucciones.",
+        "Disminución de repetición de fallos entre proyectos."
+      ],
+      "evidencias_tipicas": [
+        "Base de conocimiento de calidad/proceso.",
+        "Revisiones de arranque con lecciones heredadas.",
+        "Checklist preventivo actualizado por experiencia previa."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué fallo histórico se evitó en el programa actual?",
+        "¿Qué aprendizaje relevante no llegó a planta a tiempo?"
+      ],
+      "red_flags": [
+        "Lecciones registradas pero sin dueño ni plazo.",
+        "Mismo modo de fallo reaparece en nuevos lanzamientos."
+      ]
+    }
+  }
+}

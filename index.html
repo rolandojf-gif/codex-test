@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copiloto Auditoría VDA 6.3 (P2-P7)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="hero">
+        <p class="eyebrow">Herramienta estática para auditoría en planta</p>
+        <h1>Copiloto de Auditoría VDA 6.3 (P2-P7)</h1>
+        <p>
+          Selecciona fase y subapartado, define el producto y el proceso/tecnología,
+          y obtén una guía clara de qué pedir y qué evidencia esperar.
+        </p>
+      </header>
+
+      <section class="panel controls" aria-label="Controles de auditoría">
+        <div class="field">
+          <label for="phaseSelect">Fase</label>
+          <select id="phaseSelect"></select>
+        </div>
+
+        <div class="field">
+          <label for="subsectionSelect">Subapartado</label>
+          <select id="subsectionSelect"></select>
+        </div>
+
+        <div class="field">
+          <label for="productInput">Producto (abierto)</label>
+          <input
+            id="productInput"
+            type="text"
+            placeholder="Ej: Inversor HV, ECU motor, BMS"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="field">
+          <label for="processInput">Proceso o tecnología (abierto)</label>
+          <input
+            id="processInput"
+            type="text"
+            placeholder="Ej: SMT, soldadura láser, inyección, ensamblaje final"
+            autocomplete="off"
+          />
+        </div>
+      </section>
+
+      <section class="panel result" aria-live="polite">
+        <div class="result-header">
+          <div>
+            <p class="label">Subapartado seleccionado</p>
+            <h2 id="guidanceTitle">Cargando...</h2>
+          </div>
+          <p id="guidanceId" class="badge"></p>
+        </div>
+
+        <div id="appliedRules" class="applied-rules hidden"></div>
+
+        <article class="card">
+          <h3>Qué pedir al auditado</h3>
+          <ul id="quePedir"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Qué espero ver</h3>
+          <ul id="queEsperoVer"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Evidencias típicas</h3>
+          <ul id="evidenciasTipicas"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Preguntas de contraste</h3>
+          <ul id="preguntasContraste"></ul>
+        </article>
+
+        <article class="card warning">
+          <h3>Red flags</h3>
+          <ul id="redFlags"></ul>
+        </article>
+      </section>
+
+      <footer class="footer-note">
+        <p>
+          Primera versión enfocada a uso real en auditoría: sin scoring, sin hallazgos
+          y sin backend.
+        </p>
+      </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

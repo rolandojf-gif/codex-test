@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "electronics_smt",
+      "name": "Electrónica con proceso SMT/reflow",
+      "when": {
+        "product_contains": ["ecu", "bms", "inverter", "inversor", "electr"],
+        "process_contains": ["smt", "reflow", "aoi", "spi"]
+      },
+      "adjustments": {
+        "*": {
+          "evidencias_tipicas": [
+            "Trazabilidad de bobinas/lotes de componentes electrónicos y perfil térmico por lote.",
+            "Alarmas y bloqueos de AOI/SPI con registro de reacción."
+          ],
+          "red_flags": [
+            "Uso de perfil térmico fuera de ventana sin aprobación formal.",
+            "Bypass de alarmas de AOI/SPI sin análisis de riesgo."
+          ]
+        },
+        "P6.2": {
+          "que_pedir": [
+            "Límites de pasta, offsets y criterios de paro por deriva en SPI/AOI.",
+            "Plan de reacción ante defectos de soldadura tipo tombstone, puente o voiding."
+          ]
+        }
+      }
+    },
+    {
+      "id": "injection_molding",
+      "name": "Piezas plásticas por inyección",
+      "when": {
+        "process_contains": ["inyeccion", "inyección", "moldeo", "molding"]
+      },
+      "adjustments": {
+        "P4.2": {
+          "que_pedir": [
+            "Ventanas de proceso por cavidad (temperatura, presión, tiempo de sostenimiento).",
+            "Estrategia de validación tras cambio de resina o colorante."
+          ],
+          "que_espero_ver": [
+            "Control de secado de material higroscópico con límites definidos.",
+            "Separación clara de parámetros maestros y ajustes de turno."
+          ]
+        },
+        "P6.3": {
+          "preguntas_de_contraste": [
+            "¿Cómo detectan deriva entre cavidades antes de generar scrap visible?"
+          ],
+          "red_flags": [
+            "Ajustes frecuentes de parámetros sin estudio de causa."
+          ]
+        }
+      }
+    },
+    {
+      "id": "welding_laser",
+      "name": "Soldadura láser/resistencia",
+      "when": {
+        "process_contains": ["laser", "láser", "soldadura", "resistencia"]
+      },
+      "adjustments": {
+        "P4.3": {
+          "que_pedir": [
+            "Resultados de cupones de validación metalúrgica y mecánica por combinación de material.",
+            "Plan de monitorización de potencia/energía y desviación permitida."
+          ]
+        },
+        "P6.2": {
+          "evidencias_tipicas": [
+            "Registro de calibración de sensores de potencia y sistema de visión de cordón."
+          ],
+          "red_flags": [
+            "Parámetros de soldadura modificados sin rerun de validación mínima."
+          ]
+        }
+      }
+    }
+  ]
+}

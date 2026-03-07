@@ -1,2 +1,0 @@
-def saludo():
-    return "hola"

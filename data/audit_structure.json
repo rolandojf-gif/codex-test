@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "scope": "VDA 6.3 P2-P7",
+  "phases": [
+    {
+      "id": "P2",
+      "title": "Gestión del proyecto",
+      "subsections": [
+        { "id": "P2.1", "title": "Organización y responsabilidades del proyecto" },
+        { "id": "P2.2", "title": "Planificación de proyecto y recursos" },
+        { "id": "P2.3", "title": "Gestión de riesgos del proyecto" }
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "Planificación del desarrollo de producto y proceso",
+      "subsections": [
+        { "id": "P3.1", "title": "Requisitos del cliente y legales" },
+        { "id": "P3.2", "title": "Factibilidad y revisión técnica" },
+        { "id": "P3.3", "title": "Plan de aseguramiento para producto/proceso" }
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "Implementación del desarrollo de producto y proceso",
+      "subsections": [
+        { "id": "P4.1", "title": "Diseño y validación del producto" },
+        { "id": "P4.2", "title": "Diseño y validación del proceso" },
+        { "id": "P4.3", "title": "Muestreo, homologación y liberación" },
+        { "id": "P4.4", "title": "Gestión de cambios en desarrollo" }
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "Gestión de proveedores",
+      "subsections": [
+        { "id": "P5.1", "title": "Selección y evaluación de proveedores" },
+        { "id": "P5.2", "title": "Aseguramiento de calidad de suministro" },
+        { "id": "P5.3", "title": "Escalación y seguimiento con proveedores" }
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "Análisis del proceso de producción",
+      "subsections": [
+        { "id": "P6.1", "title": "Preparación y arranque de producción" },
+        { "id": "P6.2", "title": "Cumplimiento de instrucciones y control en línea" },
+        { "id": "P6.3", "title": "Mantenimiento, capacidad y estabilidad del proceso" },
+        { "id": "P6.4", "title": "Gestión de no conformidades internas" }
+      ]
+    },
+    {
+      "id": "P7",
+      "title": "Atención al cliente y servicio",
+      "subsections": [
+        { "id": "P7.1", "title": "Gestión de reclamaciones de cliente" },
+        { "id": "P7.2", "title": "Análisis de campo y acciones correctivas" },
+        { "id": "P7.3", "title": "Lecciones aprendidas y prevención" }
+      ]
+    }
+  ]
+}
