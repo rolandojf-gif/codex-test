@@ -182,12 +182,20 @@ function onSidebarClick(e) {
   if (subBtn) {
     const hasLvls = subBtn.dataset.hasLvls === "true";
     if (hasLvls) {
-      // Expandir/contraer los subniveles sin navegar
+      // Expandir/contraer los subniveles y auto-seleccionar el primero
       const lvlList = document.querySelector(`#lvls-${subBtn.dataset.sub}`);
       const arrow   = subBtn.querySelector(".nav-sub-arrow");
       if (lvlList) {
+        const isOpening = !lvlList.classList.contains("open");
         lvlList.classList.toggle("open");
         arrow?.classList.toggle("open");
+        // Al abrir, seleccionar el primer subnivel automáticamente
+        if (isOpening) {
+          const firstLvl = lvlList.querySelector(".nav-lvl-btn");
+          if (firstLvl) {
+            selectItem(firstLvl.dataset.phase, firstLvl.dataset.sub, firstLvl.dataset.lvl);
+          }
+        }
       }
     } else {
       selectItem(subBtn.dataset.phase, subBtn.dataset.sub, null);
