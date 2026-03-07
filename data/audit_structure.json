@@ -1,61 +1,136 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scope": "VDA 6.3 P2-P7",
   "phases": [
     {
       "id": "P2",
-      "title": "Gestión del proyecto",
+      "title": "Gestion del proyecto",
       "subsections": [
-        { "id": "P2.1", "title": "Organización y responsabilidades del proyecto" },
-        { "id": "P2.2", "title": "Planificación de proyecto y recursos" },
-        { "id": "P2.3", "title": "Gestión de riesgos del proyecto" }
+        { "id": "P2.1", "title": "Estrategia y organizacion del proyecto" },
+        { "id": "P2.2", "title": "Recursos del proyecto" },
+        { "id": "P2.3", "title": "Plan de proyecto acordado con cliente" },
+        { "id": "P2.4", "title": "Planificacion y seguimiento de actividades de calidad" },
+        { "id": "P2.5", "title": "Integracion de compras en la planificacion del proyecto" },
+        { "id": "P2.6", "title": "Gestion de cambios dentro del proyecto" }
       ]
     },
     {
       "id": "P3",
-      "title": "Planificación del desarrollo de producto y proceso",
+      "title": "Planificacion del desarrollo de producto y proceso",
       "subsections": [
-        { "id": "P3.1", "title": "Requisitos del cliente y legales" },
-        { "id": "P3.2", "title": "Factibilidad y revisión técnica" },
-        { "id": "P3.3", "title": "Plan de aseguramiento para producto/proceso" }
+        { "id": "P3.1", "title": "Requisitos especificos de producto y proceso" },
+        { "id": "P3.2", "title": "Factibilidad" },
+        { "id": "P3.3", "title": "Planificacion detallada de producto y proceso" },
+        { "id": "P3.4", "title": "Planificacion y seguimiento de compras" },
+        { "id": "P3.5", "title": "Recursos para desarrollo de producto y proceso" },
+        { "id": "P3.6", "title": "Planificacion de atencion al cliente y analisis de fallos de campo" }
       ]
     },
     {
       "id": "P4",
-      "title": "Implementación del desarrollo de producto y proceso",
+      "title": "Implementacion del desarrollo de producto y proceso",
       "subsections": [
-        { "id": "P4.1", "title": "Diseño y validación del producto" },
-        { "id": "P4.2", "title": "Diseño y validación del proceso" },
-        { "id": "P4.3", "title": "Muestreo, homologación y liberación" },
-        { "id": "P4.4", "title": "Gestión de cambios en desarrollo" }
+        { "id": "P4.1", "title": "Implantacion de acciones de desarrollo" },
+        { "id": "P4.2", "title": "Recursos humanos para la implementacion" },
+        { "id": "P4.3", "title": "Recursos materiales e inmateriales para la implementacion" },
+        { "id": "P4.4", "title": "Pruebas de capacidad y liberaciones" },
+        { "id": "P4.5", "title": "Implantacion de actividades de compras" },
+        { "id": "P4.6", "title": "Derivacion e implantacion de instrucciones de fabricacion e inspeccion" },
+        { "id": "P4.7", "title": "Prueba de capacidad bajo condiciones de serie" },
+        { "id": "P4.8", "title": "Implantacion de procesos de atencion al cliente y analisis de fallos" },
+        { "id": "P4.9", "title": "Transferencia controlada de desarrollo a serie" }
       ]
     },
     {
       "id": "P5",
-      "title": "Gestión de proveedores",
+      "title": "Gestion de proveedores",
       "subsections": [
-        { "id": "P5.1", "title": "Selección y evaluación de proveedores" },
-        { "id": "P5.2", "title": "Aseguramiento de calidad de suministro" },
-        { "id": "P5.3", "title": "Escalación y seguimiento con proveedores" }
+        { "id": "P5.1", "title": "Uso de proveedores aprobados y capaces" },
+        { "id": "P5.2", "title": "Despliegue de requisitos de cliente en la cadena de suministro" },
+        { "id": "P5.3", "title": "Objetivos y seguimiento del desempeno proveedor" },
+        { "id": "P5.4", "title": "Liberaciones de productos y servicios comprados" },
+        { "id": "P5.5", "title": "Calidad acordada de productos y servicios comprados" },
+        { "id": "P5.6", "title": "Recepcion y almacenamiento del material entrante" },
+        { "id": "P5.7", "title": "Cualificacion y responsabilidades del personal" }
       ]
     },
     {
       "id": "P6",
-      "title": "Análisis del proceso de producción",
+      "title": "Analisis del proceso de produccion",
       "subsections": [
-        { "id": "P6.1", "title": "Preparación y arranque de producción" },
-        { "id": "P6.2", "title": "Cumplimiento de instrucciones y control en línea" },
-        { "id": "P6.3", "title": "Mantenimiento, capacidad y estabilidad del proceso" },
-        { "id": "P6.4", "title": "Gestión de no conformidades internas" }
+        {
+          "id": "P6.1",
+          "title": "Entradas del proceso",
+          "sublevels": [
+            { "id": "P6.1.1", "title": "Transferencia del proyecto a serie y arranque fiable" },
+            { "id": "P6.1.2", "title": "Cantidades necesarias en lugar y momento correctos" },
+            { "id": "P6.1.3", "title": "Almacenamiento y transporte adecuados de materiales" },
+            { "id": "P6.1.4", "title": "Etiquetas, registros y liberaciones correctamente asignados" },
+            { "id": "P6.1.5", "title": "Cambios de producto o proceso en serie trazados y documentados" }
+          ]
+        },
+        {
+          "id": "P6.2",
+          "title": "Control de los procesos de produccion",
+          "sublevels": [
+            { "id": "P6.2.1", "title": "Plan de control completo e implantado" },
+            { "id": "P6.2.2", "title": "Procesos de produccion liberados" },
+            { "id": "P6.2.3", "title": "Caracteristicas especiales controladas en produccion" },
+            { "id": "P6.2.4", "title": "Control de piezas no aprobadas o defectuosas" },
+            { "id": "P6.2.5", "title": "Flujo de materiales protegido frente a mezclas o piezas incorrectas" }
+          ]
+        },
+        {
+          "id": "P6.3",
+          "title": "Recursos humanos del proceso",
+          "sublevels": [
+            { "id": "P6.3.1", "title": "Empleados capaces de realizar sus tareas" },
+            { "id": "P6.3.2", "title": "Responsabilidades y autoridad conocidas por los empleados" },
+            { "id": "P6.3.3", "title": "Disponibilidad suficiente de personal" }
+          ]
+        },
+        {
+          "id": "P6.4",
+          "title": "Recursos materiales del proceso",
+          "sublevels": [
+            { "id": "P6.4.1", "title": "Equipos de fabricacion adecuados para cumplir requisitos" },
+            { "id": "P6.4.2", "title": "Mantenimiento controlado de equipos y herramientas" },
+            { "id": "P6.4.3", "title": "Equipos de medicion e inspeccion adecuados" },
+            { "id": "P6.4.4", "title": "Puestos de trabajo e inspeccion adecuados" },
+            { "id": "P6.4.5", "title": "Herramientas, utiles y equipos almacenados correctamente" }
+          ]
+        },
+        {
+          "id": "P6.5",
+          "title": "Eficacia y eficiencia del proceso",
+          "sublevels": [
+            { "id": "P6.5.1", "title": "Objetivos definidos para el proceso de produccion" },
+            { "id": "P6.5.2", "title": "Recogida y analisis de datos de calidad y proceso" },
+            { "id": "P6.5.3", "title": "Analisis de causas y eficacia de acciones correctivas" },
+            { "id": "P6.5.4", "title": "Auditorias regulares de proceso y producto" }
+          ]
+        },
+        {
+          "id": "P6.6",
+          "title": "Salida del proceso y cumplimiento al cliente",
+          "sublevels": [
+            { "id": "P6.6.1", "title": "Cantidades y lotes orientados a la siguiente etapa" },
+            { "id": "P6.6.2", "title": "Almacenamiento y embalaje adecuados del producto" },
+            { "id": "P6.6.3", "title": "Conservacion de registros y liberaciones" },
+            { "id": "P6.6.4", "title": "Cumplimiento de requisitos del cliente en la entrega final" }
+          ]
+        }
       ]
     },
     {
       "id": "P7",
-      "title": "Atención al cliente y servicio",
+      "title": "Atencion al cliente y servicio",
       "subsections": [
-        { "id": "P7.1", "title": "Gestión de reclamaciones de cliente" },
-        { "id": "P7.2", "title": "Análisis de campo y acciones correctivas" },
-        { "id": "P7.3", "title": "Lecciones aprendidas y prevención" }
+        { "id": "P7.1", "title": "Cumplimiento de requisitos de sistema y conformidad de producto" },
+        { "id": "P7.2", "title": "Servicio y comunicacion con cliente" },
+        { "id": "P7.3", "title": "Garantia de suministro" },
+        { "id": "P7.4", "title": "Reclamaciones, analisis de fallo y acciones correctivas" },
+        { "id": "P7.5", "title": "Cualificacion y responsabilidades del personal de atencion al cliente" }
       ]
     }
   ]
