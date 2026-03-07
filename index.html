@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Copiloto Auditoría VDA 6.3 (P2-P7)</title>
+    <title>Copiloto Auditoría VDA 6.3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,98 +13,145 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="layout">
-      <header class="hero">
-        <p class="eyebrow">Herramienta estática para auditoría en planta</p>
-        <h1>Copiloto de Auditoría VDA 6.3 (P2-P7)</h1>
-        <p>
-          Selecciona fase y subapartado, define el producto y el proceso/tecnología,
-          y obtén una guía clara de qué pedir y qué evidencia esperar.
-        </p>
+    <div class="app">
+
+      <!-- ── TOPBAR ─────────────────────────────────────────── -->
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir navegación">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="5" x2="17" y2="5"/>
+            <line x1="3" y1="10" x2="17" y2="10"/>
+            <line x1="3" y1="15" x2="17" y2="15"/>
+          </svg>
+        </button>
+
+        <div class="topbar-brand">
+          <span class="topbar-tag">VDA 6.3</span>
+          <span class="topbar-name">Copiloto de Auditoría</span>
+        </div>
+
+        <div class="topbar-context" id="topbarContext">
+          <div class="ctx-field">
+            <label for="productInput">Producto</label>
+            <input
+              id="productInput"
+              type="text"
+              placeholder="Ej: pinza de freno de fundicion nodular"
+              autocomplete="off"
+            />
+          </div>
+          <div class="ctx-field">
+            <label for="processInput">Proceso / Tecnología</label>
+            <input
+              id="processInput"
+              type="text"
+              placeholder="Ej: fundicion + mecanizado + acabado superficial"
+              autocomplete="off"
+            />
+          </div>
+        </div>
       </header>
 
-      <section class="panel controls" aria-label="Controles de auditoría">
-        <div class="field">
-          <label for="phaseSelect">Fase</label>
-          <select id="phaseSelect"></select>
-        </div>
+      <!-- ── BODY ───────────────────────────────────────────── -->
+      <div class="body-layout">
 
-        <div class="field">
-          <label for="subsectionSelect">Subapartado</label>
-          <select id="subsectionSelect"></select>
-        </div>
+        <!-- SIDEBAR -->
+        <nav class="sidebar" id="sidebar" aria-label="Fases VDA 6.3">
+          <div id="sidebarTree" class="sidebar-tree"></div>
+        </nav>
 
-        <div id="sublevelField" class="field hidden">
-          <label for="sublevelSelect">Subnivel</label>
-          <select id="sublevelSelect"></select>
-        </div>
+        <!-- OVERLAY para cerrar sidebar en mobile -->
+        <div class="sidebar-overlay hidden" id="sidebarOverlay"></div>
 
-        <div class="field">
-          <label for="productInput">Producto (abierto)</label>
-          <input
-            id="productInput"
-            type="text"
-            placeholder="Ej: pinza de freno de fundicion nodular"
-            autocomplete="off"
-          />
-        </div>
+        <!-- MAIN -->
+        <main class="main" id="main">
 
-        <div class="field">
-          <label for="processInput">Proceso o tecnología (abierto)</label>
-          <input
-            id="processInput"
-            type="text"
-            placeholder="Ej: fundicion bruto, fundicion + mecanizado, fundicion + mecanizado + acabado superficial"
-            autocomplete="off"
-          />
-        </div>
-      </section>
-
-      <section class="panel result" aria-live="polite">
-        <div class="result-header">
-          <div>
-            <p class="label">Elemento seleccionado</p>
-            <p id="selectionPath" class="label"></p>
-            <h2 id="guidanceTitle">Cargando...</h2>
+          <!-- Inputs de contexto en mobile (debajo del topbar) -->
+          <div class="mobile-context" id="mobileContext">
+            <div class="ctx-field">
+              <label for="productInputMobile">Producto</label>
+              <input
+                id="productInputMobile"
+                type="text"
+                placeholder="Ej: pinza de freno de fundicion nodular"
+                autocomplete="off"
+              />
+            </div>
+            <div class="ctx-field">
+              <label for="processInputMobile">Proceso / Tecnología</label>
+              <input
+                id="processInputMobile"
+                type="text"
+                placeholder="Ej: fundicion + mecanizado + acabado superficial"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <p id="guidanceId" class="badge"></p>
-        </div>
 
-        <div id="appliedRules" class="applied-rules hidden"></div>
+          <!-- Empty state -->
+          <div class="empty-state" id="emptyState">
+            <div class="empty-arrow">←</div>
+            <h2>Selecciona un subapartado</h2>
+            <p>Elige una fase y subapartado en el panel izquierdo para ver la guía de auditoría.</p>
+          </div>
 
-        <article class="card">
-          <h3>Qué pedir al auditado</h3>
-          <ul id="quePedir"></ul>
-        </article>
+          <!-- Panel de contenido (oculto hasta selección) -->
+          <div class="content-panel" id="contentPanel" hidden>
 
-        <article class="card">
-          <h3>Qué espero ver</h3>
-          <ul id="queEsperoVer"></ul>
-        </article>
+            <!-- Cabecera de selección -->
+            <div class="content-header">
+              <div>
+                <p id="selectionPath" class="breadcrumb"></p>
+                <h2 id="guidanceTitle"></h2>
+              </div>
+              <span id="guidanceId" class="badge"></span>
+            </div>
 
-        <article class="card">
-          <h3>Evidencias típicas</h3>
-          <ul id="evidenciasTipicas"></ul>
-        </article>
+            <!-- Reglas activas -->
+            <div id="appliedRules" class="applied-rules" hidden></div>
 
-        <article class="card">
-          <h3>Preguntas de contraste</h3>
-          <ul id="preguntasContraste"></ul>
-        </article>
+            <!-- Tabs -->
+            <div class="tabs" role="tablist" aria-label="Secciones de guía">
+              <button class="tab active" data-tab="que_pedir" role="tab" aria-selected="true">
+                <span class="tab-icon">?</span> Qué pedir
+              </button>
+              <button class="tab" data-tab="que_espero_ver" role="tab" aria-selected="false">
+                <span class="tab-icon">✓</span> Qué espero ver
+              </button>
+              <button class="tab" data-tab="evidencias_tipicas" role="tab" aria-selected="false">
+                <span class="tab-icon">📄</span> Evidencias
+              </button>
+              <button class="tab" data-tab="preguntas_de_contraste" role="tab" aria-selected="false">
+                <span class="tab-icon">↔</span> Contraste
+              </button>
+              <button class="tab tab-warn" data-tab="red_flags" role="tab" aria-selected="false">
+                <span class="tab-icon">!</span> Red flags
+              </button>
+            </div>
 
-        <article class="card warning">
-          <h3>Red flags</h3>
-          <ul id="redFlags"></ul>
-        </article>
-      </section>
+            <!-- Paneles de contenido -->
+            <div class="tab-pane active" id="pane-que_pedir" role="tabpanel">
+              <ul id="quePedir"></ul>
+            </div>
+            <div class="tab-pane" id="pane-que_espero_ver" role="tabpanel">
+              <ul id="queEsperoVer"></ul>
+            </div>
+            <div class="tab-pane" id="pane-evidencias_tipicas" role="tabpanel">
+              <ul id="evidenciasTipicas"></ul>
+            </div>
+            <div class="tab-pane" id="pane-preguntas_de_contraste" role="tabpanel">
+              <ul id="preguntasContraste"></ul>
+            </div>
+            <div class="tab-pane tab-pane-warn" id="pane-red_flags" role="tabpanel">
+              <ul id="redFlags"></ul>
+            </div>
 
-      <footer class="footer-note">
-        <p>
-          Primera versión enfocada a uso real en auditoría: sin scoring, sin hallazgos
-          y sin backend.
-        </p>
-      </footer>
-    </main>
+          </div><!-- /content-panel -->
+
+        </main>
+      </div><!-- /body-layout -->
+
+    </div><!-- /app -->
 
     <script src="app.js" defer></script>
   </body>

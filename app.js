@@ -1,3 +1,7 @@
+/* ══════════════════════════════════════════════════════
+   VDA 6.3 Copiloto — Lógica de aplicación
+   ══════════════════════════════════════════════════════ */
+
 const DATA_FILES = [
   "data/audit_structure.json",
   "data/audit_guidance.json",
@@ -12,336 +16,423 @@ const REQUIRED_FIELDS = [
   "red_flags"
 ];
 
+/* ── Estado global ───────────────────────────────────── */
 const state = {
   structure: null,
   guidance: null,
-  overrides: null
+  overrides: null,
+  selectedPhaseId: null,
+  selectedSubId: null,
+  selectedLvlId: null,
+  activeTab: "que_pedir"
 };
 
-const elements = {
-  phaseSelect: document.querySelector("#phaseSelect"),
-  subsectionSelect: document.querySelector("#subsectionSelect"),
-  sublevelField: document.querySelector("#sublevelField"),
-  sublevelSelect: document.querySelector("#sublevelSelect"),
-  productInput: document.querySelector("#productInput"),
-  processInput: document.querySelector("#processInput"),
-  selectionPath: document.querySelector("#selectionPath"),
-  guidanceTitle: document.querySelector("#guidanceTitle"),
-  guidanceId: document.querySelector("#guidanceId"),
-  quePedir: document.querySelector("#quePedir"),
-  queEsperoVer: document.querySelector("#queEsperoVer"),
-  evidenciasTipicas: document.querySelector("#evidenciasTipicas"),
-  preguntasContraste: document.querySelector("#preguntasContraste"),
-  redFlags: document.querySelector("#redFlags"),
-  appliedRules: document.querySelector("#appliedRules")
+/* ── Referencias DOM ─────────────────────────────────── */
+const el = {
+  sidebarTree:      document.querySelector("#sidebarTree"),
+  sidebar:          document.querySelector("#sidebar"),
+  sidebarOverlay:   document.querySelector("#sidebarOverlay"),
+  menuToggle:       document.querySelector("#menuToggle"),
+  emptyState:       document.querySelector("#emptyState"),
+  contentPanel:     document.querySelector("#contentPanel"),
+  selectionPath:    document.querySelector("#selectionPath"),
+  guidanceTitle:    document.querySelector("#guidanceTitle"),
+  guidanceId:       document.querySelector("#guidanceId"),
+  appliedRules:     document.querySelector("#appliedRules"),
+  quePedir:         document.querySelector("#quePedir"),
+  queEsperoVer:     document.querySelector("#queEsperoVer"),
+  evidenciasTipicas:document.querySelector("#evidenciasTipicas"),
+  preguntasContraste:document.querySelector("#preguntasContraste"),
+  redFlags:         document.querySelector("#redFlags"),
+  // Topbar (desktop)
+  productInput:     document.querySelector("#productInput"),
+  processInput:     document.querySelector("#processInput"),
+  // Mobile context
+  productInputMobile:  document.querySelector("#productInputMobile"),
+  processInputMobile:  document.querySelector("#processInputMobile")
 };
 
+/* ═══════════════════════════════════════════════════════
+   INICIO
+   ═══════════════════════════════════════════════════════ */
 async function init() {
   try {
     const [structure, guidance, overrides] = await Promise.all(
-      DATA_FILES.map((file) => fetch(file).then((response) => response.json()))
+      DATA_FILES.map((f) => fetch(f).then((r) => {
+        if (!r.ok) throw new Error(`No se pudo cargar ${f}`);
+        return r.json();
+      }))
     );
 
     state.structure = structure;
-    state.guidance = guidance;
+    state.guidance  = guidance;
     state.overrides = overrides;
 
-    populatePhases();
+    buildSidebar();
     attachEvents();
-    render();
-  } catch (error) {
-    console.error("Error cargando datos de auditoria:", error);
-    elements.guidanceTitle.textContent = "No se pudieron cargar los datos";
-    elements.guidanceId.textContent = "Error";
+    autoSelectFirst();
+  } catch (err) {
+    console.error("Error cargando datos:", err);
+    if (el.emptyState) {
+      el.emptyState.innerHTML =
+        "<div class='empty-arrow'>⚠</div><h2>Error al cargar datos</h2><p>Comprueba que los archivos JSON están disponibles y recarga la página.</p>";
+    }
   }
 }
 
-function attachEvents() {
-  elements.phaseSelect?.addEventListener("change", () => {
-    populateSubsections();
-    render();
-  });
-
-  elements.subsectionSelect?.addEventListener("change", () => {
-    populateSublevels();
-    render();
-  });
-
-  elements.sublevelSelect?.addEventListener("change", render);
-  elements.productInput?.addEventListener("input", render);
-  elements.processInput?.addEventListener("input", render);
-}
-
-function populatePhases() {
+/* ═══════════════════════════════════════════════════════
+   SIDEBAR — construcción del árbol de navegación
+   ═══════════════════════════════════════════════════════ */
+function buildSidebar() {
   const phases = state.structure?.phases ?? [];
-  if (!elements.phaseSelect) {
-    return;
-  }
 
-  elements.phaseSelect.innerHTML = phases
-    .map((phase) => `<option value="${phase.id}">${phase.id} - ${phase.title}</option>`)
-    .join("");
+  el.sidebarTree.innerHTML = phases.map((phase) => {
+    const subsHtml = phase.subsections.map((sub) => {
+      const hasLvls = Array.isArray(sub.sublevels) && sub.sublevels.length > 0;
 
-  populateSubsections();
+      const lvlsHtml = hasLvls
+        ? `<ul class="nav-lvl-list" id="lvls-${sub.id}">
+            ${sub.sublevels.map((lvl) => `
+              <li>
+                <button class="nav-lvl-btn"
+                  data-phase="${phase.id}"
+                  data-sub="${sub.id}"
+                  data-lvl="${lvl.id}">
+                  <span class="nav-lvl-id">${lvl.id}</span>
+                  <span>${escapeHtml(lvl.title)}</span>
+                </button>
+              </li>`).join("")}
+          </ul>`
+        : "";
+
+      return `
+        <li class="nav-sub-item">
+          <button class="nav-sub-btn"
+            data-phase="${phase.id}"
+            data-sub="${sub.id}"
+            ${hasLvls ? 'data-has-lvls="true"' : ""}>
+            <span class="nav-sub-id">${sub.id}</span>
+            <span class="nav-sub-label">${escapeHtml(sub.title)}</span>
+            ${hasLvls ? '<span class="nav-sub-arrow">›</span>' : ""}
+          </button>
+          ${lvlsHtml}
+        </li>`;
+    }).join("");
+
+    return `
+      <div class="nav-phase" id="phase-${phase.id}">
+        <button class="nav-phase-btn" data-phase="${phase.id}">
+          <span class="nav-phase-badge">${phase.id}</span>
+          <span class="nav-phase-title">${escapeHtml(phase.title)}</span>
+          <span class="nav-chevron" id="chevron-${phase.id}">›</span>
+        </button>
+        <ul class="nav-sub-list" id="subs-${phase.id}">
+          ${subsHtml}
+        </ul>
+      </div>`;
+  }).join("");
 }
 
-function populateSubsections() {
-  if (!elements.phaseSelect || !elements.subsectionSelect) {
-    return;
-  }
+/* ═══════════════════════════════════════════════════════
+   EVENTOS
+   ═══════════════════════════════════════════════════════ */
+function attachEvents() {
+  // Delegación en el árbol del sidebar
+  el.sidebarTree.addEventListener("click", onSidebarClick);
 
-  const phase = findPhase(elements.phaseSelect.value);
-  const subsections = phase?.subsections ?? [];
-
-  elements.subsectionSelect.innerHTML = subsections
-    .map((subsection) => `<option value="${subsection.id}">${subsection.id} - ${subsection.title}</option>`)
-    .join("");
-
-  populateSublevels();
-}
-
-function populateSublevels() {
-  if (!elements.subsectionSelect || !elements.sublevelSelect || !elements.sublevelField) {
-    return;
-  }
-
-  const subsection = findSubsection(elements.subsectionSelect.value);
-  const sublevels = subsection?.sublevels ?? [];
-
-  if (!sublevels.length) {
-    elements.sublevelSelect.innerHTML = "";
-    elements.sublevelField.classList.add("hidden");
-    return;
-  }
-
-  elements.sublevelSelect.innerHTML = sublevels
-    .map((sublevel) => `<option value="${sublevel.id}">${sublevel.id} - ${sublevel.title}</option>`)
-    .join("");
-
-  elements.sublevelField.classList.remove("hidden");
-}
-
-function render() {
-  const selection = getCurrentSelection();
-  const baseGuidance = resolveBaseGuidance(selection.guidanceKeys);
-
-  if (!selection.meta || !baseGuidance) {
-    if (elements.selectionPath) {
-      elements.selectionPath.textContent = "";
-    }
-    if (elements.guidanceTitle) {
-      elements.guidanceTitle.textContent = "Subapartado sin datos";
-    }
-    if (elements.guidanceId) {
-      elements.guidanceId.textContent = "N/A";
-    }
-    REQUIRED_FIELDS.forEach((field) => renderList(field, []));
-    hideAppliedRules();
-    return;
-  }
-
-  const matchedRules = findMatchingRules({
-    product: elements.productInput.value,
-    process: elements.processInput.value
-  });
-
-  const effectiveGuidance = applyRuleAdjustments(
-    selection.guidanceKeys,
-    baseGuidance,
-    matchedRules
+  // Tabs
+  document.querySelectorAll(".tab").forEach((tab) =>
+    tab.addEventListener("click", () => switchTab(tab.dataset.tab))
   );
 
-  if (elements.selectionPath) {
-    elements.selectionPath.textContent = selection.pathLabel;
-  }
-  if (elements.guidanceTitle) {
-    elements.guidanceTitle.textContent = selection.meta.title;
-  }
-  if (elements.guidanceId) {
-    elements.guidanceId.textContent = selection.meta.id;
+  // Inputs de contexto — desktop y mobile en sincronía
+  el.productInput?.addEventListener("input", () => {
+    if (el.productInputMobile) el.productInputMobile.value = el.productInput.value;
+    render();
+  });
+  el.processInput?.addEventListener("input", () => {
+    if (el.processInputMobile) el.processInputMobile.value = el.processInput.value;
+    render();
+  });
+  el.productInputMobile?.addEventListener("input", () => {
+    if (el.productInput) el.productInput.value = el.productInputMobile.value;
+    render();
+  });
+  el.processInputMobile?.addEventListener("input", () => {
+    if (el.processInput) el.processInput.value = el.processInputMobile.value;
+    render();
+  });
+
+  // Toggle sidebar mobile
+  el.menuToggle?.addEventListener("click", toggleSidebar);
+  el.sidebarOverlay?.addEventListener("click", closeSidebar);
+}
+
+function onSidebarClick(e) {
+  const phaseBtn = e.target.closest(".nav-phase-btn");
+  const subBtn   = e.target.closest(".nav-sub-btn");
+  const lvlBtn   = e.target.closest(".nav-lvl-btn");
+
+  if (lvlBtn) {
+    selectItem(lvlBtn.dataset.phase, lvlBtn.dataset.sub, lvlBtn.dataset.lvl);
+    closeSidebarOnMobile();
+    return;
   }
 
-  renderList("que_pedir", effectiveGuidance.que_pedir);
-  renderList("que_espero_ver", effectiveGuidance.que_espero_ver);
-  renderList("evidencias_tipicas", effectiveGuidance.evidencias_tipicas);
+  if (subBtn) {
+    const hasLvls = subBtn.dataset.hasLvls === "true";
+    if (hasLvls) {
+      // Expandir/contraer los subniveles sin navegar
+      const lvlList = document.querySelector(`#lvls-${subBtn.dataset.sub}`);
+      const arrow   = subBtn.querySelector(".nav-sub-arrow");
+      if (lvlList) {
+        lvlList.classList.toggle("open");
+        arrow?.classList.toggle("open");
+      }
+    } else {
+      selectItem(subBtn.dataset.phase, subBtn.dataset.sub, null);
+      closeSidebarOnMobile();
+    }
+    return;
+  }
+
+  if (phaseBtn) {
+    const phaseId = phaseBtn.dataset.phase;
+    const subList = document.querySelector(`#subs-${phaseId}`);
+    const chevron = document.querySelector(`#chevron-${phaseId}`);
+    if (subList) {
+      subList.classList.toggle("open");
+      chevron?.classList.toggle("open");
+    }
+    return;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   SELECCIÓN
+   ═══════════════════════════════════════════════════════ */
+function selectItem(phaseId, subId, lvlId) {
+  state.selectedPhaseId = phaseId;
+  state.selectedSubId   = subId;
+  state.selectedLvlId   = lvlId;
+
+  // Actualizar clases activas en el sidebar
+  document.querySelectorAll(".nav-sub-btn, .nav-lvl-btn").forEach((btn) =>
+    btn.classList.remove("active")
+  );
+
+  if (lvlId) {
+    document.querySelector(`.nav-lvl-btn[data-lvl="${lvlId}"]`)?.classList.add("active");
+  } else if (subId) {
+    document.querySelector(`.nav-sub-btn[data-sub="${subId}"]`)?.classList.add("active");
+  }
+
+  render();
+}
+
+function autoSelectFirst() {
+  const firstPhase = state.structure?.phases?.[0];
+  if (!firstPhase) return;
+
+  // Expandir primera fase
+  const subList = document.querySelector(`#subs-${firstPhase.id}`);
+  const chevron = document.querySelector(`#chevron-${firstPhase.id}`);
+  subList?.classList.add("open");
+  chevron?.classList.add("open");
+
+  // Seleccionar primera subsección
+  const firstSub = firstPhase.subsections?.[0];
+  if (!firstSub) return;
+
+  // Si tiene subniveles, expandir y seleccionar el primero
+  if (Array.isArray(firstSub.sublevels) && firstSub.sublevels.length > 0) {
+    const lvlList = document.querySelector(`#lvls-${firstSub.id}`);
+    const arrow   = document.querySelector(`.nav-sub-btn[data-sub="${firstSub.id}"] .nav-sub-arrow`);
+    lvlList?.classList.add("open");
+    arrow?.classList.add("open");
+    selectItem(firstPhase.id, firstSub.id, firstSub.sublevels[0].id);
+  } else {
+    selectItem(firstPhase.id, firstSub.id, null);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   TABS
+   ═══════════════════════════════════════════════════════ */
+function switchTab(tabId) {
+  state.activeTab = tabId;
+
+  document.querySelectorAll(".tab").forEach((tab) =>
+    tab.classList.toggle("active", tab.dataset.tab === tabId)
+  );
+  document.querySelectorAll(".tab-pane").forEach((pane) =>
+    pane.classList.toggle("active", pane.id === `pane-${tabId}`)
+  );
+}
+
+/* ═══════════════════════════════════════════════════════
+   RENDERIZADO
+   ═══════════════════════════════════════════════════════ */
+function render() {
+  if (!state.selectedSubId) {
+    showEmpty();
+    return;
+  }
+
+  const phase      = findPhase(state.selectedPhaseId);
+  const subsection = findSubsection(state.selectedSubId);
+  const sublevel   = state.selectedLvlId
+    ? findSublevel(subsection, state.selectedLvlId)
+    : null;
+
+  const meta         = sublevel ?? subsection;
+  const guidanceKeys = buildGuidanceKeyChain(phase?.id, subsection?.id, sublevel?.id);
+  const baseGuidance = resolveBaseGuidance(guidanceKeys);
+
+  if (!meta || !baseGuidance) {
+    showEmpty();
+    return;
+  }
+
+  const product = el.productInput?.value ?? "";
+  const process = el.processInput?.value ?? "";
+  const matchedRules    = findMatchingRules({ product, process });
+  const effectiveGuidance = applyRuleAdjustments(guidanceKeys, baseGuidance, matchedRules);
+
+  // Mostrar panel de contenido
+  el.emptyState?.classList.add("hidden");
+  if (el.contentPanel) el.contentPanel.hidden = false;
+
+  // Cabecera
+  const pathParts = [phase?.id, subsection?.id, sublevel?.id].filter(Boolean);
+  if (el.selectionPath) el.selectionPath.textContent = pathParts.join(" › ");
+  if (el.guidanceTitle)  el.guidanceTitle.textContent  = meta.title;
+  if (el.guidanceId)     el.guidanceId.textContent     = meta.id;
+
+  // Listas
+  renderList("que_pedir",            effectiveGuidance.que_pedir);
+  renderList("que_espero_ver",       effectiveGuidance.que_espero_ver);
+  renderList("evidencias_tipicas",   effectiveGuidance.evidencias_tipicas);
   renderList("preguntas_de_contraste", effectiveGuidance.preguntas_de_contraste);
-  renderList("red_flags", effectiveGuidance.red_flags);
+  renderList("red_flags",            effectiveGuidance.red_flags);
 
   renderAppliedRules(matchedRules);
 }
 
-function getCurrentSelection() {
-  const phase = findPhase(elements.phaseSelect?.value);
-  const subsection = findSubsection(elements.subsectionSelect?.value);
-  const hasSublevels = Array.isArray(subsection?.sublevels) && subsection.sublevels.length > 0;
-  const sublevel = hasSublevels ? findSublevel(subsection, elements.sublevelSelect?.value) : null;
-  const meta = sublevel ?? subsection ?? null;
-  const guidanceKeys = buildGuidanceKeyChain(phase?.id, subsection?.id, sublevel?.id);
-  const pathParts = [phase?.id, subsection?.id, sublevel?.id].filter(Boolean);
-
-  return {
-    meta,
-    guidanceKeys,
-    pathLabel: pathParts.join(" > ")
-  };
+function showEmpty() {
+  el.emptyState?.classList.remove("hidden");
+  if (el.contentPanel) el.contentPanel.hidden = true;
 }
 
+/* ── Listas de contenido ─────────────────────────────── */
+function renderList(field, items) {
+  const containers = {
+    que_pedir:              el.quePedir,
+    que_espero_ver:         el.queEsperoVer,
+    evidencias_tipicas:     el.evidenciasTipicas,
+    preguntas_de_contraste: el.preguntasContraste,
+    red_flags:              el.redFlags
+  };
+
+  const container = containers[field];
+  if (!container) return;
+
+  const list = Array.isArray(items) ? items : [];
+  container.innerHTML = list.length
+    ? list.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
+    : "<li><em>Sin contenido para este nivel de auditoría.</em></li>";
+}
+
+function renderAppliedRules(rules) {
+  if (!el.appliedRules) return;
+
+  if (!rules.length) {
+    el.appliedRules.hidden = true;
+    el.appliedRules.textContent = "";
+    return;
+  }
+
+  el.appliedRules.textContent =
+    "Ajustes activos: " + rules.map((r) => `${r.id} — ${r.name}`).join(" | ");
+  el.appliedRules.hidden = false;
+}
+
+/* ═══════════════════════════════════════════════════════
+   LÓGICA DE DATOS (sin cambios respecto a v1)
+   ═══════════════════════════════════════════════════════ */
 function buildGuidanceKeyChain(phaseId, subsectionId, sublevelId) {
-  const keys = [];
-
-  if (phaseId) {
-    keys.push(phaseId);
-  }
-
-  if (subsectionId) {
-    keys.push(subsectionId);
-  }
-
-  if (sublevelId) {
-    keys.push(sublevelId);
-  }
-
-  return keys;
+  return [phaseId, subsectionId, sublevelId].filter(Boolean);
 }
 
 function resolveBaseGuidance(guidanceKeys) {
   const merged = {};
-
   for (const key of guidanceKeys) {
     mergeGuidance(merged, state.guidance?.items?.[key] ?? null);
   }
-
   const hasContent = REQUIRED_FIELDS.some(
-    (field) => Array.isArray(merged[field]) && merged[field].length > 0
+    (f) => Array.isArray(merged[f]) && merged[f].length > 0
   );
-
   return hasContent ? merged : null;
 }
 
 function findPhase(phaseId) {
-  return state.structure?.phases?.find((phase) => phase.id === phaseId) ?? null;
+  return state.structure?.phases?.find((p) => p.id === phaseId) ?? null;
 }
 
-function findSubsection(subsectionId) {
+function findSubsection(subId) {
   for (const phase of state.structure?.phases ?? []) {
-    const match = phase.subsections.find((subsection) => subsection.id === subsectionId);
-    if (match) {
-      return match;
-    }
+    const match = phase.subsections.find((s) => s.id === subId);
+    if (match) return match;
   }
-
   return null;
 }
 
-function findSublevel(subsection, sublevelId) {
-  return subsection?.sublevels?.find((sublevel) => sublevel.id === sublevelId) ?? subsection?.sublevels?.[0] ?? null;
+function findSublevel(subsection, lvlId) {
+  return subsection?.sublevels?.find((l) => l.id === lvlId) ?? null;
 }
 
-function normalizeText(value) {
-  return (value || "").trim().toLowerCase();
-}
-
-function matchesCriteria(inputValue, tokens = []) {
-  if (!tokens.length) {
-    return true;
-  }
-
-  if (!inputValue) {
-    return false;
-  }
-
-  return tokens.some((token) => inputValue.includes(token.toLowerCase()));
-}
-
-function findMatchingRules(context) {
-  const productText = normalizeText(context.product);
-  const processText = normalizeText(context.process);
+function findMatchingRules({ product, process }) {
+  const productText = normalizeText(product);
+  const processText = normalizeText(process);
 
   return (state.overrides?.rules ?? []).filter((rule) => {
     const productTokens = rule.when?.product_contains ?? [];
     const processTokens = rule.when?.process_contains ?? [];
-
-    return matchesCriteria(productText, productTokens) && matchesCriteria(processText, processTokens);
+    return matchesCriteria(productText, productTokens) &&
+           matchesCriteria(processText, processTokens);
   });
 }
 
 function applyRuleAdjustments(guidanceKeys, baseGuidance, matchedRules) {
   const effective = structuredClone(baseGuidance);
-
   for (const rule of matchedRules) {
     mergeGuidance(effective, rule.adjustments?.["*"] ?? null);
-
     for (const key of guidanceKeys) {
       mergeGuidance(effective, rule.adjustments?.[key] ?? null);
     }
   }
-
   return effective;
 }
 
 function mergeGuidance(target, patch) {
-  if (!patch) {
-    return;
-  }
-
+  if (!patch) return;
   for (const field of REQUIRED_FIELDS) {
-    if (!patch[field]) {
-      continue;
-    }
-
-    const baseList = Array.isArray(target[field]) ? target[field] : [];
+    if (!patch[field]) continue;
+    const baseList  = Array.isArray(target[field]) ? target[field] : [];
     const patchList = Array.isArray(patch[field]) ? patch[field] : [String(patch[field])];
-
     target[field] = [...baseList, ...patchList.filter((item) => !baseList.includes(item))];
   }
 }
 
-function renderList(field, items) {
-  const elementByField = {
-    que_pedir: elements.quePedir,
-    que_espero_ver: elements.queEsperoVer,
-    evidencias_tipicas: elements.evidenciasTipicas,
-    preguntas_de_contraste: elements.preguntasContraste,
-    red_flags: elements.redFlags
-  };
-
-  const container = elementByField[field];
-  const listItems = Array.isArray(items) ? items : [];
-
-  if (!container) {
-    return;
-  }
-
-  if (!listItems.length) {
-    container.innerHTML = "<li>Sin contenido para este nivel de auditoria.</li>";
-    return;
-  }
-
-  container.innerHTML = listItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+/* ── Helpers ─────────────────────────────────────────── */
+function normalizeText(v) {
+  return (v || "").trim().toLowerCase();
 }
 
-function renderAppliedRules(rules) {
-  if (!elements.appliedRules) {
-    return;
-  }
-
-  if (!rules.length) {
-    hideAppliedRules();
-    return;
-  }
-
-  const labels = rules.map((rule) => `${rule.id} (${rule.name})`).join(" | ");
-  elements.appliedRules.textContent = `Ajustes activos por producto/proceso: ${labels}`;
-  elements.appliedRules.classList.remove("hidden");
-}
-
-function hideAppliedRules() {
-  if (!elements.appliedRules) {
-    return;
-  }
-
-  elements.appliedRules.textContent = "";
-  elements.appliedRules.classList.add("hidden");
+function matchesCriteria(inputValue, tokens = []) {
+  if (!tokens.length) return true;
+  if (!inputValue) return false;
+  return tokens.some((token) => inputValue.includes(token.toLowerCase()));
 }
 
 function escapeHtml(value) {
@@ -353,4 +444,22 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+/* ── Sidebar mobile ──────────────────────────────────── */
+function toggleSidebar() {
+  el.sidebar?.classList.toggle("open");
+  el.sidebarOverlay?.classList.toggle("visible");
+  el.sidebarOverlay?.classList.toggle("hidden");
+}
+
+function closeSidebar() {
+  el.sidebar?.classList.remove("open");
+  el.sidebarOverlay?.classList.remove("visible");
+  el.sidebarOverlay?.classList.add("hidden");
+}
+
+function closeSidebarOnMobile() {
+  if (window.innerWidth <= 720) closeSidebar();
+}
+
+/* ── Arranque ────────────────────────────────────────── */
 init();
