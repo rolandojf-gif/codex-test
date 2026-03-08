@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "2.0.0",
   "rules": [
     {
       "id": "pinza_nodular_default",
@@ -50,38 +50,47 @@
         },
         "P3.1": {
           "que_pedir": [
-            "Despliegue de caracteristicas especiales en alojamiento de piston, superficies de estanqueidad, roscas funcionales y referencias de mecanizado."
+            "Buscar si las caracteristicas especiales de la pinza cubren zonas de estanqueidad, alojamiento de piston, roscas funcionales y zonas con riesgo de fuga o grieta."
           ],
-          "evidencias_tipicas": [
-            "Mapa interno de zonas de estanqueidad, roscas y alojamientos funcionales con su control asociado."
+          "preguntas_de_contraste": [
+            "Que caracteristica especial protege hoy la estanqueidad hidraulica de esta pinza y en que documento la veo desplegada?"
           ],
           "red_flags": [
-            "La pinza se audita como una fundicion generica y no como componente de seguridad del circuito hidraulico."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Resultados de homologacion de zonas criticas de estanqueidad y, si aplica, de capacidad de mecanizado de alojamientos funcionales."
+            "La pinza se trata como fundicion generica y no como componente de seguridad del circuito hidraulico."
+          ],
+          "evidencias_tipicas": [
+            "Cruza plano, PFMEA y Plan de Control sobre una misma zona hidraulica: si no enlazan entre si, el despliegue de riesgo no esta cerrado."
+          ],
+          "que_espero_ver": [
+            "Foco reforzado en zonas hidraulicas y funcionales propias de pinza de freno."
           ]
         },
         "P6.2.3": {
-          "red_flags": [
-            "No existe proteccion reforzada frente a porosidad o defecto interno en zonas criticas de estanqueidad de la pinza."
-          ]
-        },
-        "P6.2": {
+          "que_pedir": [
+            "Buscar si las CC/SC de la pinza tienen controles reforzados frente a porosidad, inclusion, fuga y variacion dimensional en zonas hidraulicas."
+          ],
           "preguntas_de_contraste": [
-            "Que control concreto evita que una porosidad o inclusion llegue a una zona critica de estanqueidad?"
+            "Que barrera evita que una porosidad en zona de estanqueidad llegue al cliente: control preventivo, END o solo prueba final?"
+          ],
+          "red_flags": [
+            "No existe proteccion especifica frente a defectos internos en zonas de estanqueidad o alojamiento de piston."
+          ],
+          "evidencias_tipicas": [
+            "Si la unica barrera es la prueba final, sigue tirando del hilo: el riesgo no esta contenido en proceso."
           ]
         },
         "P6.6.3": {
-          "evidencias_tipicas": [
-            "Trazabilidad de colada, lote y resultados metalurgicos vinculada a las zonas criticas de la pinza."
-          ]
-        },
-        "P7.2": {
+          "que_pedir": [
+            "Buscar si la trazabilidad final de la pinza permite reconstruir colada, lote, resultados metalurgicos y operaciones posteriores en una reclamacion de fuga."
+          ],
           "preguntas_de_contraste": [
-            "Si aparece una fuga o grieta en cliente, como reconstruyes el camino completo hasta colada, lote y proceso?"
+            "Si Astemo reporta una fuga en una pinza concreta, en cuanto tiempo podeis llegar a colada, cavidad y lote expedido?"
+          ],
+          "red_flags": [
+            "La trazabilidad final no permite aislar rapidamente un lote de pinzas con riesgo hidraulico."
+          ],
+          "evidencias_tipicas": [
+            "Pide un ejercicio de trazabilidad inversa con una pieza real o con una etiqueta de expedicion, no una explicacion teorica."
           ]
         }
       }
@@ -108,29 +117,33 @@
         },
         "P3.1": {
           "que_pedir": [
-            "Identificacion de caracteristicas especiales en superficies de apoyo, alojamientos funcionales, taladros, roscas y referencias de fijacion."
+            "Buscar si las caracteristicas especiales de la horquilla cubren apoyos de pastilla, alojamientos funcionales, taladros, roscas y zonas sometidas a carga."
           ],
-          "evidencias_tipicas": [
-            "Mapa de zonas criticas de apoyo de pastilla, alojamientos funcionales y superficies de fijacion."
+          "preguntas_de_contraste": [
+            "Que zona funcional de esta horquilla considerais mas critica para seguridad o ruido y donde esta desplegada en PFMEA y Plan de Control?"
           ],
           "red_flags": [
-            "Se infravaloran riesgos dimensionales o metalurgicos por no ser una pieza hidraulica."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Demostracion de capacidad dimensional y de estabilidad de proceso en interfaces funcionales y zonas sometidas a carga."
+            "Se rebaja el nivel de exigencia por no ser una pieza hidraulica, pese a tener funciones estructurales y de guiado."
           ],
           "evidencias_tipicas": [
-            "Historico de capacidad y defectologia en zonas sometidas a carga o reaccion."
+            "En horquilla, vigila mucho la coherencia entre tolerancias funcionales, utillaje de mecanizado y control de desgaste de herramienta."
+          ],
+          "que_espero_ver": [
+            "Foco reforzado en apoyos, guiados, anclajes y comportamiento estructural."
           ]
         },
         "P6.2": {
+          "que_pedir": [
+            "Buscar si el proceso controla defectos de fundicion o mecanizado que puedan comprometer apoyo de pastilla, guiado o fijacion."
+          ],
           "preguntas_de_contraste": [
-            "Que defecto de fundicion o de mecanizado tiene mas probabilidad de comprometer la funcion de la horquilla y como se bloquea?"
+            "Que defecto concreto tiene mas probabilidad de comprometer la funcion de la horquilla y donde esta la barrera de control?"
           ],
           "red_flags": [
-            "No hay control reforzado en interfaces funcionales con pastilla, bulones o anclajes."
+            "No hay control reforzado sobre interfaces funcionales con bulones, apoyos de pastilla o anclajes."
+          ],
+          "evidencias_tipicas": [
+            "Pide una pieza NOK historica y revisa si el defecto habria afectado al apoyo o al guiado real de la horquilla."
           ]
         }
       }
@@ -157,312 +170,60 @@
         ]
       },
       "adjustments": {
-        "P2.2": {
-          "que_pedir": [
-            "Matriz de competencias para roles criticos de fundicion: metalurgista, calidad, laboratorio y mantenimiento; evidencia de cobertura de sustitucion por turno."
-          ],
-          "evidencias_tipicas": [
-            "Matriz de competencias con certificaciones, formacion registrada y plan de sustitucion por turno para roles criticos."
-          ],
-          "preguntas_de_contraste": [
-            "Si falta el metalurgista en turno noche, ¿quien decide sobre quimica fuera de ventana y donde queda registrado?"
-          ],
-          "red_flags": [
-            "Dependencia de una sola persona para decisiones tecnicas criticas de fundicion (quimica, tratamiento, liberacion de lote); sin sustitucion planificada."
-          ]
-        },
-        "P2.4": {
-          "que_pedir": [
-            "Registro de riesgos del proceso de fundicion con top riesgos de porosidad, inclusiones y variacion quimica: cada riesgo con dueño, mitigacion activa y fecha de cierre verificado."
-          ],
-          "evidencias_tipicas": [
-            "Registro de riesgos de proceso con dueño, estado y evidencia de cierre o mitigacion activa para los modos de fallo tipicos de fundicion."
-          ],
-          "preguntas_de_contraste": [
-            "¿Cuales son los top 3 riesgos de porosidad o inclusiones? ¿Que control previene, que detecta y que reaccion tienes para cada uno?"
-          ],
-          "red_flags": [
-            "Riesgos de calidad de fundicion registrados sin propietario, sin fecha o cerrados sin verificacion de eficacia."
-          ]
-        },
-        "P2.6": {
-          "que_pedir": [
-            "Procedimiento MOC (gestion de cambios) aplicado a consumibles criticos de fundicion: flux, filtros, refractarios, nodularizante, inoculante, proveedor de aleacion y parametros de desgasificado."
-          ],
-          "preguntas_de_contraste": [
-            "¿Que cambio de material o consumible se hizo en los ultimos 6 meses? ¿Como garantizas equivalencia metalurgica sin PPAP delta?"
-          ],
-          "red_flags": [
-            "Cambios de proveedor de aleacion, flux, filtros o retornos tratados como rutina sin MOC ni validacion tecnica documentada."
-          ]
-        },
-        "P3.1": {
-          "que_pedir": [
-            "Matriz de requisitos → CTQ → control para caracteristicas criticas de fundicion: porosidad, fugas, resistencia mecanica, microestructura y dimensiones funcionales."
-          ],
-          "preguntas_de_contraste": [
-            "¿Que CTQ gobierna fugas o fallo por porosidad? ¿Donde lo controlas: preventivo en proceso o solo deteccion final?"
-          ],
-          "red_flags": [
-            "CTQ de fundicion existente pero sin control preventivo en proceso: solo inspeccion final o prueba de estanqueidad como unica barrera."
-          ]
-        },
         "P3.2": {
           "que_pedir": [
-            "Factibilidad de cumplir quimica, nodularidad, microestructura, soundness, dureza, rechazo objetivo y capacidad de control por lote."
+            "Buscar si la factibilidad cubrio riesgos reales de quimica, nodularidad, microestructura, porosidad, inclusiones, rechazo esperado y capacidad de segregacion por lote."
           ],
           "preguntas_de_contraste": [
-            "¿Que riesgo metalurgico concreto (porosidad, inclusion, variacion quimica) identificaste en la factibilidad y que control previsto lo mitiga?"
+            "Que riesgo metalurgico concreto identificasteis en la factibilidad y que control previsto lo mitiga hoy?"
           ],
           "red_flags": [
-            "Factibilidad firmada sin analisis de riesgos especificos de fundicion o con acciones de mitigacion abiertas sin plan de cierre."
-          ]
-        },
-        "P3.3": {
-          "que_pedir": [
-            "PFMEA de proceso de fundicion con top modos de fallo: porosidad de gas, rechupe, inclusiones/oxidos, variacion quimica, defecto de moldeo/arena; acciones con responsable y fecha de verificacion."
+            "Factibilidad firmada sin riesgos metalurgicos concretos o sin plan de mitigacion verificable."
           ],
           "evidencias_tipicas": [
-            "PFMEA de proceso de fundicion con conexion real a Control Plan, instrucciones de trabajo y plan de reaccion operativo entrenado en linea."
-          ],
-          "preguntas_de_contraste": [
-            "¿Cual es el modo de fallo #1 historico en este proceso? Enséñame el control que lo previene y el plan de reaccion si aparece en turno."
-          ],
-          "red_flags": [
-            "PFMEA generico o de escritorio no conectado a controles reales en linea; sin planes de reaccion operativos entrenados; desconectado del Control Plan."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Ventanas maestras de proceso para fusion, tratamiento, inoculacion, colada, arena y machos, con criterios de reaccion.",
-            "Formacion y autorizacion del personal para decisiones tecnicas criticas: quien puede modificar parametros de fusion o tratamiento, quien libera un lote, quien bloquea el proceso."
-          ],
-          "preguntas_de_contraste": [
-            "Si hay una desviacion de temperatura en horno a las 2am, ¿quien decide, que registro genera y cuando se entera calidad?"
-          ],
-          "red_flags": [
-            "Operarios con acceso a modificar parametros criticos de fusion (temperatura, quimica, tratamiento) sin formacion documentada ni autorizacion formal."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Historial de mantenimiento de moldes, machos y utiles con CTQ de herramental (desgaste critico, ventilaciones, refrigeracion) y su correlacion documentada con defectos de fundicion."
-          ],
-          "evidencias_tipicas": [
-            "FAT/SAT de moldes y matrices, historial de intervenciones con correlacion entre desgaste de herramienta y aparicion de porosidad o defecto dimensional."
-          ],
-          "preguntas_de_contraste": [
-            "¿Que desgaste critico del molde esta mas correlacionado con porosidad o problema dimensional? ¿Como lo detectas antes de que impacte el lote?"
-          ],
-          "red_flags": [
-            "Mantenimiento de moldes reactivo: se interviene cuando aparece el defecto, no por criterio preventivo basado en datos de desgaste o tendencias de defectos."
-          ]
-        },
-        "P4.4": {
-          "que_pedir": [
-            "Secuencia de validacion: MSA (GRR) completada antes del estudio de capacidad (Cpk) para cada CTQ de fundicion; demostrar fechas, resultado del GRR y decision de aceptacion."
-          ],
-          "preguntas_de_contraste": [
-            "¿Se hizo MSA antes del Cp/Cpk? Enséñame fechas y resultado del GRR para el CTQ principal de este proceso."
-          ],
-          "red_flags": [
-            "Capacidad (Cpk) calculada con sistema de medicion no validado (sin GRR o con GRR >30%): los datos de capacidad son de dudosa credibilidad."
-          ]
-        },
-        "P4.7": {
-          "que_pedir": [
-            "Trial / Run@Rate realizado en condiciones reales de serie: mismo equipo, mismo turno, mismos operarios, materias primas de proveedor habitual; no en condiciones ideales de laboratorio."
-          ],
-          "preguntas_de_contraste": [
-            "¿Con que tasa de scrap salio el trial? ¿Que cambio entre las condiciones del trial y la produccion habitual en serie?"
-          ],
-          "red_flags": [
-            "Run@Rate realizado en condiciones ideales (equipo A, turno de dia, operarios expertos) pero produccion en serie en condiciones distintas: el trial no valida la realidad."
-          ]
-        },
-        "P4.9": {
-          "que_pedir": [
-            "Plan de Safe Launch con criterios cuantitativos de salida: PPM interna objetivo, Cpk minimo en CTQ, estabilidad SPC por X semanas/lotes, cero escapes confirmados antes de levantar controles reforzados."
-          ],
-          "evidencias_tipicas": [
-            "Plan de Safe Launch con criterios de salida cuantitativos verificados, firmados y con decision de cierre documentada."
-          ],
-          "preguntas_de_contraste": [
-            "¿Que defectos de fundicion blindas en Safe Launch, con que frecuencia de inspeccion adicional y cuando y como decidiste levantar los controles?"
-          ],
-          "red_flags": [
-            "Safe Launch sin criterios cuantitativos de salida; controles reforzados levantados por presion de fecha o cuando 'parece bien', sin verificacion de eficacia."
-          ]
-        },
-        "P5.1": {
-          "que_pedir": [
-            "Criterios de homologacion de subproveedores que incluyan evaluacion tecnica especifica para suministro a fundicion: metalurgia, quimica, certificaciones y capacidad de verificacion."
-          ],
-          "preguntas_de_contraste": [
-            "¿Quien es el proveedor mas critico para la calidad del metal (porosidad/inclusiones) y como auditas o verificas su desempeno?"
-          ],
-          "red_flags": [
-            "Subproveedor aprobado por historico o precio, sin evaluacion tecnica del impacto real en calidad del metal fundido."
+            "Si la factibilidad no nombra defectos reales de fundicion, probablemente no fue una factibilidad tecnica sino administrativa."
           ]
         },
         "P5.4": {
           "que_pedir": [
-            "Certificados de analisis (COA) de aleacion por colada/lote con verificacion interna (espectrometro o analisis termico); limites documentados de % retorno por lote con trazabilidad."
-          ],
-          "evidencias_tipicas": [
-            "COA por lote de aleacion con verificacion interna registrada, limites de % retorno documentados y registros de FIFO/FEFO en almacen de materia prima."
+            "Buscar certificados por lote de aleacion, retornos, inoculante o nodularizante y evidencia de verificacion interna de composicion o criterio metalurgico de aceptacion."
           ],
           "preguntas_de_contraste": [
-            "¿Cuanto retorno metes por lote y como evitas contaminacion cruzada entre diferentes aleaciones o cargas?"
+            "Cojamos un lote de materia prima critico: que certificado lo acompaña, quien lo revisa y como se vincula a las coladas fabricadas?"
           ],
           "red_flags": [
-            "Aleacion recibida sin verificacion interna de quimica; retornos sin limite de porcentaje documentado ni trazabilidad por lote de procedencia."
-          ]
-        },
-        "P5.5": {
-          "que_pedir": [
-            "Requisitos tecnicos documentados para subprocesos especiales externos (tratamiento termico, granallado, impregnacion, recubrimiento): especificacion, metodo de verificacion, criterios de aceptacion y frecuencia de auditoria."
-          ],
-          "red_flags": [
-            "Subproceso especial externo tratado como caja negra: sin especificacion tecnica, sin verificacion de resultado ni auditoria al subproveedor."
-          ]
-        },
-        "P5.6": {
-          "que_pedir": [
-            "Control de recepcion de materias primas criticas de fundicion: aleacion, retornos, flux, filtros, refractarios, arena/resina; verificacion por lote, segregacion fisica y FIFO documentado."
+            "Materia prima critica recibida sin verificacion interna o sin trazabilidad por lote."
           ],
           "evidencias_tipicas": [
-            "Registros de recepcion con verificacion interna por lote, identificacion fisica y evidencia de FIFO en almacen de materia prima de fundicion."
-          ],
-          "preguntas_de_contraste": [
-            "Muéstrame la trazabilidad de la ultima carga de aleacion desde la recepcion hasta el horno. ¿FIFO garantizado y verificado?"
-          ],
-          "red_flags": [
-            "Materias primas criticas de fundicion recibidas sin verificacion interna; mezcla de lotes o aleaciones en almacen sin segregacion ni FIFO."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Criterios de homologacion de carga metalica, retornos, nodularizante, inoculante, arena, resinas y machos, con segregacion y trazabilidad."
-          ]
-        },
-        "P6.1.3": {
-          "evidencias_tipicas": [
-            "Homologacion de materias primas y consumibles criticos con control por lote y proveedor."
-          ]
-        },
-        "P6.1.5": {
-          "red_flags": [
-            "Cambios de materia prima, retornos o consumibles tratados como rutina de planta sin gestion formal de cambio."
-          ]
-        },
-        "P6.2": {
-          "que_pedir": [
-            "Registros de control de temperatura, analisis quimico, tratamiento nodular, inoculacion, tiempos de colada y criterios de bloqueo de lote."
-          ],
-          "que_espero_ver": [
-            "La deriva de proceso se detecta antes de materializarse en porosidad, rechupe, inclusion o perdida de nodularidad."
+            "En fundicion nodular no te quedes en el papel del proveedor: pregunta tambien por la comprobacion interna antes de usar el lote."
           ]
         },
         "P6.2.2": {
           "que_pedir": [
-            "Ventanas de proceso aprobadas (temperatura metal, % retorno, parametros de tratamiento, parametros moldeo) con control de cambios, registro por turno/lote y reaccion definida ante desvio."
-          ],
-          "evidencias_tipicas": [
-            "Hoja de control de proceso con ventanas aprobadas, registros por turno/lote y reacciones documentadas ante desviacion de parametros."
+            "Buscar ventanas aprobadas para fusion, tratamiento, inoculacion y colada, con re-liberacion tras parada, cambio de utillaje o incidencia."
           ],
           "preguntas_de_contraste": [
-            "¿Quien puede cambiar la temperatura de fusion o el % de retorno en turno? ¿Donde queda registrado y como se entera calidad?"
+            "Despues de una parada o ajuste de horno, que comprobaciones haceis antes de volver a producir piezas liberables?"
           ],
           "red_flags": [
-            "Lote liberado con evidencia incompleta de quimica, tratamiento o microestructura.",
-            "La liberacion depende demasiado de inspeccion final y poco del control del proceso.",
-            "Parametros de fusion o tratamiento ajustables por cualquier operario sin registro, sin ventana aprobada o sin reaccion definida."
-          ]
-        },
-        "P6.3": {
-          "que_pedir": [
-            "Plan de mantenimiento y calibracion de hornos, cucharas, espectrometro, analisis termico, equipos metalograficos y utiles de proceso."
-          ]
-        },
-        "P6.4.1": {
-          "que_pedir": [
-            "Plan TPM para equipos criticos de fundicion: hornos, cucharas, maquinas de moldeo o inyeccion, sistemas de arena; con criticidad, frecuencia de PM y evidencia de cumplimiento."
-          ],
-          "preguntas_de_contraste": [
-            "¿Que plan de mantenimiento preventivo evita porosidad por variacion de horno o desgaste de molde? ¿Donde ves el impacto en los datos de defectos?"
-          ],
-          "red_flags": [
-            "Mantenimiento de equipos de fundicion no vinculado a modos de fallo: OT reactivas dominan sobre PM; no hay correlacion entre incidencias de mantenimiento y defectos de proceso."
-          ]
-        },
-        "P6.4.3": {
-          "que_pedir": [
-            "Calibracion y verificacion de equipos de medicion criticos de fundicion: espectrometro, equipo de analisis termico, equipos metalograficos, medidores de arena y gauges funcionales."
+            "Se reanuda produccion tras parada o ajuste critico sin first-off, sin verificacion metalurgica o sin decision documentada."
           ],
           "evidencias_tipicas": [
-            "Plan de calibracion con frecuencias y resultados para espectrometro, analisis termico y equipos de ensayo metalurgico; intervalos justificados por volumen de uso."
-          ],
-          "red_flags": [
-            "Espectrometro o equipo de analisis termico sin calibracion vigente o con intervalos de calibracion insuficientes para el volumen de produccion de fundicion."
+            "No aceptes respuestas de costumbre; pide el ultimo registro real de re-liberacion."
           ]
         },
         "P6.5.2": {
           "que_pedir": [
-            "SPC aplicado a variables criticas de proceso de fundicion: temperatura de metal, quimica (Si, Mg, CE), parametros de tratamiento y arena; cartas con limites de control y plan de reaccion operativo."
+            "Buscar datos analizables de temperatura, quimica, nodularidad, scrap, defectologia y variables de proceso, no solo registros archivados."
           ],
           "preguntas_de_contraste": [
-            "Muéstrame la ultima alarma SPC de temperatura o quimica y la accion concreta tomada (no el grafico, la accion)."
+            "Que tendencia de proceso os avisa antes de que aparezca porosidad o deriva metalurgica en producto?"
           ],
           "red_flags": [
-            "Variables criticas de fundicion sin SPC o con SPC sin plan de reaccion operativo; puntos fuera de control sin accion documentada ni investigacion de causa."
-          ]
-        },
-        "P6.5.3": {
-          "que_pedir": [
-            "Pareto de defectologia especifico de fundicion (porosidad, inclusiones, rechupe, variacion dimensional) con acciones de reduccion verificadas y tendencia historica."
+            "Se registran datos de fundicion pero no se usan para detectar tendencia ni para reaccionar antes del defecto."
           ],
           "evidencias_tipicas": [
-            "Pareto de defectologia especifico de fundicion nodular y acciones de reduccion."
-          ],
-          "preguntas_de_contraste": [
-            "¿Cual es el defecto #1 en PPM interno? ¿Que accion correctiva tomaste y como verificaste que funciona?"
-          ],
-          "red_flags": [
-            "Defecto cronico de fundicion (porosidad, inclusion) sin accion correctiva estructural; scrap tratado como coste asumido y no como señal de proceso inestable."
-          ]
-        },
-        "P6.6.3": {
-          "que_pedir": [
-            "Trazabilidad completa de lote: desde carga metalica y colada hasta lote expedido; demostrar reconstruccion real con horno, carga, parametros de tratamiento, inspector y resultado de inspeccion."
-          ],
-          "evidencias_tipicas": [
-            "Trazabilidad de carga, colada, tratamiento, lote de piezas y liberacion final."
-          ],
-          "red_flags": [
-            "Trazabilidad rota por mezcla de retornos, lotes o contenedores sin identificacion; imposible reconstruir el camino completo del lote ante una reclamacion."
-          ]
-        },
-        "P7.2": {
-          "que_pedir": [
-            "Protocolo de comunicacion proactiva al cliente ante lote bajo sospecha o deteccion de posible escape: quien decide avisar, en que plazo maximo y con que informacion minima."
-          ],
-          "red_flags": [
-            "Notificacion al cliente solo cuando el cliente reclama; ausencia de protocolo interno de escalado y comunicacion proactiva ante sospecha de no conformidad."
-          ]
-        },
-        "P7.4": {
-          "que_pedir": [
-            "Reclamaciones de fundicion con 8D que incluya: contencion verificada con trazabilidad del lote bloqueado, causa raiz demostrada con datos (no opinada), acciones validadas en lotes reales y actualizacion de PFMEA/Control Plan."
-          ],
-          "evidencias_tipicas": [
-            "8D con evidencia de causa raiz demostrada (hipotesis probada con datos o experimento de proceso) y PFMEA/Control Plan actualizados y formacion asociada."
-          ],
-          "preguntas_de_contraste": [
-            "Enséñame 1 reclamacion de porosidad o fuga: ¿como demostraste la causa raiz con datos y que cambio en PFMEA/Control Plan despues?"
-          ],
-          "red_flags": [
-            "8D cerrado por fecha sin verificacion de eficacia; causa raiz opinada sin datos; PFMEA/Control Plan no actualizados tras reclamacion de fundicion."
+            "Pide un ejemplo real de tendencia y reaccion; si no existe, el dato solo esta almacenado."
           ]
         }
       }
@@ -471,48 +232,29 @@
       "id": "perfil_fundicion_bruto",
       "name": "Perfil proveedor: fundicion bruto",
       "when": {
-        "process_contains": [
-          "fundicion bruto",
-          "fundición bruto",
-          "fundicion en bruto",
-          "fundición en bruto",
-          "solo fundicion",
-          "solo fundición",
-          "bruto"
-        ]
+        "process_contains": ["fundicion bruto", "fundición bruto", "fundicion en bruto", "fundición en bruto", "solo fundicion", "solo fundición", "bruto"]
       },
       "adjustments": {
-        "P3.2": {
-          "que_pedir": [
-            "Factibilidad del proveedor limitada a bruto: soundness, quimica, metalurgia, geometria en bruto y estabilidad de defectologia, sin dar por asumidas capacidades de mecanizado ajenas."
-          ],
-          "que_espero_ver": [
-            "El proveedor tiene claro cual es su punto de liberacion y que riesgos debe transferir formalmente al siguiente eslabon."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Criterios de liberacion del bruto, segregacion de lote y documentacion que acompana la transferencia al cliente o al mecanizador."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Homologacion de bruto en quimica, microestructura, dureza, soundness, dimensiones en bruto y defectologia admisible."
-          ]
-        },
         "P6.1": {
           "que_pedir": [
-            "Trazabilidad completa desde materia prima y colada hasta el lote de bruto liberado."
+            "Buscar foco reforzado en homologacion de materia prima, trazabilidad de colada, liberacion de lote y segregacion del bruto antes de cualquier proceso posterior."
+          ],
+          "que_espero_ver": [
+            "Perfil de proveedor centrado en fundicion bruto: el riesgo principal nace en metalurgia, moldeo, colada y liberacion."
           ]
         },
         "P6.2": {
-          "que_espero_ver": [
-            "La decision de liberar el bruto no se apoya en expectativas de que el mecanizado posterior corrija problemas de fundicion."
-          ]
-        },
-        "P6.4": {
+          "que_pedir": [
+            "Buscar control real de fusion, nodularizacion, inoculacion, colada, machos y defectologia en bruto."
+          ],
+          "preguntas_de_contraste": [
+            "Que parametro de fundicion os da la primera alerta de deriva antes de ver scrap en bruto?"
+          ],
           "red_flags": [
-            "El proveedor bruto da por cerrada la calidad sin definir claramente la interfaz tecnica y documental con el mecanizado siguiente."
+            "El proveedor se apoya en inspeccion final del bruto porque no domina las variables criticas del proceso metalurgico."
+          ],
+          "evidencias_tipicas": [
+            "En bruto, la pregunta clave es donde previenen el defecto, no donde lo detectan al final."
           ]
         }
       }
@@ -521,61 +263,49 @@
       "id": "perfil_fundicion_mecanizado",
       "name": "Perfil proveedor: fundicion + mecanizado",
       "when": {
-        "process_contains": [
-          "fundicion + mecanizado",
-          "fundición + mecanizado",
-          "fundicion mecanizado",
-          "fundición mecanizado",
-          "fundicion y mecanizado",
-          "fundición y mecanizado",
-          "mecanizado"
-        ]
+        "process_contains": ["fundicion + mecanizado", "fundición + mecanizado", "fundicion mecanizado", "fundición mecanizado", "fundicion y mecanizado", "fundición y mecanizado", "mecanizado"]
       },
       "adjustments": {
-        "P4.2": {
-          "que_pedir": [
-            "Hojas de setup, first-off, criterios de cambio de herramienta, offsets, dispositivos de amarre y reaction plans de mecanizado."
-          ],
-          "que_espero_ver": [
-            "El mecanizado protege con first-off, SPC y control de desgaste lo que no puede quedar delegado a la inspeccion final."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Capacidad demostrada en cotas especiales mecanizadas, rugosidad, roscas, coaxialidades o referencias funcionales si aplican."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Reglas de identificacion, segregacion y trazabilidad entre bruto, semimecanizado y mecanizado final."
-          ]
-        },
         "P6.1.4": {
-          "evidencias_tipicas": [
-            "Trazabilidad del lote bruto al lote mecanizado, incluyendo programa, utilaje y first-off aprobados."
-          ]
-        },
-        "P6.2": {
           "que_pedir": [
-            "Registros de first-off, SPC, control de vida de herramienta, cambios de programa y liberacion tras cambio de setup."
+            "Buscar trazabilidad completa entre bruto y mecanizado: lote de colada, lote intermedio, maquina, utillaje y lote final mecanizado."
           ],
           "preguntas_de_contraste": [
-            "Como detectas si el defecto nace en el bruto o en el mecanizado antes de mezclar lotes y causas?"
-          ]
-        },
-        "P6.3": {
-          "evidencias_tipicas": [
-            "Presetting, historico de herramienta, liberacion de galgas, estudios MSA y capacidad de maquinas CNC."
-          ]
-        },
-        "P6.4": {
+            "Podeis enlazar una pieza mecanizada concreta con su colada original y con la maquina/utillaje que la termino?"
+          ],
           "red_flags": [
-            "El mecanizado corrige sintomas del bruto sin retroalimentar al proceso de fundicion o sin separar causas."
+            "Se pierde el enlace de trazabilidad entre bruto y mecanizado, o solo se conserva por fecha aproximada."
+          ],
+          "evidencias_tipicas": [
+            "Haz una trazabilidad completa hacia atras y hacia delante; si falla uno de los dos sentidos, la cadena no esta cerrada."
+          ]
+        },
+        "P6.2.2": {
+          "que_pedir": [
+            "Buscar first-off, setup approval, control de desgaste de herramienta y criterio de re-liberacion tras cambio de herramienta o referencia."
+          ],
+          "preguntas_de_contraste": [
+            "Despues de cambiar herramienta o hacer setup, que first-off exigis y quien lo libera?"
+          ],
+          "red_flags": [
+            "Cambios de herramienta o setup gestionados por costumbre, sin first-off documentado ni criterio de liberacion."
+          ],
+          "evidencias_tipicas": [
+            "Si el proveedor habla de SPC pero no enseña el first-off del ultimo cambio, el control de arranque no esta cerrado."
           ]
         },
         "P6.5.2": {
+          "que_pedir": [
+            "Buscar capabilidad/SPC en caracteristicas mecanizadas clave y relacionarlo con desgaste de herramienta y ajustes de maquina."
+          ],
+          "preguntas_de_contraste": [
+            "Que caracteristica mecanizada os deriva antes y como decis cambiar o corregir herramienta?"
+          ],
+          "red_flags": [
+            "Hay datos dimensionales de mecanizado pero no criterio claro para reaccionar ante deriva o desgaste."
+          ],
           "evidencias_tipicas": [
-            "Historico de desgaste de herramienta, cambios de offset y rechazo dimensional en cotas especiales."
+            "Cruza ultimo grafico SPC con historial de cambio de herramienta; si no dialogan entre si, la capabilidad no se gestiona."
           ]
         }
       }
@@ -584,157 +314,35 @@
       "id": "perfil_integrado_acabado",
       "name": "Perfil proveedor: fundicion + mecanizado + acabado superficial",
       "when": {
-        "process_contains": [
-          "fundicion + mecanizado + acabado superficial",
-          "fundición + mecanizado + acabado superficial",
-          "acabado superficial",
-          "recubrimiento",
-          "pintura",
-          "cataforesis",
-          "fosfatado",
-          "cromado",
-          "cromado duro",
-          "cromo",
-          "hard chrome"
-        ]
+        "process_contains": ["fundicion + mecanizado + acabado superficial", "fundición + mecanizado + acabado superficial", "acabado superficial", "recubrimiento", "pintura", "cataforesis", "fosfatado", "cromado", "cromado duro", "cromo", "hard chrome"]
       },
       "adjustments": {
-        "P4.2": {
-          "que_pedir": [
-            "Parametros de limpieza, preparacion, mascaras, banos u horno, tiempos, temperaturas y criterios de rechazo del acabado superficial."
-          ],
-          "que_espero_ver": [
-            "La limpieza y el acabado no se tratan como operacion cosmetica, sino como etapa critica para funcionalidad y proteccion final."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Resultados de espesor, adherencia, cobertura, curado, corrosion o proteccion final, si aplican al alcance del proveedor."
-          ]
-        },
-        "P6.1": {
-          "que_pedir": [
-            "Reglas de limpieza previa, estado superficial de entrada al acabado y trazabilidad del lote acabado."
-          ]
-        },
         "P6.2": {
           "que_pedir": [
-            "Controles en linea de limpieza, contaminacion, parametros de proceso, espesor, adherencia y proteccion final."
+            "Buscar, ademas, limpieza/preparacion de superficie, parametros del acabado, control de contaminacion y liberacion entre mecanizado y acabado."
           ],
           "preguntas_de_contraste": [
-            "Como evitas que una pieza correcta en mecanizado quede inservible por contaminacion o dano en acabado?"
-          ]
-        },
-        "P6.3": {
-          "evidencias_tipicas": [
-            "Analiticas de bano si aplican, perfiles de horno, calibracion de medidores de espesor y control de utillajes de colgado o mascara."
-          ]
-        },
-        "P6.4": {
+            "Que control asegura que una pieza con contaminacion o preparacion deficiente no entre al acabado superficial?"
+          ],
           "red_flags": [
-            "El acabado superficial no tiene barreras robustas frente a contaminacion, dano posterior o embalaje insuficiente.",
-            "Se mide el espesor o la adherencia, pero no se gobierna la limpieza y preparacion que los condicionan."
+            "Acabado superficial tratado como operacion cosmetica y no como proceso con parametros y riesgos propios."
+          ],
+          "evidencias_tipicas": [
+            "En procesos integrados, revisa muy bien el punto de transferencia entre mecanizado, lavado y acabado: ahi suelen nacer mezclas y contaminacion."
           ]
         },
         "P6.6.2": {
-          "evidencias_tipicas": [
-            "Evidencia de proteccion final, embalaje y prevencion de dano o contaminacion postacabado."
-          ]
-        },
-        "P6.6.3": {
-          "evidencias_tipicas": [
-            "Trazabilidad del lote antes y despues de limpieza, preparacion y acabado superficial."
-          ]
-        }
-      }
-    },
-    {
-      "id": "cromado_duro_freno",
-      "name": "Proceso de cromado duro para componentes de freno",
-      "when": {
-        "process_contains": [
-          "cromado",
-          "cromado duro",
-          "cromo",
-          "hard chrome"
-        ]
-      },
-      "adjustments": {
-        "P6.2.1": {
           "que_pedir": [
-            "Pedir a varios operarios de la zona de cromado que expliquen verbalmente los simbolos SC/CC del plan de control y el control asociado que aplican."
+            "Buscar proteccion final del acabado, ausencia de danos de manipulacion y embalaje adecuado para zonas funcionales recubiertas."
+          ],
+          "preguntas_de_contraste": [
+            "Como evitais dano, roce o corrosion de la pieza acabada entre la liberacion final y la expedicion?"
           ],
           "red_flags": [
-            "Operarios del proceso de cromado no saben identificar ni explicar las caracteristicas especiales o de seguridad que controlan."
-          ]
-        },
-        "P6.2.2": {
-          "evidencias_tipicas": [
-            "Hoja de parametros de bano de cromo con ventanas de proceso (concentracion CrO3, temperatura, densidad de corriente) y registros de control por turno."
-          ],
-          "red_flags": [
-            "Parametros del bano de cromo sin ventanas de proceso definidas o sin registro sistematico por turno."
-          ]
-        },
-        "P6.2.3": {
-          "que_pedir": [
-            "Evidencia de como se comunican las SC/CC al personal de turno en el proceso de cromado: instruccion visible en puesto, formacion registrada, validacion de comprension."
-          ],
-          "red_flags": [
-            "Las caracteristicas especiales del cromado no estan visibles en el puesto ni verificadas en la formacion del operario."
-          ]
-        },
-        "P6.3.1": {
-          "que_pedir": [
-            "Instruccion de trabajo con el limite maximo de piezas por utillaje de colgado (bastidor, jig) y evidencia de que los operarios lo conocen y respetan.",
-            "Registro o control que detecte si un operario carga mas piezas de las permitidas por ciclo de cromado."
-          ],
-          "red_flags": [
-            "Limite de carga por utillaje de colgado no especificado en la instruccion o verificado durante la auditoria que se incumple."
-          ]
-        },
-        "P6.4.2": {
-          "que_pedir": [
-            "Plan de reaccion documentado ante fallo del sistema de discriminacion o vision en linea del proceso de cromado: quien decide parar, que lote queda bloqueado, como se reintroduce el equipo.",
-            "Registro del ultimo fallo del sistema de inspeccion y la reaccion tomada."
+            "El embalaje final no protege el acabado superficial ni las zonas funcionales despues del ultimo proceso."
           ],
           "evidencias_tipicas": [
-            "Plan de reaccion documentado ante desviacion de parametros de bano o fallo de equipo de inspeccion en linea."
-          ],
-          "red_flags": [
-            "Sistema de discriminacion o vision averiado sin plan de reaccion: operario decide por su cuenta si continua o para la produccion.",
-            "Fallo de equipo de inspeccion tratado como incidencia de mantenimiento sin bloqueo automatico del lote afectado."
-          ]
-        },
-        "P6.5.4": {
-          "que_pedir": [
-            "Verificar que el LPA cubre explicitamente el proceso de cromado y no solo las lineas de mecanizado; solicitar el mapa de areas auditadas.",
-            "Confirmar que el LPA tambien cubre recepcion de materia prima para cromado y la zona de expedicion."
-          ],
-          "red_flags": [
-            "LPA que excluye el proceso de cromado, la recepcion de materiales de bano o la expedicion del producto acabado.",
-            "LPAs con frecuencia inferior a la acordada sin justificacion, o resultados OK en areas donde la auditoria detecta incumplimientos.",
-            "Instrucciones de proceso del cromado con fecha de revision superior a 3 anos sin justificacion."
-          ]
-        },
-        "P6.6.3": {
-          "que_pedir": [
-            "Verificar que el sistema de vision o inspeccion del proceso de cromado almacena imagenes o resultados por pieza o lote, con trazabilidad recuperable.",
-            "Tiempo de retencion de imagenes e identificacion del lote en los registros del sistema."
-          ],
-          "red_flags": [
-            "Sistema de inspeccion en linea que no almacena imagenes ni resultados: sin trazabilidad de lo que se inspecciono y el resultado obtenido.",
-            "Resultados de inspeccion opticos o dimensionales no vinculados al lote o numero de pieza."
-          ]
-        },
-        "P7.1": {
-          "que_pedir": [
-            "Frecuencia real de LPAs realizados en el proceso de cromado en los ultimos 3 meses frente a la frecuencia planificada.",
-            "Verificar in situ durante la auditoria si los resultados de LPA son coherentes con lo observado."
-          ],
-          "red_flags": [
-            "LPAs marcados OK en areas donde la auditoria observa incumplimientos evidentes: cuestionamiento de la fiabilidad del sistema de LPA.",
-            "Frecuencia de LPA claramente insuficiente para el riesgo del proceso de cromado, sin justificacion ni compensacion alternativa."
+            "Pide ver una caja ya expedida y una pieza recien acabada; la comparacion suele enseñar si el embalaje protege de verdad."
           ]
         }
       }
@@ -746,69 +354,41 @@
         "product_contains": ["piston", "pistón"]
       },
       "adjustments": {
-        "P3.1": {
-          "que_pedir": [
-            "Requisitos de material, dureza, rugosidad, tratamiento superficial y limpieza funcional del piston."
-          ]
-        },
-        "P4.3": {
-          "que_pedir": [
-            "Capacidad demostrada en diametro, acabado superficial, tratamiento y proteccion anticorrosion si aplica."
-          ]
-        },
-        "P6.1.4": {
-          "que_pedir": [
-            "Sistema de identificacion de palés, bandejas o contenedores de pistones en cada etapa del flujo (mecanizado, tratamiento, expedicion): etiqueta, referencia y estado del lote visible en el utillaje."
-          ],
-          "red_flags": [
-            "Palés o contenedores de pistones sin identificacion visible en alguna etapa del proceso, especialmente en zonas de tratamiento superficial."
-          ]
-        },
-        "P6.2.2": {
-          "red_flags": [
-            "Se libera piston sin control suficientemente robusto de superficie, diametro o contaminacion."
-          ]
-        },
         "P6.2.4": {
           "que_pedir": [
-            "Contenedor de piezas NOK: verificar que tiene cierre fisico (tapa, precinto o candado) y etiqueta de rechazo, no solo diferenciacion por color.",
-            "Confirmar que no existe practica de reintroducir pistones caidos al suelo sin decision documentada de retrabajo o desguace."
+            "Buscar segregacion reforzada de piezas caidas, rayadas o con dano superficial que pueda comprometer estanqueidad o deslizamiento."
+          ],
+          "preguntas_de_contraste": [
+            "Que barrera fisica impide que un piston caido o rayado vuelva al flujo sin re-inspeccion documentada?"
           ],
           "red_flags": [
-            "Contenedor de rechazo diferenciado unicamente por color, sin cierre fisico ni etiqueta de rechazo: riesgo de mezcla con producto conforme.",
-            "Pistones caidos al suelo reintroducidos al flujo sin decision documentada ni responsable identificado."
-          ]
-        },
-        "P6.2.5": {
-          "que_pedir": [
-            "Identificacion del lote en los utillajes de transporte interno (palés, bandejas) que alimentan cada etapa del proceso del piston."
+            "Piezas reintroducidas en flujo tras caida o dano superficial sin re-evaluacion documentada."
           ],
-          "red_flags": [
-            "Utillajes de alimentacion entre procesos sin identificacion de lote: imposible reconstruir trazabilidad si aparece un defecto en proceso."
+          "evidencias_tipicas": [
+            "En piston, una marca superficial dudosa no es un tema cosmetico; obliga a revisar criterio funcional real."
           ]
         }
       }
     },
     {
-      "id": "pastilla_freno_secundaria",
-      "name": "Pastilla de freno turismo",
+      "id": "pastilla_freno_secundario",
+      "name": "Pastilla de freno",
       "when": {
-        "product_contains": ["pastilla", "pad"]
+        "product_contains": ["pastilla", "pad", "brake pad"]
       },
       "adjustments": {
-        "P3.1": {
+        "P6.2.5": {
           "que_pedir": [
-            "Requisitos funcionales de friccion, adherencia, geometria, ruido, embalaje y trazabilidad de lote de material."
-          ]
-        },
-        "P4.2": {
-          "que_pedir": [
-            "Controles de mezcla, prensado, curado, adhesivado y marcado si estan en alcance del proveedor."
-          ]
-        },
-        "P6.4": {
+            "Buscar segregacion robusta entre referencias, composiciones de friccion, manos y estados de inspeccion."
+          ],
+          "preguntas_de_contraste": [
+            "Como evitais mezcla de compuesto, referencia o mano en una misma expedicion?"
+          ],
           "red_flags": [
-            "La variacion del material de friccion o del curado se detecta tarde, ya en producto terminado."
+            "Riesgo de mezcla entre referencias o compuestos por identificacion debil o flujo fisico ambiguo."
+          ],
+          "evidencias_tipicas": [
+            "En pastilla, sigue la pieza y la etiqueta al mismo tiempo; la mezcla suele verse antes en el flujo que en el procedimiento."
           ]
         }
       }

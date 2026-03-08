@@ -3,536 +3,597 @@
   "items": {
     "P2": {
       "que_pedir": [
-        "Estructura de gobierno del proyecto: organigrama con líder nombrado formalmente, equipo interdisciplinario (ingeniería, calidad, compras, producción), responsabilidades definidas y puntos de contacto comunicados al cliente.",
-        "Plan maestro acordado con el cliente: hitos internos y del cliente (diseño, prototipos, validaciones, PPAP/PPA, SOP), ruta crítica identificada, gate reviews ejecutadas y lecciones aprendidas de proyectos similares incorporadas.",
-        "Evidencia de gestión activa: registro de riesgos con mitigaciones, proceso de escalación documentado con criterios y niveles, y gestión formal de cambios con evaluación de impacto y notificación al cliente cuando aplica."
+        "P2 evalua como el proveedor gestiona proyectos nuevos: organizacion, recursos, planificacion, calidad, compras y cambios. En fundicion aplica cuando hay nuevas referencias, cambios de utillaje o transferencias de produccion. Aunque en auditoria de serie (P5-P7) no siempre se audita P2 completo, es muy util tirar del hilo desde P6 hacia atras."
       ],
       "que_espero_ver": [
-        "Organizacion real, multidisciplinar y con autoridad para bloquear, decidir y escalar.",
-        "Proyecto gestionado con vision de seguridad de producto y no como lanzamiento industrial generico."
+        "P2 evalua como el proveedor gestiona proyectos nuevos: organizacion, recursos, planificacion, calidad, compras y cambios. En fundicion aplica cuando hay nuevas referencias, cambios de utillaje o transferencias de produccion. Aunque en auditoria de serie (P5-P7) no siempre se audita P2 completo, es muy util tirar del hilo desde P6 hacia atras."
       ],
       "evidencias_tipicas": [
-        "Kick-off, organigrama, RACI, ruta critica, risk register y minutas de revision.",
-        "Cronograma con hitos de utiles, lotes piloto, PPAP/PPA, Run@Rate y SOP."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Que riesgo del proyecto depende hoy mas del nivel de integracion real del proveedor?",
-        "Que escalacion se activaria si una colada piloto o un first-off no cumplen?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "Alcance del proveedor ambiguo entre bruto, mecanizado y acabado.",
-        "Riesgos o hitos gestionados solo desde administracion de proyecto, sin peso real de proceso y calidad."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P2.1": {
       "que_pedir": [
         "Buscar si existe un proceso de gestion de proyectos real, con lider de proyecto definido, equipo multidisciplinar, escalaciones claras, y lecciones aprendidas de proyectos anteriores."
       ],
-      "que_espero_ver": [
-        "Interlocutores y escalacion definidos tambien para procesos externalizados."
-      ],
-      "red_flags": [
-        "El comercial acepta el proyecto y se lo pasa a calidad/ingenieria sin organizacion formal. No hay project leader — 'lo lleva todo Begoña' pero Begoña ya tiene 5 roles. Si no hay organigrama de proyecto, no hay P2.1."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "En fundiciones pequeñas/medianas, el organigrama de proyecto suele ser el mismo que el organigrama de planta. Valido, pero tiene que estar documentado con roles y responsabilidades especificas para ESE proyecto."
       ],
       "preguntas_de_contraste": [
         "Quien es el lider de proyecto para el proyecto EU7 / [referencia X], y pueden enseñarme el organigrama de proyecto con roles definidos y vias de escalacion?"
       ],
-      "tips": [
-        "En fundiciones pequeñas/medianas, el organigrama de proyecto suele ser el mismo que el organigrama de planta. Valido, pero tiene que estar documentado con roles y responsabilidades especificas para ESE proyecto."
+      "red_flags": [
+        "El comercial acepta el proyecto y se lo pasa a calidad/ingenieria sin organizacion formal. No hay project leader — 'lo lleva todo Begoña' pero Begoña ya tiene 5 roles. Si no hay organigrama de proyecto, no hay P2.1."
       ]
     },
     "P2.2": {
       "que_pedir": [
-        "Evaluar si los recursos (personas, maquinas, utillaje, laboratorio) estan planificados, disponibles y revisados cuando hay cambios. La carga de trabajo del equipo se tiene en cuenta."
+        "*-question. Evaluar si los recursos (personas, maquinas, utillaje, laboratorio) estan planificados, disponibles y revisados cuando hay cambios. La carga de trabajo del equipo se tiene en cuenta."
       ],
-      "que_espero_ver": [
-        "La capacidad se calcula por operacion critica y no solo a nivel agregado."
-      ],
-      "red_flags": [
-        "Aceptan proyectos nuevos sin evaluar impacto en capacidad. Caso Fagor: se fue Ander (QA Tech), Naiara duro semanas, Begoña asumio todo — sin planificacion de recursos. Caso CyC: rectificadora y linea de cromo para nuevas referencias sin evaluar si aguantan el volumen."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Para la nueva referencia de bracket: que utillaje adicional, equipos de inspeccion y personal planificasteis? Como verificasteis que teniais capacidad suficiente sin comprometer las referencias existentes?"
+      ],
+      "red_flags": [
+        "Aceptan proyectos nuevos sin evaluar impacto en capacidad. Caso Fagor: se fue Ander (QA Tech), Naiara duro semanas, Begoña asumio todo — sin planificacion de recursos. Caso CyC: rectificadora y linea de cromo para nuevas referencias sin evaluar si aguantan el volumen."
       ]
     },
     "P2.3": {
       "que_pedir": [
         "Verificar que existe plan de proyecto con milestones del cliente integrados, plazos de PPAP, y que se revisa en los hitos definidos."
       ],
-      "que_espero_ver": [
-        "Ruta critica viva y alineada con entregables tecnicos reales."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Pueden enseñarme el cronograma del proyecto con los hitos de Astemo, fechas de entrega de PPAP y evidencia de las revisiones en cada hito?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P2.4": {
       "que_pedir": [
         "Las actividades de aseguramiento de calidad (PFMEA, CP, MSA, capability) estan planificadas, se ejecutan y se monitoriza su cumplimiento."
       ],
-      "que_espero_ver": [
-        "Las actividades de calidad cubren bruto, mecanizado y acabado cuando existen."
-      ],
-      "red_flags": [
-        "El PFMEA se hizo como trámite despues del SOP, no antes. O se hizo pero no se actualizo cuando hubo cambios."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñenme el plan de calidad de este proyecto: cuando se completo el PFMEA, cuando se valido el Plan de Control, y que estudios de capacidad se planificaron?"
+      ],
+      "red_flags": [
+        "El PFMEA se hizo como trámite despues del SOP, no antes. O se hizo pero no se actualizo cuando hubo cambios."
       ]
     },
     "P2.5": {
       "que_pedir": [
         "Los proveedores de utillaje, arena, materia prima, equipos de inspeccion estan integrados en la planificacion del proyecto con fechas de adjudicacion y milestones."
       ],
-      "que_espero_ver": [
-        "Compras forma parte de los hitos y de la evaluacion de riesgo, no entra tarde."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Para una nueva referencia de pinza, cuando hicisteis el pedido del molde nuevo? El plazo de entrega del fabricante de moldes estaba incluido en vuestro plan de proyecto?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P2.6": {
       "que_pedir": [
-        "Los cambios (del cliente, internos o del proveedor) se evaluan, documentan y gestionan con evaluacion de riesgo. El design freeze se respeta."
+        "*-question. Los cambios (del cliente, internos o del proveedor) se evaluan, documentan y gestionan con evaluacion de riesgo. El design freeze se respeta."
       ],
-      "que_espero_ver": [
-        "Cada cambio deja impacto evaluado sobre seguridad, capacidad, trazabilidad y cliente."
-      ],
-      "red_flags": [
-        "No hay registro formal de cambios. Los cambios se gestionan 'por email' sin evaluacion de impacto. Caso Fagor Ref 4613: implementacion de cuña Williams sin clean point claro — el cambio se hizo pero la validacion fue dudosa."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Pregunta clave si detectas problemas en serie: 'Was a formal feasibility analysis conducted before accepting these tolerances?' Aunque P2 no este en scope de serie, si en P6 detectas incapacidad, puedes tirar hacia atras."
       ],
       "preguntas_de_contraste": [
         "Cuando Astemo solicito un cambio en la geometria de la cuña del bracket, como evaluasteis el impacto en vuestro proceso de fundicion? Enseñadme la solicitud de cambio, la evaluacion de riesgos y el plan de proyecto actualizado."
       ],
-      "tips": [
-        "Pregunta clave si detectas problemas en serie: 'Was a formal feasibility analysis conducted before accepting these tolerances?' Aunque P2 no este en scope de serie, si en P6 detectas incapacidad, puedes tirar hacia atras."
+      "red_flags": [
+        "No hay registro formal de cambios. Los cambios se gestionan 'por email' sin evaluacion de impacto. Caso Fagor Ref 4613: implementacion de cuña Williams sin clean point claro — el cambio se hizo pero la validacion fue dudosa."
       ]
     },
     "P3": {
       "que_pedir": [
-        "Requisitos completos del producto y proceso desplegados por etapa del alcance, con características especiales identificadas y factibilidad formal evaluada antes de aceptar el proyecto.",
-        "Plan detallado de desarrollo con actividades técnicas (FMEA, validaciones, prototipos), gestión de riesgos, actividades de compras y proveedores, y soporte postventa planificado desde esta fase.",
-        "Recursos identificados y planificados para el desarrollo: personal, instalaciones, capacidad productiva para prototipos y pre-serie, con brechas resueltas antes de iniciar ejecución."
+        "P3 evalua la PLANIFICACION (no la implementacion, eso es P4). En fundicion: ¿se identificaron los requisitos criticos del producto, se evaluo la factibilidad, se planificaron PFMEA/CP/MSA, se planificaron las compras de utillaje y materia prima?"
       ],
       "que_espero_ver": [
-        "Requisitos desplegados por etapa del proceso y conectados a controles reales.",
-        "Factibilidad y planificacion apoyadas en datos, no en suposiciones comerciales."
+        "P3 evalua la PLANIFICACION (no la implementacion, eso es P4). En fundicion: ¿se identificaron los requisitos criticos del producto, se evaluo la factibilidad, se planificaron PFMEA/CP/MSA, se planificaron las compras de utillaje y materia prima?"
       ],
       "evidencias_tipicas": [
-        "Planos, CSR, acuerdos de calidad, flow chart, PFMEA, plan de control y planes de validacion.",
-        "Estudios de factibilidad, clasificacion de subproveedores y plan de recursos."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Que requisito especial de cliente condiciona mas el proceso del proveedor?",
-        "En que etapa del alcance nace hoy el riesgo tecnico mas alto?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "Requisitos, factibilidad y planificacion tratados de forma plana, sin separar bruto, mecanizado y acabado.",
-        "Industrializacion bien calendarizada pero pobre en criterios tecnicos de aceptacion."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P3.1": {
       "que_pedir": [
         "Los requisitos funcionales, del cliente, legales, y las caracteristicas especiales (CC/SC) estan identificados y documentados."
       ],
-      "que_espero_ver": [
-        "Cada requisito tiene reflejo en control de proceso, control de lote o validacion."
-      ],
-      "red_flags": [
-        "Las CC vienen solo del plano del cliente, sin analisis propio. O peor: tienen dos simbolos de CC en el Control Plan sin leyenda que explique que exige cada uno. Caso CyC: simbolo de seguridad + circulo azul con exclamacion invertida sin leyenda."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme como identificasteis las caracteristicas especiales para esta referencia. Las caracteristicas de seguridad y significativas, de donde vienen: del plano de Astemo, de vuestro propio analisis de riesgos, o de ambos?"
+      ],
+      "red_flags": [
+        "Las CC vienen solo del plano del cliente, sin analisis propio. O peor: tienen dos simbolos de CC en el Control Plan sin leyenda que explique que exige cada uno. Caso CyC: simbolo de seguridad + circulo azul con exclamacion invertida sin leyenda."
       ]
     },
     "P3.2": {
       "que_pedir": [
-        "Se evaluo si el producto es fabricable con los medios disponibles, con participacion de todas las funciones (produccion, calidad, logistica, compras, mantenimiento)."
+        "*-question. Se evaluo si el producto es fabricable con los medios disponibles, con participacion de todas las funciones (produccion, calidad, logistica, compras, mantenimiento)."
       ],
-      "que_espero_ver": [
-        "Los cuellos de botella y riesgos se conocen antes de comprometer PPAP/PPA."
-      ],
-      "red_flags": [
-        "El comercial acepta el proyecto, firma 'factible' y la fundicion descubre despues que no pueden cumplir el Cpk en una zona critica. El feasibility es un check en un formulario, no un estudio real. No se evaluan las CC del cliente contra la capacidad real del proceso."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Si en P6 detectas que no son capaces en alguna CC, pregunta: 'Was this capability assessed during feasibility?' — conecta P3 con P6 sin salirte de scope."
       ],
       "preguntas_de_contraste": [
         "Antes de aceptar esta referencia, hicisteis un estudio de factibilidad formal? Quien participo: solo calidad, o tambien produccion, logistica, mantenimiento? Puedo ver el documento firmado con las condiciones y riesgos identificados?"
       ],
-      "tips": [
-        "Si en P6 detectas que no son capaces en alguna CC, pregunta: 'Was this capability assessed during feasibility?' — conecta P3 con P6 sin salirte de scope."
+      "red_flags": [
+        "El comercial acepta el proyecto, firma 'factible' y la fundicion descubre despues que no pueden cumplir el Cpk en una zona critica. El feasibility es un check en un formulario, no un estudio real. No se evaluan las CC del cliente contra la capacidad real del proceso."
       ]
     },
     "P3.3": {
       "que_pedir": [
         "El desarrollo de producto y proceso esta desglosado en actividades concretas: PFMEA, trials, validacion de utillaje, estudios dimensionales, MSA."
       ],
-      "que_espero_ver": [
-        "Las interfaces entre etapas tienen criterio de liberacion y evidencia."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P3.4": {
       "que_pedir": [
-        "La seleccion de proveedores de materia prima y utillaje esta planificada con criterios definidos."
+        "*-question. La seleccion de proveedores de materia prima y utillaje esta planificada con criterios definidos."
       ],
-      "que_espero_ver": [
-        "Subproveedores criticos gobernados con enfoque de riesgo."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Cuando cualificasteis al proveedor de arena, al de inoculante, al fabricante de moldes? Fue planificado antes del SOP o se hizo de forma reactiva?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P3.5": {
       "que_pedir": [
         "Capacidad de maquina, personal, laboratorio, equipos de inspeccion planificados y disponibles para el volumen esperado."
       ],
-      "que_espero_ver": [
-        "Recursos criticos previstos antes de necesitarlos."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P3.6": {
       "que_pedir": [
         "El concepto de suministro de piezas (incluyendo repuestos), planes de contingencia y proceso de analisis de reclamaciones 0km/campo estan planificados."
       ],
-      "que_espero_ver": [
-        "El proveedor sabe como analizar un defecto que puede nacer en bruto, mecanizado o acabado."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Antes del SOP, planificasteis como gestionariais una reclamacion de campo de Astemo? Quien hace el analisis de fallo, con que equipos, en que plazo?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P4": {
       "que_pedir": [
-        "Evidencia de que las acciones del plan de desarrollo (P3) se ejecutaron: FMEAs actualizadas, validaciones completadas, medidas de riesgo implementadas y verificadas en eficacia.",
-        "Todas las liberaciones y aprobaciones obtenidas antes del SOP: PPAP/PPA del cliente, estudios de capacidad (Cpk), MSA válidas, homologaciones legales y aprobaciones de proveedores de partes críticas.",
-        "Handover controlado a producción: checklist de transferencia firmado, documentación técnica transferida, open points con responsable, criticidad y fecha de cierre definida; personal de serie capacitado antes del arranque."
+        "P4 evalua si lo PLANIFICADO en P3 se IMPLEMENTO realmente. En fundicion: ¿el PFMEA se traduce en el Control Plan? ¿Los estudios de capacidad demuestran que el proceso funciona? ¿El PPAP esta completo y aprobado?"
       ],
       "que_espero_ver": [
-        "Lo validado en desarrollo ya esta aterrizado en proceso, puesto, medio y criterio de liberacion.",
-        "Las transferencias entre etapas y a serie estan cerradas documental y operativamente."
+        "P4 evalua si lo PLANIFICADO en P3 se IMPLEMENTO realmente. En fundicion: ¿el PFMEA se traduce en el Control Plan? ¿Los estudios de capacidad demuestran que el proceso funciona? ¿El PPAP esta completo y aprobado?"
       ],
       "evidencias_tipicas": [
-        "Instrucciones, planes de control, first-off, liberaciones, estudios de capacidad y Run@Rate.",
-        "Checklists de handover, safe launch y open points post-SOP."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Que parte del alcance esta menos madura hoy para serie y como la estais protegiendo?",
-        "Que pendiente del handover generaria mas riesgo si se ignorase?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "Industrializacion cerrada por calendario sin evidencia suficiente de capacidad o control.",
-        "Produccion recibe el proceso, pero no los criterios reales de liberacion y reaccion."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P4.1": {
       "que_pedir": [
-        "Las actividades de desarrollo (PFMEA, CP, trials, MSA) se ejecutaron segun lo planificado. El analisis de riesgos se actualizo."
+        "*-question. Las actividades de desarrollo (PFMEA, CP, trials, MSA) se ejecutaron segun lo planificado. El analisis de riesgos se actualizo."
       ],
-      "que_espero_ver": [
-        "Los riesgos altos tienen acciones implantadas y medidas de eficacia."
-      ],
-      "red_flags": [
-        "El PFMEA tiene RPNs altos pero el CP no refleja controles adicionales. O el PFMEA se hizo despues del SOP como trámite."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme como vuestro analisis de riesgos del PFMEA se tradujo en el Plan de Control. Para los items con RPN mas alto, que controles especificos implementasteis?"
+      ],
+      "red_flags": [
+        "El PFMEA tiene RPNs altos pero el CP no refleja controles adicionales. O el PFMEA se hizo despues del SOP como trámite."
       ]
     },
     "P4.2": {
       "que_pedir": [
         "El personal necesario para serie esta disponible y formado antes del SOP."
       ],
-      "que_espero_ver": [
-        "Cobertura suficiente por turno en operaciones y validaciones criticas."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P4.3": {
       "que_pedir": [
         "Maquinas, utillaje, equipos de inspeccion, embalaje en cantidades necesarias y validados."
       ],
-      "que_espero_ver": [
-        "Los medios criticos estan liberados y mantenibles para serie."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Antes de la primera entrega en serie, estaban todos los moldes validados, todos los calibres de inspeccion calibrados y todo el embalaje aprobado por Astemo?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P4.4": {
       "que_pedir": [
-        "El PPAP esta completo, con aprobacion del cliente. Los waivers estan documentados."
+        "*-question. El PPAP esta completo, con aprobacion del cliente. Los waivers estan documentados."
       ],
-      "que_espero_ver": [
-        "Capacidad ligada a caracteristicas especiales y al alcance real del proveedor."
-      ],
-      "red_flags": [
-        "PPAP 'aprobado' pero con waivers abiertos que nunca se cerraron. O el PPAP se aprobo con 10 piezas de trial pero el proceso cambio desde entonces."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Pueden enseñarme el paquete PPAP completo de esta referencia, incluyendo la aprobacion firmada de Astemo? Hay algun waiver o desviacion abierta?"
+      ],
+      "red_flags": [
+        "PPAP 'aprobado' pero con waivers abiertos que nunca se cerraron. O el PPAP se aprobo con 10 piezas de trial pero el proceso cambio desde entonces."
       ]
     },
     "P4.5": {
       "que_pedir": [
         "Los proveedores de MP, utillaje y servicios fueron realmente cualificados y auditan sus entregas."
       ],
-      "que_espero_ver": [
-        "Los procesos externalizados ya operan bajo el mismo rigor de calidad que los internos."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P4.6": {
       "que_pedir": [
         "Las instrucciones de trabajo, planes de inspeccion y especificaciones se derivaron del PFMEA/CP y estan implementadas en planta."
       ],
-      "que_espero_ver": [
-        "La documentacion de puesto coincide con PFMEA, plan de control y revision vigente."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Cojamos cualquier instruccion de trabajo del taller: podeis trazarla hasta la linea del PFMEA que requirio ese control?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P4.7": {
       "que_pedir": [
         "Se realizo un Run@Rate / 2-day production para validar que el proceso funciona a velocidad y volumen de serie."
       ],
-      "que_espero_ver": [
-        "Condiciones de serie reales en personal, utiles, first-off, SPC y embalaje."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P4.8": {
       "que_pedir": [
         "El proceso de gestion de reclamaciones y analisis de fallos esta operativo antes de SOP."
       ],
-      "que_espero_ver": [
-        "El proveedor puede analizar defectos ligados a su etapa real de valor."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P4.9": {
       "que_pedir": [
-        "Existe un proceso formal de handover de proyecto a produccion serie, con criterios de aceptacion y cuestiones pendientes gestionadas."
+        "*-question. Existe un proceso formal de handover de proyecto a produccion serie, con criterios de aceptacion y cuestiones pendientes gestionadas."
       ],
-      "que_espero_ver": [
-        "No quedan zonas grises de responsabilidad entre desarrollo y serie."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
-      "preguntas_de_contraste": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P5": {
       "que_pedir": [
-        "Lista de proveedores aprobados (AVL) con criterios de aprobación; proceso formal de homologación de nuevos proveedores con evaluación previa (auditoría de proceso o VDA 6.3 P1 u equivalente) antes de la primera orden productiva.",
-        "Sistema documentado de comunicación de requisitos del cliente a la cadena de suministro: especificaciones, características especiales, cambios de ingeniería y requisitos regulatorios transmitidos y confirmados.",
-        "Liberaciones de partes compradas (PPAP) exigidas antes de usarlas en producción; control de recepción definido con plan de inspección por proveedor; proceso de gestión de no conformidades de proveedor activo y trazable."
+        "P5 evalua como el proveedor de fundicion gestiona SU propia cadena de suministro: arena, inoculante, chatarra, nodulizante, barras de acero (si aplica), utillaje, subcontratistas. Es un espejo de lo que nosotros les exigimos a ellos."
       ],
       "que_espero_ver": [
-        "Los procesos externalizados estan bajo control tecnico y no solo comercial.",
-        "La cadena de suministro protege las caracteristicas especiales y la trazabilidad."
+        "P5 evalua como el proveedor de fundicion gestiona SU propia cadena de suministro: arena, inoculante, chatarra, nodulizante, barras de acero (si aplica), utillaje, subcontratistas. Es un espejo de lo que nosotros les exigimos a ellos."
       ],
       "evidencias_tipicas": [
-        "AVL, auditorias, scorecards, acuerdos de calidad y registros de reclamacion a proveedor.",
-        "Planes de desarrollo y escalacion por subproveedor critico."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Que subproveedor puede generar hoy el defecto mas grave en esta referencia?",
-        "Como se protege el requisito critico cuando cambia de manos en la cadena?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "Subproveedores criticos tratados como suministro estandar.",
-        "Requisitos o cambios se diluyen al bajar por la cadena."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P5.1": {
       "que_pedir": [
         "Solo se utilizan proveedores aprobados con criterios de seleccion definidos. Se realizan auditorias segun criticidad."
       ],
-      "que_espero_ver": [
-        "Solo se usan proveedores evaluados y capaces para el alcance que cubren."
-      ],
-      "red_flags": [
-        "Caso CyC: DAU Burgos suministra pistones extruidos pero CyC no los considera 'proveedor' — no les auditan, no les piden certificados, no les reclaman formalmente. Si no es proveedor, tiene que ser proceso interno controlado (P6.1). Si no es ni lo uno ni lo otro, hallazgo."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Pregunta primero: 'Who is your supplier for [materia prima]?' Segun la respuesta, sabes si auditas en P5 o en P6.1."
       ],
       "preguntas_de_contraste": [
         "Auditais a vuestros proveedores de materia prima: arena, inoculante, chatarra? Enseñadme vuestro plan de auditorias y el ultimo informe de auditoria de vuestro proveedor mas critico."
       ],
-      "tips": [
-        "Pregunta primero: 'Who is your supplier for [materia prima]?' Segun la respuesta, sabes si auditas en P5 o en P6.1."
+      "red_flags": [
+        "Caso CyC: DAU Burgos suministra pistones extruidos pero CyC no los considera 'proveedor' — no les auditan, no les piden certificados, no les reclaman formalmente. Si no es proveedor, tiene que ser proceso interno controlado (P6.1). Si no es ni lo uno ni lo otro, hallazgo."
       ]
     },
     "P5.2": {
       "que_pedir": [
         "Los requisitos de Astemo (CC/SC, especificaciones de material, normas) se comunican trazablemente a los proveedores de la fundicion."
       ],
-      "que_espero_ver": [
-        "Los requisitos no se pierden ni se reinterpretan entre etapas."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Como asegurais que las caracteristicas especiales de Astemo para esta pinza se comunican a vuestro proveedor de arena o de inoculante? Enseñadme la comunicacion documentada."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P5.3": {
       "que_pedir": [
         "Existen acuerdos de calidad (PPM, OTD) con proveedores y se monitorizan."
       ],
-      "que_espero_ver": [
-        "Los KPI activan acciones y no son solo reporte."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Teneis objetivos de calidad documentados (PPM, entrega a tiempo) acordados con vuestro proveedor de chatarra? Como los monitorizais?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P5.4": {
       "que_pedir": [
-        "Se reciben certificados/informes de liberacion con cada lote de materia prima. La calidad de las entregas se verifica."
+        "*-question. Se reciben certificados/informes de liberacion con cada lote de materia prima. La calidad de las entregas se verifica."
       ],
-      "que_espero_ver": [
-        "Nada entra en serie sin release acorde al riesgo."
-      ],
-      "red_flags": [
-        "Caso CyC/DAU: solo hacen incoming propio (5 piezas con calibre) sin pedir documentacion al proveedor. Si hay problema de material, estan ciegos. Necesitan: certificado 3.1 (composicion quimica, propiedades mecanicas), informe dimensional post-transformacion, trazabilidad de lote, y liberacion del lote."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Para fundicion nodular: pedir certificados de analisis quimico de la colada (% C, Si, Mg, S, P) y verificar que la composicion esta dentro de especificacion. Si no tienen certificados de sus hornos, no controlan su propio proceso metalurgico."
       ],
       "preguntas_de_contraste": [
         "Cojamos cualquier lote del almacen ahora mismo: podeis enseñarme el certificado del proveedor, vuestro registro de inspeccion de recepcion y la decision de aceptacion?"
       ],
-      "tips": [
-        "Para fundicion nodular: pedir certificados de analisis quimico de la colada (% C, Si, Mg, S, P) y verificar que la composicion esta dentro de especificacion. Si no tienen certificados de sus hornos, no controlan su propio proceso metalurgico."
+      "red_flags": [
+        "Caso CyC/DAU: solo hacen incoming propio (5 piezas con calibre) sin pedir documentacion al proveedor. Si hay problema de material, estan ciegos. Necesitan: certificado 3.1 (composicion quimica, propiedades mecanicas), informe dimensional post-transformacion, trazabilidad de lote, y liberacion del lote."
       ]
     },
     "P5.5": {
       "que_pedir": [
-        "La inspeccion de recepcion esta definida y se ejecuta. El almacenamiento protege la calidad."
+        "*-question. La inspeccion de recepcion esta definida y se ejecuta. El almacenamiento protege la calidad."
       ],
-      "que_espero_ver": [
-        "La calidad de suministro se verifica donde realmente puede fallar."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Explicadme vuestra inspeccion de recepcion: que comprobais, con que frecuencia, con que equipos? Enseñadme el ultimo rechazo de material entrante y que paso despues."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P5.6": {
       "que_pedir": [
         "FIFO implementado. Proteccion contra oxidacion, humedad, contaminacion. Medios de transporte adecuados."
       ],
-      "que_espero_ver": [
-        "Estados y lotes visibles, separados y protegidos."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Enseñadme la zona de almacenamiento de arena: esta protegida de la humedad? Como implementais FIFO? Que pasa con los sacos abiertos?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P5.7": {
       "que_pedir": [
         "El personal de compras/incoming esta cualificado, conoce especificaciones y tiene responsabilidades definidas."
       ],
-      "que_espero_ver": [
-        "El personal entiende el impacto del suministro en un componente de freno."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Enseñadme la matriz de cualificacion del personal de inspeccion de recepcion. Conocen los criterios de aceptacion de cada materia prima?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6": {
       "que_pedir": [
-        "Control activo del proceso de producción en serie: plan de control implementado en planta, características especiales bajo control (SPC o poka-yokes verificados), no conformes identificados y segregados en cada etapa.",
-        "Recursos adecuados y gestionados: personal calificado y suficiente por turno, equipos con mantenimiento preventivo ejecutado, instrumentos calibrados con MSA válida, condiciones de puesto conformes.",
-        "Mejora continua activa: objetivos de proceso definidos y comunicados, datos recopilados y analizados, sistema de resolución de problemas con análisis de causa raíz y verificación de eficacia, auditorías de proceso y producto ejecutadas."
+        "P6 es el corazon de la auditoria en fundicion. Se evalua por pasos de proceso (PS): fusion, moldeo, colada, enfriamiento, desmoldeo, desbarbado, tratamiento termico, inspeccion visual, mecanizado (si aplica), embalaje. Cada PS se puntua individualmente.",
+        "Los sub-elementos de P6 son: EU1 (entrada), EU2 (proceso), EU3 (personal), EU4 (medios), EU5 (eficacia), EU6 (salida). Si cualquier EU < 80%, el overall baja de A a B."
       ],
       "que_espero_ver": [
-        "El proveedor detecta el riesgo en el punto donde nace y no lo desplaza a inspeccion final.",
-        "Las transferencias entre etapas mantienen estado, lote, revision y criterio de liberacion."
+        "P6 es el corazon de la auditoria en fundicion. Se evalua por pasos de proceso (PS): fusion, moldeo, colada, enfriamiento, desmoldeo, desbarbado, tratamiento termico, inspeccion visual, mecanizado (si aplica), embalaje. Cada PS se puntua individualmente.",
+        "Los sub-elementos de P6 son: EU1 (entrada), EU2 (proceso), EU3 (personal), EU4 (medios), EU5 (eficacia), EU6 (salida). Si cualquier EU < 80%, el overall baja de A a B."
       ],
       "evidencias_tipicas": [
-        "Registros de proceso, first-off, SPC, bloqueos de lote, 8D, auditorias y liberaciones.",
-        "Trazabilidad entre bruto, mecanizado, acabado y expedicion."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Que etapa del proceso tiene hoy menos robustez y como la estais protegiendo?",
-        "Como sabeis en que punto exacto nacio un defecto detectado tarde?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "El sistema se apoya demasiado en clasificacion final y no en control de proceso.",
-        "La trazabilidad o el estado del lote se debilitan al cambiar de etapa."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P6.1": {
       "que_pedir": [
-        "Criterios de entrada al proceso para cada input: material aprobado e identificado con lote y estado, instrucciones y especificaciones vigentes disponibles en puesto, handover completo de desarrollo a producción verificado.",
-        "Sistema de suministro a línea que garantiza material correcto en cantidad correcta y en el momento requerido, sin mezcla de revisiones ni estados; identificación de estado del lote visible antes de entrar a cada operación.",
-        "Control de cambios en serie activo: proceso formal con evaluación de riesgo, aprobación, comunicación al cliente cuando aplica y actualización de PFMEA, plan de control e instrucciones tras cada cambio registrado."
+        "El DOCX desarrolla este subelemento en P6.1.1, P6.1.2, P6.1.3, P6.1.4, P6.1.5.",
+        "*-question. El proyecto se traspaso a serie con documentacion completa, medios disponibles y medidas de aseguramiento de arranque.",
+        "La materia prima esta disponible en la calidad, cantidad, embalaje y documentacion correcta, en el puesto correcto y a tiempo.",
+        "Condiciones de almacenamiento protegen la calidad. Los medios de transporte internos no dañan el producto.",
+        "Los materiales de entrada tienen trazabilidad completa: casting date, cavity, heat/melt, lote de produccion.",
+        "*-question. Todos los cambios en producto, proceso, proveedores, utillaje estan documentados con evaluacion de riesgo."
       ],
       "que_espero_ver": [
-        "Nada entra en proceso sin estado, lote y criterio de uso definidos."
+        "Subelemento EU1 - ENTRADA AL PROCESO."
+      ],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "En fundicion, la humedad de la arena es critica para porosidad. Si el almacen de arena esta al aire libre o mal protegido, hay riesgo directo de blow holes en piezas.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "El Plan de Control ha tenido 5 revisiones desde el SOP. Para cada revision, podeis enseñarme que lo motivo, la evaluacion de riesgos y si fue necesario re-enviar el PPAP?",
+        "Habeis tenido alguna falta de material en los ultimos 6 meses? Cual fue vuestra contingencia? Enseñadme los niveles de stock actuales de vuestras materias primas principales.",
+        "Llevadme a la zona de almacenamiento de machos/arena: humedad controlada? Temperatura monitorizada? Como evitais la contaminacion cruzada entre distintos tipos de arena?",
+        "Cojamos un contenedor al azar de este lote de produccion. Podeis trazarlo hasta la fecha de colada, el numero de cavidad, el lote de fusion y el lote de arena?",
+        "En los ultimos 12 meses, que cambios implementasteis en este proceso de fundicion: nuevo proveedor de arena, modificacion de molde, cambio de parametros? Enseñadme la notificacion de cambio y la evaluacion de riesgos de cada uno."
       ],
       "red_flags": [
-        "Transferencias entre etapas con trazabilidad parcial o ambigua."
+        "Se entro en serie sin PPAP completo, o el PPAP se aprobo con waivers que nunca se cerraron. Las revisiones del CP durante serie son señal de que el arranque no fue estable.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "Si no pueden trazar hacia atras, cualquier reclamacion se convierte en caos. Sin trazabilidad minima no hay 'lote', hay caos. Campos criticos: casting date / foundry date, cavity / mold / die, heat / melt / furnace, batch / lot.",
+        "Caso Fagor Ref 4613: implementacion de cuña Williams declarada como clean point en cavity 034_6, pero sin evidencia robusta de que el cambio se valido en todas las cavidades afectadas."
       ]
     },
     "P6.1.1": {
       "que_pedir": [
-        "El proyecto se traspaso a serie con documentacion completa, medios disponibles y medidas de aseguramiento de arranque."
+        "*-question. El proyecto se traspaso a serie con documentacion completa, medios disponibles y medidas de aseguramiento de arranque."
       ],
-      "que_espero_ver": [
-        "Arranque de serie protegido por riesgo y con pendientes controlados."
-      ],
-      "red_flags": [
-        "Se entro en serie sin PPAP completo, o el PPAP se aprobo con waivers que nunca se cerraron. Las revisiones del CP durante serie son señal de que el arranque no fue estable."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "El Plan de Control ha tenido 5 revisiones desde el SOP. Para cada revision, podeis enseñarme que lo motivo, la evaluacion de riesgos y si fue necesario re-enviar el PPAP?"
+      ],
+      "red_flags": [
+        "Se entro en serie sin PPAP completo, o el PPAP se aprobo con waivers que nunca se cerraron. Las revisiones del CP durante serie son señal de que el arranque no fue estable."
       ]
     },
     "P6.1.2": {
       "que_pedir": [
         "La materia prima esta disponible en la calidad, cantidad, embalaje y documentacion correcta, en el puesto correcto y a tiempo."
       ],
-      "que_espero_ver": [
-        "Lote correcto, cantidad correcta y punto correcto sin mezcla de estados."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Habeis tenido alguna falta de material en los ultimos 6 meses? Cual fue vuestra contingencia? Enseñadme los niveles de stock actuales de vuestras materias primas principales."
       ],
-      "red_flags": []
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.1.3": {
       "que_pedir": [
         "Condiciones de almacenamiento protegen la calidad. Los medios de transporte internos no dañan el producto."
       ],
-      "que_espero_ver": [
-        "Proteccion frente a dano, contaminacion y mezcla segun la etapa."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "En fundicion, la humedad de la arena es critica para porosidad. Si el almacen de arena esta al aire libre o mal protegido, hay riesgo directo de blow holes en piezas."
       ],
       "preguntas_de_contraste": [
         "Llevadme a la zona de almacenamiento de machos/arena: humedad controlada? Temperatura monitorizada? Como evitais la contaminacion cruzada entre distintos tipos de arena?"
       ],
-      "red_flags": [],
-      "tips": [
-        "En fundicion, la humedad de la arena es critica para porosidad. Si el almacen de arena esta al aire libre o mal protegido, hay riesgo directo de blow holes en piezas."
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.1.4": {
       "que_pedir": [
         "Los materiales de entrada tienen trazabilidad completa: casting date, cavity, heat/melt, lote de produccion."
       ],
-      "que_espero_ver": [
-        "Estado del lote visible fisicamente y en sistema."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Cojamos un contenedor al azar de este lote de produccion. Podeis trazarlo hasta la fecha de colada, el numero de cavidad, el lote de fusion y el lote de arena?"
@@ -543,37 +604,62 @@
     },
     "P6.1.5": {
       "que_pedir": [
-        "Todos los cambios en producto, proceso, proveedores, utillaje estan documentados con evaluacion de riesgo."
+        "*-question. Todos los cambios en producto, proceso, proveedores, utillaje estan documentados con evaluacion de riesgo."
       ],
-      "que_espero_ver": [
-        "Cada cambio en serie deja historia y evaluacion de riesgo."
-      ],
-      "red_flags": [
-        "Caso Fagor Ref 4613: implementacion de cuña Williams declarada como clean point en cavity 034_6, pero sin evidencia robusta de que el cambio se valido en todas las cavidades afectadas."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "En los ultimos 12 meses, que cambios implementasteis en este proceso de fundicion: nuevo proveedor de arena, modificacion de molde, cambio de parametros? Enseñadme la notificacion de cambio y la evaluacion de riesgos de cada uno."
+      ],
+      "red_flags": [
+        "Caso Fagor Ref 4613: implementacion de cuña Williams declarada como clean point en cavity 034_6, pero sin evidencia robusta de que el cambio se valido en todas las cavidades afectadas."
       ]
     },
     "P6.2": {
       "que_pedir": [
-        "Plan de control de producción implementado y cumplido en planta; evidencia de controles realmente ejecutados: registros de first-off, mediciones de características especiales, cartas SPC activas con reacciones ante valores fuera de límite.",
-        "Características especiales bajo control estricto: SPC con límites definidos o poka-yokes funcionando, verificados periódicamente con resultado conforme; no conformes segregados física y sistemáticamente antes de avanzar al siguiente proceso.",
-        "Flujo de materiales asegurado contra mezclas de referencias o estados: identificación inequívoca, barreras físicas en puntos de riesgo, proceso de reacción documentado y seguido ante desviación o sospecha de mezcla."
+        "El DOCX desarrolla este subelemento en P6.2.1, P6.2.2, P6.2.3, P6.2.4, P6.2.5.",
+        "Los controles definidos en el CP se ejecutan en planta: parametros, frecuencias, metodos de registro, planes de reaccion.",
+        "Despues de parada, cambio de turno, cambio de herramienta, mantenimiento o interrupcion, se re-valida el proceso antes de reanudar produccion.",
+        "*-question. Las CC/SC estan identificadas, comunicadas a operarios, con controles especificos y planes de reaccion definidos.",
+        "*-question. Las piezas NOK estan bloqueadas, identificadas, segregadas. No hay riesgo de mezcla. El reproceso esta definido y trazado.",
+        "No hay riesgo de mezcla de materiales, referencias, estados de inspeccion, o cavidades."
       ],
       "que_espero_ver": [
-        "Las barreras existen en la etapa correcta y no se dejan al final."
+        "Subelemento EU2 - GESTION DEL PROCESO."
+      ],
+      "evidencias_tipicas": [
+        "Para controles por variable (diametro, rugosidad): deben estar registrados y ser evaluables (SPC o registro numerico). Para controles visuales (OK/NOK): minimo un check firmado por operario con turno/fecha. Sin registro, no hay evidencia de que el control se ejecuto.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme el Plan de Control de esta referencia. Ahora llevadme al taller y enseñadme como se ejecuta realmente cada control. Donde estan los registros?",
+        "Despues de un cambio de molde o de turno, que re-validacion haceis antes de reanudar produccion? Enseñadme el registro de inspeccion de primera pieza del ultimo cambio.",
+        "Señalad cualquier caracteristica especial en esta pieza. Ahora preguntemos al operario: que significa este simbolo, que te exige, y que haces si la medida esta fuera de tolerancia?",
+        "Enseñadme la zona de piezas NOK. Como asegurais que una pieza rechazada no pueda volver accidentalmente al flujo de produccion? Cual es la barrera fisica?",
+        "Producis pinza derecha y pinza izquierda en lineas adyacentes. Como evitais que una pieza izquierda acabe en un contenedor de derechas?"
       ],
       "red_flags": [
-        "Los controles se concentran en la inspeccion final."
+        "'5 piezas por turno' sin especificar cuando. El operario puede medir las 5 los ultimos 10 minutos del turno y técnicamente cumple. La frecuencia tiene que definir el intervalo: '1 pieza cada 90 minutos' o '5 piezas al inicio de turno'. Sin intervalo, pierdes la capacidad de detectar deriva a tiempo.",
+        "Columna 'Control Method' del CP dice 'SAP' — eso es el sistema de registro, no el metodo de control. El metodo es 'calibre pasa/no-pasa', 'CMM', 'visual segun catalogo de defectos'.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "Si el CP tiene dos simbolos de CC sin leyenda, el operario no sabe que se le exige para cada uno. Sin leyenda = no auditable. Si ademas los operarios no saben que significa el simbolo, sube de NC menor a NC mayor.",
+        "Disc clearance no tratado como 'S' characteristic en PFMEA/CP. Caso Draxton: Boris pidio evidencia de que disc clearance estaba como CC en su documentacion — no la tenian.",
+        "Caso CyC: pistones caidos de la linea reintroducidos sin inspeccion. Si una pieza sale del flujo, no puede volver sin re-inspeccion documentada. Sin barrera fisica (contenedor rojo cerrado, poka-yoke de retorno), es solo una cuestion de tiempo antes de que una pieza NOK se cuele.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.2.1": {
       "que_pedir": [
         "Los controles definidos en el CP se ejecutan en planta: parametros, frecuencias, metodos de registro, planes de reaccion."
       ],
-      "que_espero_ver": [
-        "Plan de control alineado con PFMEA y con los documentos de puesto."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Para controles por variable (diametro, rugosidad): deben estar registrados y ser evaluables (SPC o registro numerico). Para controles visuales (OK/NOK): minimo un check firmado por operario con turno/fecha. Sin registro, no hay evidencia de que el control se ejecuto."
       ],
       "preguntas_de_contraste": [
         "Enseñadme el Plan de Control de esta referencia. Ahora llevadme al taller y enseñadme como se ejecuta realmente cada control. Donde estan los registros?"
@@ -581,44 +667,46 @@
       "red_flags": [
         "'5 piezas por turno' sin especificar cuando. El operario puede medir las 5 los ultimos 10 minutos del turno y técnicamente cumple. La frecuencia tiene que definir el intervalo: '1 pieza cada 90 minutos' o '5 piezas al inicio de turno'. Sin intervalo, pierdes la capacidad de detectar deriva a tiempo.",
         "Columna 'Control Method' del CP dice 'SAP' — eso es el sistema de registro, no el metodo de control. El metodo es 'calibre pasa/no-pasa', 'CMM', 'visual segun catalogo de defectos'."
-      ],
-      "tips": [
-        "Para controles por variable (diametro, rugosidad): deben estar registrados y ser evaluables (SPC o registro numerico). Para controles visuales (OK/NOK): minimo un check firmado por operario con turno/fecha. Sin registro, no hay evidencia de que el control se ejecuto."
       ]
     },
     "P6.2.2": {
       "que_pedir": [
         "Despues de parada, cambio de turno, cambio de herramienta, mantenimiento o interrupcion, se re-valida el proceso antes de reanudar produccion."
       ],
-      "que_espero_ver": [
-        "La liberacion la hace personal autorizado con criterio objetivo."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Despues de un cambio de molde o de turno, que re-validacion haceis antes de reanudar produccion? Enseñadme el registro de inspeccion de primera pieza del ultimo cambio."
       ],
-      "red_flags": []
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.2.3": {
       "que_pedir": [
-        "Las CC/SC estan identificadas, comunicadas a operarios, con controles especificos y planes de reaccion definidos."
+        "*-question. Las CC/SC estan identificadas, comunicadas a operarios, con controles especificos y planes de reaccion definidos."
       ],
-      "que_espero_ver": [
-        "Las especiales no se dejan para una etapa posterior sin justificacion tecnica."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "Señalad cualquier caracteristica especial en esta pieza. Ahora preguntemos al operario: que significa este simbolo, que te exige, y que haces si la medida esta fuera de tolerancia?"
       ],
       "red_flags": [
         "Si el CP tiene dos simbolos de CC sin leyenda, el operario no sabe que se le exige para cada uno. Sin leyenda = no auditable. Si ademas los operarios no saben que significa el simbolo, sube de NC menor a NC mayor.",
         "Disc clearance no tratado como 'S' characteristic en PFMEA/CP. Caso Draxton: Boris pidio evidencia de que disc clearance estaba como CC en su documentacion — no la tenian."
-      ],
-      "preguntas_de_contraste": [
-        "Señalad cualquier caracteristica especial en esta pieza. Ahora preguntemos al operario: que significa este simbolo, que te exige, y que haces si la medida esta fuera de tolerancia?"
       ]
     },
     "P6.2.4": {
       "que_pedir": [
-        "Las piezas NOK estan bloqueadas, identificadas, segregadas. No hay riesgo de mezcla. El reproceso esta definido y trazado."
+        "*-question. Las piezas NOK estan bloqueadas, identificadas, segregadas. No hay riesgo de mezcla. El reproceso esta definido y trazado."
       ],
-      "que_espero_ver": [
-        "NOK fisica y sistemicamente bloqueado."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme la zona de piezas NOK. Como asegurais que una pieza rechazada no pueda volver accidentalmente al flujo de produccion? Cual es la barrera fisica?"
@@ -631,62 +719,80 @@
       "que_pedir": [
         "No hay riesgo de mezcla de materiales, referencias, estados de inspeccion, o cavidades."
       ],
-      "que_espero_ver": [
-        "El flujo visual y de sistema evita mezclar bruto, semiterminado y terminado."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Producis pinza derecha y pinza izquierda en lineas adyacentes. Como evitais que una pieza izquierda acabe en un contenedor de derechas?"
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.3": {
       "que_pedir": [
-        "Personal de producción cualificado por operación crítica: competencias verificadas mediante formación documentada, práctica supervisada o certificación; cobertura por turno asegurada incluyendo sustitutos cualificados.",
-        "Responsabilidades y autoridad claras para parar, bloquear, liberar y escalar en cada puesto crítico; personal consciente de su impacto en la calidad del producto y del cliente.",
-        "Personal de soporte (ingeniería de proceso, mantenimiento, calidad de línea) disponible con tiempos de respuesta adecuados; proceso de escalación activo cuando el operario detecta un problema que supera su autoridad."
+        "El DOCX desarrolla este subelemento en P6.3.1, P6.3.2, P6.3.3.",
+        "Cada puesto tiene perfil de requisitos. Los empleados estan cualificados y formados. La formacion esta documentada. Aplica a temporales.",
+        "Los operarios saben que hacer si detectan un defecto, conocen las consecuencias de un error, y tienen autoridad para parar la linea.",
+        "Hay suficiente personal para cubrir turnos, vacaciones, ausencias, sin comprometer la calidad."
       ],
       "que_espero_ver": [
-        "Personal suficiente y competente donde el riesgo es mas alto."
+        "Subelemento EU3 - RECURSOS DE PERSONAL."
+      ],
+      "evidencias_tipicas": [
+        "Pregunta al operario directamente, no al responsable de calidad. Si el operario no sabe explicar los criterios de aceptacion de la pieza que esta inspeccionando, es hallazgo aunque la matriz diga que esta formado.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme la matriz de formacion. Cada operario del turno actual esta cualificado para su puesto, incluyendo inspeccion de recepcion? Enseñadme el registro de formacion del operario mas nuevo.",
+        "Si detectas un defecto ahora mismo, cual es tu reaccion inmediata? A quien informas? Puedes parar la linea por tu propia autoridad?",
+        "Que pasa cuando uno de vuestros inspectores visuales llama para decir que esta enfermo? Quien cubre? Esa persona de respaldo esta formada en estas piezas concretas?"
       ],
       "red_flags": [
-        "Operacion critica soportada por una sola persona clave."
+        "Caso CyC: operarios de inspeccion visual sin formacion documentada en criterios de aceptacion. Si no saben diferenciar un poro aceptable de uno NOK, el control visual es decorativo.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "En fundiciones con plantilla justa, la baja de un inspector visual significa que otro operario 'cubre' sin formacion especifica. El control desaparece sin que nadie lo note."
       ]
     },
     "P6.3.1": {
       "que_pedir": [
         "Cada puesto tiene perfil de requisitos. Los empleados estan cualificados y formados. La formacion esta documentada. Aplica a temporales."
       ],
-      "que_espero_ver": [
-        "Competencia demostrada y actualizada tras cambios."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Pregunta al operario directamente, no al responsable de calidad. Si el operario no sabe explicar los criterios de aceptacion de la pieza que esta inspeccionando, es hallazgo aunque la matriz diga que esta formado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme la matriz de formacion. Cada operario del turno actual esta cualificado para su puesto, incluyendo inspeccion de recepcion? Enseñadme el registro de formacion del operario mas nuevo."
       ],
       "red_flags": [
         "Caso CyC: operarios de inspeccion visual sin formacion documentada en criterios de aceptacion. Si no saben diferenciar un poro aceptable de uno NOK, el control visual es decorativo."
-      ],
-      "tips": [
-        "Pregunta al operario directamente, no al responsable de calidad. Si el operario no sabe explicar los criterios de aceptacion de la pieza que esta inspeccionando, es hallazgo aunque la matriz diga que esta formado."
       ]
     },
     "P6.3.2": {
       "que_pedir": [
         "Los operarios saben que hacer si detectan un defecto, conocen las consecuencias de un error, y tienen autoridad para parar la linea."
       ],
-      "que_espero_ver": [
-        "El personal sabe que puede parar y cuando debe hacerlo."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Si detectas un defecto ahora mismo, cual es tu reaccion inmediata? A quien informas? Puedes parar la linea por tu propia autoridad?"
       ],
-      "red_flags": []
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.3.3": {
       "que_pedir": [
         "Hay suficiente personal para cubrir turnos, vacaciones, ausencias, sin comprometer la calidad."
       ],
-      "que_espero_ver": [
-        "No hay huecos operativos en turnos o fines de semana."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Que pasa cuando uno de vuestros inspectores visuales llama para decir que esta enfermo? Quien cubre? Esa persona de respaldo esta formada en estas piezas concretas?"
@@ -697,23 +803,45 @@
     },
     "P6.4": {
       "que_pedir": [
-        "Equipos de fabricación con capacidad demostrada (Cpk o validación de equipo) para cumplir tolerancias del producto; plan de mantenimiento preventivo ejecutado y registrado para todos los equipos críticos.",
-        "Instrumentos de medición calibrados con estudios MSA válidos para características especiales; condiciones de puesto adecuadas: ergonomía, iluminación, orden 5S, protección antiestática donde aplica.",
-        "Útiles, galgas y herramientas críticas almacenadas de forma protegida e identificada con revisión vigente; proceso de control de préstamo, uso y devolución con registro de incidencias por uso indebido."
+        "El DOCX desarrolla este subelemento en P6.4.1, P6.4.2, P6.4.3, P6.4.4, P6.4.5.",
+        "*-question. Maquinas, moldes, utillaje capaces de producir piezas conformes. Capacidad demostrada.",
+        "Existe plan de mantenimiento preventivo para moldes, maquinas, lineas. Se registran intervenciones. El desgaste de moldes se monitoriza.",
+        "*-question. Los equipos de medicion son adecuados, calibrados, y con MSA validado para las caracteristicas que miden.",
+        "Iluminacion adecuada, ergonomia, limpieza, condiciones ambientales (temperatura, polvo, vibracion).",
+        "Los moldes inactivos se almacenan protegidos. Los calibres se guardan en condiciones controladas."
       ],
       "que_espero_ver": [
-        "Los medios criticos estan controlados segun su impacto real."
+        "Subelemento EU4 - RECURSOS MATERIALES."
+      ],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "Pide registros de mantenimiento de los ultimos 6 meses. Si solo hay correctivos y ningun preventivo, el programa de mantenimiento es reactivo — hallazgo directo.",
+        "Pide ver el calibre fisicamente. Pregunta que pasa si el calibre no esta disponible (averia, calibracion). El plan de reaccion tiene que estar en el CP.",
+        "Si la iluminacion de la estacion de inspeccion visual es la misma que la del taller, no es controlada. Para piezas de fundicion donde detectas defectos por sombra/contraste, la iluminacion es critica.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "Cual es el Cpk actual de la dimension mas critica de esta pinza? Cuando se hizo el ultimo estudio de capacidad y sobre cuantas piezas?",
+        "Enseñadme el plan de mantenimiento preventivo del molde #X. Cuantos golpes ha producido? Cual es el umbral de reemplazo? Cuando fue la ultima intervencion de mantenimiento?",
+        "El calibre que usais para verificar el paso de disco: cuando fue la ultima calibracion? Hay un estudio MSA (Gage R&R)? Cual fue el resultado?",
+        "La estacion de inspeccion visual tiene iluminacion controlada? Cual es el nivel de lux? Hay una politica de rotacion de inspectores para prevenir fatiga?",
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
       ],
       "red_flags": [
-        "Mantenimiento o metrologia debiles en equipos cuello de botella."
+        "Caso fundicion: los canales de enfriamiento del molde estan obstruidos, la temperatura de colada varia, y nadie ha hecho un estudio de capacidad real en la ultima referencia. Tienen un Cpk de hace 3 años con un molde que ha tenido 2 reparaciones desde entonces.",
+        "Caso Draxton: rebabas trimestrales recurrentes. La pregunta es si el die de desbarbado tiene un plan de reemplazo preventivo basado en numero de golpes/horas, o si solo se cambia cuando ya es demasiado tarde.",
+        "Caso CyC: sistema de vision (SVI) para detectar rayas en pistones, pero no pueden definir umbral fiable entre revisable y scrap. Si el sistema no distingue OK de NOK de forma fiable, todo lo dudoso deberia ir a scrap.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.4.1": {
       "que_pedir": [
-        "Maquinas, moldes, utillaje capaces de producir piezas conformes. Capacidad demostrada."
+        "*-question. Maquinas, moldes, utillaje capaces de producir piezas conformes. Capacidad demostrada."
       ],
-      "que_espero_ver": [
-        "El equipo adecuado esta asignado a la pieza correcta y a la revision correcta."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Cual es el Cpk actual de la dimension mas critica de esta pinza? Cuando se hizo el ultimo estudio de capacidad y sobre cuantas piezas?"
@@ -726,92 +854,115 @@
       "que_pedir": [
         "Existe plan de mantenimiento preventivo para moldes, maquinas, lineas. Se registran intervenciones. El desgaste de moldes se monitoriza."
       ],
-      "que_espero_ver": [
-        "Desgaste y averias controlados antes de afectar al lote."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Pide registros de mantenimiento de los ultimos 6 meses. Si solo hay correctivos y ningun preventivo, el programa de mantenimiento es reactivo — hallazgo directo."
       ],
       "preguntas_de_contraste": [
         "Enseñadme el plan de mantenimiento preventivo del molde #X. Cuantos golpes ha producido? Cual es el umbral de reemplazo? Cuando fue la ultima intervencion de mantenimiento?"
       ],
       "red_flags": [
         "Caso Draxton: rebabas trimestrales recurrentes. La pregunta es si el die de desbarbado tiene un plan de reemplazo preventivo basado en numero de golpes/horas, o si solo se cambia cuando ya es demasiado tarde."
-      ],
-      "tips": [
-        "Pide registros de mantenimiento de los ultimos 6 meses. Si solo hay correctivos y ningun preventivo, el programa de mantenimiento es reactivo — hallazgo directo."
       ]
     },
     "P6.4.3": {
       "que_pedir": [
-        "Los equipos de medicion son adecuados, calibrados, y con MSA validado para las caracteristicas que miden."
+        "*-question. Los equipos de medicion son adecuados, calibrados, y con MSA validado para las caracteristicas que miden."
       ],
-      "que_espero_ver": [
-        "El medio de medicion es valido para liberar lote."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Pide ver el calibre fisicamente. Pregunta que pasa si el calibre no esta disponible (averia, calibracion). El plan de reaccion tiene que estar en el CP."
       ],
       "preguntas_de_contraste": [
         "El calibre que usais para verificar el paso de disco: cuando fue la ultima calibracion? Hay un estudio MSA (Gage R&R)? Cual fue el resultado?"
       ],
       "red_flags": [
         "Caso CyC: sistema de vision (SVI) para detectar rayas en pistones, pero no pueden definir umbral fiable entre revisable y scrap. Si el sistema no distingue OK de NOK de forma fiable, todo lo dudoso deberia ir a scrap."
-      ],
-      "tips": [
-        "Pide ver el calibre fisicamente. Pregunta que pasa si el calibre no esta disponible (averia, calibracion). El plan de reaccion tiene que estar en el CP."
       ]
     },
     "P6.4.4": {
       "que_pedir": [
         "Iluminacion adecuada, ergonomia, limpieza, condiciones ambientales (temperatura, polvo, vibracion)."
       ],
-      "que_espero_ver": [
-        "Las condiciones del puesto protegen la pieza segun su estado."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Si la iluminacion de la estacion de inspeccion visual es la misma que la del taller, no es controlada. Para piezas de fundicion donde detectas defectos por sombra/contraste, la iluminacion es critica."
       ],
       "preguntas_de_contraste": [
         "La estacion de inspeccion visual tiene iluminacion controlada? Cual es el nivel de lux? Hay una politica de rotacion de inspectores para prevenir fatiga?"
       ],
-      "red_flags": [],
-      "tips": [
-        "Si la iluminacion de la estacion de inspeccion visual es la misma que la del taller, no es controlada. Para piezas de fundicion donde detectas defectos por sombra/contraste, la iluminacion es critica."
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.4.5": {
       "que_pedir": [
         "Los moldes inactivos se almacenan protegidos. Los calibres se guardan en condiciones controladas."
       ],
-      "que_espero_ver": [
-        "Utiles correctos, identificados y protegidos frente a uso indebido."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "preguntas_de_contraste": [],
-      "red_flags": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.5": {
       "que_pedir": [
-        "Objetivos de proceso definidos por etapa (scrap, FPY, Cpk, OEE) con seguimiento periódico documentado y comunicación visible al personal de producción (paneles en planta o sistema equivalente).",
-        "Sistema de resolución de problemas activo: metodología documentada (8D, Ishikawa, 5-Por qué), análisis de causa raíz para desviaciones significativas, acciones correctivas con verificación de eficacia documentada.",
-        "Auditorías de proceso y de producto ejecutadas según plan anual, con hallazgos documentados, acciones tomadas y seguimiento de cierre verificado; cultura de mejora continua visible en la operación diaria."
+        "El DOCX desarrolla este subelemento en P6.5.1, P6.5.2, P6.5.3, P6.5.4.",
+        "Existen targets de OEE, ppm interno, scrap rate, productividad. Se monitorizan y actuan.",
+        "Los datos se registran, son evaluables (SPC, graficos de control), y se analizan para detectar tendencias.",
+        "*-question. Cuando se detecta un defecto, se analiza la causa, se implementan acciones correctivas y se verifica eficacia. Los errores repetidos requieren analisis mas profundo.",
+        "Programa de auditorias internas (proceso y producto). Si se detectan NC, se analizan causas y se actua."
       ],
       "que_espero_ver": [
-        "El proveedor anticipa el defecto con datos y no reacciona solo al escape."
+        "Subelemento EU5 - EFICACIA DEL PROCESO."
+      ],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "Compara 8Ds de diferentes fechas para el mismo defecto. Si las causas raiz cambian pero el defecto persiste, no entendieron el problema.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "Cuales son vuestros objetivos actuales de PPM interno y tasa de scrap en esta referencia? Como estais respecto a esos objetivos?",
+        "Enseñadme graficos SPC de las dimensiones principales de fundicion. Estan en control? Cuando fue el ultimo punto fuera de control y cual fue la reaccion?",
+        "Enseñadme el ultimo informe de no conformidad interna de esta referencia. Cual fue el analisis de causa raiz? Que accion correctiva se tomo? Y como verificasteis que fue eficaz?",
+        "Enseñadme vuestro calendario de auditorias internas. Cuando fue la ultima auditoria de proceso en esta linea de fundicion? Que hallazgos produjo y estan cerrados?"
       ],
       "red_flags": [
-        "Mucho dato recogido y poca decision basada en el."
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "Tienen graficos de control pero con puntos fuera de limites sin reaccion documentada. O los graficos existen pero nadie los mira — 'control charts decorativos'. Si hay puntos OOC sin reaccion, es hallazgo P6.5.2 y conecta con P6.5.3.",
+        "Causa raiz = 'error humano' sin accion sistemica (poka-yoke). Si el error se repite, 'formacion adicional' no es suficiente como accion correctiva. Caso CyC: Ishikawa de marzo dice 'instructions clear but not fulfilled', Ishikawa de julio dice 'no instructions'. Contradiccion flagrante.",
+        "El 8D de un defecto anterior dice 'practically eliminated'. Para defectos con historial de reclamacion del cliente, zero tolerance — 'prácticamente eliminado' no es aceptable.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.5.1": {
       "que_pedir": [
         "Existen targets de OEE, ppm interno, scrap rate, productividad. Se monitorizan y actuan."
       ],
-      "que_espero_ver": [
-        "Objetivos ligados a requisitos cliente y caracteristicas especiales."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Cuales son vuestros objetivos actuales de PPM interno y tasa de scrap en esta referencia? Como estais respecto a esos objetivos?"
       ],
-      "red_flags": []
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.5.2": {
       "que_pedir": [
         "Los datos se registran, son evaluables (SPC, graficos de control), y se analizan para detectar tendencias."
       ],
-      "que_espero_ver": [
-        "Tendencias y no conformidades visibles antes de afectar al cliente."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme graficos SPC de las dimensiones principales de fundicion. Estan en control? Cuando fue el ultimo punto fuera de control y cual fue la reaccion?"
@@ -822,196 +973,217 @@
     },
     "P6.5.3": {
       "que_pedir": [
-        "Cuando se detecta un defecto, se analiza la causa, se implementan acciones correctivas y se verifica eficacia. Los errores repetidos requieren analisis mas profundo."
+        "*-question. Cuando se detecta un defecto, se analiza la causa, se implementan acciones correctivas y se verifica eficacia. Los errores repetidos requieren analisis mas profundo."
       ],
-      "que_espero_ver": [
-        "La causa raiz identifica tambien la etapa exacta donde nacio el defecto."
-      ],
-      "red_flags": [
-        "Causa raiz = 'error humano' sin accion sistemica (poka-yoke). Si el error se repite, 'formacion adicional' no es suficiente como accion correctiva. Caso CyC: Ishikawa de marzo dice 'instructions clear but not fulfilled', Ishikawa de julio dice 'no instructions'. Contradiccion flagrante.",
-        "El 8D de un defecto anterior dice 'practically eliminated'. Para defectos con historial de reclamacion del cliente, zero tolerance — 'prácticamente eliminado' no es aceptable."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Compara 8Ds de diferentes fechas para el mismo defecto. Si las causas raiz cambian pero el defecto persiste, no entendieron el problema."
       ],
       "preguntas_de_contraste": [
         "Enseñadme el ultimo informe de no conformidad interna de esta referencia. Cual fue el analisis de causa raiz? Que accion correctiva se tomo? Y como verificasteis que fue eficaz?"
       ],
-      "tips": [
-        "Compara 8Ds de diferentes fechas para el mismo defecto. Si las causas raiz cambian pero el defecto persiste, no entendieron el problema."
+      "red_flags": [
+        "Causa raiz = 'error humano' sin accion sistemica (poka-yoke). Si el error se repite, 'formacion adicional' no es suficiente como accion correctiva. Caso CyC: Ishikawa de marzo dice 'instructions clear but not fulfilled', Ishikawa de julio dice 'no instructions'. Contradiccion flagrante.",
+        "El 8D de un defecto anterior dice 'practically eliminated'. Para defectos con historial de reclamacion del cliente, zero tolerance — 'prácticamente eliminado' no es aceptable."
       ]
     },
     "P6.5.4": {
       "que_pedir": [
         "Programa de auditorias internas (proceso y producto). Si se detectan NC, se analizan causas y se actua."
       ],
-      "que_espero_ver": [
-        "Las auditorias detectan riesgos de proceso y no solo incumplimientos documentales."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Enseñadme vuestro calendario de auditorias internas. Cuando fue la ultima auditoria de proceso en esta linea de fundicion? Que hallazgos produjo y estan cerrados?"
       ],
-      "red_flags": []
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.6": {
       "que_pedir": [
-        "Producto terminado correctamente identificado, liberado por Calidad y almacenado según condiciones requeridas; embalajes conformes a los requisitos del cliente; documentación de conformidad completa archivada por lote.",
-        "Proceso de liberación final antes de cada expedición con responsable y criterios definidos: checklist firmado o validación en sistema por parte de Calidad; ningún lote sale sin esta aprobación formal.",
-        "Entregas al cliente conformes en calidad, cantidad, plazo y documentación; indicadores de cumplimiento (PPM externo, reclamos logísticos, entregas fuera de plazo) monitorizados con acciones cuando se incumplen objetivos."
+        "El DOCX desarrolla este subelemento en P6.6.1, P6.6.2, P6.6.3, P6.6.4.",
+        "Los productos se dirigen a almacenamiento/siguiente proceso con medios adecuados. FIFO. Estado de inspeccion visible.",
+        "El embalaje protege las piezas. Los contenedores son adecuados para las caracteristicas especiales (sin golpes, sin oxidacion).",
+        "Los registros de inspeccion, liberacion y trazabilidad se archivan segun requisitos del cliente.",
+        "*-question. Los requisitos de calidad, etiquetado, embalaje y entrega del cliente se cumplen. La performance se monitoriza."
       ],
       "que_espero_ver": [
-        "Solo fluye material OK y con estado claro a la siguiente etapa o al cliente."
+        "Subelemento EU6 - RESULTADO DEL PROCESO."
+      ],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "Caso MAT Breyden: disputa de packaging donde piezas llegaban dañadas. El embalaje tiene que proteger las zonas criticas (paso disco, zona hidraulica). Si la pieza se mueve dentro del contenedor, va a llegar con marcas.",
+        "El DOCX no aporta un TIP especifico para este apartado.",
+        "El DOCX no aporta un TIP especifico para este apartado."
+      ],
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado.",
+        "Enseñadme como embalais las piezas terminadas de fundicion. Que proteccion hay contra daños durante el transporte a Astemo?",
+        "El DOCX no aporta una PREGUNTA especifica para este apartado.",
+        "Cual es vuestro PPM actual hacia Astemo en los ultimos 12 meses? Enseñadme la tendencia. Y cuando fue la ultima parada de envios?"
       ],
       "red_flags": [
-        "Se protege poco la pieza al final del proceso o en la transferencia al cliente."
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "El DOCX no aporta una TRAMPA especifica para este apartado.",
+        "Dicen '0 PPM' pero es porque no contabilizan los defectos detectados en incoming Astemo como PPM propios. Cruzar con los datos de HLP."
       ]
     },
     "P6.6.1": {
       "que_pedir": [
         "Los productos se dirigen a almacenamiento/siguiente proceso con medios adecuados. FIFO. Estado de inspeccion visible."
       ],
-      "que_espero_ver": [
-        "No se empuja lote solo por liberar espacio o por urgencia."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "preguntas_de_contraste": [],
-      "red_flags": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.6.2": {
       "que_pedir": [
         "El embalaje protege las piezas. Los contenedores son adecuados para las caracteristicas especiales (sin golpes, sin oxidacion)."
       ],
-      "que_espero_ver": [
-        "La proteccion final evita dano, corrosion o contaminacion."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "Caso MAT Breyden: disputa de packaging donde piezas llegaban dañadas. El embalaje tiene que proteger las zonas criticas (paso disco, zona hidraulica). Si la pieza se mueve dentro del contenedor, va a llegar con marcas."
       ],
       "preguntas_de_contraste": [
         "Enseñadme como embalais las piezas terminadas de fundicion. Que proteccion hay contra daños durante el transporte a Astemo?"
       ],
-      "red_flags": [],
-      "tips": [
-        "Caso MAT Breyden: disputa de packaging donde piezas llegaban dañadas. El embalaje tiene que proteger las zonas criticas (paso disco, zona hidraulica). Si la pieza se mueve dentro del contenedor, va a llegar con marcas."
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P6.6.3": {
       "que_pedir": [
         "Los registros de inspeccion, liberacion y trazabilidad se archivan segun requisitos del cliente."
       ],
-      "que_espero_ver": [
-        "El historico del lote es recuperable y legible."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
-      "preguntas_de_contraste": [],
-      "red_flags": []
+      "preguntas_de_contraste": [
+        "El DOCX no aporta una PREGUNTA especifica para este apartado."
+      ],
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
+      ]
     },
     "P6.6.4": {
       "que_pedir": [
-        "Los requisitos de calidad, etiquetado, embalaje y entrega del cliente se cumplen. La performance se monitoriza."
+        "*-question. Los requisitos de calidad, etiquetado, embalaje y entrega del cliente se cumplen. La performance se monitoriza."
       ],
-      "que_espero_ver": [
-        "La entrega final refleja el mismo control que se exige internamente."
-      ],
-      "red_flags": [
-        "Dicen '0 PPM' pero es porque no contabilizan los defectos detectados en incoming Astemo como PPM propios. Cruzar con los datos de HLP."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Cual es vuestro PPM actual hacia Astemo en los ultimos 12 meses? Enseñadme la tendencia. Y cuando fue la ultima parada de envios?"
+      ],
+      "red_flags": [
+        "Dicen '0 PPM' pero es porque no contabilizan los defectos detectados en incoming Astemo como PPM propios. Cruzar con los datos de HLP."
       ]
     },
     "P7": {
       "que_pedir": [
-        "Sistema de requalificacion: calendario, criterios de disparo (cambio, tiempo, problema de campo) y resultado de la ultima requalificacion.",
-        "Proceso de servicio al cliente, comunicacion ante incidencias y gestion de portales con tiempos de respuesta comprometidos.",
-        "Capacidad de bloqueo rapido de lote y reconstruccion del origen del defecto hasta la etapa exacta del proceso."
+        "P7 evalua como el proveedor gestiona su relacion con nosotros: cumplimiento de requisitos, servicio, seguridad de suministro, gestion de reclamaciones y cualificacion del personal de soporte."
       ],
       "que_espero_ver": [
-        "La organizacion sabe sostener la conformidad y responder a fallos reales de campo o de suministro.",
-        "Las lecciones aprendidas vuelven a PFMEA, plan de control y decisiones de compra."
+        "P7 evalua como el proveedor gestiona su relacion con nosotros: cumplimiento de requisitos, servicio, seguridad de suministro, gestion de reclamaciones y cualificacion del personal de soporte."
       ],
       "evidencias_tipicas": [
-        "Requalificaciones, portales cliente, planes de contingencia, 8D y analisis de campo.",
-        "Bloqueos de lote, cronologias de respuesta y actualizaciones de estandar."
+        "El DOCX no define un TIP unico a nivel de fase; utiliza los tips de los subapartados de esta fase."
       ],
       "preguntas_de_contraste": [
-        "Como se localiza si un problema de cliente nacio en bruto, mecanizado o acabado?",
-        "Que medida de contingencia entraria primero si se cae una etapa critica del proveedor?"
+        "El DOCX no define una PREGUNTA unica a nivel de fase; utiliza las preguntas de los subapartados de esta fase."
       ],
       "red_flags": [
-        "Servicio al cliente dependiente de improvisacion o de pocas personas clave.",
-        "Lecciones aprendidas almacenadas pero no convertidas en prevencion."
+        "El DOCX no define una TRAMPA unica a nivel de fase; utiliza las trampas de los subapartados de esta fase."
       ]
     },
     "P7.1": {
       "que_pedir": [
         "Certificacion IATF vigente. Requalificaciones realizadas. Procesos externalizados controlados."
       ],
-      "que_espero_ver": [
-        "La requalificacion cubre el alcance real del proveedor."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "'Hemos pasado IATF' no es un plan de control. La certificacion es condicion necesaria, no suficiente."
       ],
-      "red_flags": [],
       "preguntas_de_contraste": [
         "Cuando fue vuestra ultima auditoria de seguimiento IATF 16949? Hubo hallazgos mayores? Enseñadme vuestro plan de recualificacion y los ultimos resultados de ensayos de recualificacion para las referencias de Astemo."
       ],
-      "tips": [
-        "'Hemos pasado IATF' no es un plan de control. La certificacion es condicion necesaria, no suficiente."
+      "red_flags": [
+        "El DOCX no aporta una TRAMPA especifica para este apartado."
       ]
     },
     "P7.2": {
       "que_pedir": [
         "Existe interlocutor definido, comunicacion fluida, y capacidad de respuesta."
       ],
-      "que_espero_ver": [
-        "Respuesta rapida y trazable ante incidencias."
-      ],
-      "red_flags": [
-        "Caso Fagor: tras la salida de Ander, toda la comunicacion de calidad recae en Begoña, que ya es responsable de calidad de planta. No hay backup, las respuestas en HLP se retrasan, y los tiempos de reaccion se degradan."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Quien es nuestro contacto principal para temas de calidad, entregas y temas tecnicos? Es la misma persona? Si esa persona no esta disponible, quien es el backup?"
+      ],
+      "red_flags": [
+        "Caso Fagor: tras la salida de Ander, toda la comunicacion de calidad recae en Begoña, que ya es responsable de calidad de planta. No hay backup, las respuestas en HLP se retrasan, y los tiempos de reaccion se degradan."
       ]
     },
     "P7.3": {
       "que_pedir": [
-        "Plan de contingencia disponible y actualizado. Stock de seguridad definido. Procesos para emergencias establecidos."
+        "*-question. Plan de contingencia disponible y actualizado. Stock de seguridad definido. Procesos para emergencias establecidos."
       ],
-      "que_espero_ver": [
-        "Las contingencias distinguen que etapa falla y que capacidad queda operativa."
-      ],
-      "red_flags": [
-        "No hay plan de contingencia, o lo hay pero es un documento generico que nadie conoce. La pregunta de raiz: 'If this risk wasn't identified during feasibility (P3.2), how did it end up in your contingency plan? And if it was identified, where is the evidence?'"
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El plan de contingencia conecta con P2.6 (riesgos del proyecto) y P6.1.1 (arranque fiable). Si no existe, hay un fallo sistemico desde la planificacion."
       ],
       "preguntas_de_contraste": [
         "Enseñadme vuestro plan de contingencia: que pasa si la linea principal de moldeo se para? Si vuestro proveedor de arena no puede entregar? Cual es vuestra politica de stock de seguridad para las referencias de Astemo?"
       ],
-      "tips": [
-        "El plan de contingencia conecta con P2.6 (riesgos del proyecto) y P6.1.1 (arranque fiable). Si no existe, hay un fallo sistemico desde la planificacion."
+      "red_flags": [
+        "No hay plan de contingencia, o lo hay pero es un documento generico que nadie conoce. La pregunta de raiz: 'If this risk wasn't identified during feasibility (P3.2), how did it end up in your contingency plan? And if it was identified, where is the evidence?'"
       ]
     },
     "P7.4": {
       "que_pedir": [
-        "El proceso de gestion de reclamaciones funciona: 8Ds a tiempo, causa raiz real, acciones eficaces, feedback loop."
+        "*-question. El proceso de gestion de reclamaciones funciona: 8Ds a tiempo, causa raiz real, acciones eficaces, feedback loop."
       ],
-      "que_espero_ver": [
-        "La causa raiz identifica la etapa exacta donde nacio el defecto."
-      ],
-      "red_flags": [
-        "Caso CyC: Ishikawas copiados entre reclamaciones de distinta fecha con conclusiones contraditorias. Si el proveedor copia-pega los 8Ds, no esta analizando nada.",
-        "Causa raiz de reclamaciones anteriores: 'error del operario' + 'formacion adicional' = Si el error se repitio, la formacion no fue eficaz. Exige poka-yoke o accion sistemica."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "No digas 'esto esta mal'. Pregunta: 'Why did you conclude X when in your previous 8D you stated Y?' Deja que se expliquen — muchas veces se contradicen solos.",
+        "Comprueba en el portal HLP antes de ir: cuantas reclamaciones abiertas, tiempos de respuesta, si hay overdue. Lleva los datos contigo — es evidencia objetiva."
       ],
       "preguntas_de_contraste": [
         "Cuantos 8Ds abiertos teneis actualmente con Astemo? Enseñadme los plazos de D1/D2/D8: se estan cumpliendo? Para el ultimo 8D cerrado, explicadme el analisis de causa raiz y enseñadme como verificasteis que la accion correctiva fue eficaz."
       ],
-      "tips": [
-        "No digas 'esto esta mal'. Pregunta: 'Why did you conclude X when in your previous 8D you stated Y?' Deja que se expliquen — muchas veces se contradicen solos.",
-        "Comprueba en el portal HLP antes de ir: cuantas reclamaciones abiertas, tiempos de respuesta, si hay overdue. Lleva los datos contigo — es evidencia objetiva."
+      "red_flags": [
+        "Caso CyC: Ishikawas copiados entre reclamaciones de distinta fecha con conclusiones contraditorias. Si el proveedor copia-pega los 8Ds, no esta analizando nada.",
+        "Causa raiz de reclamaciones anteriores: 'error del operario' + 'formacion adicional' = Si el error se repitio, la formacion no fue eficaz. Exige poka-yoke o accion sistemica."
       ]
     },
     "P7.5": {
       "que_pedir": [
         "El personal asignado a la relacion con el cliente esta cualificado, conoce los requisitos y los metodos de calidad (8D, Pareto, 5-Why)."
       ],
-      "que_espero_ver": [
-        "El personal entiende el producto, el cliente y el riesgo de seguridad."
-      ],
-      "red_flags": [
-        "No piden scorecard, no saben cual es su PPM hacia nosotros, y no tienen plan de mejora. Si no mides, no mejoras."
+      "que_espero_ver": [],
+      "evidencias_tipicas": [
+        "El DOCX no aporta un TIP especifico para este apartado."
       ],
       "preguntas_de_contraste": [
         "Solicitais proactivamente vuestro scorecard de proveedor a Astemo? Enseñadme el ultimo recibido y que acciones de mejora iniciasteis a partir de el."
+      ],
+      "red_flags": [
+        "No piden scorecard, no saben cual es su PPM hacia nosotros, y no tienen plan de mejora. Si no mides, no mejoras. NOTAS FINALES DE CAMPO Conexiones entre elementos que te dan ventaja • P2.6 (riesgos) conecta con P6.1.1 (arranque fiable) y P7.3 (contingencia). Si falta P7.3, tira del hilo: 'Was this risk identified during feasibility?' • P6.2.1 (CP) conecta con P6.2.3 (CC/SC) y P6.5.3 (acciones ante NC). Si el CP no tiene controles reforzados para CCs, el PFMEA es decorativo. • P5.4 (incoming) conecta con P6.1.4 (trazabilidad de entrada). Si no tienen certificados de MP, en P6 no pueden trazar un defecto de material. • P6.5.3 (NC internas) conecta con P7.4 (reclamaciones). Si sus acciones internas son debiles, sus 8Ds hacia ti seran iguales. • Los hallazgos en elementos adyacentes se pueden conectar ligeramente sin ser explicito — refuerzan el argumento sin acusar. Reglas de oro en planta • Pregunta al operario, no al Quality Manager. Si el operario no sabe, es hallazgo aunque la matriz diga que esta formado. • Coge un contenedor al azar y pide trazar hacia atras hasta la colada. Si no pueden, P6.1.4 es hallazgo. • Pide ver el catalogo de defectos EN la estacion de inspeccion. Si no esta visible o no esta actualizado, hallazgo. • Si un poka-yoke esta anulado (bypass, puente electrico, desactivado), es hallazgo directo y grave. • Nunca prescribas parametros de fundicion (arena, temperatura, mazarotas). Exige resultados. Ellos deciden como cuidar su casa. Sobre la puntuacion • 10 = cumple totalmente, 8 = desviacion menor (NO es hallazgo mayor), 6 = desviacion mayor parcial, 4 = desviacion mayor, 0 = no cumple. • Si una *-question puntua 4, hay downgrading automatico de A a B. • Si cualquier elemento (P2-P7) o sub-elemento (EU1-EU6) < 80%, hay downgrading de A a B. • Si cualquier elemento < 70%, hay downgrading a C. Prepared by: Rolando Fernandez | SQA & Incoming Inspection Manager | Astemo, Ltd. | Marzo 2026"
       ]
     }
   }

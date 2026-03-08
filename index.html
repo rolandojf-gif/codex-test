@@ -113,22 +113,19 @@
             <!-- Tabs -->
             <div class="tabs" role="tablist" aria-label="Secciones de guía">
               <button class="tab active" data-tab="que_pedir" role="tab" aria-selected="true">
-                <span class="tab-icon">?</span> Qué pedir
-              </button>
-              <button class="tab" data-tab="que_espero_ver" role="tab" aria-selected="false">
-                <span class="tab-icon">✓</span> Qué espero ver
-              </button>
-              <button class="tab" data-tab="evidencias_tipicas" role="tab" aria-selected="false">
-                <span class="tab-icon">📄</span> Evidencias
+                <span class="tab-icon">?</span> Qué buscar
               </button>
               <button class="tab" data-tab="preguntas_de_contraste" role="tab" aria-selected="false">
-                <span class="tab-icon">↔</span> Contraste
+                <span class="tab-icon">↔</span> PREGUNTA
               </button>
               <button class="tab tab-warn" data-tab="red_flags" role="tab" aria-selected="false">
-                <span class="tab-icon">!</span> Red flags
+                <span class="tab-icon">!</span> TRAMPA
               </button>
-              <button class="tab tab-tip" data-tab="tips" role="tab" aria-selected="false">
+              <button class="tab" data-tab="evidencias_tipicas" role="tab" aria-selected="false">
                 <span class="tab-icon">💡</span> TIP
+              </button>
+              <button class="tab" data-tab="que_espero_ver" role="tab" aria-selected="false">
+                <span class="tab-icon">✓</span> Contexto
               </button>
             </div>
 
@@ -136,20 +133,17 @@
             <div class="tab-pane active" id="pane-que_pedir" role="tabpanel">
               <ul id="quePedir"></ul>
             </div>
-            <div class="tab-pane" id="pane-que_espero_ver" role="tabpanel">
-              <ul id="queEsperoVer"></ul>
-            </div>
-            <div class="tab-pane" id="pane-evidencias_tipicas" role="tabpanel">
-              <ul id="evidenciasTipicas"></ul>
-            </div>
             <div class="tab-pane" id="pane-preguntas_de_contraste" role="tabpanel">
               <ul id="preguntasContraste"></ul>
             </div>
             <div class="tab-pane tab-pane-warn" id="pane-red_flags" role="tabpanel">
               <ul id="redFlags"></ul>
             </div>
-            <div class="tab-pane tab-pane-tip" id="pane-tips" role="tabpanel">
-              <ul id="tips"></ul>
+            <div class="tab-pane" id="pane-evidencias_tipicas" role="tabpanel">
+              <ul id="evidenciasTipicas"></ul>
+            </div>
+            <div class="tab-pane" id="pane-que_espero_ver" role="tabpanel">
+              <ul id="queEsperoVer"></ul>
             </div>
 
           </div><!-- /content-panel -->
