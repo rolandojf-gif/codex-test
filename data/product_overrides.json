@@ -104,14 +104,188 @@
         ]
       },
       "adjustments": {
+        "P2.2": {
+          "que_pedir": [
+            "Matriz de competencias para roles criticos de fundicion: metalurgista, calidad, laboratorio y mantenimiento; evidencia de cobertura de sustitucion por turno."
+          ],
+          "evidencias_tipicas": [
+            "Matriz de competencias con certificaciones, formacion registrada y plan de sustitucion por turno para roles criticos."
+          ],
+          "preguntas_de_contraste": [
+            "Si falta el metalurgista en turno noche, ¿quien decide sobre quimica fuera de ventana y donde queda registrado?"
+          ],
+          "red_flags": [
+            "Dependencia de una sola persona para decisiones tecnicas criticas de fundicion (quimica, tratamiento, liberacion de lote); sin sustitucion planificada."
+          ]
+        },
+        "P2.4": {
+          "que_pedir": [
+            "Registro de riesgos del proceso de fundicion con top riesgos de porosidad, inclusiones y variacion quimica: cada riesgo con dueño, mitigacion activa y fecha de cierre verificado."
+          ],
+          "evidencias_tipicas": [
+            "Registro de riesgos de proceso con dueño, estado y evidencia de cierre o mitigacion activa para los modos de fallo tipicos de fundicion."
+          ],
+          "preguntas_de_contraste": [
+            "¿Cuales son los top 3 riesgos de porosidad o inclusiones? ¿Que control previene, que detecta y que reaccion tienes para cada uno?"
+          ],
+          "red_flags": [
+            "Riesgos de calidad de fundicion registrados sin propietario, sin fecha o cerrados sin verificacion de eficacia."
+          ]
+        },
+        "P2.6": {
+          "que_pedir": [
+            "Procedimiento MOC (gestion de cambios) aplicado a consumibles criticos de fundicion: flux, filtros, refractarios, nodularizante, inoculante, proveedor de aleacion y parametros de desgasificado."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que cambio de material o consumible se hizo en los ultimos 6 meses? ¿Como garantizas equivalencia metalurgica sin PPAP delta?"
+          ],
+          "red_flags": [
+            "Cambios de proveedor de aleacion, flux, filtros o retornos tratados como rutina sin MOC ni validacion tecnica documentada."
+          ]
+        },
+        "P3.1": {
+          "que_pedir": [
+            "Matriz de requisitos → CTQ → control para caracteristicas criticas de fundicion: porosidad, fugas, resistencia mecanica, microestructura y dimensiones funcionales."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que CTQ gobierna fugas o fallo por porosidad? ¿Donde lo controlas: preventivo en proceso o solo deteccion final?"
+          ],
+          "red_flags": [
+            "CTQ de fundicion existente pero sin control preventivo en proceso: solo inspeccion final o prueba de estanqueidad como unica barrera."
+          ]
+        },
         "P3.2": {
           "que_pedir": [
             "Factibilidad de cumplir quimica, nodularidad, microestructura, soundness, dureza, rechazo objetivo y capacidad de control por lote."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que riesgo metalurgico concreto (porosidad, inclusion, variacion quimica) identificaste en la factibilidad y que control previsto lo mitiga?"
+          ],
+          "red_flags": [
+            "Factibilidad firmada sin analisis de riesgos especificos de fundicion o con acciones de mitigacion abiertas sin plan de cierre."
+          ]
+        },
+        "P3.3": {
+          "que_pedir": [
+            "PFMEA de proceso de fundicion con top modos de fallo: porosidad de gas, rechupe, inclusiones/oxidos, variacion quimica, defecto de moldeo/arena; acciones con responsable y fecha de verificacion."
+          ],
+          "evidencias_tipicas": [
+            "PFMEA de proceso de fundicion con conexion real a Control Plan, instrucciones de trabajo y plan de reaccion operativo entrenado en linea."
+          ],
+          "preguntas_de_contraste": [
+            "¿Cual es el modo de fallo #1 historico en este proceso? Enséñame el control que lo previene y el plan de reaccion si aparece en turno."
+          ],
+          "red_flags": [
+            "PFMEA generico o de escritorio no conectado a controles reales en linea; sin planes de reaccion operativos entrenados; desconectado del Control Plan."
           ]
         },
         "P4.2": {
           "que_pedir": [
-            "Ventanas maestras de proceso para fusion, tratamiento, inoculacion, colada, arena y machos, con criterios de reaccion."
+            "Ventanas maestras de proceso para fusion, tratamiento, inoculacion, colada, arena y machos, con criterios de reaccion.",
+            "Formacion y autorizacion del personal para decisiones tecnicas criticas: quien puede modificar parametros de fusion o tratamiento, quien libera un lote, quien bloquea el proceso."
+          ],
+          "preguntas_de_contraste": [
+            "Si hay una desviacion de temperatura en horno a las 2am, ¿quien decide, que registro genera y cuando se entera calidad?"
+          ],
+          "red_flags": [
+            "Operarios con acceso a modificar parametros criticos de fusion (temperatura, quimica, tratamiento) sin formacion documentada ni autorizacion formal."
+          ]
+        },
+        "P4.3": {
+          "que_pedir": [
+            "Historial de mantenimiento de moldes, machos y utiles con CTQ de herramental (desgaste critico, ventilaciones, refrigeracion) y su correlacion documentada con defectos de fundicion."
+          ],
+          "evidencias_tipicas": [
+            "FAT/SAT de moldes y matrices, historial de intervenciones con correlacion entre desgaste de herramienta y aparicion de porosidad o defecto dimensional."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que desgaste critico del molde esta mas correlacionado con porosidad o problema dimensional? ¿Como lo detectas antes de que impacte el lote?"
+          ],
+          "red_flags": [
+            "Mantenimiento de moldes reactivo: se interviene cuando aparece el defecto, no por criterio preventivo basado en datos de desgaste o tendencias de defectos."
+          ]
+        },
+        "P4.4": {
+          "que_pedir": [
+            "Secuencia de validacion: MSA (GRR) completada antes del estudio de capacidad (Cpk) para cada CTQ de fundicion; demostrar fechas, resultado del GRR y decision de aceptacion."
+          ],
+          "preguntas_de_contraste": [
+            "¿Se hizo MSA antes del Cp/Cpk? Enséñame fechas y resultado del GRR para el CTQ principal de este proceso."
+          ],
+          "red_flags": [
+            "Capacidad (Cpk) calculada con sistema de medicion no validado (sin GRR o con GRR >30%): los datos de capacidad son de dudosa credibilidad."
+          ]
+        },
+        "P4.7": {
+          "que_pedir": [
+            "Trial / Run@Rate realizado en condiciones reales de serie: mismo equipo, mismo turno, mismos operarios, materias primas de proveedor habitual; no en condiciones ideales de laboratorio."
+          ],
+          "preguntas_de_contraste": [
+            "¿Con que tasa de scrap salio el trial? ¿Que cambio entre las condiciones del trial y la produccion habitual en serie?"
+          ],
+          "red_flags": [
+            "Run@Rate realizado en condiciones ideales (equipo A, turno de dia, operarios expertos) pero produccion en serie en condiciones distintas: el trial no valida la realidad."
+          ]
+        },
+        "P4.9": {
+          "que_pedir": [
+            "Plan de Safe Launch con criterios cuantitativos de salida: PPM interna objetivo, Cpk minimo en CTQ, estabilidad SPC por X semanas/lotes, cero escapes confirmados antes de levantar controles reforzados."
+          ],
+          "evidencias_tipicas": [
+            "Plan de Safe Launch con criterios de salida cuantitativos verificados, firmados y con decision de cierre documentada."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que defectos de fundicion blindas en Safe Launch, con que frecuencia de inspeccion adicional y cuando y como decidiste levantar los controles?"
+          ],
+          "red_flags": [
+            "Safe Launch sin criterios cuantitativos de salida; controles reforzados levantados por presion de fecha o cuando 'parece bien', sin verificacion de eficacia."
+          ]
+        },
+        "P5.1": {
+          "que_pedir": [
+            "Criterios de homologacion de subproveedores que incluyan evaluacion tecnica especifica para suministro a fundicion: metalurgia, quimica, certificaciones y capacidad de verificacion."
+          ],
+          "preguntas_de_contraste": [
+            "¿Quien es el proveedor mas critico para la calidad del metal (porosidad/inclusiones) y como auditas o verificas su desempeno?"
+          ],
+          "red_flags": [
+            "Subproveedor aprobado por historico o precio, sin evaluacion tecnica del impacto real en calidad del metal fundido."
+          ]
+        },
+        "P5.4": {
+          "que_pedir": [
+            "Certificados de analisis (COA) de aleacion por colada/lote con verificacion interna (espectrometro o analisis termico); limites documentados de % retorno por lote con trazabilidad."
+          ],
+          "evidencias_tipicas": [
+            "COA por lote de aleacion con verificacion interna registrada, limites de % retorno documentados y registros de FIFO/FEFO en almacen de materia prima."
+          ],
+          "preguntas_de_contraste": [
+            "¿Cuanto retorno metes por lote y como evitas contaminacion cruzada entre diferentes aleaciones o cargas?"
+          ],
+          "red_flags": [
+            "Aleacion recibida sin verificacion interna de quimica; retornos sin limite de porcentaje documentado ni trazabilidad por lote de procedencia."
+          ]
+        },
+        "P5.5": {
+          "que_pedir": [
+            "Requisitos tecnicos documentados para subprocesos especiales externos (tratamiento termico, granallado, impregnacion, recubrimiento): especificacion, metodo de verificacion, criterios de aceptacion y frecuencia de auditoria."
+          ],
+          "red_flags": [
+            "Subproceso especial externo tratado como caja negra: sin especificacion tecnica, sin verificacion de resultado ni auditoria al subproveedor."
+          ]
+        },
+        "P5.6": {
+          "que_pedir": [
+            "Control de recepcion de materias primas criticas de fundicion: aleacion, retornos, flux, filtros, refractarios, arena/resina; verificacion por lote, segregacion fisica y FIFO documentado."
+          ],
+          "evidencias_tipicas": [
+            "Registros de recepcion con verificacion interna por lote, identificacion fisica y evidencia de FIFO en almacen de materia prima de fundicion."
+          ],
+          "preguntas_de_contraste": [
+            "Muéstrame la trazabilidad de la ultima carga de aleacion desde la recepcion hasta el horno. ¿FIFO garantizado y verificado?"
+          ],
+          "red_flags": [
+            "Materias primas criticas de fundicion recibidas sin verificacion interna; mezcla de lotes o aleaciones en almacen sin segregacion ni FIFO."
           ]
         },
         "P6.1": {
@@ -138,9 +312,19 @@
           ]
         },
         "P6.2.2": {
+          "que_pedir": [
+            "Ventanas de proceso aprobadas (temperatura metal, % retorno, parametros de tratamiento, parametros moldeo) con control de cambios, registro por turno/lote y reaccion definida ante desvio."
+          ],
+          "evidencias_tipicas": [
+            "Hoja de control de proceso con ventanas aprobadas, registros por turno/lote y reacciones documentadas ante desviacion de parametros."
+          ],
+          "preguntas_de_contraste": [
+            "¿Quien puede cambiar la temperatura de fusion o el % de retorno en turno? ¿Donde queda registrado y como se entera calidad?"
+          ],
           "red_flags": [
             "Lote liberado con evidencia incompleta de quimica, tratamiento o microestructura.",
-            "La liberacion depende demasiado de inspeccion final y poco del control del proceso."
+            "La liberacion depende demasiado de inspeccion final y poco del control del proceso.",
+            "Parametros de fusion o tratamiento ajustables por cualquier operario sin registro, sin ventana aprobada o sin reaccion definida."
           ]
         },
         "P6.3": {
@@ -148,14 +332,84 @@
             "Plan de mantenimiento y calibracion de hornos, cucharas, espectrometro, analisis termico, equipos metalograficos y utiles de proceso."
           ]
         },
+        "P6.4.1": {
+          "que_pedir": [
+            "Plan TPM para equipos criticos de fundicion: hornos, cucharas, maquinas de moldeo o inyeccion, sistemas de arena; con criticidad, frecuencia de PM y evidencia de cumplimiento."
+          ],
+          "preguntas_de_contraste": [
+            "¿Que plan de mantenimiento preventivo evita porosidad por variacion de horno o desgaste de molde? ¿Donde ves el impacto en los datos de defectos?"
+          ],
+          "red_flags": [
+            "Mantenimiento de equipos de fundicion no vinculado a modos de fallo: OT reactivas dominan sobre PM; no hay correlacion entre incidencias de mantenimiento y defectos de proceso."
+          ]
+        },
+        "P6.4.3": {
+          "que_pedir": [
+            "Calibracion y verificacion de equipos de medicion criticos de fundicion: espectrometro, equipo de analisis termico, equipos metalograficos, medidores de arena y gauges funcionales."
+          ],
+          "evidencias_tipicas": [
+            "Plan de calibracion con frecuencias y resultados para espectrometro, analisis termico y equipos de ensayo metalurgico; intervalos justificados por volumen de uso."
+          ],
+          "red_flags": [
+            "Espectrometro o equipo de analisis termico sin calibracion vigente o con intervalos de calibracion insuficientes para el volumen de produccion de fundicion."
+          ]
+        },
+        "P6.5.2": {
+          "que_pedir": [
+            "SPC aplicado a variables criticas de proceso de fundicion: temperatura de metal, quimica (Si, Mg, CE), parametros de tratamiento y arena; cartas con limites de control y plan de reaccion operativo."
+          ],
+          "preguntas_de_contraste": [
+            "Muéstrame la ultima alarma SPC de temperatura o quimica y la accion concreta tomada (no el grafico, la accion)."
+          ],
+          "red_flags": [
+            "Variables criticas de fundicion sin SPC o con SPC sin plan de reaccion operativo; puntos fuera de control sin accion documentada ni investigacion de causa."
+          ]
+        },
         "P6.5.3": {
+          "que_pedir": [
+            "Pareto de defectologia especifico de fundicion (porosidad, inclusiones, rechupe, variacion dimensional) con acciones de reduccion verificadas y tendencia historica."
+          ],
           "evidencias_tipicas": [
             "Pareto de defectologia especifico de fundicion nodular y acciones de reduccion."
+          ],
+          "preguntas_de_contraste": [
+            "¿Cual es el defecto #1 en PPM interno? ¿Que accion correctiva tomaste y como verificaste que funciona?"
+          ],
+          "red_flags": [
+            "Defecto cronico de fundicion (porosidad, inclusion) sin accion correctiva estructural; scrap tratado como coste asumido y no como señal de proceso inestable."
           ]
         },
         "P6.6.3": {
+          "que_pedir": [
+            "Trazabilidad completa de lote: desde carga metalica y colada hasta lote expedido; demostrar reconstruccion real con horno, carga, parametros de tratamiento, inspector y resultado de inspeccion."
+          ],
           "evidencias_tipicas": [
             "Trazabilidad de carga, colada, tratamiento, lote de piezas y liberacion final."
+          ],
+          "red_flags": [
+            "Trazabilidad rota por mezcla de retornos, lotes o contenedores sin identificacion; imposible reconstruir el camino completo del lote ante una reclamacion."
+          ]
+        },
+        "P7.2": {
+          "que_pedir": [
+            "Protocolo de comunicacion proactiva al cliente ante lote bajo sospecha o deteccion de posible escape: quien decide avisar, en que plazo maximo y con que informacion minima."
+          ],
+          "red_flags": [
+            "Notificacion al cliente solo cuando el cliente reclama; ausencia de protocolo interno de escalado y comunicacion proactiva ante sospecha de no conformidad."
+          ]
+        },
+        "P7.4": {
+          "que_pedir": [
+            "Reclamaciones de fundicion con 8D que incluya: contencion verificada con trazabilidad del lote bloqueado, causa raiz demostrada con datos (no opinada), acciones validadas en lotes reales y actualizacion de PFMEA/Control Plan."
+          ],
+          "evidencias_tipicas": [
+            "8D con evidencia de causa raiz demostrada (hipotesis probada con datos o experimento de proceso) y PFMEA/Control Plan actualizados y formacion asociada."
+          ],
+          "preguntas_de_contraste": [
+            "Enséñame 1 reclamacion de porosidad o fuga: ¿como demostraste la causa raiz con datos y que cambio en PFMEA/Control Plan despues?"
+          ],
+          "red_flags": [
+            "8D cerrado por fecha sin verificacion de eficacia; causa raiz opinada sin datos; PFMEA/Control Plan no actualizados tras reclamacion de fundicion."
           ]
         }
       }
