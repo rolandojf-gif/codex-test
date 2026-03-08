@@ -183,7 +183,7 @@ function onSidebarClick(e) {
     const hasLvls = subBtn.dataset.hasLvls === "true";
     if (hasLvls) {
       // Expandir/contraer los subniveles y auto-seleccionar el primero
-      const lvlList = document.querySelector(`#lvls-${subBtn.dataset.sub}`);
+      const lvlList = document.getElementById(`lvls-${subBtn.dataset.sub}`);
       const arrow   = subBtn.querySelector(".nav-sub-arrow");
       if (lvlList) {
         const isOpening = !lvlList.classList.contains("open");
@@ -254,7 +254,7 @@ function autoSelectFirst() {
 
   // Si tiene subniveles, expandir y seleccionar el primero
   if (Array.isArray(firstSub.sublevels) && firstSub.sublevels.length > 0) {
-    const lvlList = document.querySelector(`#lvls-${firstSub.id}`);
+    const lvlList = document.getElementById(`lvls-${firstSub.id}`);
     const arrow   = document.querySelector(`.nav-sub-btn[data-sub="${firstSub.id}"] .nav-sub-arrow`);
     lvlList?.classList.add("open");
     arrow?.classList.add("open");
