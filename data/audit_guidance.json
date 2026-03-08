@@ -3,9 +3,9 @@
   "items": {
     "P2": {
       "que_pedir": [
-        "Gobierno del proyecto: organigrama actualizado, RACI, acta de kick-off y minutas de revision periodica con asistentes reales.",
-        "Plan maestro con hitos tecnicos (utiles, lotes piloto, PPAP/PPA, Run@Rate, SOP), riesgos registrados y circuito de escalacion documentado.",
-        "Evidencia de como se incorporan lecciones aprendidas de proyectos comparables al programa actual."
+        "Estructura de gobierno del proyecto: organigrama con líder nombrado formalmente, equipo interdisciplinario (ingeniería, calidad, compras, producción), responsabilidades definidas y puntos de contacto comunicados al cliente.",
+        "Plan maestro acordado con el cliente: hitos internos y del cliente (diseño, prototipos, validaciones, PPAP/PPA, SOP), ruta crítica identificada, gate reviews ejecutadas y lecciones aprendidas de proyectos similares incorporadas.",
+        "Evidencia de gestión activa: registro de riesgos con mitigaciones, proceso de escalación documentado con criterios y niveles, y gestión formal de cambios con evaluación de impacto y notificación al cliente cuando aplica."
       ],
       "que_espero_ver": [
         "Organizacion real, multidisciplinar y con autoridad para bloquear, decidir y escalar.",
@@ -26,9 +26,9 @@
     },
     "P2.1": {
       "que_pedir": [
-        "Organigrama con responsables nominales de cada etapa del alcance (fundicion, metalurgia, laboratorio, mantenimiento, CNC, calidad, acabado) con datos de contacto y sustitutos.",
-        "Acta de kick-off con compromisos concretos y fecha, y RACI actualizado que incluya procesos externalizados.",
-        "Evidencia de como se aplicaron lecciones aprendidas de proyectos similares a la planificacion del programa actual."
+        "Organigrama del proyecto con líder nombrado formalmente, roles y responsabilidades definidos para cada miembro del equipo interdisciplinario, e interfaces con el cliente y proveedores documentadas.",
+        "Acta de kick-off con compromisos y fechas; RACI actualizado que incluya procesos externalizados; evidencia de que el cliente conoce los puntos de contacto del proveedor.",
+        "Lecciones aprendidas de proyectos similares incorporadas a la planificación del programa actual, con riesgos del proyecto identificados y medidas de mitigación definidas y asignadas."
       ],
       "que_espero_ver": [
         "Interlocutores y escalacion definidos tambien para procesos externalizados."
@@ -39,9 +39,9 @@
     },
     "P2.2": {
       "que_pedir": [
-        "Recursos reservados por etapa (hornos, laboratorio, utillajes, CNC, galgas, medios de acabado) con calendario de disponibilidad comprometida.",
-        "Analisis documentado de cuello de botella por operacion critica, no solo a nivel agregado de planta.",
-        "Proceso de revision de capacidad ante cambios de volumen, mix o alcance, con evidencia de actualizacion cuando ha ocurrido."
+        "Plan de recursos documentado que incluye personal, instalaciones, equipamiento (laboratorios, bancos de prueba, herramientas) y presupuesto aprobado para el proyecto, considerando el camino crítico.",
+        "Evidencia de que los recursos planificados están disponibles en el momento requerido: confirmación de asignación de personal clave, pedidos de equipos realizados, presupuesto liberado.",
+        "Proceso de revisión y ajuste de la planificación de recursos ante cambios de alcance, plazos o cargas de trabajo, con evidencia de algún reajuste documentado durante el proyecto."
       ],
       "que_espero_ver": [
         "La capacidad se calcula por operacion critica y no solo a nivel agregado."
@@ -52,9 +52,9 @@
     },
     "P2.3": {
       "que_pedir": [
-        "Plan de proyecto acordado con el cliente: hitos, PPAP/PPA, first-off, validaciones y pruebas de serie con fechas comprometidas.",
-        "Evidencia de alineacion con el cliente: confirmaciones de hitos, actas de revision de plan o correos de acuerdo.",
-        "Ruta critica viva con estado actual y acciones abiertas para los hitos en riesgo."
+        "Plan maestro de proyecto documentado y acordado con el cliente, con todos los hitos internos y del cliente (diseño, prototipos, validaciones, PPAP/PPA, SOP) con fechas, responsables y entregables definidos.",
+        "Ruta crítica identificada y monitorizada activamente; gate reviews ejecutadas en cada hito para verificar madurez antes de avanzar de fase, con actas o registros de las revisiones realizadas.",
+        "Proceso de comunicación de cambios al plan: notificación interna y al cliente cuando afectan compromisos acordados, con evidencia de estas comunicaciones y actualización del plan."
       ],
       "que_espero_ver": [
         "Ruta critica viva y alineada con entregables tecnicos reales."
@@ -65,9 +65,9 @@
     },
     "P2.4": {
       "que_pedir": [
-        "Plan de actividades de calidad: PFMEA, plan de control, MSA, auditorias internas, validaciones y plan de contencion de arranque.",
-        "Estado actual de madurez de cada actividad de calidad (completada, en curso, pendiente) por etapa del alcance.",
-        "Registro de actividades completadas con evidencia: informes de MSA, resultados de auditorias y actas de validacion."
+        "Plan de calidad del proyecto con actividades de aseguramiento de producto y proceso: FMEA, plan de control, MSA, validaciones, revisiones de diseño, auditorías internas y hitos de calidad (VDA MLA o APQP).",
+        "Identificación de características especiales con medidas de control planificadas para cada una; verificación de que el plan incluye actividades de calidad de todas las áreas y etapas del alcance.",
+        "Seguimiento documentado del cumplimiento del plan de calidad: estado de cada actividad (completada/en curso/pendiente), resultados de las ejecutadas y frecuencia de revisión del plan."
       ],
       "que_espero_ver": [
         "Las actividades de calidad cubren bruto, mecanizado y acabado cuando existen."
@@ -78,9 +78,9 @@
     },
     "P2.5": {
       "que_pedir": [
-        "Lista de subproveedores criticos por materia prima, consumibles, utillajes, mecanizado o acabado, con estado de cualificacion y hitos comprometidos.",
-        "Evidencia de que compras forma parte de las reuniones de proyecto y de la evaluacion de riesgo del cronograma.",
-        "Registro de seguimiento de pedidos criticos con alerta temprana ante retrasos."
+        "Cronograma del proyecto que incluye actividades de compras: selección y homologación de proveedores, adquisición de maquinaria, herramientas, sistemas de medición y servicios externos con fechas objetivo.",
+        "Evidencia de que los hitos de proveedores (entregas de moldes, muestras iniciales, instalaciones, aprobación PPAP de componentes) están integrados y coordinados con el cronograma general del proyecto.",
+        "Decisiones de make-or-buy documentadas y reflejadas en el plan; seguimiento activo de pedidos críticos con alerta temprana ante retrasos de proveedores o equipos externos."
       ],
       "que_espero_ver": [
         "Compras forma parte de los hitos y de la evaluacion de riesgo, no entra tarde."
@@ -91,9 +91,9 @@
     },
     "P2.6": {
       "que_pedir": [
-        "Proceso documentado de gestion de cambio para material, parametros, moldes, machos, programas CNC, utiles y procesos de acabado.",
-        "Registro de cambios ocurridos durante el proyecto con evaluacion de impacto, aprobacion y notificacion al cliente cuando aplica.",
-        "Trazabilidad entre cada cambio y la actualizacion de documentos relacionados (PFMEA, plan de control, instrucciones)."
+        "Proceso formal de gestión de cambios con formato ECR/ECN, evaluación de impacto en calidad, plazos y costes, aprobación multidisciplinaria antes de implementar y comunicación al cliente cuando aplica.",
+        "Registro de cambios ocurridos durante el proyecto: evaluación, aprobación, notificación al cliente si procede y actualización de documentos del proyecto (plan, diseños, PFMEA, plan de control).",
+        "Respeto de los design freeze acordados con el cliente; si se requiere excepción posterior al congelamiento, está acordada con el cliente y documentada; proveedores involucrados en los cambios que les afectan."
       ],
       "que_espero_ver": [
         "Cada cambio deja impacto evaluado sobre seguridad, capacidad, trazabilidad y cliente."
@@ -102,12 +102,11 @@
         "Cambios tratados como ajustes de planta y no como cambios de proceso."
       ]
     },
-
     "P3": {
       "que_pedir": [
-        "Requisitos tecnicos y de cliente de la pieza y del proceso completo, desplegados por etapa del alcance del proveedor.",
-        "Planificacion de industrializacion con flow chart, PFMEA, plan de control, recursos, compras y soporte post-lanzamiento.",
-        "Factibilidad documentada por etapa, con riesgos identificados y datos de referencia de productos comparables."
+        "Requisitos completos del producto y proceso desplegados por etapa del alcance, con características especiales identificadas y factibilidad formal evaluada antes de aceptar el proyecto.",
+        "Plan detallado de desarrollo con actividades técnicas (FMEA, validaciones, prototipos), gestión de riesgos, actividades de compras y proveedores, y soporte postventa planificado desde esta fase.",
+        "Recursos identificados y planificados para el desarrollo: personal, instalaciones, capacidad productiva para prototipos y pre-serie, con brechas resueltas antes de iniciar ejecución."
       ],
       "que_espero_ver": [
         "Requisitos desplegados por etapa del proceso y conectados a controles reales.",
@@ -128,9 +127,9 @@
     },
     "P3.1": {
       "que_pedir": [
-        "Lista maestra de requisitos: material, metalurgia, dimensiones, superficies funcionales, limpieza, proteccion y trazabilidad, con origen en plano, CSR o acuerdo de calidad.",
-        "Matriz de trazabilidad de cada requisito al punto de control donde se verifica realmente en proceso.",
-        "Estado de cada caracteristica especial: dueno asignado, metodo de control, punto de control y nivel de madurez actual."
+        "Documentación completa de requisitos del producto y proceso: especificaciones técnicas del cliente, normas aplicables, requisitos legales y reglamentarios, y criterios internos, todos acordados antes de iniciar el diseño.",
+        "Características especiales (de calidad, seguridad, regulatorias) identificadas y marcadas en planos y listados, con trazabilidad al requisito del cliente, norma o aspecto de seguridad que las origina.",
+        "Método para asegurar que no faltan requisitos: checklist de revisión de contrato, comparación con proyectos previos, lecciones aprendidas incorporadas; proveedores o materiales impuestos por el cliente documentados."
       ],
       "que_espero_ver": [
         "Cada requisito tiene reflejo en control de proceso, control de lote o validacion."
@@ -141,9 +140,9 @@
     },
     "P3.2": {
       "que_pedir": [
-        "Estudio de factibilidad firmado por etapa del alcance (fundicion, mecanizado, acabado si aplica), con riesgos identificados y datos de soporte.",
-        "Analisis de capacidad para las caracteristicas criticas: quimica, nodularidad, soundness, first-off, Cpk, limpieza o espesor segun aplique.",
-        "Referencia a piezas similares producidas como base de datos para la factibilidad, con resultado real documentado."
+        "Análisis de factibilidad formal y multidisciplinario (ingeniería, producción, calidad, compras, logística) documentado y disponible antes de la aceptación del proyecto o envío de oferta.",
+        "La factibilidad cubre producto y proceso: tolerancias vs capacidad del proceso, volúmenes vs capacidad instalada, disponibilidad de materiales especiales, limitaciones de proveedores externos.",
+        "Requisitos que resultaron no factibles o dudosos comunicados al cliente con evidencia (correo, reserva en oferta) y aprobación de desviación antes de comprometerse; fecha del documento de factibilidad anterior a la firma del contrato."
       ],
       "que_espero_ver": [
         "Los cuellos de botella y riesgos se conocen antes de comprometer PPAP/PPA."
@@ -154,9 +153,9 @@
     },
     "P3.3": {
       "que_pedir": [
-        "Plan detallado de lotes piloto, first-off, MSA, Run@Rate y liberaciones por etapa, con fechas, criterios de aceptacion y responsables.",
-        "Criterios tecnicos de liberacion entre etapas del alcance (bruto a mecanizado, mecanizado a acabado si aplica).",
-        "Registro de seguimiento de actividades de validacion completadas vs planificadas."
+        "Plan detallado de desarrollo del producto y proceso con todas las actividades técnicas (FMEA de diseño y proceso, revisiones de diseño, construcción de prototipos, pruebas de validación) calendarizadas con fechas, duraciones y responsables.",
+        "Gestión de riesgos técnicos integrada en el plan: FMEA preliminar con medidas de mitigación reflejadas en el cronograma; plan de contingencia para innovaciones de alto riesgo; criterios de liberación entre fases definidos.",
+        "Plan de pruebas y validaciones (confiabilidad, durabilidad, desempeño) con criterios de éxito definidos; plan de inspecciones que cubre desde prototipos hasta producción en serie; corridas de pre-serie y Run@Rate contemplados con fechas."
       ],
       "que_espero_ver": [
         "Las interfaces entre etapas tienen criterio de liberacion y evidencia."
@@ -167,9 +166,9 @@
     },
     "P3.4": {
       "que_pedir": [
-        "Plan de compras con lista de subproveedores criticos, criterio de criticidad, estado de cualificacion y hitos comprometidos.",
-        "Sistema de seguimiento de riesgo por proveedor: lead times, dependencias unicas, impacto en programa.",
-        "Proceso de gestion de proveedor nuevo o no cualificado durante el desarrollo."
+        "Criterios de selección de proveedores documentados; para proveedores nuevos o con nueva tecnología/localización, evidencia de análisis de potencial (VDA 6.3 P1 u equivalente) planificado antes de contratarlos.",
+        "Comunicación formal a proveedores de todos los requisitos del proyecto: especificaciones, características especiales, requisitos logísticos, normativos y de calidad, con confirmación de recepción documentada.",
+        "Cronograma con hitos de proveedores (entrega de moldes, primeras muestras, PPAP de componentes comprados) y actividades de seguimiento planificadas por nivel de riesgo del insumo; decisiones make-or-buy documentadas."
       ],
       "que_espero_ver": [
         "Subproveedores criticos gobernados con enfoque de riesgo."
@@ -180,9 +179,9 @@
     },
     "P3.5": {
       "que_pedir": [
-        "Inventario de recursos necesarios para industrializar (laboratorio, metrologia, CNC, utiles, limpieza, acabado) vs recursos disponibles, con brechas identificadas.",
-        "Estado de equipos o medios criticos para las etapas de homologacion y validacion.",
-        "Plan de disponibilidad de recursos para lotes piloto y Run@Rate con fechas confirmadas."
+        "Inventario de recursos necesarios para el desarrollo e industrialización (personal calificado, instalaciones, equipos de laboratorio, líneas piloto) versus disponibles, con brechas identificadas y plan de resolución.",
+        "Capacidad productiva planificada para construir prototipos y pre-serie: reserva de líneas piloto o tiempo de máquina con fechas confirmadas; nuevas infraestructuras o equipos críticos con plan de adquisición y disponibilidad.",
+        "Plan de capacitación del personal para nuevas tecnologías o productos con fechas previas al SOP; medios de transporte y embalajes especiales para materiales del nuevo producto considerados y gestionados."
       ],
       "que_espero_ver": [
         "Recursos criticos previstos antes de necesitarlos."
@@ -193,9 +192,9 @@
     },
     "P3.6": {
       "que_pedir": [
-        "Proceso documentado de respuesta a reclamacion, bloqueo de lote y contencion ante fallo post-lanzamiento.",
-        "Responsables nominados para soporte al cliente, analisis de fallo de campo y continuidad de suministro post-SOP.",
-        "Capacidad de distinguir si un defecto de campo nacio en bruto, mecanizado o acabado, con el proceso de analisis que lo soporta."
+        "Plan de soporte posventa que cubre: suministro de repuestos durante la vida útil del producto (volúmenes y plazos), planes de contingencia para garantizar continuidad de suministro en serie ante paradas o fallos de proveedor.",
+        "Requisitos del cliente sobre análisis de fallas de campo (tiempos de respuesta, profundidad del análisis, NTF) acordados e incorporados a la planificación, con recursos definidos (laboratorio propio o externo) para cumplirlos.",
+        "Personal de soporte posventa y análisis de fallas identificado y calificado; si se requieren laboratorios externos para ciertos análisis, acuerdos definidos con capacidad y tiempos comprometidos documentados."
       ],
       "que_espero_ver": [
         "El proveedor sabe como analizar un defecto que puede nacer en bruto, mecanizado o acabado."
@@ -204,12 +203,11 @@
         "Soporte post-lanzamiento no definido o reducido a un 8D administrativo."
       ]
     },
-
     "P4": {
       "que_pedir": [
-        "Evidencia de implantacion real del proceso definido: instrucciones en puesto, medios liberados, first-off completado y readiness de serie documentado.",
-        "Plan de handover a serie con checklist de open points, responsables, criticidad y fechas de cierre.",
-        "Estado actual de acciones de contencion de arranque por etapa del alcance."
+        "Evidencia de que las acciones del plan de desarrollo (P3) se ejecutaron: FMEAs actualizadas, validaciones completadas, medidas de riesgo implementadas y verificadas en eficacia.",
+        "Todas las liberaciones y aprobaciones obtenidas antes del SOP: PPAP/PPA del cliente, estudios de capacidad (Cpk), MSA válidas, homologaciones legales y aprobaciones de proveedores de partes críticas.",
+        "Handover controlado a producción: checklist de transferencia firmado, documentación técnica transferida, open points con responsable, criticidad y fecha de cierre definida; personal de serie capacitado antes del arranque."
       ],
       "que_espero_ver": [
         "Lo validado en desarrollo ya esta aterrizado en proceso, puesto, medio y criterio de liberacion.",
@@ -230,9 +228,9 @@
     },
     "P4.1": {
       "que_pedir": [
-        "Registro de acciones de desarrollo: simulacion, utiles, reduccion de defectologia, robustez de mecanizado y acabado, con estado (abierta/cerrada) y evidencia de eficacia.",
-        "Actualizacion del PFMEA tras cierre de acciones criticas, con nueva valoracion de riesgo.",
-        "Resultados de pruebas tecnologicas o lotes piloto que soportan el cierre de las acciones."
+        "Registro actualizado de acciones del plan de desarrollo con estado (abierta/cerrada) y evidencia de eficacia para las acciones críticas; FMEA de diseño y proceso actualizadas conforme avanzó el proyecto.",
+        "Características especiales identificadas en todos los documentos clave (FMEA, planos, plan de control) con medidas de control implementadas y verificadas: poka-yokes probados, SPC activo, controles adicionales validados.",
+        "Sin riesgos técnicos abiertos sin mitigar al momento del SOP: resultados de pruebas de validación completados, hallazgos de revisiones de diseño resueltos, análisis de riesgo multidisciplinario activo durante todo el desarrollo."
       ],
       "que_espero_ver": [
         "Los riesgos altos tienen acciones implantadas y medidas de eficacia."
@@ -243,9 +241,9 @@
     },
     "P4.2": {
       "que_pedir": [
-        "Matriz de competencias del personal por operacion critica del alcance (fundicion, laboratorio, CNC, acabado), con nivel requerido vs actual.",
-        "Plan de formacion con estado de completado, pendiente y fecha prevista para el personal de serie.",
-        "Cobertura por turno documentada para operaciones criticas, con sustitutos identificados y cualificados."
+        "Asignación documentada de personal a todas las actividades de desarrollo e industrialización, con competencias verificadas (formación en Core Tools, metodologías específicas, roles y responsabilidades definidos).",
+        "Cobertura de todos los roles necesarios para el lanzamiento, incluyendo personal de producción y mantenimiento involucrado en corridas piloto; gestión de cuellos de botella de personal con evidencia de acciones tomadas.",
+        "Personal de producción en serie identificado con plan de capacitación ejecutado antes del SOP: operarios entrenados en el nuevo proceso, inspectores capacitados en características especiales, cobertura por turno confirmada."
       ],
       "que_espero_ver": [
         "Cobertura suficiente por turno en operaciones y validaciones criticas."
@@ -256,9 +254,9 @@
     },
     "P4.3": {
       "que_pedir": [
-        "Estado de liberacion de cada medio critico del alcance: hornos, moldes, machos, equipos de ensayo, CNC, utillajes, lineas de limpieza y acabado.",
-        "Plan de mantenimiento previo al SOP y evidencia de que los medios estan en estado valido para serie.",
-        "Evidencia de cualificacion de utillajes y moldes: primeras coladas o primeros ciclos, resultados y aprobacion."
+        "Estado de disponibilidad de todos los medios de producción: máquinas, herramientas, equipos de laboratorio y dispositivos de inspección instalados, cualificados y listos para serie, con pruebas de aceptación (FAT/SAT) completadas.",
+        "Lay-out de planta actualizado con el nuevo proceso; capacidad real de equipos instalados verificada versus la requerida; cualquier proceso subcontratado con recursos del proveedor verificados.",
+        "Contenedores, racks y medios de transporte interno disponibles en cantidad suficiente; almacenamiento preparado; evaluaciones periódicas de necesidades adicionales de recursos durante esta fase con acciones documentadas."
       ],
       "que_espero_ver": [
         "Los medios criticos estan liberados y mantenibles para serie."
@@ -269,9 +267,9 @@
     },
     "P4.4": {
       "que_pedir": [
-        "Resultados de estudios de capacidad (Cpk) por caracteristica especial con el metodo y muestra utilizados.",
-        "Estado del PPAP/PPA: elementos completados, pendientes y concesiones abiertas, con fecha de cierre prevista.",
-        "Resultado del Run@Rate si ya se ha ejecutado, o plan concreto con fecha, condiciones y criterio de Go/No-Go."
+        "PSW/PPAP firmado por el cliente obtenido antes del inicio de producción serie; aprobaciones internas de Calidad, Producción e Ingeniería otorgadas; ningún componente producido en serie antes de estas aprobaciones.",
+        "Estudios de capacidad de proceso (Cpk/Ppk ≥ 1,33 o valor acordado) y estudios MSA completados para todas las características especiales, con resultados conformes documentados.",
+        "Medidas definidas en FMEAs implementadas y verificadas en eficacia (poka-yokes validados, controles probados); todos los proveedores de partes críticas con PPAP aprobado; requisitos legales y reglamentarios verificados con certificados."
       ],
       "que_espero_ver": [
         "Capacidad ligada a caracteristicas especiales y al alcance real del proveedor."
@@ -282,9 +280,9 @@
     },
     "P4.5": {
       "que_pedir": [
-        "Registros de liberacion de subproveedores criticos: materiales, procesos externalizados y utillajes, con estado actual.",
-        "Evidencia de que los procesos externalizados ya operan bajo el mismo rigor de calidad que los internos (auditorias, acuerdos de calidad, liberaciones).",
-        "Estado de cualquier proveedor o proceso critico que llega tarde a la industrializacion y como se esta gestionando."
+        "Evidencia de que las actividades planificadas con proveedores (auditorías, controles adicionales, inspecciones reforzadas) se ejecutaron según el plan, considerando el nivel de riesgo de cada insumo.",
+        "Liberaciones de calidad de todos los insumos críticos obtenidas (certificados de material, PPAP de proveedores, aprobaciones de software de terceros) antes de usarlos en producción serie.",
+        "Cumplimiento del cronograma de hitos de proveedores: moldes, máquinas e instalaciones entregadas en fechas previstas; desviaciones gestionadas con acciones documentadas y sin impacto en el SOP."
       ],
       "que_espero_ver": [
         "Los procesos externalizados ya operan bajo el mismo rigor de calidad que los internos."
@@ -295,9 +293,9 @@
     },
     "P4.6": {
       "que_pedir": [
-        "Instrucciones de fabricacion e inspeccion en puesto para cada etapa del alcance (bruto, mecanizado, acabado), derivadas del desarrollo y alineadas con PFMEA y plan de control.",
-        "Evidencia de que las instrucciones en puesto corresponden a la revision vigente del producto y del proceso.",
-        "Registro de formacion del personal sobre las instrucciones actuales, incluidos cambios recientes."
+        "Plan de control de producción vigente, disponible en planta y conocido por el personal clave, que incluye todas las características especiales con método de control, frecuencia, criterio de aceptación y reacción ante desviación.",
+        "Instrucciones de trabajo e inspección en puesto para cada etapa del proceso, derivadas del desarrollo y alineadas con la versión vigente del PFMEA y el plan de control; instrucciones de mantenimiento preventivo entregadas.",
+        "Plan de auditorías de producto en serie y pruebas de revalidación periódica definido y programado; personal de producción y calidad capacitado en las instrucciones y plan de control antes del arranque."
       ],
       "que_espero_ver": [
         "La documentacion de puesto coincide con PFMEA, plan de control y revision vigente."
@@ -308,9 +306,9 @@
     },
     "P4.7": {
       "que_pedir": [
-        "Condiciones exactas del Run@Rate ejecutado o planificado: turno real, personal de serie, utiles, first-off, SPC y embalaje de produccion.",
-        "Resultado documentado del Run@Rate con desvios detectados, acciones y criterio de Go/No-Go para liberar el SOP.",
-        "Criterio por el que se considera suficiente el Run@Rate para el alcance completo del proveedor."
+        "Prueba de capacidad productiva (Run@Rate) ejecutada bajo condiciones reales de serie (máquinas, personal, proveedores, logística, embalaje reales) durante el tiempo necesario para demostrar la tasa de producción requerida.",
+        "Resultado del Run@Rate documentado: cantidad producida vs requerida, defectos y paros ocurridos, con criterio de Go/No-Go definido y verificado; acciones correctivas implementadas si no se alcanzaron los objetivos.",
+        "Si la auditoría ocurre antes del Run@Rate: plan detallado con fecha, condiciones, participantes y criterios de éxito; ciclos calculados incluyendo todos los elementos reales (setup, cambio de herramienta, carga de software si aplica)."
       ],
       "que_espero_ver": [
         "Condiciones de serie reales en personal, utiles, first-off, SPC y embalaje."
@@ -321,9 +319,9 @@
     },
     "P4.8": {
       "que_pedir": [
-        "Proceso documentado de respuesta a reclamacion con tiempos comprometidos, responsables y circuito de bloqueo de lote ante sospecha de fallo de campo.",
-        "Sistema de analisis de fallo con capacidad de identificar la etapa de origen del defecto dentro del alcance del proveedor.",
-        "Proceso de 8D o equivalente con seguimiento y criterio de cierre tecnico real, no solo por plazo."
+        "Procesos de soporte posventa operativos: flujo de gestión de reclamaciones activo con responsables y tiempos de respuesta, stocks de repuestos asegurados, planes de contingencia para continuidad de suministro ante emergencias.",
+        "Capacidad de análisis de fallas de campo instalada: laboratorio propio o acuerdos con externos documentados; procedimiento de Failure Analysis con responsables y tiempos comprometidos alineados con exigencias del cliente.",
+        "Personal de servicio y garantía identificado y capacitado en el nuevo producto; herramientas e infraestructura (equipos de prueba, software de diagnóstico) disponibles; proceso de análisis NTF acordado con el cliente si aplica."
       ],
       "que_espero_ver": [
         "El proveedor puede analizar defectos ligados a su etapa real de valor."
@@ -334,9 +332,9 @@
     },
     "P4.9": {
       "que_pedir": [
-        "Checklist de handover con estado actualizado: elementos completados, open points con criticidad, responsable y fecha de cierre.",
-        "Evidencia de que produccion serie conoce los criterios de reaccion, los parametros clave y la trazabilidad requerida.",
-        "Criterio formal para levantar la contencion de arranque y evidencia de que no quedan zonas grises de responsabilidad entre desarrollo y serie."
+        "Checklist de handover completado y firmado por desarrollo y producción: planos liberados en sistema, PFMEA y plan de control transferidos, parámetros cargados en hojas de proceso, historial de cambios comunicado.",
+        "Inicio de producción serie aprobado formalmente por Calidad, Producción e Ingeniería; aprobación del cliente obtenida (PSW); open points post-PPAP con responsable, criticidad y fecha de cierre definida y seguida.",
+        "Medidas de arranque implementadas: soporte intensificado de ingeniería en planta durante las primeras semanas, criterios de safe launch definidos y activos; personal de serie confirmado, entrenado y con cobertura por turno asegurada."
       ],
       "que_espero_ver": [
         "No quedan zonas grises de responsabilidad entre desarrollo y serie."
@@ -345,12 +343,11 @@
         "Handover firmado con pendientes criticos sobre control, trazabilidad o capacidad."
       ]
     },
-
     "P5": {
       "que_pedir": [
-        "Sistema de gestion de subproveedores criticos: AVL, criterios de aprobacion, auditorias, scorecard y planes de desarrollo.",
-        "Reglas de despliegue de requisitos cliente a la cadena de suministro: CSR, acuerdos de calidad, caracteristicas especiales y cambios.",
-        "Proceso de liberacion, control de entrada y escalacion ante incidencia de proveedor critico."
+        "Lista de proveedores aprobados (AVL) con criterios de aprobación; proceso formal de homologación de nuevos proveedores con evaluación previa (auditoría de proceso o VDA 6.3 P1 u equivalente) antes de la primera orden productiva.",
+        "Sistema documentado de comunicación de requisitos del cliente a la cadena de suministro: especificaciones, características especiales, cambios de ingeniería y requisitos regulatorios transmitidos y confirmados.",
+        "Liberaciones de partes compradas (PPAP) exigidas antes de usarlas en producción; control de recepción definido con plan de inspección por proveedor; proceso de gestión de no conformidades de proveedor activo y trazable."
       ],
       "que_espero_ver": [
         "Los procesos externalizados estan bajo control tecnico y no solo comercial.",
@@ -371,9 +368,9 @@
     },
     "P5.1": {
       "que_pedir": [
-        "AVL vigente con nivel de aprobacion de cada proveedor critico y fecha de ultima evaluacion o auditoria.",
-        "Criterios documentados para aprobar, mantener o retirar a un proveedor segun su riesgo tecnico y de seguridad.",
-        "Proceso formal para la aprobacion de nuevos proveedores o de cambio de proveedor, con requisitos minimos de cualificacion."
+        "AVL vigente con criterios de aprobación de cada proveedor (certificaciones, resultado de auditoría, historial de desempeño); ningún proveedor productivo sin evaluación previa documentada (auditoría, encuesta de calidad o equivalente).",
+        "Para proveedores nuevos o con nueva tecnología/localización: análisis de potencial (VDA 6.3 P1 u equivalente) realizado antes de la primera orden productiva, con informe de resultados y acciones acordadas.",
+        "Identificación de riesgos en la cadena de suministro (proveedor único, riesgo país, dependencia tecnológica) con medidas de mitigación definidas (proveedor alternativo, stock de seguridad, acuerdos de emergencia)."
       ],
       "que_espero_ver": [
         "Solo se usan proveedores evaluados y capaces para el alcance que cubren."
@@ -384,9 +381,9 @@
     },
     "P5.2": {
       "que_pedir": [
-        "Evidencia de que el CSR del cliente ha sido trasladado formalmente a los subproveedores criticos (acuerdos de calidad, instrucciones tecnicas o requisitos de compra).",
-        "Proceso de comunicacion de cambios de requisito hacia la cadena, con confirmacion de recepcion y aceptacion.",
-        "Trazabilidad de caracteristicas especiales desde el cliente hasta el subproveedor que las controla."
+        "Evidencia documentada de que todos los requisitos del cliente (especificaciones técnicas, características especiales, requisitos logísticos, normas, requisitos ambientales REACH/RoHS) se han transmitido formalmente a los proveedores con confirmación de recepción.",
+        "Proceso de gestión de cambios hacia la cadena de suministro: notificación formal de cambios de ingeniería, obtención de PPAP de cambio del proveedor antes de implementar, gestión simultánea de inventarios anterior y nuevo.",
+        "Reclamaciones del cliente originadas en insumos comprados trasladadas formalmente al proveedor con exigencia de 8D; requisitos de re-certificación periódica del cliente trasladados y seguidos en la cadena."
       ],
       "que_espero_ver": [
         "Los requisitos no se pierden ni se reinterpretan entre etapas."
@@ -397,9 +394,9 @@
     },
     "P5.3": {
       "que_pedir": [
-        "Scorecard o dashboard de proveedores criticos con KPIs (ppm, entregas, estabilidad de lote, first-off) y tendencia reciente.",
-        "Proceso de escalacion cuando un KPI no se cumple: umbrales, acciones y responsables.",
-        "Plan de desarrollo activo para proveedores con problemas repetidos, con objetivos, acciones y fecha de revision."
+        "Objetivos cuantitativos de desempeño acordados con proveedores (PPM, entregas a tiempo, tiempo de respuesta en 8D) documentados en acuerdos de calidad o contratos, con evidencia de comunicación al proveedor.",
+        "Seguimiento periódico (mensual/trimestral) del desempeño de proveedores con scorecard o reporte, generando calificaciones (verde/amarillo/rojo) y planes de mejora para proveedores con bajo desempeño.",
+        "Proceso de escalación activo para proveedores con incumplimiento persistente: planes de desarrollo de proveedor, visitas in situ, cartas de advertencia o búsqueda documentada de alternativa cuando el desempeño no mejora."
       ],
       "que_espero_ver": [
         "Los KPI activan acciones y no son solo reporte."
@@ -410,9 +407,9 @@
     },
     "P5.4": {
       "que_pedir": [
-        "Registro de liberaciones vigentes para cada material critico, proceso externalizado y cambio de proveedor reciente.",
-        "Proceso documentado que exige nueva liberacion ante cambio de proveedor, material o proceso, con criterio de riesgo para decidir el alcance.",
-        "Estado de cualquier liberacion pendiente o provisional, con plan de cierre."
+        "Registro de PPAP o liberación aprobada para cada material, componente o servicio comprado utilizado en producción; proceso interno que bloquea el uso de insumos sin liberación hasta obtenerla.",
+        "Ante cambio de proveedor, de proceso o de material en la cadena, se exige re-PPAP antes de usar el insumo modificado; criterio de riesgo documentado para definir el alcance del re-PPAP.",
+        "Gestión de materiales provisionales o con desviación: acuerdo formal de uso limitado (interim approval) con el cliente; confirmación de aprobación de proveedores dirigidos por el OEM disponible en planta."
       ],
       "que_espero_ver": [
         "Nada entra en serie sin release acorde al riesgo."
@@ -423,9 +420,9 @@
     },
     "P5.5": {
       "que_pedir": [
-        "Plan de inspeccion de entrada por material o proveedor, con frecuencia, caracteristicas verificadas y criterios de aceptacion o rechazo.",
-        "Proceso de reclamacion a proveedor con seguimiento de 8D y confirmacion de eficacia de acciones.",
-        "Criterio documentado para aceptar por certificado en lugar de verificar: que riesgo asume y como lo compensa."
+        "Plan de inspección de recepción por material/proveedor: características a verificar, frecuencia de muestreo (100%, AQL, skip-lot según historial de desempeño), criterios de aceptación y registro de resultados.",
+        "Proceso de gestión de no conformidades de proveedor: segregación inmediata, emisión de reclamación con 8D exigido, disposición del material (devolución/retrabajo) y verificación de eficacia de las acciones del proveedor.",
+        "Equipos de medición calibrados y personal capacitado en inspección de recepción; criterios de aceptación documentados incluyendo muestras límite para criterios visuales; verificación de documentación provista por el proveedor (certificados, resultados de pruebas)."
       ],
       "que_espero_ver": [
         "La calidad de suministro se verifica donde realmente puede fallar."
@@ -436,9 +433,9 @@
     },
     "P5.6": {
       "que_pedir": [
-        "Layout del area de recepcion y almacen de entrada con zonas identificadas para material OK, bloqueado, cuarentena y WIP externalizado.",
-        "Sistema de identificacion del estado del lote visible fisicamente y en sistema, con proceso de actualizacion cuando cambia el estado.",
-        "Proceso de tratamiento de material sospechoso o en cuarentena: quien decide, como se segrega y como se recupera o rechaza."
+        "Áreas de almacén claramente diferenciadas para material aprobado, en cuarentena y rechazado, con barreras físicas o de sistema que impiden el uso de material no liberado; etiquetado de estado visible en cada unidad de almacenamiento.",
+        "Aplicación de FIFO (o FEFO para materiales con vida útil definida); condiciones de almacenamiento especiales cumplidas y registradas para materiales sensibles (temperatura, humedad, ESD, protección mecánica).",
+        "Sistema de inventario exacto con ciclos de conteo periódicos; proceso de reacción ante material sospechoso o con estado ambiguo: quién decide, cómo se segrega, cómo se recupera o rechaza y quién documenta la decisión."
       ],
       "que_espero_ver": [
         "Estados y lotes visibles, separados y protegidos."
@@ -449,9 +446,9 @@
     },
     "P5.7": {
       "que_pedir": [
-        "Perfil de competencias requerido para el personal de compras, recepcion e inspeccion de entrada, con evidencia de cumplimiento actual.",
-        "Formacion documentada en caracteristicas especiales del producto y en impacto del suministro en la funcion del componente.",
-        "Autoridad formal para rechazar o bloquear material en recepcion, con registro de quien la ejerce y como se documenta."
+        "Perfil de competencias definido para personal de compras, SQA, inspección de recepción y almacén; evidencia de formación completada en características especiales del producto y en VDA 6.3 para auditores de proveedores.",
+        "Autoridad formal y conocida para bloquear material en recepción (quién), liberarlo tras inspección (quién aprueba) y emitir reclamaciones al proveedor (quién las gestiona), con segregación de funciones documentada.",
+        "Personal clave capaz de leer planos, interpretar certificados de material y usar equipos de medición de recepción; retroalimentación y reentrenamiento documentados cuando se detectan errores de inspección."
       ],
       "que_espero_ver": [
         "El personal entiende el impacto del suministro en un componente de freno."
@@ -460,12 +457,11 @@
         "Decisiones criticas de entrada basadas solo en experiencia informal."
       ]
     },
-
     "P6": {
       "que_pedir": [
-        "Control completo del proceso en planta: desde materia prima y colada hasta liberacion final al cliente, con trazabilidad de lote por etapa.",
-        "Reaccion ante desvio: proceso de bloqueo, analisis de causa, contencion y liberacion, con ejemplo real reciente.",
-        "Control de equipos, personal, capacidad y no conformidades por etapa del alcance."
+        "Control activo del proceso de producción en serie: plan de control implementado en planta, características especiales bajo control (SPC o poka-yokes verificados), no conformes identificados y segregados en cada etapa.",
+        "Recursos adecuados y gestionados: personal calificado y suficiente por turno, equipos con mantenimiento preventivo ejecutado, instrumentos calibrados con MSA válida, condiciones de puesto conformes.",
+        "Mejora continua activa: objetivos de proceso definidos y comunicados, datos recopilados y analizados, sistema de resolución de problemas con análisis de causa raíz y verificación de eficacia, auditorías de proceso y producto ejecutadas."
       ],
       "que_espero_ver": [
         "El proveedor detecta el riesgo en el punto donde nace y no lo desplaza a inspeccion final.",
@@ -486,9 +482,9 @@
     },
     "P6.1": {
       "que_pedir": [
-        "Criterios de entrada al proceso para cada tipo de input: materia prima, coladas, WIP, utiles, programas y transferencias entre etapas.",
-        "Sistema de identificacion del estado del lote antes de entrar en cada operacion: quien verifica, como y con que criterio.",
-        "Evidencia de una transferencia reciente entre etapas con la documentacion y el estado del lote correctamente asignados."
+        "Criterios de entrada al proceso para cada input: material aprobado e identificado con lote y estado, instrucciones y especificaciones vigentes disponibles en puesto, handover completo de desarrollo a producción verificado.",
+        "Sistema de suministro a línea que garantiza material correcto en cantidad correcta y en el momento requerido, sin mezcla de revisiones ni estados; identificación de estado del lote visible antes de entrar a cada operación.",
+        "Control de cambios en serie activo: proceso formal con evaluación de riesgo, aprobación, comunicación al cliente cuando aplica y actualización de PFMEA, plan de control e instrucciones tras cada cambio registrado."
       ],
       "que_espero_ver": [
         "Nada entra en proceso sin estado, lote y criterio de uso definidos."
@@ -499,9 +495,9 @@
     },
     "P6.1.1": {
       "que_pedir": [
-        "Acta de handover de desarrollo a serie y plan de safe launch con criterios de salida, responsable asignado y fechas comprometidas.",
-        "Registro de los primeros lotes de serie con incidencias detectadas, reacciones aplicadas y estado actual de la contencion.",
-        "Criterios definidos y aprobados para levantar la contencion de arranque, con evidencia de que aun no se ha levantado sin cumplirlos."
+        "Acta de handover de desarrollo a serie con checklist completado y firmado por ambas partes; evidencia de que producción recibió toda la documentación técnica vigente (planos, PFMEA, plan de control, instrucciones de trabajo).",
+        "Plan de safe launch activo con criterios de salida definidos; registro de los primeros lotes de serie con incidencias detectadas, reacciones aplicadas y criterio formal documentado para levantar la contención de arranque.",
+        "Inicio de producción serie aprobado formalmente: aprobación interna de Calidad, Producción e Ingeniería y aprobación del cliente (PSW) obtenidas antes de producir en serie; sin producción sin estas liberaciones."
       ],
       "que_espero_ver": [
         "Arranque de serie protegido por riesgo y con pendientes controlados."
@@ -512,9 +508,9 @@
     },
     "P6.1.2": {
       "que_pedir": [
-        "Sistema de planificacion o senales (kanban, MRP, pull) que garantiza la disponibilidad del material correcto en el punto y momento correctos.",
-        "Evidencia de que no circula material de distintos estados o revisiones mezclados en el almacen intermedio.",
-        "Registro de incidencias recientes de falta de material, mezcla de estados o parada de linea por entrada incorrecta."
+        "Sistema de suministro a línea (kanban, MRP, pull) que garantiza disponibilidad del material correcto en el punto y momento correctos, sin paros por falta de material ni mezclas de revisiones o estados en el almacén intermedio.",
+        "Identificación clara del estado del lote (aprobado, bloqueado, cuarentena) visible físicamente en cada contenedor antes de entrar al proceso; proceso de verificación de estado en cada punto de entrada definido y seguido.",
+        "Registro de incidencias recientes de desabastecimiento, mezcla de estados o parada de línea por material incorrecto, con acciones tomadas y evidencia de resolución y de que no se repitió."
       ],
       "que_espero_ver": [
         "Lote correcto, cantidad correcta y punto correcto sin mezcla de estados."
@@ -522,9 +518,9 @@
     },
     "P6.1.3": {
       "que_pedir": [
-        "Condiciones de almacenamiento especificadas por tipo de pieza y etapa (temperatura, humedad, proteccion mecanica, separacion de estados).",
-        "Metodo de transporte interno validado para evitar dano o contaminacion entre etapas, con evidencia de que los embalajes internos estan cualificados.",
-        "Proceso de deteccion y reaccion ante daño en almacenamiento o transporte interno."
+        "Condiciones de almacenamiento y transporte interno definidas por tipo de pieza y etapa (temperatura, humedad, protección mecánica, separación entre estados), con evidencia de cumplimiento en planta.",
+        "Embalajes y medios de transporte interno cualificados para preservar la integridad del producto entre etapas; evidencia de que piezas no llegan dañadas ni contaminadas a la siguiente operación.",
+        "Proceso de detección y reacción ante daño en almacenamiento o transporte interno, con registro de incidencias y acciones correctivas implementadas para evitar recurrencia."
       ],
       "que_espero_ver": [
         "Proteccion frente a dano, contaminacion y mezcla segun la etapa."
@@ -532,9 +528,9 @@
     },
     "P6.1.4": {
       "que_pedir": [
-        "Sistema de etiquetado por etapa del proceso con estado (OK, bloqueado, cuarentena), lote y revision visibles fisicamente.",
-        "Proceso de reconciliacion entre la etiqueta fisica y el sistema de informacion, con ejemplo de como se detecta una discrepancia.",
-        "Evidencia de que no circula material sin etiqueta o con estado ambiguo entre etapas."
+        "Sistema de etiquetado activo por lote y etapa del proceso: número de parte, revisión, cantidad, estado (OK/bloqueado/cuarentena) y lote visibles en cada contenedor; ningún material circula sin etiqueta o con estado ambiguo.",
+        "Proceso de reconciliación entre etiqueta física y sistema de información, con método para detectar discrepancias; trazabilidad completa: dado un lote enviado al cliente, posibilidad de recuperar todos los registros de proceso y material.",
+        "Evidencia de que la identificación se mantiene íntegra a lo largo de todas las etapas del proceso: sin pérdida de trazabilidad en transferencias entre operaciones, turnos o ubicaciones."
       ],
       "que_espero_ver": [
         "Estado del lote visible fisicamente y en sistema."
@@ -542,9 +538,9 @@
     },
     "P6.1.5": {
       "que_pedir": [
-        "Proceso documentado de gestion de cambio en serie con gatillo formal de comunicacion al cliente cuando aplica.",
-        "Registro de cambios en serie recientes: material, parametros, utiles, programas CNC o acabado, con evaluacion de riesgo, aprobacion y antes/despues.",
-        "Evidencia de actualizacion de documentos (PFMEA, plan de control, instrucciones) tras cada cambio registrado."
+        "Proceso documentado de gestión de cambios en serie (cambios de material, parámetros, útiles, programas, proveedor) con formato formal, evaluación de riesgo, aprobación y comunicación al cliente cuando el cambio lo requiere.",
+        "Registro de cambios en serie recientes con evaluación de impacto documentada, aprobación, segregación del inventario antes/después del cambio y notificación al cliente si aplica.",
+        "Evidencia de actualización de PFMEA, plan de control e instrucciones de trabajo tras cada cambio registrado; sin cambios implementados sin documentación previa ni sin revisión de riesgo."
       ],
       "que_espero_ver": [
         "Cada cambio en serie deja historia y evaluacion de riesgo."
@@ -555,9 +551,9 @@
     },
     "P6.2": {
       "que_pedir": [
-        "Plan de control vigente con parametros, frecuencias, tolerancias y reaction plans por etapa y operacion critica.",
-        "Registros de first-off, SPC y control de caracteristicas especiales en los ultimos lotes producidos.",
-        "Proceso de bloqueo y contencion ante desvio detectado en proceso, con ejemplo real y tiempo de respuesta."
+        "Plan de control de producción implementado y cumplido en planta; evidencia de controles realmente ejecutados: registros de first-off, mediciones de características especiales, cartas SPC activas con reacciones ante valores fuera de límite.",
+        "Características especiales bajo control estricto: SPC con límites definidos o poka-yokes funcionando, verificados periódicamente con resultado conforme; no conformes segregados física y sistemáticamente antes de avanzar al siguiente proceso.",
+        "Flujo de materiales asegurado contra mezclas de referencias o estados: identificación inequívoca, barreras físicas en puntos de riesgo, proceso de reacción documentado y seguido ante desviación o sospecha de mezcla."
       ],
       "que_espero_ver": [
         "Las barreras existen en la etapa correcta y no se dejan al final."
@@ -568,9 +564,9 @@
     },
     "P6.2.1": {
       "que_pedir": [
-        "Plan de control vigente alineado con la ultima revision del PFMEA: parametros, frecuencias, tolerancias y reaction plans por etapa.",
-        "Evidencia de que los operarios tienen acceso al plan de control en puesto y que es la version actualizada.",
-        "Registro de las ultimas auditorias de cumplimiento del plan de control, con hallazgos y acciones."
+        "Plan de control de producción vigente, alineado con la última revisión del PFMEA, disponible físicamente en el área de producción y en la versión actualizada; personal clave conoce su contenido y lo aplica.",
+        "Evidencia de que los controles del plan se ejecutan en planta: registros de los últimos lotes con mediciones, firmas, reacciones ante valores fuera de límite documentadas y disposición del lote afectado.",
+        "Auditorías de cumplimiento del plan de control realizadas periódicamente, con hallazgos documentados, acciones implementadas y seguimiento de cierre verificado."
       ],
       "que_espero_ver": [
         "Plan de control alineado con PFMEA y con los documentos de puesto."
@@ -578,9 +574,9 @@
     },
     "P6.2.2": {
       "que_pedir": [
-        "Criterios escritos y en puesto para first-off, last-off y liberacion tras cambio de turno o de setup, con autoridad nominal para liberar.",
-        "Registro de liberaciones de los ultimos lotes: quien libero, con que evidencia y que resultado.",
-        "Proceso de retencion de lote cuando el first-off no es conforme, con ejemplo documentado."
+        "Criterios escritos y disponibles en puesto para first-off, last-off y liberación tras cambio de turno o setup, con autoridad nominal para liberar y registro de las últimas liberaciones ejecutadas.",
+        "Proceso de retención de lote cuando el first-off no es conforme, con ejemplo documentado de cómo se manejó: quién decidió, qué análisis se realizó y cómo se liberó o rechazó el lote.",
+        "Proceso de reacción definido ante fallo en la liberación de proceso: quién decide la retención del lote, qué análisis se realiza y quién autoriza la liberación condicionada o el rechazo."
       ],
       "que_espero_ver": [
         "La liberacion la hace personal autorizado con criterio objetivo."
@@ -588,9 +584,9 @@
     },
     "P6.2.3": {
       "que_pedir": [
-        "Mapa de caracteristicas especiales con punto de control asignado, metodo de medicion y frecuencia, por etapa del alcance.",
-        "Evidencia de que el control de cada especial se realiza en la etapa donde nace la caracteristica y no en una posterior.",
-        "Resultado de la ultima MSA y Cpk para cada caracteristica especial, con fecha y numero de muestra."
+        "Mapa de características especiales con punto de control asignado, método de medición, frecuencia de verificación y criterio de reacción por etapa; la característica se controla donde se genera, no en una etapa posterior.",
+        "Evidencia de control en ejecución: cartas SPC activas con límites definidos o registro de poka-yoke funcional para cada característica especial; resultado de la última MSA y Cpk con fecha y tamaño de muestra conformes.",
+        "Proceso de reacción cuando una característica especial sale fuera de control: parada de proceso, bloqueo del lote, análisis de causa y criterio para liberación condicionada o rechazo del lote afectado."
       ],
       "que_espero_ver": [
         "Las especiales no se dejan para una etapa posterior sin justificacion tecnica."
@@ -601,9 +597,9 @@
     },
     "P6.2.4": {
       "que_pedir": [
-        "Sistema fisico y documental para segregar y bloquear piezas NOK por etapa: zona identificada, barrera fisica y registro en sistema.",
-        "Proceso de autorizacion de retrabajo con criterios tecnicos, responsable y registro de reinspeccion tras el retrabajo.",
-        "Evidencia de que el NOK no avanza al siguiente paso ni se mezcla con el material conforme."
+        "Sistema físico y documental de segregación de piezas NOK por etapa: zona de cuarentena identificada con barrera física, acceso controlado y registro en sistema; material rechazado nunca ubicado en zona de material conforme.",
+        "Proceso de autorización de retrabajo con criterios técnicos definidos, responsable nominal y reinspección obligatoria tras el retrabajo con registro del resultado; retrabajo no autorizado sin aprobación documentada.",
+        "Proceso claro ante lote sospechoso en campo o en proceso: bloqueo inmediato, decisión de disposición (retrabajo, desguace, devolución), notificación al cliente si el lote ya fue expedido y registro de la investigación."
       ],
       "que_espero_ver": [
         "NOK fisica y sistemicamente bloqueado."
@@ -611,9 +607,9 @@
     },
     "P6.2.5": {
       "que_pedir": [
-        "Sistema de identificacion inequivoca de piezas, lotes y revisiones en cada punto del flujo de material.",
-        "Barreras fisicas o de sistema implementadas en los puntos donde existe riesgo de mezcla de estados, revisiones o lotes.",
-        "Proceso de reaccion ante sospecha de mezcla detectada: quien decide, como se bloquea y como se segrega para reinspeccionar."
+        "Identificación inequívoca de piezas, lotes y revisiones en cada punto del flujo; barreras físicas (conectores únicos, geometrías distintas) o de sistema (escaneo de código de barras, validación electrónica) en puntos de riesgo de mezcla.",
+        "Solo un lote o referencia a la vez en cada estación crítica; proceso de preparación de cambio de referencia (limpieza de zona, retirada de material anterior) documentado y seguido por el personal.",
+        "Proceso de reacción ante sospecha de mezcla: quién decide el bloqueo, cómo se reinspeccionan los lotes afectados, qué evidencia se genera de la investigación y cómo se libera o rechaza el material."
       ],
       "que_espero_ver": [
         "El flujo visual y de sistema evita mezclar bruto, semiterminado y terminado."
@@ -624,9 +620,9 @@
     },
     "P6.3": {
       "que_pedir": [
-        "Matriz de cualificacion del personal por operacion critica del alcance, con nivel requerido vs actual y fecha de ultima actualizacion.",
-        "Autoridad definida y conocida por el personal para parar, bloquear, liberar y escalar en cada puesto critico.",
-        "Cobertura por turno documentada con sustitutos cualificados para las operaciones que no admiten improvisacion."
+        "Personal de producción cualificado por operación crítica: competencias verificadas mediante formación documentada, práctica supervisada o certificación; cobertura por turno asegurada incluyendo sustitutos cualificados.",
+        "Responsabilidades y autoridad claras para parar, bloquear, liberar y escalar en cada puesto crítico; personal consciente de su impacto en la calidad del producto y del cliente.",
+        "Personal de soporte (ingeniería de proceso, mantenimiento, calidad de línea) disponible con tiempos de respuesta adecuados; proceso de escalación activo cuando el operario detecta un problema que supera su autoridad."
       ],
       "que_espero_ver": [
         "Personal suficiente y competente donde el riesgo es mas alto."
@@ -637,9 +633,9 @@
     },
     "P6.3.1": {
       "que_pedir": [
-        "Matriz de cualificacion con nivel por persona y operacion (horno, laboratorio, CNC, acabado), con evidencia de la cualificacion: formacion, practica supervisada o certificacion.",
-        "Proceso de recualificacion tras cambio de proceso, larga ausencia o cambio de asignacion de puesto.",
-        "Registro de formaciones completadas y fecha de ultima actualizacion, especialmente para operaciones de mayor impacto en calidad."
+        "Matriz de cualificación con nivel por persona y operación crítica, verificada mediante formación documentada, práctica supervisada o certificación; proceso de recualificación tras cambios de proceso, larga ausencia o cambio de puesto.",
+        "Registro de formaciones completadas y fecha de última actualización, con énfasis en operaciones de mayor impacto en calidad y en cambios recientes de proceso o producto.",
+        "Proceso de incorporación de personal nuevo o polivalente a operaciones críticas: formación específica, período de supervisión y criterio de aptitud antes de operar de forma autónoma sin supervisión."
       ],
       "que_espero_ver": [
         "Competencia demostrada y actualizada tras cambios."
@@ -647,9 +643,9 @@
     },
     "P6.3.2": {
       "que_pedir": [
-        "Instruccion o documento que define quien puede parar, bloquear, liberar y escalar en cada etapa del proceso.",
-        "Evidencia de que los operarios conocen su autoridad y la han ejercido: registro de paradas o bloqueos realizados por el personal de linea.",
-        "Proceso de escalacion cuando el operario activa la parada o el bloqueo: a quien va, en cuanto tiempo y como se documenta."
+        "Documento o instrucción que define quién puede parar la producción, bloquear un lote, liberar material y escalar un problema en cada etapa del proceso, con nombres o roles nominales y sin ambigüedad.",
+        "Evidencia de que los operarios conocen y ejercen su autoridad: registros de paradas o bloqueos iniciados por personal de línea, con proceso de notificación y reacción del soporte documentado.",
+        "Proceso de escalación cuando el operario activa parada o bloqueo: a quién se notifica, en cuánto tiempo responde el soporte, cómo se documenta la decisión tomada y quién autoriza la reanudación."
       ],
       "que_espero_ver": [
         "El personal sabe que puede parar y cuando debe hacerlo."
@@ -657,9 +653,9 @@
     },
     "P6.3.3": {
       "que_pedir": [
-        "Plan de turnos con cobertura minima por operacion critica, incluyendo noches, fines de semana y periodos de vacaciones.",
-        "Politica de sustitutos para operaciones restringidas: quien puede cubrir y con que cualificacion minima.",
-        "Registro de incidencias recientes por falta de cobertura y como se resolvieron sin comprometer la calidad."
+        "Plan de turnos con cobertura mínima de personal cualificado para cada operación crítica, incluyendo noches, fines de semana y períodos de vacaciones; sustitutos identificados con cualificación verificada.",
+        "Dotación de personal evaluada como suficiente: ningún operario realiza el trabajo de dos puestos en operaciones críticas; proceso documentado para gestionar ausencias sin comprometer los controles de calidad.",
+        "Registro de incidencias recientes por falta de cobertura y cómo se resolvieron sin relajar los controles de calidad; plan de polivalencia actualizado como base de la gestión de sustituciones."
       ],
       "que_espero_ver": [
         "No hay huecos operativos en turnos o fines de semana."
@@ -667,9 +663,9 @@
     },
     "P6.4": {
       "que_pedir": [
-        "Lista de equipos criticos del proceso con parametros de referencia, tolerancias aceptadas y estado actual de validacion.",
-        "Plan de mantenimiento preventivo con estado de cumplimiento y registro de averias recientes con impacto en lote.",
-        "Estado de calibracion de equipos de medicion criticos y resultado de la ultima MSA para los metodos mas usados."
+        "Equipos de fabricación con capacidad demostrada (Cpk o validación de equipo) para cumplir tolerancias del producto; plan de mantenimiento preventivo ejecutado y registrado para todos los equipos críticos.",
+        "Instrumentos de medición calibrados con estudios MSA válidos para características especiales; condiciones de puesto adecuadas: ergonomía, iluminación, orden 5S, protección antiestática donde aplica.",
+        "Útiles, galgas y herramientas críticas almacenadas de forma protegida e identificada con revisión vigente; proceso de control de préstamo, uso y devolución con registro de incidencias por uso indebido."
       ],
       "que_espero_ver": [
         "Los medios criticos estan controlados segun su impacto real."
@@ -680,9 +676,9 @@
     },
     "P6.4.1": {
       "que_pedir": [
-        "Lista de equipos de fabricacion por etapa (hornos, moldes, machos, CNC, lineas de acabado) con parametros de proceso y tolerancias admisibles.",
-        "Evidencia de que el equipo asignado a la pieza tiene la capacidad correcta: validacion de maquina, estudio de proceso o certificado de equipo.",
-        "Resultado de la ultima validacion o calificacion del equipo para la referencia auditada, con fecha y estado."
+        "Lista de equipos de fabricación por etapa con parámetros de proceso y tolerancias admisibles; evidencia de que cada equipo tiene la capacidad técnica (precisión, repetibilidad) para las características del producto: estudio Cpk o validación de equipo.",
+        "Proceso de evaluación periódica de la capacidad de equipos: indicadores de deriva definidos, límites de intervención y acciones ante pérdida de capacidad; historial sin defectos atribuibles a limitación de máquina.",
+        "Resultado de la última validación o calificación del equipo para la referencia auditada, con fecha, tamaño de muestra y criterio de aceptación cumplido."
       ],
       "que_espero_ver": [
         "El equipo adecuado esta asignado a la pieza correcta y a la revision correcta."
@@ -690,9 +686,9 @@
     },
     "P6.4.2": {
       "que_pedir": [
-        "Plan de mantenimiento preventivo y predictivo para equipos criticos, con estado de cumplimiento de los ultimos tres meses.",
-        "Registro de averias recientes en equipos criticos: tiempo de respuesta, impacto en lote y medida tomada para evitar recurrencia.",
-        "Evidencia de que el desgaste de utiles y herramientas criticas se controla antes de afectar a la calidad del lote."
+        "Plan de mantenimiento preventivo y predictivo para equipos críticos con estado de cumplimiento de los últimos tres meses; periodicidades respetadas y tareas registradas con firma del técnico ejecutor.",
+        "Registro de averías recientes en equipos críticos: tiempo de respuesta, impacto en lote afectado, análisis de causa raíz realizado y medida implementada para evitar recurrencia documentada.",
+        "Control del desgaste de útiles y herramientas críticas: criterio de vida útil (número de piezas o ciclos) definido, seguimiento activo y evidencia de reposición antes de que el desgaste afecte a la calidad del lote."
       ],
       "que_espero_ver": [
         "Desgaste y averias controlados antes de afectar al lote."
@@ -700,9 +696,9 @@
     },
     "P6.4.3": {
       "que_pedir": [
-        "Listado de equipos de medicion criticos con estado de calibracion, fecha de vencimiento y responsable de calibracion.",
-        "Resultado de MSA para los metodos de inspeccion de caracteristicas especiales: R&R, sesgo y linealidad si aplican.",
-        "Proceso de reaccion cuando un equipo pierde calibracion o falla una MSA: bloqueo de mediciones, revision de lotes afectados y recalibracion."
+        "Listado de equipos de medición críticos con estado de calibración, fecha de vencimiento y responsable; todos los equipos en uso tienen calibración vigente verificable con certificado o etiqueta.",
+        "Resultados de MSA (R&R, sesgo y linealidad si aplican) para los métodos de inspección de características especiales, con valores conformes al criterio acordado; MSA repetida si el proceso o instrumento cambia.",
+        "Proceso de reacción cuando un equipo pierde calibración o falla un estudio MSA: bloqueo de mediciones realizadas con el equipo afectado, evaluación de lotes desde la última calibración válida y recalibración con evidencia."
       ],
       "que_espero_ver": [
         "El medio de medicion es valido para liberar lote."
@@ -710,9 +706,9 @@
     },
     "P6.4.4": {
       "que_pedir": [
-        "Condiciones de puesto definidas por etapa: iluminacion, limpieza, orden, accesibilidad y proteccion de la pieza segun su estado.",
-        "Evidencia de auditoria de puesto realizada con resultado, hallazgos y acciones, y fecha de proxima revision.",
-        "Proceso para que el operario informe y se resuelvan las deficiencias del puesto que afectan a la calidad."
+        "Condiciones de puesto definidas y verificadas: iluminación adecuada en zonas de inspección visual, orden y limpieza (5S), ergonomía, protección antiestática donde aplica, accesibilidad de piezas sin riesgo de daño.",
+        "Evidencia de auditoría de puesto realizada: fecha, hallazgos, acciones correctivas implementadas y próxima revisión programada; proceso para que el operario reporte y se resuelvan deficiencias que puedan afectar la calidad.",
+        "Requisitos ambientales especiales (temperatura, humedad, limpieza de sala de metrología) definidos, medidos y registrados donde aplique; cumplimiento verificable con registros de condiciones."
       ],
       "que_espero_ver": [
         "Las condiciones del puesto protegen la pieza segun su estado."
@@ -720,9 +716,9 @@
     },
     "P6.4.5": {
       "que_pedir": [
-        "Inventario de utiles, galgas y equipos criticos por etapa del proceso, con ubicacion, estado y revision identificados.",
-        "Sistema de identificacion de la revision vigente vs obsoleta para utiles y galgas, con proceso de retirada de lo obsoleto.",
-        "Proceso de control de prestamo, uso y devolucion de utiles criticos, con registro de incidencias por uso indebido."
+        "Inventario de útiles, galgas y equipos críticos con ubicación, estado, revisión vigente identificada y obsoletos retirados del punto de uso; proceso de retirada inmediata de versiones obsoletas documentado.",
+        "Sistema de identificación que permite saber en todo momento qué revisión de útil o galga está en uso; proceso de control de préstamo, uso y devolución con registro de incidencias por uso indebido.",
+        "Condiciones de almacenamiento de útiles y herramientas: racks identificados, calibres en estuches protectores, protección contra corrosión y daño mecánico; revisión del estado al devolver al almacén."
       ],
       "que_espero_ver": [
         "Utiles correctos, identificados y protegidos frente a uso indebido."
@@ -730,9 +726,9 @@
     },
     "P6.5": {
       "que_pedir": [
-        "Cuadro de KPIs por etapa del proceso (scrap, first-off, Cpk, FPY, no conformidades) con tendencia de los ultimos tres meses.",
-        "Proceso de analisis de tendencias y deteccion de deriva, con ejemplo de decision tomada a partir de datos de proceso.",
-        "Sistema de analisis de causa raiz activo con registro de las acciones mas recientes y verificacion de eficacia."
+        "Objetivos de proceso definidos por etapa (scrap, FPY, Cpk, OEE) con seguimiento periódico documentado y comunicación visible al personal de producción (paneles en planta o sistema equivalente).",
+        "Sistema de resolución de problemas activo: metodología documentada (8D, Ishikawa, 5-Por qué), análisis de causa raíz para desviaciones significativas, acciones correctivas con verificación de eficacia documentada.",
+        "Auditorías de proceso y de producto ejecutadas según plan anual, con hallazgos documentados, acciones tomadas y seguimiento de cierre verificado; cultura de mejora continua visible en la operación diaria."
       ],
       "que_espero_ver": [
         "El proveedor anticipa el defecto con datos y no reacciona solo al escape."
@@ -743,9 +739,9 @@
     },
     "P6.5.1": {
       "que_pedir": [
-        "Objetivos definidos por etapa del alcance: scrap, first-off, Cpk, FPY y defectologia especifica, con referencia al requisito del cliente o a la caracteristica especial asociada.",
-        "Proceso de revision periodica de objetivos: frecuencia, responsable y evidencia de la ultima revision con resultado.",
-        "Evidencia de que los objetivos no son estaticos sino que se actualizan cuando cambia el contexto o el requisito del cliente."
+        "Objetivos cuantitativos definidos por etapa del proceso (scrap, defectología específica, Cpk, FPY, productividad) con referencia al requisito del cliente o a la característica especial asociada; objetivos actualizados cuando cambia el contexto.",
+        "Proceso de revisión periódica de objetivos con responsable y evidencia de la última revisión: resultados reales vs meta, análisis de brecha si no se cumple y plan de acción definido.",
+        "Objetivos comunicados y visibles para el personal de producción: paneles en planta con meta vs actual, o sistema equivalente que el operario conoce y puede consultar en su área de trabajo."
       ],
       "que_espero_ver": [
         "Objetivos ligados a requisitos cliente y caracteristicas especiales."
@@ -753,9 +749,9 @@
     },
     "P6.5.2": {
       "que_pedir": [
-        "Sistema o herramienta de recogida de datos de proceso y producto por etapa, con ejemplo de uso real y frecuencia de analisis.",
-        "Proceso de analisis de tendencias con umbral de alerta y responsable de actuar cuando se detecta deriva.",
-        "Evidencia de que las tendencias negativas en datos de proceso han generado acciones antes de afectar al cliente."
+        "Sistema de recopilación de datos de proceso y producto en cada etapa: scrap por código de defecto, productividad, paros y tiempo de ciclo, con frecuencia definida y registros accesibles para análisis.",
+        "Análisis de tendencias con umbral de alerta definido y responsable de actuar; evidencia de que tendencias negativas detectadas en datos generaron acciones correctivas antes de afectar al cliente.",
+        "Datos disponibles para análisis cruzado (relación parámetro de proceso-defecto, lote de material-scrap, turno-productividad) como base para mejora de proceso; herramienta o sistema de análisis utilizado regularmente."
       ],
       "que_espero_ver": [
         "Tendencias y no conformidades visibles antes de afectar al cliente."
@@ -763,9 +759,9 @@
     },
     "P6.5.3": {
       "que_pedir": [
-        "Metodologia documentada de analisis de causa raiz (8D, Ishikawa, 5-Why) con ejemplo de aplicacion real reciente.",
-        "Registro de los ultimos analisis con causa identificada, accion implantada, fecha de cierre y verificacion de eficacia.",
-        "Evidencia de actualizacion del PFMEA y plan de control tras las acciones correctivas de mayor impacto."
+        "Metodología documentada de análisis de causa raíz (8D, Ishikawa, 5-Por qué) con ejemplo de aplicación real reciente: causa identificada, acción implementada, fecha de cierre y verificación de eficacia con datos.",
+        "PFMEA y plan de control actualizados tras las acciones correctivas de mayor impacto; cero reincidencia del problema analizado o evidencia de mejora sostenida verificada con datos posteriores al cierre del 8D.",
+        "Proceso para escalar al cliente o a ingeniería cuando el análisis revela un riesgo de campo o una necesidad de cambio de diseño/proceso significativa, con evidencia de que esta escalación se realizó cuando correspondió."
       ],
       "que_espero_ver": [
         "La causa raiz identifica tambien la etapa exacta donde nacio el defecto."
@@ -776,9 +772,9 @@
     },
     "P6.5.4": {
       "que_pedir": [
-        "Plan anual de auditorias de proceso y producto, con estado de ejecucion, responsables y criterios de cobertura.",
-        "Informe de las ultimas auditorias realizadas con hallazgos, nivel de criticidad y acciones asociadas.",
-        "Evidencia de que los hallazgos de auditoria generan acciones reales y no solo registros: seguimiento y cierre verificado."
+        "Plan anual de auditorías de proceso (auto-auditorías VDA 6.3, auditorías de piso por supervisores) y de producto (auditorías de producto final aleatorias) con estado de ejecución y cobertura de todas las líneas y turnos.",
+        "Informes de las últimas auditorías con hallazgos, nivel de criticidad y acciones asociadas con responsable y fecha; seguimiento de cierre verificado por evidencia, no solo por plazo de vencimiento.",
+        "Gerencia o supervisores realizan recorridos regulares (gemba walks) con observaciones registradas y mejoras derivadas documentadas; cultura de autoevaluación continua visible en la dinámica diaria del equipo."
       ],
       "que_espero_ver": [
         "Las auditorias detectan riesgos de proceso y no solo incumplimientos documentales."
@@ -786,9 +782,9 @@
     },
     "P6.6": {
       "que_pedir": [
-        "Criterios de liberacion del producto para paso a siguiente etapa o expedicion: estado, lote, trazabilidad y documentacion requerida.",
-        "Condiciones de almacenamiento, embalaje y proteccion del producto segun estado (bruto, mecanizado, acabado, expedicion).",
-        "Registros de liberacion, conservacion y archivo de los ultimos lotes, con capacidad de recuperar la historia completa de un lote concreto."
+        "Producto terminado correctamente identificado, liberado por Calidad y almacenado según condiciones requeridas; embalajes conformes a los requisitos del cliente; documentación de conformidad completa archivada por lote.",
+        "Proceso de liberación final antes de cada expedición con responsable y criterios definidos: checklist firmado o validación en sistema por parte de Calidad; ningún lote sale sin esta aprobación formal.",
+        "Entregas al cliente conformes en calidad, cantidad, plazo y documentación; indicadores de cumplimiento (PPM externo, reclamos logísticos, entregas fuera de plazo) monitorizados con acciones cuando se incumplen objetivos."
       ],
       "que_espero_ver": [
         "Solo fluye material OK y con estado claro a la siguiente etapa o al cliente."
@@ -799,9 +795,9 @@
     },
     "P6.6.1": {
       "que_pedir": [
-        "Criterios documentados de paso a la siguiente etapa: estado del lote, cantidad correcta, trazabilidad completa y documentacion exigida.",
-        "Evidencia de que el lote no avanza sin cumplir los criterios de paso: registro de lotes retenidos o bloqueados por criterio de paso no cumplido.",
-        "Proceso de reaccion cuando un lote llega a la siguiente etapa con documentacion o estado incompleto."
+        "Criterios documentados de paso al siguiente proceso o a expedición: lote en estado aprobado, cantidad correcta, trazabilidad completa, documentación de inspección firmada y liberación de Calidad otorgada.",
+        "Evidencia de que ningún lote avanza sin cumplir los criterios de paso: registro de lotes retenidos o bloqueados por criterio incumplido, con decisión documentada sobre su disposición final.",
+        "Proceso de reacción cuando un lote llega a la siguiente etapa con documentación o estado incompleto: quién decide la retención, cómo se resuelve y quién autoriza la continuación o el rechazo."
       ],
       "que_espero_ver": [
         "No se empuja lote solo por liberar espacio o por urgencia."
@@ -809,9 +805,9 @@
     },
     "P6.6.2": {
       "que_pedir": [
-        "Especificacion de embalaje por estado y destino: WIP interno, almacenamiento a largo plazo y expedicion al cliente.",
-        "Evidencia de validacion del embalaje final: prueba de caida, aprobacion del cliente o resultado de auditoria de logistica.",
-        "Proceso de inspeccion de embalaje antes de expedicion y registro de las ultimas verificaciones."
+        "Especificación de embalaje por estado y destino (WIP interno, almacén a largo plazo, expedición al cliente) validada y cumplida; embalaje final aprobado por el cliente o verificado mediante ensayo documentado.",
+        "Producto terminado almacenado en condiciones adecuadas: protección mecánica, condiciones ambientales correctas, separación entre lotes y estados, rotación FIFO garantizada y sin piezas dañadas en almacén.",
+        "Proceso de inspección de embalaje antes de expedición con registro de las últimas verificaciones; ninguna pieza sale con embalaje dañado o no conforme al acuerdo con el cliente."
       ],
       "que_espero_ver": [
         "La proteccion final evita dano, corrosion o contaminacion."
@@ -819,9 +815,9 @@
     },
     "P6.6.3": {
       "que_pedir": [
-        "Politica de retencion de registros con tiempo minimo por tipo de registro y soporte (papel, electronico, servidor).",
-        "Demostracion de recuperacion de un registro especifico ante una consulta: buscar el historico de un lote concreto de los ultimos meses.",
-        "Proceso de archivo y gestion de registros ante cambio de sistema, traslado o cierre de proyecto."
+        "Política de retención de registros con tiempo mínimo por tipo de registro y soporte (papel, electrónico); proceso de archivo accesible que permite recuperar el historial completo de un lote específico en tiempo razonable.",
+        "Demostración práctica: recuperar el historial completo (parámetros de proceso, lotes de material, registros de inspección, liberación) de un lote enviado al cliente en los últimos meses sin dificultad.",
+        "Proceso de gestión de registros ante cambio de sistema, traslado o cierre de proyecto: cómo se asegura que no se pierda la trazabilidad requerida durante toda la vida útil del producto."
       ],
       "que_espero_ver": [
         "El historico del lote es recuperable y legible."
@@ -829,9 +825,9 @@
     },
     "P6.6.4": {
       "que_pedir": [
-        "Lista de requisitos del cliente en la entrega final: etiquetado, embalaje, documentacion de conformidad, trazabilidad y estado.",
-        "Proceso de verificacion final antes de expedicion con registro de la persona que aprueba y la evidencia revisada.",
-        "Registro de no conformidades de expedicion detectadas internamente en los ultimos meses, con acciones y estado."
+        "Lista de requisitos del cliente en la entrega final (etiquetado, embalaje, documentación de conformidad, trazabilidad, ASN, cantidades exactas) verificada antes de cada expedición y registrada.",
+        "Proceso de liberación final antes de despacho: responsable de Calidad revisa y aprueba con evidencia (checklist firmado o validación en sistema); ningún lote sale sin esta aprobación formal.",
+        "Indicadores de cumplimiento de requisitos de entrega al cliente (PPM externo, reclamos de logística, entregas fuera de plazo) con tendencia reciente y acciones correctivas definidas si no se cumplen los objetivos."
       ],
       "que_espero_ver": [
         "La entrega final refleja el mismo control que se exige internamente."
@@ -840,7 +836,6 @@
         "Requisitos finales de cliente tratados como chequeo de expedicion y no como parte del proceso."
       ]
     },
-
     "P7": {
       "que_pedir": [
         "Sistema de requalificacion: calendario, criterios de disparo (cambio, tiempo, problema de campo) y resultado de la ultima requalificacion.",
