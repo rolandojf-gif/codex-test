@@ -24,8 +24,7 @@ const state = {
   overrides: null,
   selectedPhaseId: null,
   selectedSubId: null,
-  selectedLvlId: null,
-  activeTab: "que_pedir"
+  selectedLvlId: null
 };
 
 /* ── Referencias DOM ─────────────────────────────────── */
@@ -45,6 +44,7 @@ const el = {
   evidenciasTipicas:document.querySelector("#evidenciasTipicas"),
   preguntasContraste:document.querySelector("#preguntasContraste"),
   redFlags:         document.querySelector("#redFlags"),
+  contentBlocks:    document.querySelectorAll(".content-block"),
   tips:             document.querySelector("#tips"),
   // Topbar (desktop)
   productInput:     document.querySelector("#productInput"),
@@ -141,11 +141,6 @@ function buildSidebar() {
 function attachEvents() {
   // Delegación en el árbol del sidebar
   el.sidebarTree.addEventListener("click", onSidebarClick);
-
-  // Tabs
-  document.querySelectorAll(".tab").forEach((tab) =>
-    tab.addEventListener("click", () => switchTab(tab.dataset.tab))
-  );
 
   // Inputs de contexto — desktop y mobile en sincronía
   el.productInput?.addEventListener("input", () => {
@@ -267,20 +262,6 @@ function autoSelectFirst() {
 }
 
 /* ═══════════════════════════════════════════════════════
-   TABS
-   ═══════════════════════════════════════════════════════ */
-function switchTab(tabId) {
-  state.activeTab = tabId;
-
-  document.querySelectorAll(".tab").forEach((tab) =>
-    tab.classList.toggle("active", tab.dataset.tab === tabId)
-  );
-  document.querySelectorAll(".tab-pane").forEach((pane) =>
-    pane.classList.toggle("active", pane.id === `pane-${tabId}`)
-  );
-}
-
-/* ═══════════════════════════════════════════════════════
    RENDERIZADO
    ═══════════════════════════════════════════════════════ */
 function render() {
@@ -326,8 +307,17 @@ function render() {
   renderList("preguntas_de_contraste", effectiveGuidance.preguntas_de_contraste);
   renderList("red_flags",            effectiveGuidance.red_flags);
   renderList("tips",                 effectiveGuidance.tips);
+  updateBlockVisibility(effectiveGuidance);
 
   renderAppliedRules(matchedRules);
+}
+
+function updateBlockVisibility(guidance) {
+  el.contentBlocks.forEach((block) => {
+    const field = block.dataset.field;
+    const items = Array.isArray(guidance[field]) ? guidance[field] : [];
+    block.hidden = items.length === 0;
+  });
 }
 
 function showEmpty() {

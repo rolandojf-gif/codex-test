@@ -110,41 +110,31 @@
             <!-- Reglas activas -->
             <div id="appliedRules" class="applied-rules" hidden></div>
 
-            <!-- Tabs -->
-            <div class="tabs" role="tablist" aria-label="Secciones de guía">
-              <button class="tab active" data-tab="que_pedir" role="tab" aria-selected="true">
-                <span class="tab-icon">?</span> Qué buscar
-              </button>
-              <button class="tab" data-tab="preguntas_de_contraste" role="tab" aria-selected="false">
-                <span class="tab-icon">↔</span> PREGUNTA
-              </button>
-              <button class="tab tab-warn" data-tab="red_flags" role="tab" aria-selected="false">
-                <span class="tab-icon">!</span> TRAMPA
-              </button>
-              <button class="tab" data-tab="evidencias_tipicas" role="tab" aria-selected="false">
-                <span class="tab-icon">💡</span> TIP
-              </button>
-              <button class="tab" data-tab="que_espero_ver" role="tab" aria-selected="false">
-                <span class="tab-icon">✓</span> Contexto
-              </button>
-            </div>
-
-            <!-- Paneles de contenido -->
-            <div class="tab-pane active" id="pane-que_pedir" role="tabpanel">
-              <ul id="quePedir"></ul>
-            </div>
-            <div class="tab-pane" id="pane-preguntas_de_contraste" role="tabpanel">
-              <ul id="preguntasContraste"></ul>
-            </div>
-            <div class="tab-pane tab-pane-warn" id="pane-red_flags" role="tabpanel">
-              <ul id="redFlags"></ul>
-            </div>
-            <div class="tab-pane" id="pane-evidencias_tipicas" role="tabpanel">
-              <ul id="evidenciasTipicas"></ul>
-            </div>
-            <div class="tab-pane" id="pane-que_espero_ver" role="tabpanel">
+            <!-- Bloques de contenido continuo -->
+            <section class="content-block block-context" data-field="que_espero_ver" id="block-contexto">
+              <h3>Contexto</h3>
               <ul id="queEsperoVer"></ul>
-            </div>
+            </section>
+
+            <section class="content-block" data-field="que_pedir" id="block-que-buscar">
+              <h3>Qué buscar</h3>
+              <ul id="quePedir"></ul>
+            </section>
+
+            <section class="content-block" data-field="preguntas_de_contraste" id="block-pregunta">
+              <h3>PREGUNTA</h3>
+              <ul id="preguntasContraste"></ul>
+            </section>
+
+            <section class="content-block block-warn" data-field="red_flags" id="block-trampa">
+              <h3>TRAMPA</h3>
+              <ul id="redFlags"></ul>
+            </section>
+
+            <section class="content-block block-tip" data-field="evidencias_tipicas" id="block-tip">
+              <h3>TIP</h3>
+              <ul id="evidenciasTipicas"></ul>
+            </section>
 
           </div><!-- /content-panel -->
 
