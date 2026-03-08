@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "items": {
     "P2": {
       "que_pedir": [
@@ -26,102 +26,88 @@
     },
     "P2.1": {
       "que_pedir": [
-        "Organigrama del proyecto con líder nombrado formalmente, roles y responsabilidades definidos para cada miembro del equipo interdisciplinario, e interfaces con el cliente y proveedores documentadas.",
-        "Acta de kick-off con compromisos y fechas; RACI actualizado que incluya procesos externalizados; evidencia de que el cliente conoce los puntos de contacto del proveedor.",
-        "Lecciones aprendidas de proyectos similares incorporadas a la planificación del programa actual, con riesgos del proyecto identificados y medidas de mitigación definidas y asignadas."
+        "Buscar si existe un proceso de gestion de proyectos real, con lider de proyecto definido, equipo multidisciplinar, escalaciones claras, y lecciones aprendidas de proyectos anteriores."
       ],
       "que_espero_ver": [
         "Interlocutores y escalacion definidos tambien para procesos externalizados."
       ],
       "red_flags": [
-        "No hay dueno claro de riesgos tecnicos por etapa del proceso.",
-        "El comercial acepta el proyecto y lo pasa a calidad/ingeniería sin organización formal; no hay project leader asignado o comparte rol con producción."
+        "El comercial acepta el proyecto y se lo pasa a calidad/ingenieria sin organizacion formal. No hay project leader — 'lo lleva todo Begoña' pero Begoña ya tiene 5 roles. Si no hay organigrama de proyecto, no hay P2.1."
       ],
       "preguntas_de_contraste": [
-        "¿Quién es el líder de proyecto para la referencia auditada y pueden enseñarme el organigrama del equipo (incluyendo calidad, logística, producción, laboratorio)?"
+        "Quien es el lider de proyecto para el proyecto EU7 / [referencia X], y pueden enseñarme el organigrama de proyecto con roles definidos y vias de escalacion?"
+      ],
+      "tips": [
+        "En fundiciones pequeñas/medianas, el organigrama de proyecto suele ser el mismo que el organigrama de planta. Valido, pero tiene que estar documentado con roles y responsabilidades especificas para ESE proyecto."
       ]
     },
     "P2.2": {
       "que_pedir": [
-        "Plan de recursos documentado que incluye personal, instalaciones, equipamiento (laboratorios, bancos de prueba, herramientas) y presupuesto aprobado para el proyecto, considerando el camino crítico.",
-        "Evidencia de que los recursos planificados están disponibles en el momento requerido: confirmación de asignación de personal clave, pedidos de equipos realizados, presupuesto liberado.",
-        "Proceso de revisión y ajuste de la planificación de recursos ante cambios de alcance, plazos o cargas de trabajo, con evidencia de algún reajuste documentado durante el proyecto."
+        "Evaluar si los recursos (personas, maquinas, utillaje, laboratorio) estan planificados, disponibles y revisados cuando hay cambios. La carga de trabajo del equipo se tiene en cuenta."
       ],
       "que_espero_ver": [
         "La capacidad se calcula por operacion critica y no solo a nivel agregado."
       ],
       "red_flags": [
-        "Capacidad teorica sin evidencia para los recursos cuello de botella.",
-        "Aceptan proyectos nuevos sin evaluar el impacto en la capacidad de recursos clave (laboratorio, QA técnico, inspección); el plan de recursos no se actualiza ante bajas o salidas de personal crítico."
+        "Aceptan proyectos nuevos sin evaluar impacto en capacidad. Caso Fagor: se fue Ander (QA Tech), Naiara duro semanas, Begoña asumio todo — sin planificacion de recursos. Caso CyC: rectificadora y linea de cromo para nuevas referencias sin evaluar si aguantan el volumen."
       ],
       "preguntas_de_contraste": [
-        "Para la última referencia nueva lanzada: ¿qué utillaje adicional, equipos de inspección y personal planificasteis? ¿Cuándo estuvo disponible todo ello?"
+        "Para la nueva referencia de bracket: que utillaje adicional, equipos de inspeccion y personal planificasteis? Como verificasteis que teniais capacidad suficiente sin comprometer las referencias existentes?"
       ]
     },
     "P2.3": {
       "que_pedir": [
-        "Plan maestro de proyecto documentado y acordado con el cliente, con todos los hitos internos y del cliente (diseño, prototipos, validaciones, PPAP/PPA, SOP) con fechas, responsables y entregables definidos.",
-        "Ruta crítica identificada y monitorizada activamente; gate reviews ejecutadas en cada hito para verificar madurez antes de avanzar de fase, con actas o registros de las revisiones realizadas.",
-        "Proceso de comunicación de cambios al plan: notificación interna y al cliente cuando afectan compromisos acordados, con evidencia de estas comunicaciones y actualización del plan."
+        "Verificar que existe plan de proyecto con milestones del cliente integrados, plazos de PPAP, y que se revisa en los hitos definidos."
       ],
       "que_espero_ver": [
         "Ruta critica viva y alineada con entregables tecnicos reales."
       ],
-      "red_flags": [
-        "Plan de proyecto desconectado de la realidad de utiles, laboratorio o capacidad."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "¿Pueden enseñarme el cronograma del proyecto con los hitos del cliente, fechas de entrega de PPAP y evidencia de que se revisa en los gates clave?"
+        "Pueden enseñarme el cronograma del proyecto con los hitos de Astemo, fechas de entrega de PPAP y evidencia de las revisiones en cada hito?"
       ]
     },
     "P2.4": {
       "que_pedir": [
-        "Plan de calidad del proyecto con actividades de aseguramiento de producto y proceso: FMEA, plan de control, MSA, validaciones, revisiones de diseño, auditorías internas y hitos de calidad (VDA MLA o APQP).",
-        "Identificación de características especiales con medidas de control planificadas para cada una; verificación de que el plan incluye actividades de calidad de todas las áreas y etapas del alcance.",
-        "Seguimiento documentado del cumplimiento del plan de calidad: estado de cada actividad (completada/en curso/pendiente), resultados de las ejecutadas y frecuencia de revisión del plan."
+        "Las actividades de aseguramiento de calidad (PFMEA, CP, MSA, capability) estan planificadas, se ejecutan y se monitoriza su cumplimiento."
       ],
       "que_espero_ver": [
         "Las actividades de calidad cubren bruto, mecanizado y acabado cuando existen."
       ],
       "red_flags": [
-        "Calidad planificada como checklist, sin ligarla a riesgos reales de colada, first-off o superficie.",
-        "El PFMEA se hizo como trámite después del SOP, no antes; o se hizo pero no se actualizó cuando hubo cambios de producto o proceso."
+        "El PFMEA se hizo como trámite despues del SOP, no antes. O se hizo pero no se actualizo cuando hubo cambios."
       ],
       "preguntas_de_contraste": [
-        "Enseñenme el plan de calidad de este proyecto: ¿cuándo se completó el PFMEA, cuándo se validó el Plan de Control, cuándo se hizo la MSA de las características especiales?"
+        "Enseñenme el plan de calidad de este proyecto: cuando se completo el PFMEA, cuando se valido el Plan de Control, y que estudios de capacidad se planificaron?"
       ]
     },
     "P2.5": {
       "que_pedir": [
-        "Cronograma del proyecto que incluye actividades de compras: selección y homologación de proveedores, adquisición de maquinaria, herramientas, sistemas de medición y servicios externos con fechas objetivo.",
-        "Evidencia de que los hitos de proveedores (entregas de moldes, muestras iniciales, instalaciones, aprobación PPAP de componentes) están integrados y coordinados con el cronograma general del proyecto.",
-        "Decisiones de make-or-buy documentadas y reflejadas en el plan; seguimiento activo de pedidos críticos con alerta temprana ante retrasos de proveedores o equipos externos."
+        "Los proveedores de utillaje, arena, materia prima, equipos de inspeccion estan integrados en la planificacion del proyecto con fechas de adjudicacion y milestones."
       ],
       "que_espero_ver": [
         "Compras forma parte de los hitos y de la evaluacion de riesgo, no entra tarde."
       ],
-      "red_flags": [
-        "Subproveedores criticos fuera del seguimiento del proyecto."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Para una nueva referencia, ¿cuándo hicisteis el pedido del molde o utillaje crítico? ¿El plazo de entrega del proveedor de moldes estaba integrado en el plan de proyecto?"
+        "Para una nueva referencia de pinza, cuando hicisteis el pedido del molde nuevo? El plazo de entrega del fabricante de moldes estaba incluido en vuestro plan de proyecto?"
       ]
     },
     "P2.6": {
       "que_pedir": [
-        "Proceso formal de gestión de cambios con formato ECR/ECN, evaluación de impacto en calidad, plazos y costes, aprobación multidisciplinaria antes de implementar y comunicación al cliente cuando aplica.",
-        "Registro de cambios ocurridos durante el proyecto: evaluación, aprobación, notificación al cliente si procede y actualización de documentos del proyecto (plan, diseños, PFMEA, plan de control).",
-        "Respeto de los design freeze acordados con el cliente; si se requiere excepción posterior al congelamiento, está acordada con el cliente y documentada; proveedores involucrados en los cambios que les afectan."
+        "Los cambios (del cliente, internos o del proveedor) se evaluan, documentan y gestionan con evaluacion de riesgo. El design freeze se respeta."
       ],
       "que_espero_ver": [
         "Cada cambio deja impacto evaluado sobre seguridad, capacidad, trazabilidad y cliente."
       ],
       "red_flags": [
-        "Cambios tratados como ajustes de planta y no como cambios de proceso.",
-        "Los cambios se gestionan por email o de forma verbal sin evaluación de impacto documentada; cambios implementados sin evidencia de validación ni notificación formal al cliente."
+        "No hay registro formal de cambios. Los cambios se gestionan 'por email' sin evaluacion de impacto. Caso Fagor Ref 4613: implementacion de cuña Williams sin clean point claro — el cambio se hizo pero la validacion fue dudosa."
       ],
       "preguntas_de_contraste": [
-        "Cuando el cliente solicitó un cambio en la geometría del producto, ¿cómo evaluasteis el impacto en vuestro PFMEA, utillaje y capacidad del proceso?"
+        "Cuando Astemo solicito un cambio en la geometria de la cuña del bracket, como evaluasteis el impacto en vuestro proceso de fundicion? Enseñadme la solicitud de cambio, la evaluacion de riesgos y el plan de proyecto actualizado."
+      ],
+      "tips": [
+        "Pregunta clave si detectas problemas en serie: 'Was a formal feasibility analysis conducted before accepting these tolerances?' Aunque P2 no este en scope de serie, si en P6 detectas incapacidad, puedes tirar hacia atras."
       ]
     },
     "P3": {
@@ -149,94 +135,77 @@
     },
     "P3.1": {
       "que_pedir": [
-        "Documentación completa de requisitos del producto y proceso: especificaciones técnicas del cliente, normas aplicables, requisitos legales y reglamentarios, y criterios internos, todos acordados antes de iniciar el diseño.",
-        "Características especiales (de calidad, seguridad, regulatorias) identificadas y marcadas en planos y listados, con trazabilidad al requisito del cliente, norma o aspecto de seguridad que las origina.",
-        "Método para asegurar que no faltan requisitos: checklist de revisión de contrato, comparación con proyectos previos, lecciones aprendidas incorporadas; proveedores o materiales impuestos por el cliente documentados."
+        "Los requisitos funcionales, del cliente, legales, y las caracteristicas especiales (CC/SC) estan identificados y documentados."
       ],
       "que_espero_ver": [
         "Cada requisito tiene reflejo en control de proceso, control de lote o validacion."
       ],
       "red_flags": [
-        "Caracteristicas especiales sin due owner claro o sin punto de control definido.",
-        "Las CC vienen solo del plano del cliente sin análisis propio de la fundición; o el Control Plan tiene símbolos de CC sin leyenda que el operario no puede interpretar."
+        "Las CC vienen solo del plano del cliente, sin analisis propio. O peor: tienen dos simbolos de CC en el Control Plan sin leyenda que explique que exige cada uno. Caso CyC: simbolo de seguridad + circulo azul con exclamacion invertida sin leyenda."
       ],
       "preguntas_de_contraste": [
-        "¿Cómo identificasteis las características especiales (CC/SC) para esta referencia? ¿Las características de seguridad del cliente están trazadas desde el plano hasta el Control Plan?"
+        "Enseñadme como identificasteis las caracteristicas especiales para esta referencia. Las caracteristicas de seguridad y significativas, de donde vienen: del plano de Astemo, de vuestro propio analisis de riesgos, o de ambos?"
       ]
     },
     "P3.2": {
       "que_pedir": [
-        "Análisis de factibilidad formal y multidisciplinario (ingeniería, producción, calidad, compras, logística) documentado y disponible antes de la aceptación del proyecto o envío de oferta.",
-        "La factibilidad cubre producto y proceso: tolerancias vs capacidad del proceso, volúmenes vs capacidad instalada, disponibilidad de materiales especiales, limitaciones de proveedores externos.",
-        "Requisitos que resultaron no factibles o dudosos comunicados al cliente con evidencia (correo, reserva en oferta) y aprobación de desviación antes de comprometerse; fecha del documento de factibilidad anterior a la firma del contrato."
+        "Se evaluo si el producto es fabricable con los medios disponibles, con participacion de todas las funciones (produccion, calidad, logistica, compras, mantenimiento)."
       ],
       "que_espero_ver": [
         "Los cuellos de botella y riesgos se conocen antes de comprometer PPAP/PPA."
       ],
       "red_flags": [
-        "Factibilidad aprobada en bloque y no por etapa del alcance real.",
-        "El comercial acepta el proyecto y firma 'factible' sin análisis técnico; la fundición descubre después del SOP que no puede cumplir el Cpk en la característica crítica."
+        "El comercial acepta el proyecto, firma 'factible' y la fundicion descubre despues que no pueden cumplir el Cpk en una zona critica. El feasibility es un check en un formulario, no un estudio real. No se evaluan las CC del cliente contra la capacidad real del proceso."
       ],
       "preguntas_de_contraste": [
-        "Antes de aceptar esta referencia, ¿hicisteis un estudio de factibilidad formal? ¿Quién participó: solo calidad, o también producción, laboratorio y mantenimiento?"
+        "Antes de aceptar esta referencia, hicisteis un estudio de factibilidad formal? Quien participo: solo calidad, o tambien produccion, logistica, mantenimiento? Puedo ver el documento firmado con las condiciones y riesgos identificados?"
+      ],
+      "tips": [
+        "Si en P6 detectas que no son capaces en alguna CC, pregunta: 'Was this capability assessed during feasibility?' — conecta P3 con P6 sin salirte de scope."
       ]
     },
     "P3.3": {
       "que_pedir": [
-        "Plan detallado de desarrollo del producto y proceso con todas las actividades técnicas (FMEA de diseño y proceso, revisiones de diseño, construcción de prototipos, pruebas de validación) calendarizadas con fechas, duraciones y responsables.",
-        "Gestión de riesgos técnicos integrada en el plan: FMEA preliminar con medidas de mitigación reflejadas en el cronograma; plan de contingencia para innovaciones de alto riesgo; criterios de liberación entre fases definidos.",
-        "Plan de pruebas y validaciones (confiabilidad, durabilidad, desempeño) con criterios de éxito definidos; plan de inspecciones que cubre desde prototipos hasta producción en serie; corridas de pre-serie y Run@Rate contemplados con fechas."
+        "El desarrollo de producto y proceso esta desglosado en actividades concretas: PFMEA, trials, validacion de utillaje, estudios dimensionales, MSA."
       ],
       "que_espero_ver": [
         "Las interfaces entre etapas tienen criterio de liberacion y evidencia."
       ],
-      "red_flags": [
-        "No existe proteccion clara en la transferencia entre bruto, mecanizado y acabado."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P3.4": {
       "que_pedir": [
-        "Criterios de selección de proveedores documentados; para proveedores nuevos o con nueva tecnología/localización, evidencia de análisis de potencial (VDA 6.3 P1 u equivalente) planificado antes de contratarlos.",
-        "Comunicación formal a proveedores de todos los requisitos del proyecto: especificaciones, características especiales, requisitos logísticos, normativos y de calidad, con confirmación de recepción documentada.",
-        "Cronograma con hitos de proveedores (entrega de moldes, primeras muestras, PPAP de componentes comprados) y actividades de seguimiento planificadas por nivel de riesgo del insumo; decisiones make-or-buy documentadas."
+        "La seleccion de proveedores de materia prima y utillaje esta planificada con criterios definidos."
       ],
       "que_espero_ver": [
         "Subproveedores criticos gobernados con enfoque de riesgo."
       ],
-      "red_flags": [
-        "Procesos externalizados tratados como caja negra."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "¿Cuándo cualificasteis al proveedor de arena, al de inoculante, al fabricante de moldes? ¿Fue planificado antes del SOP o de forma reactiva?"
+        "Cuando cualificasteis al proveedor de arena, al de inoculante, al fabricante de moldes? Fue planificado antes del SOP o se hizo de forma reactiva?"
       ]
     },
     "P3.5": {
       "que_pedir": [
-        "Inventario de recursos necesarios para el desarrollo e industrialización (personal calificado, instalaciones, equipos de laboratorio, líneas piloto) versus disponibles, con brechas identificadas y plan de resolución.",
-        "Capacidad productiva planificada para construir prototipos y pre-serie: reserva de líneas piloto o tiempo de máquina con fechas confirmadas; nuevas infraestructuras o equipos críticos con plan de adquisición y disponibilidad.",
-        "Plan de capacitación del personal para nuevas tecnologías o productos con fechas previas al SOP; medios de transporte y embalajes especiales para materiales del nuevo producto considerados y gestionados."
+        "Capacidad de maquina, personal, laboratorio, equipos de inspeccion planificados y disponibles para el volumen esperado."
       ],
       "que_espero_ver": [
         "Recursos criticos previstos antes de necesitarlos."
       ],
-      "red_flags": [
-        "Capacidad de ensayo o metrologia no alineada con el plan de homologacion."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P3.6": {
       "que_pedir": [
-        "Plan de soporte posventa que cubre: suministro de repuestos durante la vida útil del producto (volúmenes y plazos), planes de contingencia para garantizar continuidad de suministro en serie ante paradas o fallos de proveedor.",
-        "Requisitos del cliente sobre análisis de fallas de campo (tiempos de respuesta, profundidad del análisis, NTF) acordados e incorporados a la planificación, con recursos definidos (laboratorio propio o externo) para cumplirlos.",
-        "Personal de soporte posventa y análisis de fallas identificado y calificado; si se requieren laboratorios externos para ciertos análisis, acuerdos definidos con capacidad y tiempos comprometidos documentados."
+        "El concepto de suministro de piezas (incluyendo repuestos), planes de contingencia y proceso de analisis de reclamaciones 0km/campo estan planificados."
       ],
       "que_espero_ver": [
         "El proveedor sabe como analizar un defecto que puede nacer en bruto, mecanizado o acabado."
       ],
-      "red_flags": [
-        "Soporte post-lanzamiento no definido o reducido a un 8D administrativo."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Antes del SOP, ¿planificasteis cómo gestionaríais una reclamación de campo del cliente? ¿Quién hace el análisis de causa raíz y en qué plazo?"
+        "Antes del SOP, planificasteis como gestionariais una reclamacion de campo de Astemo? Quien hace el analisis de fallo, con que equipos, en que plazo?"
       ]
     },
     "P4": {
@@ -264,134 +233,105 @@
     },
     "P4.1": {
       "que_pedir": [
-        "Registro actualizado de acciones del plan de desarrollo con estado (abierta/cerrada) y evidencia de eficacia para las acciones críticas; FMEA de diseño y proceso actualizadas conforme avanzó el proyecto.",
-        "Características especiales identificadas en todos los documentos clave (FMEA, planos, plan de control) con medidas de control implementadas y verificadas: poka-yokes probados, SPC activo, controles adicionales validados.",
-        "Sin riesgos técnicos abiertos sin mitigar al momento del SOP: resultados de pruebas de validación completados, hallazgos de revisiones de diseño resueltos, análisis de riesgo multidisciplinario activo durante todo el desarrollo."
+        "Las actividades de desarrollo (PFMEA, CP, trials, MSA) se ejecutaron segun lo planificado. El analisis de riesgos se actualizo."
       ],
       "que_espero_ver": [
         "Los riesgos altos tienen acciones implantadas y medidas de eficacia."
       ],
       "red_flags": [
-        "Acciones cerradas sin cambio visible en proceso, util o control.",
-        "El PFMEA tiene prioridades de acción altas pero el CP no refleja controles adicionales; o el PFMEA se hizo después del SOP como trámite documental."
+        "El PFMEA tiene RPNs altos pero el CP no refleja controles adicionales. O el PFMEA se hizo despues del SOP como trámite."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme cómo vuestro análisis de riesgos del PFMEA se tradujo en el Plan de Control: para los ítems con AP/RPN alto, ¿qué controles adicionales definisteis?"
+        "Enseñadme como vuestro analisis de riesgos del PFMEA se tradujo en el Plan de Control. Para los items con RPN mas alto, que controles especificos implementasteis?"
       ]
     },
     "P4.2": {
       "que_pedir": [
-        "Asignación documentada de personal a todas las actividades de desarrollo e industrialización, con competencias verificadas (formación en Core Tools, metodologías específicas, roles y responsabilidades definidos).",
-        "Cobertura de todos los roles necesarios para el lanzamiento, incluyendo personal de producción y mantenimiento involucrado en corridas piloto; gestión de cuellos de botella de personal con evidencia de acciones tomadas.",
-        "Personal de producción en serie identificado con plan de capacitación ejecutado antes del SOP: operarios entrenados en el nuevo proceso, inspectores capacitados en características especiales, cobertura por turno confirmada."
+        "El personal necesario para serie esta disponible y formado antes del SOP."
       ],
       "que_espero_ver": [
         "Cobertura suficiente por turno en operaciones y validaciones criticas."
       ],
-      "red_flags": [
-        "Dependencia excesiva de personas clave sin sustitucion real."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P4.3": {
       "que_pedir": [
-        "Estado de disponibilidad de todos los medios de producción: máquinas, herramientas, equipos de laboratorio y dispositivos de inspección instalados, cualificados y listos para serie, con pruebas de aceptación (FAT/SAT) completadas.",
-        "Lay-out de planta actualizado con el nuevo proceso; capacidad real de equipos instalados verificada versus la requerida; cualquier proceso subcontratado con recursos del proveedor verificados.",
-        "Contenedores, racks y medios de transporte interno disponibles en cantidad suficiente; almacenamiento preparado; evaluaciones periódicas de necesidades adicionales de recursos durante esta fase con acciones documentadas."
+        "Maquinas, utillaje, equipos de inspeccion, embalaje en cantidades necesarias y validados."
       ],
       "que_espero_ver": [
         "Los medios criticos estan liberados y mantenibles para serie."
       ],
-      "red_flags": [
-        "Recursos materiales disponibles en plan pero no en planta o no en estado valido."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Antes de la primera entrega en serie, ¿estaban todos los moldes validados, todos los calibres de inspección calibrados y la MSA realizada para las CC?"
+        "Antes de la primera entrega en serie, estaban todos los moldes validados, todos los calibres de inspeccion calibrados y todo el embalaje aprobado por Astemo?"
       ]
     },
     "P4.4": {
       "que_pedir": [
-        "PSW/PPAP firmado por el cliente obtenido antes del inicio de producción serie; aprobaciones internas de Calidad, Producción e Ingeniería otorgadas; ningún componente producido en serie antes de estas aprobaciones.",
-        "Estudios de capacidad de proceso (Cpk/Ppk ≥ 1,33 o valor acordado) y estudios MSA completados para todas las características especiales, con resultados conformes documentados.",
-        "Medidas definidas en FMEAs implementadas y verificadas en eficacia (poka-yokes validados, controles probados); todos los proveedores de partes críticas con PPAP aprobado; requisitos legales y reglamentarios verificados con certificados."
+        "El PPAP esta completo, con aprobacion del cliente. Los waivers estan documentados."
       ],
       "que_espero_ver": [
         "Capacidad ligada a caracteristicas especiales y al alcance real del proveedor."
       ],
       "red_flags": [
-        "Datos de capacidad mezclados entre etapas distintas como si fueran equivalentes.",
-        "PPAP 'aprobado' pero con waivers abiertos que nunca se cerraron; o el PPAP se aprobó con piezas de trial pero el proceso en serie usa condiciones distintas."
+        "PPAP 'aprobado' pero con waivers abiertos que nunca se cerraron. O el PPAP se aprobo con 10 piezas de trial pero el proceso cambio desde entonces."
       ],
       "preguntas_de_contraste": [
-        "¿Pueden enseñarme el paquete PPAP completo de esta referencia, incluyendo la aprobación firmada del cliente? ¿Hay waivers abiertos?"
+        "Pueden enseñarme el paquete PPAP completo de esta referencia, incluyendo la aprobacion firmada de Astemo? Hay algun waiver o desviacion abierta?"
       ]
     },
     "P4.5": {
       "que_pedir": [
-        "Evidencia de que las actividades planificadas con proveedores (auditorías, controles adicionales, inspecciones reforzadas) se ejecutaron según el plan, considerando el nivel de riesgo de cada insumo.",
-        "Liberaciones de calidad de todos los insumos críticos obtenidas (certificados de material, PPAP de proveedores, aprobaciones de software de terceros) antes de usarlos en producción serie.",
-        "Cumplimiento del cronograma de hitos de proveedores: moldes, máquinas e instalaciones entregadas en fechas previstas; desviaciones gestionadas con acciones documentadas y sin impacto en el SOP."
+        "Los proveedores de MP, utillaje y servicios fueron realmente cualificados y auditan sus entregas."
       ],
       "que_espero_ver": [
         "Los procesos externalizados ya operan bajo el mismo rigor de calidad que los internos."
       ],
-      "red_flags": [
-        "Proveedor o proceso critico llega tarde a la industrializacion."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P4.6": {
       "que_pedir": [
-        "Plan de control de producción vigente, disponible en planta y conocido por el personal clave, que incluye todas las características especiales con método de control, frecuencia, criterio de aceptación y reacción ante desviación.",
-        "Instrucciones de trabajo e inspección en puesto para cada etapa del proceso, derivadas del desarrollo y alineadas con la versión vigente del PFMEA y el plan de control; instrucciones de mantenimiento preventivo entregadas.",
-        "Plan de auditorías de producto en serie y pruebas de revalidación periódica definido y programado; personal de producción y calidad capacitado en las instrucciones y plan de control antes del arranque."
+        "Las instrucciones de trabajo, planes de inspeccion y especificaciones se derivaron del PFMEA/CP y estan implementadas en planta."
       ],
       "que_espero_ver": [
         "La documentacion de puesto coincide con PFMEA, plan de control y revision vigente."
       ],
-      "red_flags": [
-        "Instrucciones genericas o sin parametros/reaccion en etapas criticas."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Cojamos cualquier instrucción de trabajo del taller: ¿podéis trazarla hasta la línea del PFMEA que requirió ese control específico?"
+        "Cojamos cualquier instruccion de trabajo del taller: podeis trazarla hasta la linea del PFMEA que requirio ese control?"
       ]
     },
     "P4.7": {
       "que_pedir": [
-        "Prueba de capacidad productiva (Run@Rate) ejecutada bajo condiciones reales de serie (máquinas, personal, proveedores, logística, embalaje reales) durante el tiempo necesario para demostrar la tasa de producción requerida.",
-        "Resultado del Run@Rate documentado: cantidad producida vs requerida, defectos y paros ocurridos, con criterio de Go/No-Go definido y verificado; acciones correctivas implementadas si no se alcanzaron los objetivos.",
-        "Si la auditoría ocurre antes del Run@Rate: plan detallado con fecha, condiciones, participantes y criterios de éxito; ciclos calculados incluyendo todos los elementos reales (setup, cambio de herramienta, carga de software si aplica)."
+        "Se realizo un Run@Rate / 2-day production para validar que el proceso funciona a velocidad y volumen de serie."
       ],
       "que_espero_ver": [
         "Condiciones de serie reales en personal, utiles, first-off, SPC y embalaje."
       ],
-      "red_flags": [
-        "Run@Rate parcial tratado como readiness completo."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P4.8": {
       "que_pedir": [
-        "Procesos de soporte posventa operativos: flujo de gestión de reclamaciones activo con responsables y tiempos de respuesta, stocks de repuestos asegurados, planes de contingencia para continuidad de suministro ante emergencias.",
-        "Capacidad de análisis de fallas de campo instalada: laboratorio propio o acuerdos con externos documentados; procedimiento de Failure Analysis con responsables y tiempos comprometidos alineados con exigencias del cliente.",
-        "Personal de servicio y garantía identificado y capacitado en el nuevo producto; herramientas e infraestructura (equipos de prueba, software de diagnóstico) disponibles; proceso de análisis NTF acordado con el cliente si aplica."
+        "El proceso de gestion de reclamaciones y analisis de fallos esta operativo antes de SOP."
       ],
       "que_espero_ver": [
         "El proveedor puede analizar defectos ligados a su etapa real de valor."
       ],
-      "red_flags": [
-        "Analisis de fallos dependiente de improvisacion o de terceros sin interfaz cerrada."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P4.9": {
       "que_pedir": [
-        "Checklist de handover completado y firmado por desarrollo y producción: planos liberados en sistema, PFMEA y plan de control transferidos, parámetros cargados en hojas de proceso, historial de cambios comunicado.",
-        "Inicio de producción serie aprobado formalmente por Calidad, Producción e Ingeniería; aprobación del cliente obtenida (PSW); open points post-PPAP con responsable, criticidad y fecha de cierre definida y seguida.",
-        "Medidas de arranque implementadas: soporte intensificado de ingeniería en planta durante las primeras semanas, criterios de safe launch definidos y activos; personal de serie confirmado, entrenado y con cobertura por turno asegurada."
+        "Existe un proceso formal de handover de proyecto a produccion serie, con criterios de aceptacion y cuestiones pendientes gestionadas."
       ],
       "que_espero_ver": [
         "No quedan zonas grises de responsabilidad entre desarrollo y serie."
       ],
-      "red_flags": [
-        "Handover firmado con pendientes criticos sobre control, trazabilidad o capacidad."
-      ]
+      "red_flags": [],
+      "preguntas_de_contraste": []
     },
     "P5": {
       "que_pedir": [
@@ -418,115 +358,96 @@
     },
     "P5.1": {
       "que_pedir": [
-        "AVL vigente con criterios de aprobación de cada proveedor (certificaciones, resultado de auditoría, historial de desempeño); ningún proveedor productivo sin evaluación previa documentada (auditoría, encuesta de calidad o equivalente).",
-        "Para proveedores nuevos o con nueva tecnología/localización: análisis de potencial (VDA 6.3 P1 u equivalente) realizado antes de la primera orden productiva, con informe de resultados y acciones acordadas.",
-        "Identificación de riesgos en la cadena de suministro (proveedor único, riesgo país, dependencia tecnológica) con medidas de mitigación definidas (proveedor alternativo, stock de seguridad, acuerdos de emergencia)."
+        "Solo se utilizan proveedores aprobados con criterios de seleccion definidos. Se realizan auditorias segun criticidad."
       ],
       "que_espero_ver": [
         "Solo se usan proveedores evaluados y capaces para el alcance que cubren."
       ],
       "red_flags": [
-        "Proveedor critico sin aprobacion robusta."
+        "Caso CyC: DAU Burgos suministra pistones extruidos pero CyC no los considera 'proveedor' — no les auditan, no les piden certificados, no les reclaman formalmente. Si no es proveedor, tiene que ser proceso interno controlado (P6.1). Si no es ni lo uno ni lo otro, hallazgo."
       ],
       "preguntas_de_contraste": [
-        "¿Auditáis a vuestros proveedores de materia prima (arena, inoculante, chatarra, nodularizante)? Enseñadme vuestro plan de auditorías a proveedores del último año."
+        "Auditais a vuestros proveedores de materia prima: arena, inoculante, chatarra? Enseñadme vuestro plan de auditorias y el ultimo informe de auditoria de vuestro proveedor mas critico."
+      ],
+      "tips": [
+        "Pregunta primero: 'Who is your supplier for [materia prima]?' Segun la respuesta, sabes si auditas en P5 o en P6.1."
       ]
     },
     "P5.2": {
       "que_pedir": [
-        "Evidencia documentada de que todos los requisitos del cliente (especificaciones técnicas, características especiales, requisitos logísticos, normas, requisitos ambientales REACH/RoHS) se han transmitido formalmente a los proveedores con confirmación de recepción.",
-        "Proceso de gestión de cambios hacia la cadena de suministro: notificación formal de cambios de ingeniería, obtención de PPAP de cambio del proveedor antes de implementar, gestión simultánea de inventarios anterior y nuevo.",
-        "Reclamaciones del cliente originadas en insumos comprados trasladadas formalmente al proveedor con exigencia de 8D; requisitos de re-certificación periódica del cliente trasladados y seguidos en la cadena."
+        "Los requisitos de Astemo (CC/SC, especificaciones de material, normas) se comunican trazablemente a los proveedores de la fundicion."
       ],
       "que_espero_ver": [
         "Los requisitos no se pierden ni se reinterpretan entre etapas."
       ],
-      "red_flags": [
-        "Comunicacion informal de requisitos a subproveedor."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "¿Cómo aseguráis que las características especiales del cliente para este componente se comunican a vuestros proveedores de materia prima crítica? ¿Lo tienen por escrito?"
+        "Como asegurais que las caracteristicas especiales de Astemo para esta pinza se comunican a vuestro proveedor de arena o de inoculante? Enseñadme la comunicacion documentada."
       ]
     },
     "P5.3": {
       "que_pedir": [
-        "Objetivos cuantitativos de desempeño acordados con proveedores (PPM, entregas a tiempo, tiempo de respuesta en 8D) documentados en acuerdos de calidad o contratos, con evidencia de comunicación al proveedor.",
-        "Seguimiento periódico (mensual/trimestral) del desempeño de proveedores con scorecard o reporte, generando calificaciones (verde/amarillo/rojo) y planes de mejora para proveedores con bajo desempeño.",
-        "Proceso de escalación activo para proveedores con incumplimiento persistente: planes de desarrollo de proveedor, visitas in situ, cartas de advertencia o búsqueda documentada de alternativa cuando el desempeño no mejora."
+        "Existen acuerdos de calidad (PPM, OTD) con proveedores y se monitorizan."
       ],
       "que_espero_ver": [
         "Los KPI activan acciones y no son solo reporte."
       ],
-      "red_flags": [
-        "Problemas repetidos sin desarrollo real del proveedor."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "¿Tenéis objetivos de calidad documentados (PPM, entrega a tiempo) acordados con vuestros proveedores críticos de fundición? Enseñadme el último scorecard."
+        "Teneis objetivos de calidad documentados (PPM, entrega a tiempo) acordados con vuestro proveedor de chatarra? Como los monitorizais?"
       ]
     },
     "P5.4": {
       "que_pedir": [
-        "Registro de PPAP o liberación aprobada para cada material, componente o servicio comprado utilizado en producción; proceso interno que bloquea el uso de insumos sin liberación hasta obtenerla.",
-        "Ante cambio de proveedor, de proceso o de material en la cadena, se exige re-PPAP antes de usar el insumo modificado; criterio de riesgo documentado para definir el alcance del re-PPAP.",
-        "Gestión de materiales provisionales o con desviación: acuerdo formal de uso limitado (interim approval) con el cliente; confirmación de aprobación de proveedores dirigidos por el OEM disponible en planta."
+        "Se reciben certificados/informes de liberacion con cada lote de materia prima. La calidad de las entregas se verifica."
       ],
       "que_espero_ver": [
         "Nada entra en serie sin release acorde al riesgo."
       ],
       "red_flags": [
-        "Cambios de proveedor o proceso usados sin release suficiente.",
-        "Solo verifican la materia prima con medición propia sin solicitar documentación al proveedor; si hay un problema, no pueden rastrear el lote hasta la colada del proveedor."
+        "Caso CyC/DAU: solo hacen incoming propio (5 piezas con calibre) sin pedir documentacion al proveedor. Si hay problema de material, estan ciegos. Necesitan: certificado 3.1 (composicion quimica, propiedades mecanicas), informe dimensional post-transformacion, trazabilidad de lote, y liberacion del lote."
       ],
       "preguntas_de_contraste": [
-        "Cojamos cualquier lote del almacén ahora mismo: ¿podéis enseñarme el certificado del proveedor, vuestro registro de inspección de recepción y el resultado de la verificación interna?"
+        "Cojamos cualquier lote del almacen ahora mismo: podeis enseñarme el certificado del proveedor, vuestro registro de inspeccion de recepcion y la decision de aceptacion?"
+      ],
+      "tips": [
+        "Para fundicion nodular: pedir certificados de analisis quimico de la colada (% C, Si, Mg, S, P) y verificar que la composicion esta dentro de especificacion. Si no tienen certificados de sus hornos, no controlan su propio proceso metalurgico."
       ]
     },
     "P5.5": {
       "que_pedir": [
-        "Plan de inspección de recepción por material/proveedor: características a verificar, frecuencia de muestreo (100%, AQL, skip-lot según historial de desempeño), criterios de aceptación y registro de resultados.",
-        "Proceso de gestión de no conformidades de proveedor: segregación inmediata, emisión de reclamación con 8D exigido, disposición del material (devolución/retrabajo) y verificación de eficacia de las acciones del proveedor.",
-        "Equipos de medición calibrados y personal capacitado en inspección de recepción; criterios de aceptación documentados incluyendo muestras límite para criterios visuales; verificación de documentación provista por el proveedor (certificados, resultados de pruebas)."
+        "La inspeccion de recepcion esta definida y se ejecuta. El almacenamiento protege la calidad."
       ],
       "que_espero_ver": [
         "La calidad de suministro se verifica donde realmente puede fallar."
       ],
-      "red_flags": [
-        "Se acepta por certificado lo que deberia verificarse por riesgo."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Explicadme vuestra inspección de recepción: ¿qué comprobáis, con qué frecuencia, con qué equipos? Enseñadme el último registro de recepción no conforme."
+        "Explicadme vuestra inspeccion de recepcion: que comprobais, con que frecuencia, con que equipos? Enseñadme el ultimo rechazo de material entrante y que paso despues."
       ]
     },
     "P5.6": {
       "que_pedir": [
-        "Áreas de almacén claramente diferenciadas para material aprobado, en cuarentena y rechazado, con barreras físicas o de sistema que impiden el uso de material no liberado; etiquetado de estado visible en cada unidad de almacenamiento.",
-        "Aplicación de FIFO (o FEFO para materiales con vida útil definida); condiciones de almacenamiento especiales cumplidas y registradas para materiales sensibles (temperatura, humedad, ESD, protección mecánica).",
-        "Sistema de inventario exacto con ciclos de conteo periódicos; proceso de reacción ante material sospechoso o con estado ambiguo: quién decide, cómo se segrega, cómo se recupera o rechaza y quién documenta la decisión."
+        "FIFO implementado. Proteccion contra oxidacion, humedad, contaminacion. Medios de transporte adecuados."
       ],
       "que_espero_ver": [
         "Estados y lotes visibles, separados y protegidos."
       ],
-      "red_flags": [
-        "Material bloqueado o sospechoso accesible para uso accidental."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Enseñadme la zona de almacenamiento de arena: ¿está protegida de la humedad? ¿Cómo implementáis FIFO? ¿Qué pasa si llega un lote nuevo mientras hay stock de uno anterior?"
+        "Enseñadme la zona de almacenamiento de arena: esta protegida de la humedad? Como implementais FIFO? Que pasa con los sacos abiertos?"
       ]
     },
     "P5.7": {
       "que_pedir": [
-        "Perfil de competencias definido para personal de compras, SQA, inspección de recepción y almacén; evidencia de formación completada en características especiales del producto y en VDA 6.3 para auditores de proveedores.",
-        "Autoridad formal y conocida para bloquear material en recepción (quién), liberarlo tras inspección (quién aprueba) y emitir reclamaciones al proveedor (quién las gestiona), con segregación de funciones documentada.",
-        "Personal clave capaz de leer planos, interpretar certificados de material y usar equipos de medición de recepción; retroalimentación y reentrenamiento documentados cuando se detectan errores de inspección."
+        "El personal de compras/incoming esta cualificado, conoce especificaciones y tiene responsabilidades definidas."
       ],
       "que_espero_ver": [
         "El personal entiende el impacto del suministro en un componente de freno."
       ],
-      "red_flags": [
-        "Decisiones criticas de entrada basadas solo en experiencia informal."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Enseñadme la matriz de cualificación del personal de inspección de recepción: ¿conocen los criterios de aceptación específicos de los materiales críticos de fundición?"
+        "Enseñadme la matriz de cualificacion del personal de inspeccion de recepcion. Conocen los criterios de aceptacion de cada materia prima?"
       ]
     },
     "P6": {
@@ -567,81 +488,71 @@
     },
     "P6.1.1": {
       "que_pedir": [
-        "Acta de handover de desarrollo a serie con checklist completado y firmado por ambas partes; evidencia de que producción recibió toda la documentación técnica vigente (planos, PFMEA, plan de control, instrucciones de trabajo).",
-        "Plan de safe launch activo con criterios de salida definidos; registro de los primeros lotes de serie con incidencias detectadas, reacciones aplicadas y criterio formal documentado para levantar la contención de arranque.",
-        "Inicio de producción serie aprobado formalmente: aprobación interna de Calidad, Producción e Ingeniería y aprobación del cliente (PSW) obtenidas antes de producir en serie; sin producción sin estas liberaciones."
+        "El proyecto se traspaso a serie con documentacion completa, medios disponibles y medidas de aseguramiento de arranque."
       ],
       "que_espero_ver": [
         "Arranque de serie protegido por riesgo y con pendientes controlados."
       ],
       "red_flags": [
-        "Arranque apoyado en concesiones abiertas sin barreras claras.",
-        "Se entró en serie sin PPAP completo, o el PPAP se aprobó con waivers que nunca se cerraron; las revisiones del CP no tienen evidencia de motivación ni de formación al personal afectado."
+        "Se entro en serie sin PPAP completo, o el PPAP se aprobo con waivers que nunca se cerraron. Las revisiones del CP durante serie son señal de que el arranque no fue estable."
       ],
       "preguntas_de_contraste": [
-        "El Plan de Control tiene varias revisiones desde el SOP: para cada revisión, ¿podéis enseñarme qué la motivó, la aprobación correspondiente y cómo se formó al personal?"
+        "El Plan de Control ha tenido 5 revisiones desde el SOP. Para cada revision, podeis enseñarme que lo motivo, la evaluacion de riesgos y si fue necesario re-enviar el PPAP?"
       ]
     },
     "P6.1.2": {
       "que_pedir": [
-        "Sistema de suministro a línea (kanban, MRP, pull) que garantiza disponibilidad del material correcto en el punto y momento correctos, sin paros por falta de material ni mezclas de revisiones o estados en el almacén intermedio.",
-        "Identificación clara del estado del lote (aprobado, bloqueado, cuarentena) visible físicamente en cada contenedor antes de entrar al proceso; proceso de verificación de estado en cada punto de entrada definido y seguido.",
-        "Registro de incidencias recientes de desabastecimiento, mezcla de estados o parada de línea por material incorrecto, con acciones tomadas y evidencia de resolución y de que no se repitió."
+        "La materia prima esta disponible en la calidad, cantidad, embalaje y documentacion correcta, en el puesto correcto y a tiempo."
       ],
       "que_espero_ver": [
         "Lote correcto, cantidad correcta y punto correcto sin mezcla de estados."
       ],
       "preguntas_de_contraste": [
-        "¿Habéis tenido alguna falta de material en los últimos 6 meses? ¿Cuál fue vuestra contingencia? Enseñadme los niveles de stock de seguridad de arena e inoculante."
-      ]
+        "Habeis tenido alguna falta de material en los ultimos 6 meses? Cual fue vuestra contingencia? Enseñadme los niveles de stock actuales de vuestras materias primas principales."
+      ],
+      "red_flags": []
     },
     "P6.1.3": {
       "que_pedir": [
-        "Condiciones de almacenamiento y transporte interno definidas por tipo de pieza y etapa (temperatura, humedad, protección mecánica, separación entre estados), con evidencia de cumplimiento en planta.",
-        "Embalajes y medios de transporte interno cualificados para preservar la integridad del producto entre etapas; evidencia de que piezas no llegan dañadas ni contaminadas a la siguiente operación.",
-        "Proceso de detección y reacción ante daño en almacenamiento o transporte interno, con registro de incidencias y acciones correctivas implementadas para evitar recurrencia."
+        "Condiciones de almacenamiento protegen la calidad. Los medios de transporte internos no dañan el producto."
       ],
       "que_espero_ver": [
         "Proteccion frente a dano, contaminacion y mezcla segun la etapa."
       ],
       "preguntas_de_contraste": [
-        "Llevadme a la zona de almacenamiento de machos/arena: ¿humedad controlada? ¿Temperatura monitorizada? ¿Cómo evitáis la contaminación entre lotes diferentes?"
+        "Llevadme a la zona de almacenamiento de machos/arena: humedad controlada? Temperatura monitorizada? Como evitais la contaminacion cruzada entre distintos tipos de arena?"
       ],
-      "red_flags": [
-        "Almacén de arena o machos sin control de humedad ni temperatura: en fundición, la humedad de la arena es factor directo de porosidad por gas."
+      "red_flags": [],
+      "tips": [
+        "En fundicion, la humedad de la arena es critica para porosidad. Si el almacen de arena esta al aire libre o mal protegido, hay riesgo directo de blow holes en piezas."
       ]
     },
     "P6.1.4": {
       "que_pedir": [
-        "Sistema de etiquetado activo por lote y etapa del proceso: número de parte, revisión, cantidad, estado (OK/bloqueado/cuarentena) y lote visibles en cada contenedor; ningún material circula sin etiqueta o con estado ambiguo.",
-        "Proceso de reconciliación entre etiqueta física y sistema de información, con método para detectar discrepancias; trazabilidad completa: dado un lote enviado al cliente, posibilidad de recuperar todos los registros de proceso y material.",
-        "Evidencia de que la identificación se mantiene íntegra a lo largo de todas las etapas del proceso: sin pérdida de trazabilidad en transferencias entre operaciones, turnos o ubicaciones."
+        "Los materiales de entrada tienen trazabilidad completa: casting date, cavity, heat/melt, lote de produccion."
       ],
       "que_espero_ver": [
         "Estado del lote visible fisicamente y en sistema."
       ],
       "preguntas_de_contraste": [
-        "Cojamos un contenedor al azar de este lote de producción: ¿podéis trazarlo hasta la fecha de colada, el número de horno, el inoculante usado y el resultado de inspección?"
+        "Cojamos un contenedor al azar de este lote de produccion. Podeis trazarlo hasta la fecha de colada, el numero de cavidad, el lote de fusion y el lote de arena?"
       ],
       "red_flags": [
-        "No pueden reconstruir la trazabilidad completa del lote hacia atrás: sin trazabilidad mínima no hay contención de lote posible ante una reclamación."
+        "Si no pueden trazar hacia atras, cualquier reclamacion se convierte en caos. Sin trazabilidad minima no hay 'lote', hay caos. Campos criticos: casting date / foundry date, cavity / mold / die, heat / melt / furnace, batch / lot."
       ]
     },
     "P6.1.5": {
       "que_pedir": [
-        "Proceso documentado de gestión de cambios en serie (cambios de material, parámetros, útiles, programas, proveedor) con formato formal, evaluación de riesgo, aprobación y comunicación al cliente cuando el cambio lo requiere.",
-        "Registro de cambios en serie recientes con evaluación de impacto documentada, aprobación, segregación del inventario antes/después del cambio y notificación al cliente si aplica.",
-        "Evidencia de actualización de PFMEA, plan de control e instrucciones de trabajo tras cada cambio registrado; sin cambios implementados sin documentación previa ni sin revisión de riesgo."
+        "Todos los cambios en producto, proceso, proveedores, utillaje estan documentados con evaluacion de riesgo."
       ],
       "que_espero_ver": [
         "Cada cambio en serie deja historia y evaluacion de riesgo."
       ],
       "red_flags": [
-        "Cambios en serie sin gatillo formal de trazabilidad o revalidacion.",
-        "Cambios de proceso implementados como 'clean point' sin evidencia de validación ni notificación formal al cliente cuando corresponde."
+        "Caso Fagor Ref 4613: implementacion de cuña Williams declarada como clean point en cavity 034_6, pero sin evidencia robusta de que el cambio se valido en todas las cavidades afectadas."
       ],
       "preguntas_de_contraste": [
-        "En los últimos 12 meses, ¿qué cambios implementasteis en este proceso de fundición: nuevo proveedor de arena, cambio en parámetros de temperatura, nuevo molde o modificación de utillaje?"
+        "En los ultimos 12 meses, que cambios implementasteis en este proceso de fundicion: nuevo proveedor de arena, modificacion de molde, cambio de parametros? Enseñadme la notificacion de cambio y la evaluacion de riesgos de cada uno."
       ]
     },
     "P6.2": {
@@ -659,81 +570,73 @@
     },
     "P6.2.1": {
       "que_pedir": [
-        "Plan de control de producción vigente, alineado con la última revisión del PFMEA, disponible físicamente en el área de producción y en la versión actualizada; personal clave conoce su contenido y lo aplica.",
-        "Evidencia de que los controles del plan se ejecutan en planta: registros de los últimos lotes con mediciones, firmas, reacciones ante valores fuera de límite documentadas y disposición del lote afectado.",
-        "Auditorías de cumplimiento del plan de control realizadas periódicamente, con hallazgos documentados, acciones implementadas y seguimiento de cierre verificado."
+        "Los controles definidos en el CP se ejecutan en planta: parametros, frecuencias, metodos de registro, planes de reaccion."
       ],
       "que_espero_ver": [
         "Plan de control alineado con PFMEA y con los documentos de puesto."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme el Plan de Control de esta referencia; ahora llevadme al taller y enseñadme cómo se ejecuta realmente: frecuencias, registros, planes de reacción visibles en el puesto."
+        "Enseñadme el Plan de Control de esta referencia. Ahora llevadme al taller y enseñadme como se ejecuta realmente cada control. Donde estan los registros?"
       ],
       "red_flags": [
-        "Frecuencias de control indefinidas ('X piezas por turno' sin especificar cuándo): el operario puede concentrar todas las mediciones al final del turno con registros perfectos pero sin control real.",
-        "La columna 'Método de control' del CP indica el sistema de registro (SAP, Excel) en lugar del método de medición real: ambos conceptos son distintos."
+        "'5 piezas por turno' sin especificar cuando. El operario puede medir las 5 los ultimos 10 minutos del turno y técnicamente cumple. La frecuencia tiene que definir el intervalo: '1 pieza cada 90 minutos' o '5 piezas al inicio de turno'. Sin intervalo, pierdes la capacidad de detectar deriva a tiempo.",
+        "Columna 'Control Method' del CP dice 'SAP' — eso es el sistema de registro, no el metodo de control. El metodo es 'calibre pasa/no-pasa', 'CMM', 'visual segun catalogo de defectos'."
+      ],
+      "tips": [
+        "Para controles por variable (diametro, rugosidad): deben estar registrados y ser evaluables (SPC o registro numerico). Para controles visuales (OK/NOK): minimo un check firmado por operario con turno/fecha. Sin registro, no hay evidencia de que el control se ejecuto."
       ]
     },
     "P6.2.2": {
       "que_pedir": [
-        "Criterios escritos y disponibles en puesto para first-off, last-off y liberación tras cambio de turno o setup, con autoridad nominal para liberar y registro de las últimas liberaciones ejecutadas.",
-        "Proceso de retención de lote cuando el first-off no es conforme, con ejemplo documentado de cómo se manejó: quién decidió, qué análisis se realizó y cómo se liberó o rechazó el lote.",
-        "Proceso de reacción definido ante fallo en la liberación de proceso: quién decide la retención del lote, qué análisis se realiza y quién autoriza la liberación condicionada o el rechazo."
+        "Despues de parada, cambio de turno, cambio de herramienta, mantenimiento o interrupcion, se re-valida el proceso antes de reanudar produccion."
       ],
       "que_espero_ver": [
         "La liberacion la hace personal autorizado con criterio objetivo."
       ],
       "preguntas_de_contraste": [
-        "Después de un cambio de molde, de turno o de herramienta, ¿qué re-validación hacéis antes de reanudar producción? Enseñadme el último first-off aprobado."
-      ]
+        "Despues de un cambio de molde o de turno, que re-validacion haceis antes de reanudar produccion? Enseñadme el registro de inspeccion de primera pieza del ultimo cambio."
+      ],
+      "red_flags": []
     },
     "P6.2.3": {
       "que_pedir": [
-        "Mapa de características especiales con punto de control asignado, método de medición, frecuencia de verificación y criterio de reacción por etapa; la característica se controla donde se genera, no en una etapa posterior.",
-        "Evidencia de control en ejecución: cartas SPC activas con límites definidos o registro de poka-yoke funcional para cada característica especial; resultado de la última MSA y Cpk con fecha y tamaño de muestra conformes.",
-        "Proceso de reacción cuando una característica especial sale fuera de control: parada de proceso, bloqueo del lote, análisis de causa y criterio para liberación condicionada o rechazo del lote afectado."
+        "Las CC/SC estan identificadas, comunicadas a operarios, con controles especificos y planes de reaccion definidos."
       ],
       "que_espero_ver": [
         "Las especiales no se dejan para una etapa posterior sin justificacion tecnica."
       ],
       "red_flags": [
-        "Caracteristica especial controlada tarde o con metodo debil.",
-        "El CP contiene dos o más símbolos de CC/SC sin leyenda: el operario no sabe qué se le exige para cada uno y no puede diferenciar los controles asociados."
+        "Si el CP tiene dos simbolos de CC sin leyenda, el operario no sabe que se le exige para cada uno. Sin leyenda = no auditable. Si ademas los operarios no saben que significa el simbolo, sube de NC menor a NC mayor.",
+        "Disc clearance no tratado como 'S' characteristic en PFMEA/CP. Caso Draxton: Boris pidio evidencia de que disc clearance estaba como CC en su documentacion — no la tenian."
       ],
       "preguntas_de_contraste": [
-        "Señalad cualquier característica especial en esta pieza; ahora preguntemos al operario: ¿qué significa ese símbolo y qué hace de manera diferente en este puesto?"
+        "Señalad cualquier caracteristica especial en esta pieza. Ahora preguntemos al operario: que significa este simbolo, que te exige, y que haces si la medida esta fuera de tolerancia?"
       ]
     },
     "P6.2.4": {
       "que_pedir": [
-        "Sistema físico y documental de segregación de piezas NOK por etapa: zona de cuarentena identificada con barrera física, acceso controlado y registro en sistema; material rechazado nunca ubicado en zona de material conforme.",
-        "Proceso de autorización de retrabajo con criterios técnicos definidos, responsable nominal y reinspección obligatoria tras el retrabajo con registro del resultado; retrabajo no autorizado sin aprobación documentada.",
-        "Proceso claro ante lote sospechoso en campo o en proceso: bloqueo inmediato, decisión de disposición (retrabajo, desguace, devolución), notificación al cliente si el lote ya fue expedido y registro de la investigación."
+        "Las piezas NOK estan bloqueadas, identificadas, segregadas. No hay riesgo de mezcla. El reproceso esta definido y trazado."
       ],
       "que_espero_ver": [
         "NOK fisica y sistemicamente bloqueado."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme la zona de piezas NOK: ¿cómo aseguráis que una pieza rechazada no puede volver accidentalmente al flujo de producción?"
+        "Enseñadme la zona de piezas NOK. Como asegurais que una pieza rechazada no pueda volver accidentalmente al flujo de produccion? Cual es la barrera fisica?"
       ],
       "red_flags": [
-        "Piezas caídas al suelo o fuera del flujo reintroducidas sin criterio de aceptación ni decisión documentada: cualquier pieza que salga del flujo definido no puede volver sin inspección explícita."
+        "Caso CyC: pistones caidos de la linea reintroducidos sin inspeccion. Si una pieza sale del flujo, no puede volver sin re-inspeccion documentada. Sin barrera fisica (contenedor rojo cerrado, poka-yoke de retorno), es solo una cuestion de tiempo antes de que una pieza NOK se cuele."
       ]
     },
     "P6.2.5": {
       "que_pedir": [
-        "Identificación inequívoca de piezas, lotes y revisiones en cada punto del flujo; barreras físicas (conectores únicos, geometrías distintas) o de sistema (escaneo de código de barras, validación electrónica) en puntos de riesgo de mezcla.",
-        "Solo un lote o referencia a la vez en cada estación crítica; proceso de preparación de cambio de referencia (limpieza de zona, retirada de material anterior) documentado y seguido por el personal.",
-        "Proceso de reacción ante sospecha de mezcla: quién decide el bloqueo, cómo se reinspeccionan los lotes afectados, qué evidencia se genera de la investigación y cómo se libera o rechaza el material."
+        "No hay riesgo de mezcla de materiales, referencias, estados de inspeccion, o cavidades."
       ],
       "que_espero_ver": [
         "El flujo visual y de sistema evita mezclar bruto, semiterminado y terminado."
       ],
-      "red_flags": [
-        "Mezcla potencial de lotes o estados en transferencias internas."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "Si producís referencias similares en líneas adyacentes, ¿cómo evitáis que una pieza de una referencia acabe en el contenedor de la otra?"
+        "Producis pinza derecha y pinza izquierda en lineas adyacentes. Como evitais que una pieza izquierda acabe en un contenedor de derechas?"
       ]
     },
     "P6.3": {
@@ -751,48 +654,45 @@
     },
     "P6.3.1": {
       "que_pedir": [
-        "Matriz de cualificación con nivel por persona y operación crítica, verificada mediante formación documentada, práctica supervisada o certificación; proceso de recualificación tras cambios de proceso, larga ausencia o cambio de puesto.",
-        "Registro de formaciones completadas y fecha de última actualización, con énfasis en operaciones de mayor impacto en calidad y en cambios recientes de proceso o producto.",
-        "Proceso de incorporación de personal nuevo o polivalente a operaciones críticas: formación específica, período de supervisión y criterio de aptitud antes de operar de forma autónoma sin supervisión."
+        "Cada puesto tiene perfil de requisitos. Los empleados estan cualificados y formados. La formacion esta documentada. Aplica a temporales."
       ],
       "que_espero_ver": [
         "Competencia demostrada y actualizada tras cambios."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme la matriz de formación: ¿cada operario del turno actual está cualificado para su puesto, incluyendo la inspección de características especiales?"
+        "Enseñadme la matriz de formacion. Cada operario del turno actual esta cualificado para su puesto, incluyendo inspeccion de recepcion? Enseñadme el registro de formacion del operario mas nuevo."
       ],
       "red_flags": [
-        "Operarios de inspección visual sin formación documentada en criterios de aceptación: si el operario no puede explicar los criterios, es hallazgo aunque la matriz diga que está formado.",
-        "Pregunta directamente al operario, no al responsable de calidad: la diferencia entre lo que dice la matriz y lo que sabe el operario define el hallazgo real."
+        "Caso CyC: operarios de inspeccion visual sin formacion documentada en criterios de aceptacion. Si no saben diferenciar un poro aceptable de uno NOK, el control visual es decorativo."
+      ],
+      "tips": [
+        "Pregunta al operario directamente, no al responsable de calidad. Si el operario no sabe explicar los criterios de aceptacion de la pieza que esta inspeccionando, es hallazgo aunque la matriz diga que esta formado."
       ]
     },
     "P6.3.2": {
       "que_pedir": [
-        "Documento o instrucción que define quién puede parar la producción, bloquear un lote, liberar material y escalar un problema en cada etapa del proceso, con nombres o roles nominales y sin ambigüedad.",
-        "Evidencia de que los operarios conocen y ejercen su autoridad: registros de paradas o bloqueos iniciados por personal de línea, con proceso de notificación y reacción del soporte documentado.",
-        "Proceso de escalación cuando el operario activa parada o bloqueo: a quién se notifica, en cuánto tiempo responde el soporte, cómo se documenta la decisión tomada y quién autoriza la reanudación."
+        "Los operarios saben que hacer si detectan un defecto, conocen las consecuencias de un error, y tienen autoridad para parar la linea."
       ],
       "que_espero_ver": [
         "El personal sabe que puede parar y cuando debe hacerlo."
       ],
       "preguntas_de_contraste": [
-        "Si detectas un defecto ahora mismo, ¿cuál es tu reacción inmediata? ¿A quién informas? ¿Puedes parar la línea por tu cuenta?"
-      ]
+        "Si detectas un defecto ahora mismo, cual es tu reaccion inmediata? A quien informas? Puedes parar la linea por tu propia autoridad?"
+      ],
+      "red_flags": []
     },
     "P6.3.3": {
       "que_pedir": [
-        "Plan de turnos con cobertura mínima de personal cualificado para cada operación crítica, incluyendo noches, fines de semana y períodos de vacaciones; sustitutos identificados con cualificación verificada.",
-        "Dotación de personal evaluada como suficiente: ningún operario realiza el trabajo de dos puestos en operaciones críticas; proceso documentado para gestionar ausencias sin comprometer los controles de calidad.",
-        "Registro de incidencias recientes por falta de cobertura y cómo se resolvieron sin relajar los controles de calidad; plan de polivalencia actualizado como base de la gestión de sustituciones."
+        "Hay suficiente personal para cubrir turnos, vacaciones, ausencias, sin comprometer la calidad."
       ],
       "que_espero_ver": [
         "No hay huecos operativos en turnos o fines de semana."
       ],
       "preguntas_de_contraste": [
-        "¿Qué pasa cuando un inspector visual llama enfermo? ¿Quién lo cubre? ¿Esa persona está cualificada específicamente para ese puesto y esa referencia?"
+        "Que pasa cuando uno de vuestros inspectores visuales llama para decir que esta enfermo? Quien cubre? Esa persona de respaldo esta formada en estas piezas concretas?"
       ],
       "red_flags": [
-        "En fundiciones con plantilla ajustada, la baja de un inspector visual significa que otro operario 'cubre' sin formación específica en criterios de aceptación de esa referencia."
+        "En fundiciones con plantilla justa, la baja de un inspector visual significa que otro operario 'cubre' sin formacion especifica. El control desaparece sin que nadie lo note."
       ]
     },
     "P6.4": {
@@ -810,77 +710,76 @@
     },
     "P6.4.1": {
       "que_pedir": [
-        "Lista de equipos de fabricación por etapa con parámetros de proceso y tolerancias admisibles; evidencia de que cada equipo tiene la capacidad técnica (precisión, repetibilidad) para las características del producto: estudio Cpk o validación de equipo.",
-        "Proceso de evaluación periódica de la capacidad de equipos: indicadores de deriva definidos, límites de intervención y acciones ante pérdida de capacidad; historial sin defectos atribuibles a limitación de máquina.",
-        "Resultado de la última validación o calificación del equipo para la referencia auditada, con fecha, tamaño de muestra y criterio de aceptación cumplido."
+        "Maquinas, moldes, utillaje capaces de producir piezas conformes. Capacidad demostrada."
       ],
       "que_espero_ver": [
         "El equipo adecuado esta asignado a la pieza correcta y a la revision correcta."
       ],
       "preguntas_de_contraste": [
-        "¿Cuál es el Cpk actual de la dimensión más crítica de esta referencia? ¿Cuándo se hizo el último estudio de capacidad y con qué condiciones de proceso?"
+        "Cual es el Cpk actual de la dimension mas critica de esta pinza? Cuando se hizo el ultimo estudio de capacidad y sobre cuantas piezas?"
       ],
       "red_flags": [
-        "Canales de enfriamiento del molde obstruidos o estado de utillaje degradado sin correlación documentada con la variación de Cpk o con la aparición de defectos."
+        "Caso fundicion: los canales de enfriamiento del molde estan obstruidos, la temperatura de colada varia, y nadie ha hecho un estudio de capacidad real en la ultima referencia. Tienen un Cpk de hace 3 años con un molde que ha tenido 2 reparaciones desde entonces."
       ]
     },
     "P6.4.2": {
       "que_pedir": [
-        "Plan de mantenimiento preventivo y predictivo para equipos críticos con estado de cumplimiento de los últimos tres meses; periodicidades respetadas y tareas registradas con firma del técnico ejecutor.",
-        "Registro de averías recientes en equipos críticos: tiempo de respuesta, impacto en lote afectado, análisis de causa raíz realizado y medida implementada para evitar recurrencia documentada.",
-        "Control del desgaste de útiles y herramientas críticas: criterio de vida útil (número de piezas o ciclos) definido, seguimiento activo y evidencia de reposición antes de que el desgaste afecte a la calidad del lote."
+        "Existe plan de mantenimiento preventivo para moldes, maquinas, lineas. Se registran intervenciones. El desgaste de moldes se monitoriza."
       ],
       "que_espero_ver": [
         "Desgaste y averias controlados antes de afectar al lote."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme el plan de mantenimiento preventivo del molde principal: ¿cuántos golpes ha producido? ¿Cuál es el umbral de cambio de inserto o desgaste crítico?"
+        "Enseñadme el plan de mantenimiento preventivo del molde #X. Cuantos golpes ha producido? Cual es el umbral de reemplazo? Cuando fue la ultima intervencion de mantenimiento?"
       ],
       "red_flags": [
-        "Defectos recurrentes (rebabas, marcas, variación dimensional) sin plan de reemplazo de desgaste vinculado: el mantenimiento responde al defecto, no lo previene."
+        "Caso Draxton: rebabas trimestrales recurrentes. La pregunta es si el die de desbarbado tiene un plan de reemplazo preventivo basado en numero de golpes/horas, o si solo se cambia cuando ya es demasiado tarde."
+      ],
+      "tips": [
+        "Pide registros de mantenimiento de los ultimos 6 meses. Si solo hay correctivos y ningun preventivo, el programa de mantenimiento es reactivo — hallazgo directo."
       ]
     },
     "P6.4.3": {
       "que_pedir": [
-        "Listado de equipos de medición críticos con estado de calibración, fecha de vencimiento y responsable; todos los equipos en uso tienen calibración vigente verificable con certificado o etiqueta.",
-        "Resultados de MSA (R&R, sesgo y linealidad si aplican) para los métodos de inspección de características especiales, con valores conformes al criterio acordado; MSA repetida si el proceso o instrumento cambia.",
-        "Proceso de reacción cuando un equipo pierde calibración o falla un estudio MSA: bloqueo de mediciones realizadas con el equipo afectado, evaluación de lotes desde la última calibración válida y recalibración con evidencia."
+        "Los equipos de medicion son adecuados, calibrados, y con MSA validado para las caracteristicas que miden."
       ],
       "que_espero_ver": [
         "El medio de medicion es valido para liberar lote."
       ],
       "preguntas_de_contraste": [
-        "Para el calibre o equipo de inspección de la característica más crítica: ¿cuándo fue la última calibración? ¿Hay un estudio MSA (GRR) hecho con los operarios reales de este puesto?"
+        "El calibre que usais para verificar el paso de disco: cuando fue la ultima calibracion? Hay un estudio MSA (Gage R&R)? Cual fue el resultado?"
       ],
       "red_flags": [
-        "Sistema de visión o discriminación automática implantado sin poder definir el umbral fiable entre aceptable y rechazable: la inspección automática da una falsa sensación de control."
+        "Caso CyC: sistema de vision (SVI) para detectar rayas en pistones, pero no pueden definir umbral fiable entre revisable y scrap. Si el sistema no distingue OK de NOK de forma fiable, todo lo dudoso deberia ir a scrap."
+      ],
+      "tips": [
+        "Pide ver el calibre fisicamente. Pregunta que pasa si el calibre no esta disponible (averia, calibracion). El plan de reaccion tiene que estar en el CP."
       ]
     },
     "P6.4.4": {
       "que_pedir": [
-        "Condiciones de puesto definidas y verificadas: iluminación adecuada en zonas de inspección visual, orden y limpieza (5S), ergonomía, protección antiestática donde aplica, accesibilidad de piezas sin riesgo de daño.",
-        "Evidencia de auditoría de puesto realizada: fecha, hallazgos, acciones correctivas implementadas y próxima revisión programada; proceso para que el operario reporte y se resuelvan deficiencias que puedan afectar la calidad.",
-        "Requisitos ambientales especiales (temperatura, humedad, limpieza de sala de metrología) definidos, medidos y registrados donde aplique; cumplimiento verificable con registros de condiciones."
+        "Iluminacion adecuada, ergonomia, limpieza, condiciones ambientales (temperatura, polvo, vibracion)."
       ],
       "que_espero_ver": [
         "Las condiciones del puesto protegen la pieza segun su estado."
       ],
       "preguntas_de_contraste": [
-        "¿La estación de inspección visual tiene iluminación controlada? ¿Cuál es el nivel de lux? ¿Hay política de rotación de operarios para evitar fatiga visual?"
+        "La estacion de inspeccion visual tiene iluminacion controlada? Cual es el nivel de lux? Hay una politica de rotacion de inspectores para prevenir fatiga?"
       ],
-      "red_flags": [
-        "Iluminación de la estación de inspección visual igual a la del taller general: para defectos superficiales en fundición, la iluminación no controlada hace la inspección ineficaz."
+      "red_flags": [],
+      "tips": [
+        "Si la iluminacion de la estacion de inspeccion visual es la misma que la del taller, no es controlada. Para piezas de fundicion donde detectas defectos por sombra/contraste, la iluminacion es critica."
       ]
     },
     "P6.4.5": {
       "que_pedir": [
-        "Inventario de útiles, galgas y equipos críticos con ubicación, estado, revisión vigente identificada y obsoletos retirados del punto de uso; proceso de retirada inmediata de versiones obsoletas documentado.",
-        "Sistema de identificación que permite saber en todo momento qué revisión de útil o galga está en uso; proceso de control de préstamo, uso y devolución con registro de incidencias por uso indebido.",
-        "Condiciones de almacenamiento de útiles y herramientas: racks identificados, calibres en estuches protectores, protección contra corrosión y daño mecánico; revisión del estado al devolver al almacén."
+        "Los moldes inactivos se almacenan protegidos. Los calibres se guardan en condiciones controladas."
       ],
       "que_espero_ver": [
         "Utiles correctos, identificados y protegidos frente a uso indebido."
-      ]
+      ],
+      "preguntas_de_contraste": [],
+      "red_flags": []
     },
     "P6.5": {
       "que_pedir": [
@@ -897,63 +796,59 @@
     },
     "P6.5.1": {
       "que_pedir": [
-        "Objetivos cuantitativos definidos por etapa del proceso (scrap, defectología específica, Cpk, FPY, productividad) con referencia al requisito del cliente o a la característica especial asociada; objetivos actualizados cuando cambia el contexto.",
-        "Proceso de revisión periódica de objetivos con responsable y evidencia de la última revisión: resultados reales vs meta, análisis de brecha si no se cumple y plan de acción definido.",
-        "Objetivos comunicados y visibles para el personal de producción: paneles en planta con meta vs actual, o sistema equivalente que el operario conoce y puede consultar en su área de trabajo."
+        "Existen targets de OEE, ppm interno, scrap rate, productividad. Se monitorizan y actuan."
       ],
       "que_espero_ver": [
         "Objetivos ligados a requisitos cliente y caracteristicas especiales."
       ],
       "preguntas_de_contraste": [
-        "¿Cuáles son los objetivos actuales de PPM interno y tasa de scrap en esta referencia? ¿Cómo estáis respecto al objetivo y qué acción hay si se supera?"
-      ]
+        "Cuales son vuestros objetivos actuales de PPM interno y tasa de scrap en esta referencia? Como estais respecto a esos objetivos?"
+      ],
+      "red_flags": []
     },
     "P6.5.2": {
       "que_pedir": [
-        "Sistema de recopilación de datos de proceso y producto en cada etapa: scrap por código de defecto, productividad, paros y tiempo de ciclo, con frecuencia definida y registros accesibles para análisis.",
-        "Análisis de tendencias con umbral de alerta definido y responsable de actuar; evidencia de que tendencias negativas detectadas en datos generaron acciones correctivas antes de afectar al cliente.",
-        "Datos disponibles para análisis cruzado (relación parámetro de proceso-defecto, lote de material-scrap, turno-productividad) como base para mejora de proceso; herramienta o sistema de análisis utilizado regularmente."
+        "Los datos se registran, son evaluables (SPC, graficos de control), y se analizan para detectar tendencias."
       ],
       "que_espero_ver": [
         "Tendencias y no conformidades visibles antes de afectar al cliente."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme gráficos SPC de las dimensiones principales de esta referencia: ¿están en control? ¿Cuándo fue el último punto fuera de límites y qué acción se tomó?"
+        "Enseñadme graficos SPC de las dimensiones principales de fundicion. Estan en control? Cuando fue el ultimo punto fuera de control y cual fue la reaccion?"
       ],
       "red_flags": [
-        "Gráficos de control con puntos fuera de límites sin reacción documentada; o los gráficos existen pero nadie los consulta para decisiones de producción."
+        "Tienen graficos de control pero con puntos fuera de limites sin reaccion documentada. O los graficos existen pero nadie los mira — 'control charts decorativos'. Si hay puntos OOC sin reaccion, es hallazgo P6.5.2 y conecta con P6.5.3."
       ]
     },
     "P6.5.3": {
       "que_pedir": [
-        "Metodología documentada de análisis de causa raíz (8D, Ishikawa, 5-Por qué) con ejemplo de aplicación real reciente: causa identificada, acción implementada, fecha de cierre y verificación de eficacia con datos.",
-        "PFMEA y plan de control actualizados tras las acciones correctivas de mayor impacto; cero reincidencia del problema analizado o evidencia de mejora sostenida verificada con datos posteriores al cierre del 8D.",
-        "Proceso para escalar al cliente o a ingeniería cuando el análisis revela un riesgo de campo o una necesidad de cambio de diseño/proceso significativa, con evidencia de que esta escalación se realizó cuando correspondió."
+        "Cuando se detecta un defecto, se analiza la causa, se implementan acciones correctivas y se verifica eficacia. Los errores repetidos requieren analisis mas profundo."
       ],
       "que_espero_ver": [
         "La causa raiz identifica tambien la etapa exacta donde nacio el defecto."
       ],
       "red_flags": [
-        "Causa raiz generica sin localizar el origen real.",
-        "Causa raíz identificada como 'error humano' sin acción sistémica (poka-yoke o cambio de proceso): si el error se repite, 'formación adicional' no es acción correctiva.",
-        "8Ds anteriores con el mismo defecto que cambian la causa raíz en cada iteración: señal de que no se entiende el proceso ni se verifica la eficacia real."
+        "Causa raiz = 'error humano' sin accion sistemica (poka-yoke). Si el error se repite, 'formacion adicional' no es suficiente como accion correctiva. Caso CyC: Ishikawa de marzo dice 'instructions clear but not fulfilled', Ishikawa de julio dice 'no instructions'. Contradiccion flagrante.",
+        "El 8D de un defecto anterior dice 'practically eliminated'. Para defectos con historial de reclamacion del cliente, zero tolerance — 'prácticamente eliminado' no es aceptable."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme el último informe de no conformidad interna de esta referencia: ¿cuál fue el análisis de causa raíz? ¿Cómo verificasteis que la acción correctiva funcionó?"
+        "Enseñadme el ultimo informe de no conformidad interna de esta referencia. Cual fue el analisis de causa raiz? Que accion correctiva se tomo? Y como verificasteis que fue eficaz?"
+      ],
+      "tips": [
+        "Compara 8Ds de diferentes fechas para el mismo defecto. Si las causas raiz cambian pero el defecto persiste, no entendieron el problema."
       ]
     },
     "P6.5.4": {
       "que_pedir": [
-        "Plan anual de auditorías de proceso (auto-auditorías VDA 6.3, auditorías de piso por supervisores) y de producto (auditorías de producto final aleatorias) con estado de ejecución y cobertura de todas las líneas y turnos.",
-        "Informes de las últimas auditorías con hallazgos, nivel de criticidad y acciones asociadas con responsable y fecha; seguimiento de cierre verificado por evidencia, no solo por plazo de vencimiento.",
-        "Gerencia o supervisores realizan recorridos regulares (gemba walks) con observaciones registradas y mejoras derivadas documentadas; cultura de autoevaluación continua visible en la dinámica diaria del equipo."
+        "Programa de auditorias internas (proceso y producto). Si se detectan NC, se analizan causas y se actua."
       ],
       "que_espero_ver": [
         "Las auditorias detectan riesgos de proceso y no solo incumplimientos documentales."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme vuestro calendario de auditorías internas de proceso y producto: ¿cuándo fue la última auditoría en esta línea y qué hallazgos tuvo?"
-      ]
+        "Enseñadme vuestro calendario de auditorias internas. Cuando fue la ultima auditoria de proceso en esta linea de fundicion? Que hallazgos produjo y estan cerrados?"
+      ],
+      "red_flags": []
     },
     "P6.6": {
       "que_pedir": [
@@ -970,55 +865,51 @@
     },
     "P6.6.1": {
       "que_pedir": [
-        "Criterios documentados de paso al siguiente proceso o a expedición: lote en estado aprobado, cantidad correcta, trazabilidad completa, documentación de inspección firmada y liberación de Calidad otorgada.",
-        "Evidencia de que ningún lote avanza sin cumplir los criterios de paso: registro de lotes retenidos o bloqueados por criterio incumplido, con decisión documentada sobre su disposición final.",
-        "Proceso de reacción cuando un lote llega a la siguiente etapa con documentación o estado incompleto: quién decide la retención, cómo se resuelve y quién autoriza la continuación o el rechazo."
+        "Los productos se dirigen a almacenamiento/siguiente proceso con medios adecuados. FIFO. Estado de inspeccion visible."
       ],
       "que_espero_ver": [
         "No se empuja lote solo por liberar espacio o por urgencia."
-      ]
+      ],
+      "preguntas_de_contraste": [],
+      "red_flags": []
     },
     "P6.6.2": {
       "que_pedir": [
-        "Especificación de embalaje por estado y destino (WIP interno, almacén a largo plazo, expedición al cliente) validada y cumplida; embalaje final aprobado por el cliente o verificado mediante ensayo documentado.",
-        "Producto terminado almacenado en condiciones adecuadas: protección mecánica, condiciones ambientales correctas, separación entre lotes y estados, rotación FIFO garantizada y sin piezas dañadas en almacén.",
-        "Proceso de inspección de embalaje antes de expedición con registro de las últimas verificaciones; ninguna pieza sale con embalaje dañado o no conforme al acuerdo con el cliente."
+        "El embalaje protege las piezas. Los contenedores son adecuados para las caracteristicas especiales (sin golpes, sin oxidacion)."
       ],
       "que_espero_ver": [
         "La proteccion final evita dano, corrosion o contaminacion."
       ],
       "preguntas_de_contraste": [
-        "Enseñadme cómo embálaís las piezas terminadas de fundición: ¿qué protección hay contra daños en las zonas críticas durante el transporte hasta el cliente?"
+        "Enseñadme como embalais las piezas terminadas de fundicion. Que proteccion hay contra daños durante el transporte a Astemo?"
       ],
-      "red_flags": [
-        "Embalaje que no protege las zonas funcionales críticas de la pieza: daños en transporte que el proveedor no imputa a su PPM porque ocurren fuera de planta."
+      "red_flags": [],
+      "tips": [
+        "Caso MAT Breyden: disputa de packaging donde piezas llegaban dañadas. El embalaje tiene que proteger las zonas criticas (paso disco, zona hidraulica). Si la pieza se mueve dentro del contenedor, va a llegar con marcas."
       ]
     },
     "P6.6.3": {
       "que_pedir": [
-        "Política de retención de registros con tiempo mínimo por tipo de registro y soporte (papel, electrónico); proceso de archivo accesible que permite recuperar el historial completo de un lote específico en tiempo razonable.",
-        "Demostración práctica: recuperar el historial completo (parámetros de proceso, lotes de material, registros de inspección, liberación) de un lote enviado al cliente en los últimos meses sin dificultad.",
-        "Proceso de gestión de registros ante cambio de sistema, traslado o cierre de proyecto: cómo se asegura que no se pierda la trazabilidad requerida durante toda la vida útil del producto."
+        "Los registros de inspeccion, liberacion y trazabilidad se archivan segun requisitos del cliente."
       ],
       "que_espero_ver": [
         "El historico del lote es recuperable y legible."
-      ]
+      ],
+      "preguntas_de_contraste": [],
+      "red_flags": []
     },
     "P6.6.4": {
       "que_pedir": [
-        "Lista de requisitos del cliente en la entrega final (etiquetado, embalaje, documentación de conformidad, trazabilidad, ASN, cantidades exactas) verificada antes de cada expedición y registrada.",
-        "Proceso de liberación final antes de despacho: responsable de Calidad revisa y aprueba con evidencia (checklist firmado o validación en sistema); ningún lote sale sin esta aprobación formal.",
-        "Indicadores de cumplimiento de requisitos de entrega al cliente (PPM externo, reclamos de logística, entregas fuera de plazo) con tendencia reciente y acciones correctivas definidas si no se cumplen los objetivos."
+        "Los requisitos de calidad, etiquetado, embalaje y entrega del cliente se cumplen. La performance se monitoriza."
       ],
       "que_espero_ver": [
         "La entrega final refleja el mismo control que se exige internamente."
       ],
       "red_flags": [
-        "Requisitos finales de cliente tratados como chequeo de expedicion y no como parte del proceso.",
-        "Declaran 0 PPM hacia el cliente pero no contabilizan los defectos detectados en incoming del cliente como PPM propios: cruzar con el dato real del cliente."
+        "Dicen '0 PPM' pero es porque no contabilizan los defectos detectados en incoming Astemo como PPM propios. Cruzar con los datos de HLP."
       ],
       "preguntas_de_contraste": [
-        "¿Cuál es vuestro PPM actual hacia el cliente en los últimos 12 meses? Enseñadme la tendencia. ¿Cuándo fue la última auditoría de producto saliente?"
+        "Cual es vuestro PPM actual hacia Astemo en los ultimos 12 meses? Enseñadme la tendencia. Y cuando fue la ultima parada de envios?"
       ]
     },
     "P7": {
@@ -1046,88 +937,81 @@
     },
     "P7.1": {
       "que_pedir": [
-        "Calendario de requalificaciones con estado actual de cada una: completada, en curso o pendiente.",
-        "Criterios que disparan una requalificacion: cambio de proceso, tiempo transcurrido, problema de cliente o cambio de alcance.",
-        "Resultado documentado de la ultima requalificacion con caracteristicas verificadas, resultados y aprobacion."
+        "Certificacion IATF vigente. Requalificaciones realizadas. Procesos externalizados controlados."
       ],
       "que_espero_ver": [
         "La requalificacion cubre el alcance real del proveedor."
       ],
-      "red_flags": [
-        "Conformidad asumida por inercia tras cambios de proceso.",
-        "La certificación IATF se usa como argumento de calidad en lugar de como punto de partida: 'hemos pasado IATF' no es un plan de control."
-      ],
+      "red_flags": [],
       "preguntas_de_contraste": [
-        "¿Cuándo fue vuestra última auditoría de seguimiento IATF 16949? ¿Hubo hallazgos mayores? Enseñadme vuestro plan de acción en curso."
+        "Cuando fue vuestra ultima auditoria de seguimiento IATF 16949? Hubo hallazgos mayores? Enseñadme vuestro plan de recualificacion y los ultimos resultados de ensayos de recualificacion para las referencias de Astemo."
+      ],
+      "tips": [
+        "'Hemos pasado IATF' no es un plan de control. La certificacion es condicion necesaria, no suficiente."
       ]
     },
     "P7.2": {
       "que_pedir": [
-        "Proceso de servicio al cliente con canales de comunicacion, responsables nominados y tiempos de respuesta comprometidos por tipo de incidencia.",
-        "Registro de comunicaciones activas o recientes con el cliente, incluyendo actualizaciones de portales o sistemas del cliente.",
-        "Evidencia de cumplimiento de los tiempos de respuesta comprometidos en las ultimas incidencias gestionadas."
+        "Existe interlocutor definido, comunicacion fluida, y capacidad de respuesta."
       ],
       "que_espero_ver": [
         "Respuesta rapida y trazable ante incidencias."
       ],
       "red_flags": [
-        "Datos de cliente desactualizados o respuesta tardia.",
-        "Toda la comunicación de calidad recae en una sola persona que acumula también responsabilidades de proyectos y producción: saturación que genera tiempos de respuesta inaceptables ante incidencias."
+        "Caso Fagor: tras la salida de Ander, toda la comunicacion de calidad recae en Begoña, que ya es responsable de calidad de planta. No hay backup, las respuestas en HLP se retrasan, y los tiempos de reaccion se degradan."
       ],
       "preguntas_de_contraste": [
-        "¿Quién es vuestro contacto principal para temas de calidad, entregas y temas técnicos? ¿Es la misma persona? Si esa persona deja la empresa mañana, ¿quién la sustituye?"
+        "Quien es nuestro contacto principal para temas de calidad, entregas y temas tecnicos? Es la misma persona? Si esa persona no esta disponible, quien es el backup?"
       ]
     },
     "P7.3": {
       "que_pedir": [
-        "Plan de contingencia documentado por etapa critica del proceso: que falla, que capacidad alternativa existe y en cuanto tiempo entra en operacion.",
-        "Stock de seguridad definido o proveedor alternativo identificado para los inputs criticos del proceso.",
-        "Resultado del ultimo test o simulacion de contingencia, o al menos evidencia de que el plan se ha revisado recientemente con datos reales."
+        "Plan de contingencia disponible y actualizado. Stock de seguridad definido. Procesos para emergencias establecidos."
       ],
       "que_espero_ver": [
         "Las contingencias distinguen que etapa falla y que capacidad queda operativa."
       ],
       "red_flags": [
-        "Plan teorico sin tiempos ni medios creibles.",
-        "No existe plan de contingencia o existe un documento genérico que nadie conoce en planta: la pregunta de raíz es si el riesgo de parada fue identificado en P2.6 y tiene respuesta operativa real."
+        "No hay plan de contingencia, o lo hay pero es un documento generico que nadie conoce. La pregunta de raiz: 'If this risk wasn't identified during feasibility (P3.2), how did it end up in your contingency plan? And if it was identified, where is the evidence?'"
       ],
       "preguntas_de_contraste": [
-        "Enseñadme vuestro plan de contingencia: ¿qué pasa si la línea principal de moldeo se para? ¿Si vuestro proveedor de arena tiene un problema, qué hacéis?"
+        "Enseñadme vuestro plan de contingencia: que pasa si la linea principal de moldeo se para? Si vuestro proveedor de arena no puede entregar? Cual es vuestra politica de stock de seguridad para las referencias de Astemo?"
+      ],
+      "tips": [
+        "El plan de contingencia conecta con P2.6 (riesgos del proyecto) y P6.1.1 (arranque fiable). Si no existe, hay un fallo sistemico desde la planificacion."
       ]
     },
     "P7.4": {
       "que_pedir": [
-        "Registro de las ultimas reclamaciones de cliente con estado (abierta/cerrada), fecha de apertura, tiempo de respuesta y analisis de causa documentado.",
-        "Proceso de 8D o equivalente con cierre tecnico real: causa confirmada, accion implantada y verificacion de eficacia, no solo cierre por plazo.",
-        "Evidencia de realimentacion de las lecciones aprendidas al proceso: actualizacion de PFMEA, plan de control o instrucciones tras reclamaciones."
+        "El proceso de gestion de reclamaciones funciona: 8Ds a tiempo, causa raiz real, acciones eficaces, feedback loop."
       ],
       "que_espero_ver": [
         "La causa raiz identifica la etapa exacta donde nacio el defecto."
       ],
       "red_flags": [
-        "8D cerrado por plazo y no por entendimiento tecnico.",
-        "Ishikawas o análisis de causa raíz copiados entre reclamaciones de distinta fecha con conclusiones contradictorias entre sí.",
-        "Causa raíz recurrente: 'error del operario' + 'formación adicional'; si el defecto se repitió, la acción correctiva no fue eficaz y el 8D no debió cerrarse."
+        "Caso CyC: Ishikawas copiados entre reclamaciones de distinta fecha con conclusiones contraditorias. Si el proveedor copia-pega los 8Ds, no esta analizando nada.",
+        "Causa raiz de reclamaciones anteriores: 'error del operario' + 'formacion adicional' = Si el error se repitio, la formacion no fue eficaz. Exige poka-yoke o accion sistemica."
       ],
       "preguntas_de_contraste": [
-        "¿Cuántos 8Ds abiertos tenéis actualmente con el cliente? Enseñadme los plazos de D1/D2/D8: ¿se están cumpliendo? ¿Para el último defecto cerrado, cómo demostráis que la causa raíz es real?"
+        "Cuantos 8Ds abiertos teneis actualmente con Astemo? Enseñadme los plazos de D1/D2/D8: se estan cumpliendo? Para el ultimo 8D cerrado, explicadme el analisis de causa raiz y enseñadme como verificasteis que la accion correctiva fue eficaz."
+      ],
+      "tips": [
+        "No digas 'esto esta mal'. Pregunta: 'Why did you conclude X when in your previous 8D you stated Y?' Deja que se expliquen — muchas veces se contradicen solos.",
+        "Comprueba en el portal HLP antes de ir: cuantas reclamaciones abiertas, tiempos de respuesta, si hay overdue. Lleva los datos contigo — es evidencia objetiva."
       ]
     },
     "P7.5": {
       "que_pedir": [
-        "Perfil de competencias requerido para el personal de atencion al cliente, gestion de reclamaciones y continuidad de suministro, con evidencia de cumplimiento.",
-        "Formacion documentada del personal en producto, proceso, requisitos del cliente y riesgo de seguridad del componente.",
-        "Autoridad formal para tomar decisiones de contencion, bloqueo de lote o comunicacion de shortage, con registro de quien la ejerce."
+        "El personal asignado a la relacion con el cliente esta cualificado, conoce los requisitos y los metodos de calidad (8D, Pareto, 5-Why)."
       ],
       "que_espero_ver": [
         "El personal entiende el producto, el cliente y el riesgo de seguridad."
       ],
       "red_flags": [
-        "Funcion cliente sin perfiles claros o sin capacidad tecnica minima.",
-        "No solicitan el scorecard, no conocen su PPM hacia el cliente y no tienen plan de mejora activo: si no mides tu desempeño ante el cliente, no puedes gestionarlo."
+        "No piden scorecard, no saben cual es su PPM hacia nosotros, y no tienen plan de mejora. Si no mides, no mejoras."
       ],
       "preguntas_de_contraste": [
-        "¿Solicitáis proactivamente vuestro scorecard de proveedor al cliente? Enseñadme el último recibido y qué acciones tomasteis sobre él."
+        "Solicitais proactivamente vuestro scorecard de proveedor a Astemo? Enseñadme el ultimo recibido y que acciones de mejora iniciasteis a partir de el."
       ]
     }
   }

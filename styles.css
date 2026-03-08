@@ -483,6 +483,18 @@ body {
 }
 .tab-pane-warn li { color: var(--warn); }
 
+.tab-tip { }
+.tab-tip.active {
+  color: #7a5c00;
+  border-bottom-color: #c9960a;
+  background: #fff9e6;
+}
+.tab-pane-tip {
+  border-color: #f0d87a;
+  background: #fffdf0;
+}
+.tab-pane-tip li { color: #6b4f00; }
+
 /* ── UTILITIES ──────────────────────────────────────── */
 .hidden { display: none !important; }
 

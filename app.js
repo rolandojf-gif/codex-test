@@ -13,7 +13,8 @@ const REQUIRED_FIELDS = [
   "que_espero_ver",
   "evidencias_tipicas",
   "preguntas_de_contraste",
-  "red_flags"
+  "red_flags",
+  "tips"
 ];
 
 /* ── Estado global ───────────────────────────────────── */
@@ -44,6 +45,7 @@ const el = {
   evidenciasTipicas:document.querySelector("#evidenciasTipicas"),
   preguntasContraste:document.querySelector("#preguntasContraste"),
   redFlags:         document.querySelector("#redFlags"),
+  tips:             document.querySelector("#tips"),
   // Topbar (desktop)
   productInput:     document.querySelector("#productInput"),
   processInput:     document.querySelector("#processInput"),
@@ -323,6 +325,7 @@ function render() {
   renderList("evidencias_tipicas",   effectiveGuidance.evidencias_tipicas);
   renderList("preguntas_de_contraste", effectiveGuidance.preguntas_de_contraste);
   renderList("red_flags",            effectiveGuidance.red_flags);
+  renderList("tips",                 effectiveGuidance.tips);
 
   renderAppliedRules(matchedRules);
 }
@@ -339,7 +342,8 @@ function renderList(field, items) {
     que_espero_ver:         el.queEsperoVer,
     evidencias_tipicas:     el.evidenciasTipicas,
     preguntas_de_contraste: el.preguntasContraste,
-    red_flags:              el.redFlags
+    red_flags:              el.redFlags,
+    tips:                   el.tips
   };
 
   const container = containers[field];
