@@ -258,7 +258,11 @@
           "recubrimiento",
           "pintura",
           "cataforesis",
-          "fosfatado"
+          "fosfatado",
+          "cromado",
+          "cromado duro",
+          "cromo",
+          "hard chrome"
         ]
       },
       "adjustments": {
@@ -308,8 +312,98 @@
       }
     },
     {
+      "id": "cromado_duro_freno",
+      "name": "Proceso de cromado duro para componentes de freno",
+      "when": {
+        "process_contains": [
+          "cromado",
+          "cromado duro",
+          "cromo",
+          "hard chrome"
+        ]
+      },
+      "adjustments": {
+        "*": {
+          "evidencias_tipicas": [
+            "Hoja de parametros de bano de cromo con ventanas de proceso (concentracion CrO3, temperatura, densidad de corriente) y registros de control por turno.",
+            "Plan de reaccion documentado ante desviacion de parametros de bano o fallo de equipo de inspeccion en linea."
+          ],
+          "red_flags": [
+            "Parametros del bano de cromo sin ventanas de proceso definidas o sin registro sistematico por turno.",
+            "Sistema de discriminacion o vision artificial averiado y produccion continua sin plan de reaccion documentado.",
+            "Instrucciones de proceso del cromado con fecha de revision superior a 3 anos sin justificacion."
+          ]
+        },
+        "P6.2.1": {
+          "que_pedir": [
+            "Pedir a varios operarios de la zona de cromado que expliquen verbalmente los simbolos SC/CC del plan de control y el control asociado que aplican."
+          ],
+          "red_flags": [
+            "Operarios del proceso de cromado no saben identificar ni explicar las caracteristicas especiales o de seguridad que controlan."
+          ]
+        },
+        "P6.2.3": {
+          "que_pedir": [
+            "Evidencia de como se comunican las SC/CC al personal de turno en el proceso de cromado: instruccion visible en puesto, formacion registrada, validacion de comprension."
+          ],
+          "red_flags": [
+            "Las caracteristicas especiales del cromado no estan visibles en el puesto ni verificadas en la formacion del operario."
+          ]
+        },
+        "P6.3.1": {
+          "que_pedir": [
+            "Instruccion de trabajo con el limite maximo de piezas por utillaje de colgado (bastidor, jig) y evidencia de que los operarios lo conocen y respetan.",
+            "Registro o control que detecte si un operario carga mas piezas de las permitidas por ciclo de cromado."
+          ],
+          "red_flags": [
+            "Limite de carga por utillaje de colgado no especificado en la instruccion o verificado durante la auditoria que se incumple."
+          ]
+        },
+        "P6.4.2": {
+          "que_pedir": [
+            "Plan de reaccion documentado ante fallo del sistema de discriminacion o vision en linea del proceso de cromado: quien decide parar, que lote queda bloqueado, como se reintroduce el equipo.",
+            "Registro del ultimo fallo del sistema de inspeccion y la reaccion tomada."
+          ],
+          "red_flags": [
+            "Sistema de discriminacion o vision averiado sin plan de reaccion: operario decide por su cuenta si continua o para la produccion.",
+            "Fallo de equipo de inspeccion tratado como incidencia de mantenimiento sin bloqueo automatico del lote afectado."
+          ]
+        },
+        "P6.5.4": {
+          "que_pedir": [
+            "Verificar que el LPA cubre explicitamente el proceso de cromado y no solo las lineas de mecanizado; solicitar el mapa de areas auditadas.",
+            "Confirmar que el LPA tambien cubre recepcion de materia prima para cromado y la zona de expedicion."
+          ],
+          "red_flags": [
+            "LPA que excluye el proceso de cromado, la recepcion de materiales de bano o la expedicion del producto acabado.",
+            "LPAs con frecuencia inferior a la acordada sin justificacion, o resultados OK en areas donde la auditoria detecta incumplimientos."
+          ]
+        },
+        "P6.6.3": {
+          "que_pedir": [
+            "Verificar que el sistema de vision o inspeccion del proceso de cromado almacena imagenes o resultados por pieza o lote, con trazabilidad recuperable.",
+            "Tiempo de retencion de imagenes e identificacion del lote en los registros del sistema."
+          ],
+          "red_flags": [
+            "Sistema de inspeccion en linea que no almacena imagenes ni resultados: sin trazabilidad de lo que se inspeccionó y el resultado obtenido.",
+            "Resultados de inspeccion opticos o dimensionales no vinculados al lote o numero de pieza."
+          ]
+        },
+        "P7.1": {
+          "que_pedir": [
+            "Frecuencia real de LPAs realizados en el proceso de cromado en los ultimos 3 meses frente a la frecuencia planificada.",
+            "Verificar in situ durante la auditoria si los resultados de LPA son coherentes con lo observado."
+          ],
+          "red_flags": [
+            "LPAs marcados OK en areas donde la auditoria observa incumplimientos evidentes: cuestionamiento de la fiabilidad del sistema de LPA.",
+            "Frecuencia de LPA claramente insuficiente para el riesgo del proceso de cromado, sin justificacion ni compensacion alternativa."
+          ]
+        }
+      }
+    },
+    {
       "id": "piston_hidraulico_secundario",
-      "name": "Piston hidraulico de freno turismo",
+      "name": "Piston de freno",
       "when": {
         "product_contains": ["piston", "pistón"]
       },
@@ -322,6 +416,32 @@
         "P4.3": {
           "que_pedir": [
             "Capacidad demostrada en diametro, acabado superficial, tratamiento y proteccion anticorrosion si aplica."
+          ]
+        },
+        "P6.1.4": {
+          "que_pedir": [
+            "Sistema de identificacion de palés, bandejas o contenedores de pistones en cada etapa del flujo (mecanizado, tratamiento, expedicion): etiqueta, referencia y estado del lote visible en el utillaje."
+          ],
+          "red_flags": [
+            "Palés o contenedores de pistones sin identificacion visible en alguna etapa del proceso, especialmente en zonas de tratamiento superficial."
+          ]
+        },
+        "P6.2.4": {
+          "que_pedir": [
+            "Contenedor de piezas NOK: verificar que tiene cierre fisico (tapa, precinto o candado) y etiqueta de rechazo, no solo diferenciacion por color.",
+            "Confirmar que no existe practica de reintroducir pistones caidos al suelo sin decision documentada de retrabajo o desguace."
+          ],
+          "red_flags": [
+            "Contenedor de rechazo diferenciado unicamente por color, sin cierre fisico ni etiqueta de rechazo: riesgo de mezcla con producto conforme.",
+            "Pistones caidos al suelo reintroducidos al flujo sin decision documentada ni responsable identificado."
+          ]
+        },
+        "P6.2.5": {
+          "que_pedir": [
+            "Identificacion del lote en los utillajes de transporte interno (palés, bandejas) que alimentan cada etapa del proceso del piston."
+          ],
+          "red_flags": [
+            "Utillajes de alimentacion entre procesos sin identificacion de lote: imposible reconstruir trazabilidad si aparece un defecto en proceso."
           ]
         },
         "P6.2": {
