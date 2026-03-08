@@ -34,7 +34,11 @@
         "Interlocutores y escalacion definidos tambien para procesos externalizados."
       ],
       "red_flags": [
-        "No hay dueno claro de riesgos tecnicos por etapa del proceso."
+        "No hay dueno claro de riesgos tecnicos por etapa del proceso.",
+        "El comercial acepta el proyecto y lo pasa a calidad/ingeniería sin organización formal; no hay project leader asignado o comparte rol con producción."
+      ],
+      "preguntas_de_contraste": [
+        "¿Quién es el líder de proyecto para la referencia auditada y pueden enseñarme el organigrama del equipo (incluyendo calidad, logística, producción, laboratorio)?"
       ]
     },
     "P2.2": {
@@ -47,7 +51,11 @@
         "La capacidad se calcula por operacion critica y no solo a nivel agregado."
       ],
       "red_flags": [
-        "Capacidad teorica sin evidencia para los recursos cuello de botella."
+        "Capacidad teorica sin evidencia para los recursos cuello de botella.",
+        "Aceptan proyectos nuevos sin evaluar el impacto en la capacidad de recursos clave (laboratorio, QA técnico, inspección); el plan de recursos no se actualiza ante bajas o salidas de personal crítico."
+      ],
+      "preguntas_de_contraste": [
+        "Para la última referencia nueva lanzada: ¿qué utillaje adicional, equipos de inspección y personal planificasteis? ¿Cuándo estuvo disponible todo ello?"
       ]
     },
     "P2.3": {
@@ -61,6 +69,9 @@
       ],
       "red_flags": [
         "Plan de proyecto desconectado de la realidad de utiles, laboratorio o capacidad."
+      ],
+      "preguntas_de_contraste": [
+        "¿Pueden enseñarme el cronograma del proyecto con los hitos del cliente, fechas de entrega de PPAP y evidencia de que se revisa en los gates clave?"
       ]
     },
     "P2.4": {
@@ -73,7 +84,11 @@
         "Las actividades de calidad cubren bruto, mecanizado y acabado cuando existen."
       ],
       "red_flags": [
-        "Calidad planificada como checklist, sin ligarla a riesgos reales de colada, first-off o superficie."
+        "Calidad planificada como checklist, sin ligarla a riesgos reales de colada, first-off o superficie.",
+        "El PFMEA se hizo como trámite después del SOP, no antes; o se hizo pero no se actualizó cuando hubo cambios de producto o proceso."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñenme el plan de calidad de este proyecto: ¿cuándo se completó el PFMEA, cuándo se validó el Plan de Control, cuándo se hizo la MSA de las características especiales?"
       ]
     },
     "P2.5": {
@@ -87,6 +102,9 @@
       ],
       "red_flags": [
         "Subproveedores criticos fuera del seguimiento del proyecto."
+      ],
+      "preguntas_de_contraste": [
+        "Para una nueva referencia, ¿cuándo hicisteis el pedido del molde o utillaje crítico? ¿El plazo de entrega del proveedor de moldes estaba integrado en el plan de proyecto?"
       ]
     },
     "P2.6": {
@@ -99,7 +117,11 @@
         "Cada cambio deja impacto evaluado sobre seguridad, capacidad, trazabilidad y cliente."
       ],
       "red_flags": [
-        "Cambios tratados como ajustes de planta y no como cambios de proceso."
+        "Cambios tratados como ajustes de planta y no como cambios de proceso.",
+        "Los cambios se gestionan por email o de forma verbal sin evaluación de impacto documentada; cambios implementados sin evidencia de validación ni notificación formal al cliente."
+      ],
+      "preguntas_de_contraste": [
+        "Cuando el cliente solicitó un cambio en la geometría del producto, ¿cómo evaluasteis el impacto en vuestro PFMEA, utillaje y capacidad del proceso?"
       ]
     },
     "P3": {
@@ -135,7 +157,11 @@
         "Cada requisito tiene reflejo en control de proceso, control de lote o validacion."
       ],
       "red_flags": [
-        "Caracteristicas especiales sin due owner claro o sin punto de control definido."
+        "Caracteristicas especiales sin due owner claro o sin punto de control definido.",
+        "Las CC vienen solo del plano del cliente sin análisis propio de la fundición; o el Control Plan tiene símbolos de CC sin leyenda que el operario no puede interpretar."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cómo identificasteis las características especiales (CC/SC) para esta referencia? ¿Las características de seguridad del cliente están trazadas desde el plano hasta el Control Plan?"
       ]
     },
     "P3.2": {
@@ -148,7 +174,11 @@
         "Los cuellos de botella y riesgos se conocen antes de comprometer PPAP/PPA."
       ],
       "red_flags": [
-        "Factibilidad aprobada en bloque y no por etapa del alcance real."
+        "Factibilidad aprobada en bloque y no por etapa del alcance real.",
+        "El comercial acepta el proyecto y firma 'factible' sin análisis técnico; la fundición descubre después del SOP que no puede cumplir el Cpk en la característica crítica."
+      ],
+      "preguntas_de_contraste": [
+        "Antes de aceptar esta referencia, ¿hicisteis un estudio de factibilidad formal? ¿Quién participó: solo calidad, o también producción, laboratorio y mantenimiento?"
       ]
     },
     "P3.3": {
@@ -175,6 +205,9 @@
       ],
       "red_flags": [
         "Procesos externalizados tratados como caja negra."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuándo cualificasteis al proveedor de arena, al de inoculante, al fabricante de moldes? ¿Fue planificado antes del SOP o de forma reactiva?"
       ]
     },
     "P3.5": {
@@ -201,6 +234,9 @@
       ],
       "red_flags": [
         "Soporte post-lanzamiento no definido o reducido a un 8D administrativo."
+      ],
+      "preguntas_de_contraste": [
+        "Antes del SOP, ¿planificasteis cómo gestionaríais una reclamación de campo del cliente? ¿Quién hace el análisis de causa raíz y en qué plazo?"
       ]
     },
     "P4": {
@@ -236,7 +272,11 @@
         "Los riesgos altos tienen acciones implantadas y medidas de eficacia."
       ],
       "red_flags": [
-        "Acciones cerradas sin cambio visible en proceso, util o control."
+        "Acciones cerradas sin cambio visible en proceso, util o control.",
+        "El PFMEA tiene prioridades de acción altas pero el CP no refleja controles adicionales; o el PFMEA se hizo después del SOP como trámite documental."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme cómo vuestro análisis de riesgos del PFMEA se tradujo en el Plan de Control: para los ítems con AP/RPN alto, ¿qué controles adicionales definisteis?"
       ]
     },
     "P4.2": {
@@ -263,6 +303,9 @@
       ],
       "red_flags": [
         "Recursos materiales disponibles en plan pero no en planta o no en estado valido."
+      ],
+      "preguntas_de_contraste": [
+        "Antes de la primera entrega en serie, ¿estaban todos los moldes validados, todos los calibres de inspección calibrados y la MSA realizada para las CC?"
       ]
     },
     "P4.4": {
@@ -275,7 +318,11 @@
         "Capacidad ligada a caracteristicas especiales y al alcance real del proveedor."
       ],
       "red_flags": [
-        "Datos de capacidad mezclados entre etapas distintas como si fueran equivalentes."
+        "Datos de capacidad mezclados entre etapas distintas como si fueran equivalentes.",
+        "PPAP 'aprobado' pero con waivers abiertos que nunca se cerraron; o el PPAP se aprobó con piezas de trial pero el proceso en serie usa condiciones distintas."
+      ],
+      "preguntas_de_contraste": [
+        "¿Pueden enseñarme el paquete PPAP completo de esta referencia, incluyendo la aprobación firmada del cliente? ¿Hay waivers abiertos?"
       ]
     },
     "P4.5": {
@@ -302,6 +349,9 @@
       ],
       "red_flags": [
         "Instrucciones genericas o sin parametros/reaccion en etapas criticas."
+      ],
+      "preguntas_de_contraste": [
+        "Cojamos cualquier instrucción de trabajo del taller: ¿podéis trazarla hasta la línea del PFMEA que requirió ese control específico?"
       ]
     },
     "P4.7": {
@@ -377,6 +427,9 @@
       ],
       "red_flags": [
         "Proveedor critico sin aprobacion robusta."
+      ],
+      "preguntas_de_contraste": [
+        "¿Auditáis a vuestros proveedores de materia prima (arena, inoculante, chatarra, nodularizante)? Enseñadme vuestro plan de auditorías a proveedores del último año."
       ]
     },
     "P5.2": {
@@ -390,6 +443,9 @@
       ],
       "red_flags": [
         "Comunicacion informal de requisitos a subproveedor."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cómo aseguráis que las características especiales del cliente para este componente se comunican a vuestros proveedores de materia prima crítica? ¿Lo tienen por escrito?"
       ]
     },
     "P5.3": {
@@ -403,6 +459,9 @@
       ],
       "red_flags": [
         "Problemas repetidos sin desarrollo real del proveedor."
+      ],
+      "preguntas_de_contraste": [
+        "¿Tenéis objetivos de calidad documentados (PPM, entrega a tiempo) acordados con vuestros proveedores críticos de fundición? Enseñadme el último scorecard."
       ]
     },
     "P5.4": {
@@ -415,7 +474,11 @@
         "Nada entra en serie sin release acorde al riesgo."
       ],
       "red_flags": [
-        "Cambios de proveedor o proceso usados sin release suficiente."
+        "Cambios de proveedor o proceso usados sin release suficiente.",
+        "Solo verifican la materia prima con medición propia sin solicitar documentación al proveedor; si hay un problema, no pueden rastrear el lote hasta la colada del proveedor."
+      ],
+      "preguntas_de_contraste": [
+        "Cojamos cualquier lote del almacén ahora mismo: ¿podéis enseñarme el certificado del proveedor, vuestro registro de inspección de recepción y el resultado de la verificación interna?"
       ]
     },
     "P5.5": {
@@ -429,6 +492,9 @@
       ],
       "red_flags": [
         "Se acepta por certificado lo que deberia verificarse por riesgo."
+      ],
+      "preguntas_de_contraste": [
+        "Explicadme vuestra inspección de recepción: ¿qué comprobáis, con qué frecuencia, con qué equipos? Enseñadme el último registro de recepción no conforme."
       ]
     },
     "P5.6": {
@@ -442,6 +508,9 @@
       ],
       "red_flags": [
         "Material bloqueado o sospechoso accesible para uso accidental."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme la zona de almacenamiento de arena: ¿está protegida de la humedad? ¿Cómo implementáis FIFO? ¿Qué pasa si llega un lote nuevo mientras hay stock de uno anterior?"
       ]
     },
     "P5.7": {
@@ -455,6 +524,9 @@
       ],
       "red_flags": [
         "Decisiones criticas de entrada basadas solo en experiencia informal."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme la matriz de cualificación del personal de inspección de recepción: ¿conocen los criterios de aceptación específicos de los materiales críticos de fundición?"
       ]
     },
     "P6": {
@@ -503,7 +575,11 @@
         "Arranque de serie protegido por riesgo y con pendientes controlados."
       ],
       "red_flags": [
-        "Arranque apoyado en concesiones abiertas sin barreras claras."
+        "Arranque apoyado en concesiones abiertas sin barreras claras.",
+        "Se entró en serie sin PPAP completo, o el PPAP se aprobó con waivers que nunca se cerraron; las revisiones del CP no tienen evidencia de motivación ni de formación al personal afectado."
+      ],
+      "preguntas_de_contraste": [
+        "El Plan de Control tiene varias revisiones desde el SOP: para cada revisión, ¿podéis enseñarme qué la motivó, la aprobación correspondiente y cómo se formó al personal?"
       ]
     },
     "P6.1.2": {
@@ -514,6 +590,9 @@
       ],
       "que_espero_ver": [
         "Lote correcto, cantidad correcta y punto correcto sin mezcla de estados."
+      ],
+      "preguntas_de_contraste": [
+        "¿Habéis tenido alguna falta de material en los últimos 6 meses? ¿Cuál fue vuestra contingencia? Enseñadme los niveles de stock de seguridad de arena e inoculante."
       ]
     },
     "P6.1.3": {
@@ -524,6 +603,12 @@
       ],
       "que_espero_ver": [
         "Proteccion frente a dano, contaminacion y mezcla segun la etapa."
+      ],
+      "preguntas_de_contraste": [
+        "Llevadme a la zona de almacenamiento de machos/arena: ¿humedad controlada? ¿Temperatura monitorizada? ¿Cómo evitáis la contaminación entre lotes diferentes?"
+      ],
+      "red_flags": [
+        "Almacén de arena o machos sin control de humedad ni temperatura: en fundición, la humedad de la arena es factor directo de porosidad por gas."
       ]
     },
     "P6.1.4": {
@@ -534,6 +619,12 @@
       ],
       "que_espero_ver": [
         "Estado del lote visible fisicamente y en sistema."
+      ],
+      "preguntas_de_contraste": [
+        "Cojamos un contenedor al azar de este lote de producción: ¿podéis trazarlo hasta la fecha de colada, el número de horno, el inoculante usado y el resultado de inspección?"
+      ],
+      "red_flags": [
+        "No pueden reconstruir la trazabilidad completa del lote hacia atrás: sin trazabilidad mínima no hay contención de lote posible ante una reclamación."
       ]
     },
     "P6.1.5": {
@@ -546,7 +637,11 @@
         "Cada cambio en serie deja historia y evaluacion de riesgo."
       ],
       "red_flags": [
-        "Cambios en serie sin gatillo formal de trazabilidad o revalidacion."
+        "Cambios en serie sin gatillo formal de trazabilidad o revalidacion.",
+        "Cambios de proceso implementados como 'clean point' sin evidencia de validación ni notificación formal al cliente cuando corresponde."
+      ],
+      "preguntas_de_contraste": [
+        "En los últimos 12 meses, ¿qué cambios implementasteis en este proceso de fundición: nuevo proveedor de arena, cambio en parámetros de temperatura, nuevo molde o modificación de utillaje?"
       ]
     },
     "P6.2": {
@@ -570,6 +665,13 @@
       ],
       "que_espero_ver": [
         "Plan de control alineado con PFMEA y con los documentos de puesto."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme el Plan de Control de esta referencia; ahora llevadme al taller y enseñadme cómo se ejecuta realmente: frecuencias, registros, planes de reacción visibles en el puesto."
+      ],
+      "red_flags": [
+        "Frecuencias de control indefinidas ('X piezas por turno' sin especificar cuándo): el operario puede concentrar todas las mediciones al final del turno con registros perfectos pero sin control real.",
+        "La columna 'Método de control' del CP indica el sistema de registro (SAP, Excel) en lugar del método de medición real: ambos conceptos son distintos."
       ]
     },
     "P6.2.2": {
@@ -580,6 +682,9 @@
       ],
       "que_espero_ver": [
         "La liberacion la hace personal autorizado con criterio objetivo."
+      ],
+      "preguntas_de_contraste": [
+        "Después de un cambio de molde, de turno o de herramienta, ¿qué re-validación hacéis antes de reanudar producción? Enseñadme el último first-off aprobado."
       ]
     },
     "P6.2.3": {
@@ -592,7 +697,11 @@
         "Las especiales no se dejan para una etapa posterior sin justificacion tecnica."
       ],
       "red_flags": [
-        "Caracteristica especial controlada tarde o con metodo debil."
+        "Caracteristica especial controlada tarde o con metodo debil.",
+        "El CP contiene dos o más símbolos de CC/SC sin leyenda: el operario no sabe qué se le exige para cada uno y no puede diferenciar los controles asociados."
+      ],
+      "preguntas_de_contraste": [
+        "Señalad cualquier característica especial en esta pieza; ahora preguntemos al operario: ¿qué significa ese símbolo y qué hace de manera diferente en este puesto?"
       ]
     },
     "P6.2.4": {
@@ -603,6 +712,12 @@
       ],
       "que_espero_ver": [
         "NOK fisica y sistemicamente bloqueado."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme la zona de piezas NOK: ¿cómo aseguráis que una pieza rechazada no puede volver accidentalmente al flujo de producción?"
+      ],
+      "red_flags": [
+        "Piezas caídas al suelo o fuera del flujo reintroducidas sin criterio de aceptación ni decisión documentada: cualquier pieza que salga del flujo definido no puede volver sin inspección explícita."
       ]
     },
     "P6.2.5": {
@@ -616,6 +731,9 @@
       ],
       "red_flags": [
         "Mezcla potencial de lotes o estados en transferencias internas."
+      ],
+      "preguntas_de_contraste": [
+        "Si producís referencias similares en líneas adyacentes, ¿cómo evitáis que una pieza de una referencia acabe en el contenedor de la otra?"
       ]
     },
     "P6.3": {
@@ -639,6 +757,13 @@
       ],
       "que_espero_ver": [
         "Competencia demostrada y actualizada tras cambios."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme la matriz de formación: ¿cada operario del turno actual está cualificado para su puesto, incluyendo la inspección de características especiales?"
+      ],
+      "red_flags": [
+        "Operarios de inspección visual sin formación documentada en criterios de aceptación: si el operario no puede explicar los criterios, es hallazgo aunque la matriz diga que está formado.",
+        "Pregunta directamente al operario, no al responsable de calidad: la diferencia entre lo que dice la matriz y lo que sabe el operario define el hallazgo real."
       ]
     },
     "P6.3.2": {
@@ -649,6 +774,9 @@
       ],
       "que_espero_ver": [
         "El personal sabe que puede parar y cuando debe hacerlo."
+      ],
+      "preguntas_de_contraste": [
+        "Si detectas un defecto ahora mismo, ¿cuál es tu reacción inmediata? ¿A quién informas? ¿Puedes parar la línea por tu cuenta?"
       ]
     },
     "P6.3.3": {
@@ -659,6 +787,12 @@
       ],
       "que_espero_ver": [
         "No hay huecos operativos en turnos o fines de semana."
+      ],
+      "preguntas_de_contraste": [
+        "¿Qué pasa cuando un inspector visual llama enfermo? ¿Quién lo cubre? ¿Esa persona está cualificada específicamente para ese puesto y esa referencia?"
+      ],
+      "red_flags": [
+        "En fundiciones con plantilla ajustada, la baja de un inspector visual significa que otro operario 'cubre' sin formación específica en criterios de aceptación de esa referencia."
       ]
     },
     "P6.4": {
@@ -682,6 +816,12 @@
       ],
       "que_espero_ver": [
         "El equipo adecuado esta asignado a la pieza correcta y a la revision correcta."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuál es el Cpk actual de la dimensión más crítica de esta referencia? ¿Cuándo se hizo el último estudio de capacidad y con qué condiciones de proceso?"
+      ],
+      "red_flags": [
+        "Canales de enfriamiento del molde obstruidos o estado de utillaje degradado sin correlación documentada con la variación de Cpk o con la aparición de defectos."
       ]
     },
     "P6.4.2": {
@@ -692,6 +832,12 @@
       ],
       "que_espero_ver": [
         "Desgaste y averias controlados antes de afectar al lote."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme el plan de mantenimiento preventivo del molde principal: ¿cuántos golpes ha producido? ¿Cuál es el umbral de cambio de inserto o desgaste crítico?"
+      ],
+      "red_flags": [
+        "Defectos recurrentes (rebabas, marcas, variación dimensional) sin plan de reemplazo de desgaste vinculado: el mantenimiento responde al defecto, no lo previene."
       ]
     },
     "P6.4.3": {
@@ -702,6 +848,12 @@
       ],
       "que_espero_ver": [
         "El medio de medicion es valido para liberar lote."
+      ],
+      "preguntas_de_contraste": [
+        "Para el calibre o equipo de inspección de la característica más crítica: ¿cuándo fue la última calibración? ¿Hay un estudio MSA (GRR) hecho con los operarios reales de este puesto?"
+      ],
+      "red_flags": [
+        "Sistema de visión o discriminación automática implantado sin poder definir el umbral fiable entre aceptable y rechazable: la inspección automática da una falsa sensación de control."
       ]
     },
     "P6.4.4": {
@@ -712,6 +864,12 @@
       ],
       "que_espero_ver": [
         "Las condiciones del puesto protegen la pieza segun su estado."
+      ],
+      "preguntas_de_contraste": [
+        "¿La estación de inspección visual tiene iluminación controlada? ¿Cuál es el nivel de lux? ¿Hay política de rotación de operarios para evitar fatiga visual?"
+      ],
+      "red_flags": [
+        "Iluminación de la estación de inspección visual igual a la del taller general: para defectos superficiales en fundición, la iluminación no controlada hace la inspección ineficaz."
       ]
     },
     "P6.4.5": {
@@ -745,6 +903,9 @@
       ],
       "que_espero_ver": [
         "Objetivos ligados a requisitos cliente y caracteristicas especiales."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuáles son los objetivos actuales de PPM interno y tasa de scrap en esta referencia? ¿Cómo estáis respecto al objetivo y qué acción hay si se supera?"
       ]
     },
     "P6.5.2": {
@@ -755,6 +916,12 @@
       ],
       "que_espero_ver": [
         "Tendencias y no conformidades visibles antes de afectar al cliente."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme gráficos SPC de las dimensiones principales de esta referencia: ¿están en control? ¿Cuándo fue el último punto fuera de límites y qué acción se tomó?"
+      ],
+      "red_flags": [
+        "Gráficos de control con puntos fuera de límites sin reacción documentada; o los gráficos existen pero nadie los consulta para decisiones de producción."
       ]
     },
     "P6.5.3": {
@@ -767,7 +934,12 @@
         "La causa raiz identifica tambien la etapa exacta donde nacio el defecto."
       ],
       "red_flags": [
-        "Causa raiz generica sin localizar el origen real."
+        "Causa raiz generica sin localizar el origen real.",
+        "Causa raíz identificada como 'error humano' sin acción sistémica (poka-yoke o cambio de proceso): si el error se repite, 'formación adicional' no es acción correctiva.",
+        "8Ds anteriores con el mismo defecto que cambian la causa raíz en cada iteración: señal de que no se entiende el proceso ni se verifica la eficacia real."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme el último informe de no conformidad interna de esta referencia: ¿cuál fue el análisis de causa raíz? ¿Cómo verificasteis que la acción correctiva funcionó?"
       ]
     },
     "P6.5.4": {
@@ -778,6 +950,9 @@
       ],
       "que_espero_ver": [
         "Las auditorias detectan riesgos de proceso y no solo incumplimientos documentales."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme vuestro calendario de auditorías internas de proceso y producto: ¿cuándo fue la última auditoría en esta línea y qué hallazgos tuvo?"
       ]
     },
     "P6.6": {
@@ -811,6 +986,12 @@
       ],
       "que_espero_ver": [
         "La proteccion final evita dano, corrosion o contaminacion."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme cómo embálaís las piezas terminadas de fundición: ¿qué protección hay contra daños en las zonas críticas durante el transporte hasta el cliente?"
+      ],
+      "red_flags": [
+        "Embalaje que no protege las zonas funcionales críticas de la pieza: daños en transporte que el proveedor no imputa a su PPM porque ocurren fuera de planta."
       ]
     },
     "P6.6.3": {
@@ -833,7 +1014,11 @@
         "La entrega final refleja el mismo control que se exige internamente."
       ],
       "red_flags": [
-        "Requisitos finales de cliente tratados como chequeo de expedicion y no como parte del proceso."
+        "Requisitos finales de cliente tratados como chequeo de expedicion y no como parte del proceso.",
+        "Declaran 0 PPM hacia el cliente pero no contabilizan los defectos detectados en incoming del cliente como PPM propios: cruzar con el dato real del cliente."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuál es vuestro PPM actual hacia el cliente en los últimos 12 meses? Enseñadme la tendencia. ¿Cuándo fue la última auditoría de producto saliente?"
       ]
     },
     "P7": {
@@ -869,7 +1054,11 @@
         "La requalificacion cubre el alcance real del proveedor."
       ],
       "red_flags": [
-        "Conformidad asumida por inercia tras cambios de proceso."
+        "Conformidad asumida por inercia tras cambios de proceso.",
+        "La certificación IATF se usa como argumento de calidad en lugar de como punto de partida: 'hemos pasado IATF' no es un plan de control."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuándo fue vuestra última auditoría de seguimiento IATF 16949? ¿Hubo hallazgos mayores? Enseñadme vuestro plan de acción en curso."
       ]
     },
     "P7.2": {
@@ -882,7 +1071,11 @@
         "Respuesta rapida y trazable ante incidencias."
       ],
       "red_flags": [
-        "Datos de cliente desactualizados o respuesta tardia."
+        "Datos de cliente desactualizados o respuesta tardia.",
+        "Toda la comunicación de calidad recae en una sola persona que acumula también responsabilidades de proyectos y producción: saturación que genera tiempos de respuesta inaceptables ante incidencias."
+      ],
+      "preguntas_de_contraste": [
+        "¿Quién es vuestro contacto principal para temas de calidad, entregas y temas técnicos? ¿Es la misma persona? Si esa persona deja la empresa mañana, ¿quién la sustituye?"
       ]
     },
     "P7.3": {
@@ -895,7 +1088,11 @@
         "Las contingencias distinguen que etapa falla y que capacidad queda operativa."
       ],
       "red_flags": [
-        "Plan teorico sin tiempos ni medios creibles."
+        "Plan teorico sin tiempos ni medios creibles.",
+        "No existe plan de contingencia o existe un documento genérico que nadie conoce en planta: la pregunta de raíz es si el riesgo de parada fue identificado en P2.6 y tiene respuesta operativa real."
+      ],
+      "preguntas_de_contraste": [
+        "Enseñadme vuestro plan de contingencia: ¿qué pasa si la línea principal de moldeo se para? ¿Si vuestro proveedor de arena tiene un problema, qué hacéis?"
       ]
     },
     "P7.4": {
@@ -908,7 +1105,12 @@
         "La causa raiz identifica la etapa exacta donde nacio el defecto."
       ],
       "red_flags": [
-        "8D cerrado por plazo y no por entendimiento tecnico."
+        "8D cerrado por plazo y no por entendimiento tecnico.",
+        "Ishikawas o análisis de causa raíz copiados entre reclamaciones de distinta fecha con conclusiones contradictorias entre sí.",
+        "Causa raíz recurrente: 'error del operario' + 'formación adicional'; si el defecto se repitió, la acción correctiva no fue eficaz y el 8D no debió cerrarse."
+      ],
+      "preguntas_de_contraste": [
+        "¿Cuántos 8Ds abiertos tenéis actualmente con el cliente? Enseñadme los plazos de D1/D2/D8: ¿se están cumpliendo? ¿Para el último defecto cerrado, cómo demostráis que la causa raíz es real?"
       ]
     },
     "P7.5": {
@@ -921,7 +1123,11 @@
         "El personal entiende el producto, el cliente y el riesgo de seguridad."
       ],
       "red_flags": [
-        "Funcion cliente sin perfiles claros o sin capacidad tecnica minima."
+        "Funcion cliente sin perfiles claros o sin capacidad tecnica minima.",
+        "No solicitan el scorecard, no conocen su PPM hacia el cliente y no tienen plan de mejora activo: si no mides tu desempeño ante el cliente, no puedes gestionarlo."
+      ],
+      "preguntas_de_contraste": [
+        "¿Solicitáis proactivamente vuestro scorecard de proveedor al cliente? Enseñadme el último recibido y qué acciones tomasteis sobre él."
       ]
     }
   }

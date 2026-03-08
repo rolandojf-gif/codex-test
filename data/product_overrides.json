@@ -8,6 +8,46 @@
         "product_contains": ["pinza", "caliper", "cuerpo pinza"]
       },
       "adjustments": {
+        "P2.5": {
+          "preguntas_de_contraste": [
+            "Para una nueva referencia de pinza, ¿cuándo hicisteis el pedido del molde nuevo? ¿El plazo de entrega del fabricante de moldes estaba integrado en el plan de proyecto del cliente?"
+          ]
+        },
+        "P3.2": {
+          "que_pedir": [
+            "Resultados de homologacion de zonas criticas de estanqueidad y, si aplica, de capacidad de mecanizado de alojamientos funcionales."
+          ],
+          "preguntas_de_contraste": [
+            "Durante la factibilidad, ¿evaluasteis específicamente el Cpk alcanzable en el paso de disco y en el alojamiento del pistón? ¿Con qué medios y proceso de moldeo lo garantizáis?"
+          ],
+          "red_flags": [
+            "La factibilidad no evaluó específicamente la capacidad de las cotas funcionales de estanqueidad de la pinza; se descubrieron limitaciones de Cpk después del SOP."
+          ]
+        },
+        "P6.2.3": {
+          "preguntas_de_contraste": [
+            "La holgura de disco (disc clearance) de la pinza: ¿está tratada como característica de seguridad en el PFMEA y en el Plan de Control? ¿Qué control específico tiene en línea?"
+          ],
+          "red_flags": [
+            "El disc clearance de la pinza no está identificado como característica 'S' en el PFMEA/CP a pesar de su impacto directo en la función de frenado: hallazgo grave de gestión de CC."
+          ]
+        },
+        "P6.2.5": {
+          "preguntas_de_contraste": [
+            "¿Producís pinza derecha y pinza izquierda en líneas adyacentes o con el mismo utillaje? ¿Cómo evitáis que una pieza izquierda acabe en el contenedor de derechas antes de expedición?"
+          ],
+          "red_flags": [
+            "Referencias especulares (pinza derecha/izquierda) producidas en zonas adyacentes sin segregación física robusta ni poka-yoke que impida la mezcla."
+          ]
+        },
+        "P6.4.3": {
+          "preguntas_de_contraste": [
+            "El calibre o equipo para verificar el paso de disco de la pinza: ¿cuándo fue la última calibración? ¿Existe un estudio MSA (GRR) realizado con los operarios reales de ese puesto?"
+          ],
+          "red_flags": [
+            "Calibre de paso de disco sin MSA válida o sin calibración vigente: la medición de la característica más crítica de la pinza no es fiable."
+          ]
+        },
         "P3.1": {
           "que_pedir": [
             "Despliegue de caracteristicas especiales en alojamiento de piston, superficies de estanqueidad, roscas funcionales y referencias de mecanizado."
@@ -53,6 +93,19 @@
         "product_contains": ["horquilla", "carrier", "bracket", "soporte pinza"]
       },
       "adjustments": {
+        "P2.2": {
+          "preguntas_de_contraste": [
+            "Para una nueva referencia de horquilla o bracket: ¿qué utillaje adicional, equipos de inspección y personal planificasteis? ¿Cuándo estuvo disponible todo ello antes del SOP?"
+          ]
+        },
+        "P2.6": {
+          "preguntas_de_contraste": [
+            "Cuando el cliente solicitó un cambio en la geometría de la cuña o el bracket, ¿cómo evaluasteis el impacto en vuestro PFMEA, utillaje de moldeo y capacidad del proceso?"
+          ],
+          "red_flags": [
+            "Cambios de geometría en el bracket o la horquilla implementados como 'clean point' sin evidencia de validación dimensional ni de notificación formal al cliente."
+          ]
+        },
         "P3.1": {
           "que_pedir": [
             "Identificacion de caracteristicas especiales en superficies de apoyo, alojamientos funcionales, taladros, roscas y referencias de fijacion."
