@@ -66,28 +66,6 @@
         <!-- MAIN -->
         <main class="main" id="main">
 
-          <!-- Inputs de contexto en mobile (debajo del topbar) -->
-          <div class="mobile-context" id="mobileContext">
-            <div class="ctx-field">
-              <label for="productInputMobile">Producto</label>
-              <input
-                id="productInputMobile"
-                type="text"
-                placeholder="Ej: pinza de freno de fundicion nodular"
-                autocomplete="off"
-              />
-            </div>
-            <div class="ctx-field">
-              <label for="processInputMobile">Proceso / Tecnología</label>
-              <input
-                id="processInputMobile"
-                type="text"
-                placeholder="Ej: fundicion + mecanizado + acabado superficial"
-                autocomplete="off"
-              />
-            </div>
-          </div>
-
           <!-- Empty state -->
           <div class="empty-state" id="emptyState">
             <div class="empty-arrow">←</div>
@@ -143,6 +121,6 @@
 
     </div><!-- /app -->
 
-    <script src="app.js" defer></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

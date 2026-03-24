@@ -25,11 +25,19 @@
           ]
         },
         "P6.2.3": {
+          "que_pedir": [
+            "Buscar si las CC/SC de la pinza tienen controles reforzados frente a porosidad, inclusion, fuga y variacion dimensional en zonas hidraulicas."
+          ],
           "preguntas_de_contraste": [
-            "La holgura de disco (disc clearance) de la pinza: ¿está tratada como característica de seguridad en el PFMEA y en el Plan de Control? ¿Qué control específico tiene en línea?"
+            "La holgura de disco (disc clearance) de la pinza: ¿está tratada como característica de seguridad en el PFMEA y en el Plan de Control? ¿Qué control específico tiene en línea?",
+            "Que barrera evita que una porosidad en zona de estanqueidad llegue al cliente: control preventivo, END o solo prueba final?"
           ],
           "red_flags": [
-            "El disc clearance de la pinza no está identificado como característica 'S' en el PFMEA/CP a pesar de su impacto directo en la función de frenado: hallazgo grave de gestión de CC."
+            "El disc clearance de la pinza no está identificado como característica 'S' en el PFMEA/CP a pesar de su impacto directo en la función de frenado: hallazgo grave de gestión de CC.",
+            "No existe proteccion especifica frente a defectos internos en zonas de estanqueidad o alojamiento de piston."
+          ],
+          "evidencias_tipicas": [
+            "Si la unica barrera es la prueba final, sigue tirando del hilo: el riesgo no esta contenido en proceso."
           ]
         },
         "P6.2.5": {
@@ -63,20 +71,6 @@
           ],
           "que_espero_ver": [
             "Foco reforzado en zonas hidraulicas y funcionales propias de pinza de freno."
-          ]
-        },
-        "P6.2.3": {
-          "que_pedir": [
-            "Buscar si las CC/SC de la pinza tienen controles reforzados frente a porosidad, inclusion, fuga y variacion dimensional en zonas hidraulicas."
-          ],
-          "preguntas_de_contraste": [
-            "Que barrera evita que una porosidad en zona de estanqueidad llegue al cliente: control preventivo, END o solo prueba final?"
-          ],
-          "red_flags": [
-            "No existe proteccion especifica frente a defectos internos en zonas de estanqueidad o alojamiento de piston."
-          ],
-          "evidencias_tipicas": [
-            "Si la unica barrera es la prueba final, sigue tirando del hilo: el riesgo no esta contenido en proceso."
           ]
         },
         "P6.6.3": {
