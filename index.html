@@ -1,126 +1,1244 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Copiloto Auditoría VDA 6.3</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="app">
 
-      <!-- ── TOPBAR ─────────────────────────────────────────── -->
-      <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir navegación">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="3" y1="5" x2="17" y2="5"/>
-            <line x1="3" y1="10" x2="17" y2="10"/>
-            <line x1="3" y1="15" x2="17" y2="15"/>
-          </svg>
-        </button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi cartera · IBEX · SAN · SAB · BBVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090f;
+      --bg-grad-1: #0b1020;
+      --bg-grad-2: #0f1530;
+      --card: rgba(22, 27, 38, 0.7);
+      --card-solid: #161b26;
+      --card-border: rgba(148, 163, 184, 0.12);
+      --card-hover: rgba(148, 163, 184, 0.28);
+      --ink: #e6edf6;
+      --ink-soft: #c9d1d9;
+      --muted: #8696ad;
+      --muted-2: #5b6577;
+      --box: rgba(8, 11, 18, 0.7);
+      --ok: #34d399;
+      --ok-soft: rgba(52, 211, 153, 0.14);
+      --err: #f87171;
+      --err-soft: rgba(248, 113, 113, 0.14);
+      --info: #60a5fa;
+      --info-soft: rgba(96, 165, 250, 0.14);
+      --accent: #a78bfa;
+      --shadow: 0 12px 40px rgba(0, 0, 0, .4);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-w: 1760px;
+    }
 
-        <div class="topbar-brand">
-          <span class="topbar-tag">VDA 6.3</span>
-          <span class="topbar-name">Copiloto de Auditoría</span>
+    [data-theme="light"] {
+      --bg: #f6f7fb;
+      --bg-grad-1: #eef2ff;
+      --bg-grad-2: #fdf4ff;
+      --card: rgba(255, 255, 255, 0.78);
+      --card-solid: #ffffff;
+      --card-border: rgba(15, 23, 42, 0.08);
+      --card-hover: rgba(15, 23, 42, 0.18);
+      --ink: #0f172a;
+      --ink-soft: #1e293b;
+      --muted: #64748b;
+      --muted-2: #94a3b8;
+      --box: rgba(255, 255, 255, 0.65);
+      --ok: #059669;
+      --ok-soft: rgba(5, 150, 105, 0.1);
+      --err: #dc2626;
+      --err-soft: rgba(220, 38, 38, 0.1);
+      --info: #2563eb;
+      --info-soft: rgba(37, 99, 235, 0.1);
+      --accent: #7c3aed;
+      --shadow: 0 12px 40px rgba(15, 23, 42, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      padding: clamp(20px, 2.5vw, 40px);
+      background: var(--bg);
+      background-image:
+        radial-gradient(1400px 700px at 10% -10%, var(--bg-grad-1) 0%, transparent 60%),
+        radial-gradient(1100px 600px at 110% 10%, var(--bg-grad-2) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      transition: background .4s ease, color .3s ease;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 16px; }
+
+    .brand-mark {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--info), var(--accent));
+      display: grid; place-items: center;
+      font-weight: 800; color: white; font-size: 26px;
+      box-shadow: 0 10px 30px rgba(96, 165, 250, .35);
+    }
+
+    .brand-text .title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+    }
+
+    .brand-text .sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: .02em;
+    }
+
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 16px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+      backdrop-filter: blur(10px);
+    }
+
+    .status-pill .num { color: var(--ink-soft); font-weight: 600; }
+
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--ok);
+      box-shadow: 0 0 0 0 var(--ok);
+      animation: pulse 2s infinite;
+    }
+    .dot.err { background: var(--err); animation: none; }
+    .dot.loading { background: var(--info); animation: pulse 1s infinite; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, .55); }
+      70% { box-shadow: 0 0 0 12px rgba(52, 211, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    .spacer { flex: 1; }
+
+    .icon-btn {
+      width: 48px; height: 48px;
+      display: grid; place-items: center;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all .2s ease;
+      backdrop-filter: blur(10px);
+    }
+    .icon-btn:hover {
+      border-color: var(--card-hover);
+      transform: translateY(-2px);
+    }
+    .icon-btn svg { width: 22px; height: 22px; }
+    .icon-btn.spinning svg { animation: spin .8s linear infinite; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- Hero P/L ---------- */
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: clamp(28px, 3vw, 48px);
+      margin-bottom: 28px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius);
+      padding: 1px;
+      background: linear-gradient(135deg, transparent, rgba(96, 165, 250, .25), transparent 60%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 1.3fr) 2fr;
+      gap: clamp(24px, 3vw, 48px);
+      align-items: center;
+    }
+
+    .hero-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-pl {
+      font-size: clamp(56px, 8vw, 112px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      transition: color .3s ease;
+    }
+
+    .hero-pct {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 18px;
+      letter-spacing: -0.01em;
+    }
+    .hero-pct.up { background: var(--ok-soft); color: var(--ok); }
+    .hero-pct.down { background: var(--err-soft); color: var(--err); }
+    .hero-pct.flat { background: var(--info-soft); color: var(--muted); }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      background: var(--box);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .stat-value {
+      font-size: clamp(24px, 1.9vw, 32px);
+      font-weight: 800;
+      margin-top: 8px;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+
+    .stat-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ---------- Card grid ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+    /* Tres tarjetas con posición + IBEX más estrecho */
+    @media (min-width: 1280px) {
+      .grid { grid-template-columns: 1.35fr 1.35fr 1.35fr 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform .25s ease, border-color .25s ease;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--card-hover);
+    }
+
+    .card-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px;
+    }
+
+    .card-id { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1; }
+    .card-id > div:last-child { min-width: 0; overflow: hidden; }
+    .name, .ticker { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .logo-wrap {
+      position: relative;
+      width: 56px; height: 56px;
+      flex: 0 0 56px;
+    }
+
+    .logo-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      background: white;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 6px;
+    }
+
+    .logo-fallback {
+      position: absolute; inset: 0;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 15px;
+      letter-spacing: .03em;
+      border-radius: 14px;
+      color: white;
+    }
+
+    .logo-ibex { background: linear-gradient(135deg, #1a73e8, #0b53b8); }
+    .logo-san { background: linear-gradient(135deg, #ec0000, #b30000); }
+    .logo-sab { background: linear-gradient(135deg, #00a3e0, #0077b3); }
+    .logo-bbva { background: linear-gradient(135deg, #1464a5, #072146); }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+    }
+
+    .ticker {
+      color: var(--muted);
+      font-size: 14px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      margin-top: 4px;
+    }
+
+    .source-chip {
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--info);
+      padding: 6px 10px;
+      background: var(--info-soft);
+      border-radius: 999px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .price-block {
+      display: flex; align-items: baseline; gap: 12px;
+      flex-wrap: wrap;
+      min-width: 0;
+    }
+
+    .price {
+      font-size: clamp(34px, 2.6vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      transition: color .3s ease;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .delta {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .delta.up { background: var(--ok-soft); color: var(--ok); }
+    .delta.down { background: var(--err-soft); color: var(--err); }
+    .delta.flat { background: var(--info-soft); color: var(--muted); }
+
+    .sparkline {
+      height: 70px;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .sparkline path { fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+    .sparkline .area { fill: currentColor; opacity: 0.14; stroke: none; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .meta {
+      background: var(--box);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-value {
+      font-size: clamp(16px, 1.3vw, 20px);
+      font-weight: 700;
+      margin-top: 4px;
+      letter-spacing: -0.015em;
+      overflow-wrap: anywhere;
+    }
+
+    .meta-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ---------- Position section inside card ---------- */
+    .position {
+      border-top: 1px dashed var(--card-border);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .pos-cell {
+      background: var(--box);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .pos-cell.pl-hero {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--info-soft), transparent);
+      padding: 18px 20px;
+    }
+
+    .pos-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .pos-value {
+      font-size: clamp(20px, 1.6vw, 26px);
+      font-weight: 800;
+      margin-top: 6px;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+
+    .pos-cell.pl-hero .pos-value { font-size: clamp(24px, 2vw, 32px); }
+
+    .pos-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      overflow-wrap: anywhere;
+    }
+
+    .sim-input {
+      width: 100%;
+      background: var(--box);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 22px;
+      color: var(--ink);
+      font-weight: 700;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      outline: none;
+      margin-top: 6px;
+      transition: all .2s ease;
+    }
+    .sim-input:focus {
+      border-color: var(--info);
+      box-shadow: 0 0 0 4px var(--info-soft);
+    }
+    .sim-input:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* ---------- Converter ---------- */
+    .converter {
+      margin-top: 28px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+    }
+
+    .converter-head {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .converter-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+    }
+
+    .converter-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .conv-box { display: flex; flex-direction: column; gap: 8px; }
+
+    .conv-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .conv-input {
+      width: 100%;
+      background: var(--box);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 22px;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--ink);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      outline: none;
+      transition: all .2s ease;
+    }
+    .conv-input:focus {
+      border-color: var(--info);
+      box-shadow: 0 0 0 4px var(--info-soft);
+    }
+    .conv-input:disabled { opacity: .5; }
+
+    .conv-arrow {
+      width: 48px; height: 48px;
+      display: grid; place-items: center;
+      background: var(--info-soft);
+      color: var(--info);
+      border-radius: 14px;
+      font-size: 22px;
+      align-self: center;
+      margin-bottom: 4px;
+    }
+
+    .converter-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex; gap: 16px; flex-wrap: wrap;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes flashUp {
+      0% { background: var(--ok-soft); }
+      100% { background: transparent; }
+    }
+    @keyframes flashDown {
+      0% { background: var(--err-soft); }
+      100% { background: transparent; }
+    }
+    .flash-up { animation: flashUp 1.4s ease-out; border-radius: 10px; }
+    .flash-down { animation: flashDown 1.4s ease-out; border-radius: 10px; }
+
+    .skeleton {
+      background: linear-gradient(90deg, var(--box) 0%, var(--card-hover) 50%, var(--box) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 8px;
+      color: transparent !important;
+      user-select: none;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .up { color: var(--ok); }
+    .down { color: var(--err); }
+
+    /* IBEX card más compacto al ser columna estrecha */
+    @media (min-width: 1280px) {
+      #card-ibex .name { font-size: 22px; }
+      #card-ibex .price { font-size: clamp(28px, 2vw, 38px); }
+      #card-ibex .meta-value { font-size: clamp(14px, 1.05vw, 17px); }
+      #card-ibex .logo-wrap { width: 48px; height: 48px; flex: 0 0 48px; }
+      #card-ibex .source-chip { font-size: 10px; padding: 4px 8px; }
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .converter-row { grid-template-columns: 1fr; }
+      .conv-arrow { transform: rotate(90deg); justify-self: center; }
+      .name { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark">€</div>
+        <div class="brand-text">
+          <div class="title">Mi cartera</div>
+          <div class="sub">IBEX 35 · Santander · Sabadell · BBVA</div>
         </div>
+      </div>
 
-        <div class="topbar-context" id="topbarContext">
-          <div class="ctx-field">
-            <label for="productInput">Producto</label>
-            <input
-              id="productInput"
-              type="text"
-              placeholder="Ej: pinza de freno de fundicion nodular"
-              autocomplete="off"
-            />
+      <div class="status-pill" aria-live="polite">
+        <span id="status-dot" class="dot loading"></span>
+        <span id="status-text">Cargando…</span>
+        <span style="opacity:.4">·</span>
+        <span class="num" id="updated">--:--:--</span>
+      </div>
+
+      <div class="spacer"></div>
+
+      <button class="icon-btn" id="btn-theme" title="Cambiar tema (T)" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn" id="btn-refresh" title="Actualizar (R)" aria-label="Actualizar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/>
+          <path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Hero P/L total -->
+    <section class="hero" id="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-label">Resultado total · Banca IBEX</div>
+          <div class="hero-pl num skeleton" id="total-pl">€ ----</div>
+          <div class="hero-pct flat" id="total-pct">—</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-label">Invertido</div>
+            <div class="stat-value num skeleton" id="total-invested">----</div>
           </div>
-          <div class="ctx-field">
-            <label for="processInput">Proceso / Tecnología</label>
-            <input
-              id="processInput"
-              type="text"
-              placeholder="Ej: fundicion + mecanizado + acabado superficial"
-              autocomplete="off"
-            />
+          <div class="stat">
+            <div class="stat-label">Valor actual</div>
+            <div class="stat-value num skeleton" id="total-current">----</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Cambio diario</div>
+            <div class="stat-value num skeleton" id="total-daily">----</div>
+            <div class="stat-note" id="total-daily-note">—</div>
           </div>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <!-- ── BODY ───────────────────────────────────────────── -->
-      <div class="body-layout">
+    <!-- Cards -->
+    <section class="grid" id="cards"></section>
 
-        <!-- SIDEBAR -->
-        <nav class="sidebar" id="sidebar" aria-label="Fases VDA 6.3">
-          <div id="sidebarTree" class="sidebar-tree"></div>
-        </nav>
+    <!-- Converter -->
+    <section class="converter" aria-live="polite">
+      <div class="converter-head">
+        <div class="converter-title">Conversor de divisas</div>
+        <div class="num" style="font-size:14px;color:var(--muted);font-weight:600" id="fx-rate">cargando…</div>
+      </div>
+      <div class="converter-row">
+        <div class="conv-box">
+          <label class="conv-label" for="input-usd">Dólar (USD)</label>
+          <input type="number" id="input-usd" class="conv-input num" placeholder="0.00" disabled />
+        </div>
+        <div class="conv-arrow">⇄</div>
+        <div class="conv-box">
+          <label class="conv-label" for="input-eur">Euro (EUR)</label>
+          <input type="number" id="input-eur" class="conv-input num" placeholder="0.00" disabled />
+        </div>
+      </div>
+      <div class="converter-note">
+        <span id="fx-source">Fuente: —</span>
+      </div>
+    </section>
+  </div>
 
-        <!-- OVERLAY para cerrar sidebar en mobile -->
-        <div class="sidebar-overlay hidden" id="sidebarOverlay"></div>
+  <script>
+    /* ============ Config ============ */
+    const FINNHUB_API_KEY = "d4pic79r01qjpnavgeq0d4pic79r01qjpnavgeqg";
 
-        <!-- MAIN -->
-        <main class="main" id="main">
+    const ASSETS = [
+      { id: "san", name: "Santander", ticker: "SAN.MC", monogram: "SAN", colorClass: "logo-san",
+        logos: ["logos/santander.svg", "https://logo.clearbit.com/santander.com"], position: { shares: 2596, entry: 9.489491525423729 } },
+      { id: "sab", name: "Sabadell", ticker: "SAB.MC", monogram: "SAB", colorClass: "logo-sab",
+        logos: ["logos/sabadell.svg", "https://logo.clearbit.com/bancsabadell.com"], position: { shares: 3000, entry: 3.462 } },
+      { id: "bbva", name: "BBVA", ticker: "BBVA.MC", monogram: "BBVA", colorClass: "logo-bbva",
+        logos: ["logos/bbva.svg", "https://logo.clearbit.com/bbva.com"], position: { shares: 600, entry: 18.91 } },
+      { id: "ibex", name: "IBEX 35", ticker: "^IBEX", monogram: "IB", colorClass: "logo-ibex",
+        logos: ["logos/ibex.svg", "https://logo.clearbit.com/bolsamadrid.es"], position: null },
+    ];
 
-          <!-- Empty state -->
-          <div class="empty-state" id="emptyState">
-            <div class="empty-arrow">←</div>
-            <h2>Selecciona un subapartado</h2>
-            <p>Elige una fase y subapartado en el panel izquierdo para ver la guía de auditoría.</p>
-          </div>
+    /* ============ Formatters ============ */
+    const fmtEUR = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmtEUR3 = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", minimumFractionDigits: 3, maximumFractionDigits: 3 });
+    const fmtEUR0 = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+    const fmtNum = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 0 });
+    const fmtPct = new Intl.NumberFormat("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-          <!-- Panel de contenido (oculto hasta selección) -->
-          <div class="content-panel" id="contentPanel" hidden>
+    const fmtPrice = (a, v) => a.id === 'ibex' ? fmtNum.format(v) : fmtEUR3.format(v);
+    const fmtAbs = (a, v) => a.id === 'ibex' ? fmtNum.format(v) : fmtEUR.format(v);
 
-            <!-- Cabecera de selección -->
-            <div class="content-header">
-              <div>
-                <p id="selectionPath" class="breadcrumb"></p>
-                <h2 id="guidanceTitle"></h2>
-              </div>
-              <span id="guidanceId" class="badge"></span>
+    /* ============ Render cards ============ */
+    const cardsRoot = document.getElementById("cards");
+    cardsRoot.innerHTML = ASSETS.map(a => `
+      <article class="card" id="card-${a.id}">
+        <div class="card-head">
+          <div class="card-id">
+            <div class="logo-wrap">
+              <img class="logo-img" id="img-${a.id}" alt="${a.name}"/>
+              <div class="logo-fallback ${a.colorClass}" id="fb-${a.id}">${a.monogram}</div>
             </div>
+            <div>
+              <div class="name">${a.name}</div>
+              <div class="ticker">${a.ticker}</div>
+            </div>
+          </div>
+          <span class="source-chip" id="src-${a.id}">—</span>
+        </div>
 
-            <!-- Reglas activas -->
-            <div id="appliedRules" class="applied-rules" hidden></div>
+        <div>
+          <div class="price-block">
+            <div class="price num skeleton" id="${a.id}-price">----</div>
+            <div class="delta flat" id="${a.id}-delta">—</div>
+          </div>
+          <svg class="sparkline" id="${a.id}-spark" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
 
-            <!-- Bloques de contenido continuo -->
-            <section class="content-block block-context" data-field="que_espero_ver" id="block-contexto">
-              <h3>Contexto</h3>
-              <ul id="queEsperoVer"></ul>
-            </section>
+        <div class="meta-row">
+          <div class="meta">
+            <div class="meta-label">Máx hoy</div>
+            <div class="meta-value num" id="${a.id}-high">—</div>
+          </div>
+          <div class="meta">
+            <div class="meta-label">Mín hoy</div>
+            <div class="meta-value num" id="${a.id}-low">—</div>
+          </div>
+        </div>
 
-            <section class="content-block" data-field="que_pedir" id="block-que-buscar">
-              <h3>Qué buscar</h3>
-              <ul id="quePedir"></ul>
-            </section>
+        ${a.position ? `
+        <div class="position">
+          <div class="pos-grid">
+            <div class="pos-cell pl-hero">
+              <div class="pos-label">P/L no realizado</div>
+              <div class="pos-value num" id="${a.id}-pl">—</div>
+              <div class="pos-note" id="${a.id}-pl-note">—</div>
+            </div>
+            <div class="pos-cell">
+              <div class="pos-label">Valor</div>
+              <div class="pos-value num" id="${a.id}-value">—</div>
+              <div class="pos-note" id="${a.id}-value-note">—</div>
+            </div>
+            <div class="pos-cell">
+              <div class="pos-label">G/P diaria</div>
+              <div class="pos-value num" id="${a.id}-daily">—</div>
+              <div class="pos-note" id="${a.id}-daily-note">—</div>
+            </div>
+            <div class="pos-cell">
+              <div class="pos-label">Simular precio</div>
+              <input class="sim-input" id="${a.id}-sim-input" type="number" step="0.01" min="0" inputmode="decimal" placeholder="0.00" />
+            </div>
+            <div class="pos-cell">
+              <div class="pos-label">P/L simulado</div>
+              <div class="pos-value num" id="${a.id}-sim-pl">—</div>
+              <div class="pos-note" id="${a.id}-sim-note">—</div>
+            </div>
+          </div>
+        </div>` : ''}
+      </article>
+    `).join("");
 
-            <section class="content-block" data-field="preguntas_de_contraste" id="block-pregunta">
-              <h3>PREGUNTA</h3>
-              <ul id="preguntasContraste"></ul>
-            </section>
+    /* ============ State ============ */
+    const positionsState = new Map();
+    const lastPrices = new Map();
 
-            <section class="content-block block-warn" data-field="red_flags" id="block-trampa">
-              <h3>TRAMPA</h3>
-              <ul id="redFlags"></ul>
-            </section>
+    const totalPlEl = document.getElementById("total-pl");
+    const totalPctEl = document.getElementById("total-pct");
+    const totalInvestedEl = document.getElementById("total-invested");
+    const totalCurrentEl = document.getElementById("total-current");
+    const totalDailyEl = document.getElementById("total-daily");
+    const totalDailyNoteEl = document.getElementById("total-daily-note");
+    const statusDot = document.getElementById("status-dot");
+    const statusText = document.getElementById("status-text");
+    const updatedEl = document.getElementById("updated");
 
-            <section class="content-block block-tip" data-field="evidencias_tipicas" id="block-tip">
-              <h3>TIP</h3>
-              <ul id="evidenciasTipicas"></ul>
-            </section>
+    /* ============ Helpers ============ */
+    function toNumber(v) {
+      if (typeof v === "number") return Number.isFinite(v) ? v : NaN;
+      if (typeof v === "string") { const n = Number(v.replace(/,/g, ".")); return Number.isFinite(n) ? n : NaN; }
+      return NaN;
+    }
+    const unskel = el => el && el.classList.remove("skeleton");
 
-          </div><!-- /content-panel -->
+    function setStatus(state, label) {
+      statusDot.classList.remove("err", "loading");
+      if (state === "err") statusDot.classList.add("err");
+      else if (state === "loading") statusDot.classList.add("loading");
+      statusText.textContent = label;
+    }
+    const setSrc = (id, src) => { const el = document.getElementById(`src-${id}`); if (el) el.textContent = src; };
 
-        </main>
-      </div><!-- /body-layout -->
+    function flashEl(el, dir) {
+      if (!el) return;
+      el.classList.remove("flash-up", "flash-down");
+      void el.offsetWidth;
+      el.classList.add(dir > 0 ? "flash-up" : "flash-down");
+    }
 
-    </div><!-- /app -->
+    function pctText(v) {
+      if (!Number.isFinite(v)) return "—";
+      const s = v > 0 ? "+" : v < 0 ? "−" : "";
+      return `${s}${fmtPct.format(Math.abs(v))}%`;
+    }
 
-    <script type="module" src="js/app.js"></script>
-  </body>
+    function deltaText(v, asset) {
+      if (!Number.isFinite(v)) return "—";
+      const s = v > 0 ? "+" : v < 0 ? "−" : "";
+      return `${s}${fmtAbs(asset, Math.abs(v))}`;
+    }
+
+    function setDelta(el, value, pct) {
+      if (!el) return;
+      el.classList.remove("up", "down", "flat");
+      if (!Number.isFinite(value)) { el.classList.add("flat"); el.textContent = "—"; return; }
+      el.classList.add(value > 0 ? "up" : value < 0 ? "down" : "flat");
+      const arrow = value > 0 ? "▲" : value < 0 ? "▼" : "·";
+      el.textContent = `${arrow} ${pctText(pct)}`;
+    }
+
+    function colorClass(el, v) {
+      if (!el) return;
+      el.classList.remove("up", "down");
+      if (!Number.isFinite(v)) return;
+      if (v > 0) el.classList.add("up"); else if (v < 0) el.classList.add("down");
+    }
+
+    /* ============ Sparkline ============ */
+    function drawSpark(id, series, dir) {
+      const svg = document.getElementById(`${id}-spark`);
+      if (!svg) return;
+      svg.innerHTML = "";
+      const valid = (series || []).filter(Number.isFinite);
+      if (valid.length < 2) return;
+      const min = Math.min(...valid), max = Math.max(...valid), range = max - min || 1;
+      const w = 100, h = 40, pad = 2;
+      const stepX = w / (valid.length - 1);
+      const points = valid.map((v, i) => [i * stepX, h - pad - ((v - min) / range) * (h - pad * 2)]);
+      const d = points.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(" ");
+      const dArea = `${d} L${w},${h} L0,${h} Z`;
+      const color = dir > 0 ? "var(--ok)" : dir < 0 ? "var(--err)" : "var(--info)";
+      svg.style.color = color;
+      const ns = "http://www.w3.org/2000/svg";
+      const area = document.createElementNS(ns, "path");
+      area.setAttribute("d", dArea); area.setAttribute("class", "area");
+      const line = document.createElementNS(ns, "path");
+      line.setAttribute("d", d); line.setAttribute("stroke", color);
+      svg.appendChild(area); svg.appendChild(line);
+    }
+
+    /* ============ Painting ============ */
+    function paint(asset, d) {
+      if (!d || !Number.isFinite(d.price)) return;
+      const priceEl = document.getElementById(`${asset.id}-price`);
+      const deltaEl = document.getElementById(`${asset.id}-delta`);
+      const highEl = document.getElementById(`${asset.id}-high`);
+      const lowEl = document.getElementById(`${asset.id}-low`);
+
+      const prev = lastPrices.get(asset.id);
+      if (Number.isFinite(prev) && prev !== d.price) flashEl(priceEl, d.price - prev);
+      lastPrices.set(asset.id, d.price);
+
+      unskel(priceEl);
+      priceEl.textContent = fmtPrice(asset, d.price);
+      colorClass(priceEl, d.changePct);
+      setDelta(deltaEl, d.changeAbs, d.changePct);
+
+      if (highEl) highEl.textContent = Number.isFinite(d.dayHigh) ? fmtPrice(asset, d.dayHigh) : "—";
+      if (lowEl) lowEl.textContent = Number.isFinite(d.dayLow) ? fmtPrice(asset, d.dayLow) : "—";
+
+      if (Array.isArray(d.series) && d.series.length > 1) drawSpark(asset.id, d.series, d.changePct || 0);
+
+      if (asset.position) {
+        const shares = Number(asset.position.shares), entry = Number(asset.position.entry);
+        if (Number.isFinite(shares) && shares > 0 && Number.isFinite(entry)) {
+          const invested = shares * entry, current = shares * d.price, pnl = current - invested;
+          const pnlPct = invested ? (pnl / invested) * 100 : null;
+
+          const plEl = document.getElementById(`${asset.id}-pl`);
+          const plNoteEl = document.getElementById(`${asset.id}-pl-note`);
+          const valueEl = document.getElementById(`${asset.id}-value`);
+          const valueNoteEl = document.getElementById(`${asset.id}-value-note`);
+          const dailyEl = document.getElementById(`${asset.id}-daily`);
+          const dailyNoteEl = document.getElementById(`${asset.id}-daily-note`);
+
+          plEl.textContent = fmtEUR0.format(pnl);
+          colorClass(plEl, pnl);
+          plNoteEl.textContent = pnlPct !== null ? `${pctText(pnlPct)} acumulado` : "—";
+
+          valueEl.textContent = fmtEUR0.format(current);
+          valueNoteEl.textContent = `${fmtNum.format(shares)} acc · medio ${fmtEUR.format(entry)}`;
+
+          const daily = Number.isFinite(d.changeAbs) ? d.changeAbs * shares : null;
+          if (Number.isFinite(daily)) {
+            dailyEl.textContent = deltaText(daily, { id: '' });
+            colorClass(dailyEl, daily);
+            dailyNoteEl.textContent = `${pctText(d.changePct)} · ${fmtNum.format(shares)} acc`;
+          } else {
+            dailyEl.textContent = "—"; dailyNoteEl.textContent = "—";
+          }
+
+          positionsState.set(asset.id, { invested, current, daily: Number.isFinite(daily) ? daily : null });
+        }
+      }
+      updateTotal();
+    }
+
+    function updateTotal() {
+      let invested = 0, current = 0, daily = 0, hasDaily = false;
+      positionsState.forEach(p => {
+        invested += p.invested; current += p.current;
+        if (Number.isFinite(p.daily)) { daily += p.daily; hasDaily = true; }
+      });
+      if (positionsState.size === 0) return;
+      const pnl = current - invested;
+      const pct = invested ? (pnl / invested) * 100 : null;
+
+      unskel(totalPlEl); unskel(totalInvestedEl); unskel(totalCurrentEl); unskel(totalDailyEl);
+      const sign = pnl > 0 ? "+" : pnl < 0 ? "−" : "";
+      totalPlEl.textContent = `${sign}${fmtEUR0.format(Math.abs(pnl))}`;
+      colorClass(totalPlEl, pnl);
+
+      totalPctEl.classList.remove("up", "down", "flat");
+      totalPctEl.classList.add(pnl > 0 ? "up" : pnl < 0 ? "down" : "flat");
+      const arrow = pnl > 0 ? "▲" : pnl < 0 ? "▼" : "·";
+      totalPctEl.textContent = pct !== null ? `${arrow} ${pctText(pct)} sobre ${fmtEUR0.format(invested)}` : "—";
+
+      totalInvestedEl.textContent = fmtEUR0.format(invested);
+      totalCurrentEl.textContent = fmtEUR0.format(current);
+
+      if (hasDaily) {
+        totalDailyEl.textContent = deltaText(daily, { id: '' });
+        colorClass(totalDailyEl, daily);
+        const base = current - daily;
+        const dPct = base ? (daily / base) * 100 : null;
+        totalDailyNoteEl.textContent = dPct !== null ? `${pctText(dPct)} vs cierre anterior` : "—";
+      } else {
+        totalDailyEl.textContent = "—"; totalDailyNoteEl.textContent = "—";
+      }
+    }
+
+    /* ============ Logos ============ */
+    ASSETS.forEach(a => {
+      const img = document.getElementById("img-" + a.id);
+      const fb = document.getElementById("fb-" + a.id);
+      let i = 0;
+      const tryNext = () => {
+        if (i >= a.logos.length) { img.style.display = "none"; fb.style.display = "grid"; return; }
+        img.src = a.logos[i++];
+      };
+      img.onload = () => { fb.style.display = "none"; img.style.display = "block"; };
+      img.onerror = tryNext;
+      tryNext();
+    });
+
+    /* ============ Simuladores ============ */
+    ASSETS.forEach(asset => {
+      if (!asset.position) return;
+      const inputEl = document.getElementById(`${asset.id}-sim-input`);
+      const outputEl = document.getElementById(`${asset.id}-sim-pl`);
+      const noteEl = document.getElementById(`${asset.id}-sim-note`);
+      if (!inputEl) return;
+      const shares = Number(asset.position.shares), entry = Number(asset.position.entry);
+      const reset = () => { outputEl.textContent = "—"; outputEl.classList.remove("up", "down"); noteEl.textContent = "—"; };
+      inputEl.addEventListener("input", () => {
+        const raw = inputEl.value.trim();
+        if (!raw) return reset();
+        const price = toNumber(raw);
+        if (!Number.isFinite(price) || price < 0) return reset();
+        const invested = shares * entry, sim = shares * price, pnl = sim - invested;
+        const pct = invested ? (pnl / invested) * 100 : null;
+        outputEl.textContent = fmtEUR.format(pnl);
+        colorClass(outputEl, pnl);
+        noteEl.textContent = pct !== null ? `${pctText(pct)} @ ${fmtEUR.format(price)}` : "—";
+      });
+    });
+
+    /* ============ Cache ============ */
+    const readCache = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch { return null; } };
+    const writeCache = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+
+    (function showCachedFirst() {
+      ASSETS.forEach(a => {
+        const c = readCache("quote_" + a.ticker);
+        if (c && Number.isFinite(c.price)) { paint(a, c); setSrc(a.id, "cache"); }
+      });
+    })();
+
+    /* ============ Fetch ============ */
+    function isMarketOpenNow() {
+      const m = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+      const day = m.getDay();
+      if (day === 0 || day === 6) return false;
+      const min = m.getHours() * 60 + m.getMinutes();
+      return min >= 9 * 60 && min < 17 * 60 + 35;
+    }
+
+    async function fetchJson(url, { timeoutMs = 12000 } = {}) {
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), timeoutMs);
+      try {
+        const r = await fetch(url, { cache: "no-store", signal: c.signal });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return await r.json();
+      } finally { clearTimeout(t); }
+    }
+
+    const CORS_PROXIES = [
+      url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+      url => `https://corsproxy.io/?${encodeURIComponent(url)}`
+    ];
+
+    async function fetchWithProxy(targetUrl, opts) {
+      let lastErr = null;
+      for (const p of CORS_PROXIES) {
+        try { return await fetchJson(p(targetUrl), opts); } catch (e) { lastErr = e; }
+      }
+      throw lastErr || new Error("Proxies fallaron");
+    }
+
+    async function fetchFinnhub(asset) {
+      const sym = asset.ticker.replace(".MC", "");
+      const q = await fetchJson(`https://finnhub.io/api/v1/quote?symbol=${sym}&token=${FINNHUB_API_KEY}`);
+      if (q.error || !Number.isFinite(toNumber(q.c)) || toNumber(q.c) === 0) throw new Error("Finnhub sin datos");
+      const price = toNumber(q.c), prev = toNumber(q.pc);
+      let changeAbs = null, changePct = null;
+      if (Number.isFinite(prev) && prev !== 0) { changeAbs = price - prev; changePct = (changeAbs / prev) * 100; }
+      return { price, closed: !isMarketOpenNow(), changeAbs, changePct, previous: prev,
+        dayHigh: toNumber(q.h), dayLow: toNumber(q.l), source: "Finnhub" };
+    }
+
+    async function fetchYahooV8(asset) {
+      const url = `https://query2.finance.yahoo.com/v8/finance/chart/${asset.ticker}?interval=1d&range=10d`;
+      const r = await fetchWithProxy(url);
+      const result = r?.chart?.result?.[0];
+      if (!result?.meta) throw new Error("Yahoo v8 inválido");
+      const meta = result.meta;
+      const price = toNumber(meta.regularMarketPrice);
+      if (!Number.isFinite(price)) throw new Error("Sin precio");
+      const closes = (result?.indicators?.quote?.[0]?.close || []).map(toNumber).filter(Number.isFinite);
+      const prev = closes.length >= 2 ? closes[closes.length - 2]
+        : toNumber(meta.previousClose) || toNumber(meta.chartPreviousClose);
+      let changeAbs = null, changePct = null;
+      if (Number.isFinite(prev) && prev !== 0) { changeAbs = price - prev; changePct = (changeAbs / prev) * 100; }
+      return { price, closed: meta.marketState !== "REGULAR", changeAbs, changePct, previous: prev,
+        dayHigh: toNumber(meta.regularMarketDayHigh), dayLow: toNumber(meta.regularMarketDayLow),
+        series: closes.length > 1 ? closes : null, source: "Yahoo" };
+    }
+
+    async function fetchYahooV7(asset) {
+      const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${asset.ticker}`;
+      const r = await fetchWithProxy(url);
+      const q = r?.quoteResponse?.result?.[0];
+      if (!q) throw new Error("Yahoo v7 sin datos");
+      const price = toNumber(q.regularMarketPrice);
+      if (!Number.isFinite(price)) throw new Error("Sin precio");
+      return { price, closed: q.marketState !== "REGULAR",
+        changeAbs: toNumber(q.regularMarketChange),
+        changePct: toNumber(q.regularMarketChangePercent),
+        previous: toNumber(q.regularMarketPreviousClose),
+        dayHigh: toNumber(q.regularMarketDayHigh),
+        dayLow: toNumber(q.regularMarketDayLow),
+        source: "Yahoo v7" };
+    }
+
+    async function fetchAsset(asset) {
+      const isSpanish = asset.ticker.includes(".MC") || asset.ticker.includes("^IBEX");
+      const sources = isSpanish ? [fetchYahooV8, fetchYahooV7] : [fetchFinnhub, fetchYahooV8, fetchYahooV7];
+      let lastErr = null;
+      for (const s of sources) {
+        try { return await s(asset); } catch (e) { lastErr = e; }
+      }
+      throw lastErr || new Error("Sin fuentes");
+    }
+
+    /* ============ Update loop ============ */
+    async function updateAll() {
+      setStatus("loading", "Actualizando…");
+      const btn = document.getElementById("btn-refresh");
+      btn?.classList.add("spinning");
+
+      const used = new Set();
+      let ok = 0;
+      await Promise.all(ASSETS.map(async a => {
+        try {
+          const data = await fetchAsset(a);
+          paint(a, data);
+          writeCache("quote_" + a.ticker, data);
+          if (data.source) { used.add(data.source); setSrc(a.id, data.source); }
+          ok++;
+        } catch (e) { console.warn(`Error ${a.ticker}`, e); }
+      }));
+
+      btn?.classList.remove("spinning");
+      if (ok > 0) {
+        const label = ok === ASSETS.length ? `En vivo · ${[...used].join(" + ")}` : `Parcial · faltan ${ASSETS.length - ok}`;
+        setStatus("ok", label);
+        updatedEl.textContent = new Date().toLocaleTimeString("es-ES");
+      } else {
+        setStatus("err", "Sin conexión");
+      }
+    }
+
+    /* ============ FX converter ============ */
+    const usdInput = document.getElementById("input-usd");
+    const eurInput = document.getElementById("input-eur");
+    const fxRateEl = document.getElementById("fx-rate");
+    const fxSourceEl = document.getElementById("fx-source");
+    let eurToUsd = null, lastEdited = "eur";
+
+    const normFx = v => { const n = Number(String(v).trim().replace(/,/g, ".")); return Number.isFinite(n) ? n : NaN; };
+
+    function convert(src) {
+      if (!Number.isFinite(eurToUsd)) return;
+      const a = src === "usd" ? usdInput : eurInput;
+      const b = src === "usd" ? eurInput : usdInput;
+      const v = normFx(a.value);
+      if (!Number.isFinite(v) || v === 0) { b.value = ""; return; }
+      const r = src === "usd" ? v / eurToUsd : v * eurToUsd;
+      b.value = Number.isFinite(r) ? r.toFixed(2) : "";
+    }
+
+    async function fetchFx() {
+      try {
+        const data = await fetchJson("https://api.frankfurter.app/latest?from=EUR&to=USD");
+        const rate = Number(data?.rates?.USD);
+        if (!Number.isFinite(rate)) throw new Error("FX vacío");
+        eurToUsd = rate;
+        usdInput.disabled = false; eurInput.disabled = false;
+        usdInput.placeholder = "0.00"; eurInput.placeholder = "0.00";
+        fxRateEl.textContent = `1 € = ${rate.toFixed(4)} $`;
+        fxSourceEl.textContent = "Fuente: Frankfurter.app";
+        convert(lastEdited);
+      } catch {
+        eurToUsd = null;
+        fxRateEl.textContent = "Sin tasa";
+        fxSourceEl.textContent = "Fuente: —";
+        usdInput.disabled = true; eurInput.disabled = true;
+      }
+    }
+
+    usdInput.addEventListener("input", () => { lastEdited = "usd"; convert("usd"); });
+    eurInput.addEventListener("input", () => { lastEdited = "eur"; convert("eur"); });
+
+    /* ============ Theme ============ */
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") root.setAttribute("data-theme", "light");
+    else if (!savedTheme && window.matchMedia("(prefers-color-scheme: light)").matches) root.setAttribute("data-theme", "light");
+
+    function toggleTheme() {
+      const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      if (next === "light") root.setAttribute("data-theme", "light");
+      else root.removeAttribute("data-theme");
+      localStorage.setItem("theme", next);
+    }
+
+    document.getElementById("btn-theme").addEventListener("click", toggleTheme);
+    document.getElementById("btn-refresh").addEventListener("click", () => { updateAll(); fetchFx(); });
+
+    document.addEventListener("keydown", e => {
+      if (e.target.matches("input, textarea")) return;
+      if (e.key === "r" || e.key === "R") { updateAll(); fetchFx(); }
+      else if (e.key === "t" || e.key === "T") toggleTheme();
+    });
+
+    /* ============ Boot ============ */
+    updateAll();
+    fetchFx();
+    setInterval(updateAll, 60_000);
+    setInterval(fetchFx, 30 * 60_000);
+  </script>
+</body>
+
 </html>
