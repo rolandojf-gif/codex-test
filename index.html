@@ -738,6 +738,7 @@
   <script>
     /* ============ Config ============ */
     const FINNHUB_API_KEY = "d4pic79r01qjpnavgeq0d4pic79r01qjpnavgeqg";
+    const QUOTE_API = "/.netlify/functions/quote";
 
     const ASSETS = [
       { id: "san", name: "Santander", ticker: "SAN.MC", monogram: "SAN", colorClass: "logo-san",
@@ -1064,7 +1065,7 @@
       return min >= 9 * 60 && min < 17 * 60 + 35;
     }
 
-    async function fetchJson(url, { timeoutMs = 12000 } = {}) {
+    async function fetchJson(url, { timeoutMs = 6500 } = {}) {
       const c = new AbortController();
       const t = setTimeout(() => c.abort(), timeoutMs);
       try {
@@ -1080,11 +1081,29 @@
     ];
 
     async function fetchWithProxy(targetUrl, opts) {
-      let lastErr = null;
-      for (const p of CORS_PROXIES) {
-        try { return await fetchJson(p(targetUrl), opts); } catch (e) { lastErr = e; }
+      const attempts = CORS_PROXIES.map(p => fetchJson(p(targetUrl), { timeoutMs: 4500, ...(opts || {}) }));
+      try {
+        return await Promise.any(attempts);
+      } catch (e) {
+        throw e?.errors?.[0] || new Error("Proxies fallaron");
       }
-      throw lastErr || new Error("Proxies fallaron");
+    }
+
+    async function fetchServerQuote(asset) {
+      const data = await fetchJson(`${QUOTE_API}?symbol=${encodeURIComponent(asset.ticker)}`, { timeoutMs: 5000 });
+      if (data?.error) throw new Error(data.error);
+      if (!Number.isFinite(toNumber(data?.price))) throw new Error("Proxy sin precio");
+      return {
+        ...data,
+        price: toNumber(data.price),
+        changeAbs: toNumber(data.changeAbs),
+        changePct: toNumber(data.changePct),
+        previous: toNumber(data.previous),
+        dayHigh: toNumber(data.dayHigh),
+        dayLow: toNumber(data.dayLow),
+        series: Array.isArray(data.series) ? data.series.map(toNumber).filter(Number.isFinite) : null,
+        source: data.source || "Netlify",
+      };
     }
 
     async function fetchFinnhub(asset) {
@@ -1134,12 +1153,54 @@
 
     async function fetchAsset(asset) {
       const isSpanish = asset.ticker.includes(".MC") || asset.ticker.includes("^IBEX");
-      const sources = isSpanish ? [fetchYahooV8, fetchYahooV7] : [fetchFinnhub, fetchYahooV8, fetchYahooV7];
+      const sources = asset.ticker.includes("^IBEX")
+        ? [fetchServerQuote]
+        : isSpanish
+          ? [fetchServerQuote, fetchYahooV8, fetchYahooV7]
+          : [fetchFinnhub, fetchServerQuote, fetchYahooV8, fetchYahooV7];
       let lastErr = null;
       for (const s of sources) {
         try { return await s(asset); } catch (e) { lastErr = e; }
       }
       throw lastErr || new Error("Sin fuentes");
+    }
+
+    function markAssetUnavailable(asset) {
+      if (lastPrices.has(asset.id)) return;
+      const priceEl = document.getElementById(`${asset.id}-price`);
+      const deltaEl = document.getElementById(`${asset.id}-delta`);
+      const highEl = document.getElementById(`${asset.id}-high`);
+      const lowEl = document.getElementById(`${asset.id}-low`);
+
+      unskel(priceEl);
+      if (priceEl) {
+        priceEl.classList.remove("up", "down");
+        priceEl.textContent = "Sin datos";
+      }
+      setDelta(deltaEl, null, null);
+      if (highEl) highEl.textContent = "—";
+      if (lowEl) lowEl.textContent = "—";
+      setSrc(asset.id, "—");
+
+      if (asset.position) {
+        const shares = Number(asset.position.shares);
+        const entry = Number(asset.position.entry);
+        const valueNoteEl = document.getElementById(`${asset.id}-value-note`);
+        if (valueNoteEl && Number.isFinite(shares) && Number.isFinite(entry)) {
+          valueNoteEl.textContent = `${fmtNum.format(shares)} acc · medio ${fmtEUR.format(entry)}`;
+        }
+      }
+    }
+
+    function finishEmptyTotal() {
+      if (positionsState.size > 0) return;
+      [totalPlEl, totalInvestedEl, totalCurrentEl, totalDailyEl].forEach(unskel);
+      totalPlEl.textContent = "Sin datos";
+      totalPctEl.textContent = "—";
+      totalInvestedEl.textContent = "—";
+      totalCurrentEl.textContent = "—";
+      totalDailyEl.textContent = "—";
+      totalDailyNoteEl.textContent = "—";
     }
 
     /* ============ Update loop ============ */
@@ -1157,10 +1218,14 @@
           writeCache("quote_" + a.ticker, data);
           if (data.source) { used.add(data.source); setSrc(a.id, data.source); }
           ok++;
-        } catch (e) { console.warn(`Error ${a.ticker}`, e); }
+        } catch (e) {
+          console.warn(`Error ${a.ticker}`, e);
+          markAssetUnavailable(a);
+        }
       }));
 
       btn?.classList.remove("spinning");
+      finishEmptyTotal();
       if (ok > 0) {
         const label = ok === ASSETS.length ? `En vivo · ${[...used].join(" + ")}` : `Parcial · faltan ${ASSETS.length - ok}`;
         setStatus("ok", label);
@@ -1191,14 +1256,19 @@
 
     async function fetchFx() {
       try {
-        const data = await fetchJson("https://api.frankfurter.app/latest?from=EUR&to=USD");
-        const rate = Number(data?.rates?.USD);
+        let data;
+        try {
+          data = await fetchJson(`${QUOTE_API}?mode=fx`, { timeoutMs: 4500 });
+        } catch {
+          data = await fetchJson("https://api.frankfurter.app/latest?from=EUR&to=USD", { timeoutMs: 4500 });
+        }
+        const rate = Number(data?.rate ?? data?.rates?.USD);
         if (!Number.isFinite(rate)) throw new Error("FX vacío");
         eurToUsd = rate;
         usdInput.disabled = false; eurInput.disabled = false;
         usdInput.placeholder = "0.00"; eurInput.placeholder = "0.00";
         fxRateEl.textContent = `1 € = ${rate.toFixed(4)} $`;
-        fxSourceEl.textContent = "Fuente: Frankfurter.app";
+        fxSourceEl.textContent = `Fuente: ${data?.source || "Frankfurter.app"}`;
         convert(lastEdited);
       } catch {
         eurToUsd = null;
